@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://b7pvmv682l8pj"]
+
+[ext_resource type="PackedScene" uid="uid://yifphocygbal" path="res://Scenes/Entity/Player.tscn" id="1_exwnq"]
+[ext_resource type="Script" uid="uid://ctt14yh2mestg" path="res://Scripts/Entity/player.gd" id="2_eqbnc"]
+
+[node name="Playground" type="Node3D" unique_id=243384110]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1319664563]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.45744622, 1.7979202)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1396378454]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.004348755, -1.5392443, -0.0007982254)
+use_collision = true
+size = Vector3(15, 1, 15)
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=900485183]
+transform = Transform3D(0.46047404, 0, -0.88767314, 0, 1, 0, 0.88767314, 0, 0.46047404, -3.4177358, -0.662673, 1.8765218)
+
+[node name="Player" parent="." unique_id=865410242 instance=ExtResource("1_exwnq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5337801, 0)
+script = ExtResource("2_eqbnc")

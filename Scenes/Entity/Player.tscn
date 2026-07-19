@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://yifphocygbal"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_jh4sp"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_fsx4v"]
+
+[node name="Player" type="CharacterBody3D" unique_id=865410242]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2091167816]
+shape = SubResource("CapsuleShape3D_jh4sp")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=318328075]
+mesh = SubResource("CapsuleMesh_fsx4v")
