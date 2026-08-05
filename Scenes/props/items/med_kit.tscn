@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://xhj505s5uuhc"]
+
+[ext_resource type="Script" uid="uid://cinmq7qdq6fpo" path="res://scripts/items/key.gd" id="1_mjidu"]
+[ext_resource type="Resource" uid="uid://j8vwf02x534k" path="res://resources/props/items/med_kit.tres" id="2_mjidu"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jq8tk"]
+size = Vector3(1, 2.565918, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jyhfs"]
+albedo_color = Color(1, 1, 0.627451, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_dfgww"]
+
+[node name="Key" type="Area3D" unique_id=927341689]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+collision_layer = 2
+script = ExtResource("1_mjidu")
+item = ExtResource("2_mjidu")
+
+[node name="interact_area" type="CollisionShape3D" parent="." unique_id=1883438349]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 1.565918, 0)
+shape = SubResource("BoxShape3D_jq8tk")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=813554701]
+transform = Transform3D(1, 0, 0, 0, 0.13345224, 0, 0, 0, 1, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_jyhfs")
+mesh = SubResource("BoxMesh_dfgww")

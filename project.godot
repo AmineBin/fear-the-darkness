@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Fear the darkness"
+run/main_scene="uid://dumabfk5i6bdi"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
