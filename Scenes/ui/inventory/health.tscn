@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dab2qf3tvr0ou"]
+
+[ext_resource type="Script" uid="uid://udbonlu8gc3b" path="res://scripts/ui/inventory/health.gd" id="1_twtut"]
+[ext_resource type="Texture2D" uid="uid://k4788caks1it" path="res://art/placeholder/health/health1.jpg" id="2_o13u6"]
+[ext_resource type="Texture2D" uid="uid://b0tt3307rhhip" path="res://art/placeholder/health/health2.jpg" id="3_axceb"]
+[ext_resource type="Texture2D" uid="uid://bx8pa3gphhssq" path="res://art/placeholder/health/health3.jpg" id="4_t4tfs"]
+[ext_resource type="Texture2D" uid="uid://b7i3as8tnrscy" path="res://art/placeholder/health/health4.jpg" id="5_nnbp1"]
+
+[node name="Health" type="Control" unique_id=1676146403]
+custom_minimum_size = Vector2(128, 72)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 256.0
+offset_bottom = 144.0
+script = ExtResource("1_twtut")
+textures = Array[Texture2D]([ExtResource("5_nnbp1"), ExtResource("4_t4tfs"), ExtResource("3_axceb"), ExtResource("2_o13u6")])
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=219214627]
+position = Vector2(128.00002, 72)
+scale = Vector2(0.2, 0.2)

@@ -15,8 +15,14 @@ run/main_scene="uid://bfjw5b02bmogu"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
+[debug_draw_3d]
+
+settings/addon_root_folder="res://addons/debug_draw_3d"
+
 [display]
 
+window/size/viewport_width=1920
+window/size/viewport_height=1080
 window/size/mode=3
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
@@ -70,13 +76,18 @@ sprint={
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":16,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194325,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
 ]
 }
+close_current_ui={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":16,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194305,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
 
 [layer_names]
 
-3d_render/layer_1="World"
-3d_render/layer_2="Player"
-3d_render/layer_3="Doors"
-3d_render/layer_4="Objects"
+3d_physics/layer_1="World"
+3d_physics/layer_2="Props"
+3d_physics/layer_3="Items"
+3d_physics/layer_4="Player"
 
 [physics]
 
@@ -85,3 +96,38 @@ sprint={
 [rendering]
 
 rendering_device/driver.windows="d3d12"
+
+[shader_globals]
+
+psx_affine_strength={
+"type": "float",
+"value": 1.0
+}
+psx_bit_depth={
+"type": "int",
+"value": 5
+}
+psx_fog_color={
+"type": "color",
+"value": Color(0.5, 0.5, 0.5, 0)
+}
+psx_fog_far={
+"type": "float",
+"value": 20.0
+}
+psx_fog_near={
+"type": "float",
+"value": 10.0
+}
+psx_precision_uv={
+"type": "float",
+"value": 128.0
+}
+psx_precision_xy={
+"type": "float",
+"value": 256.0
+}
+psx_precision_z={
+"type": "float",
+"value": 512.0
+}

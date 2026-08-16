@@ -1,0 +1,202 @@
+[gd_scene format=3 uid="uid://2dh0may14cq5"]
+
+[ext_resource type="Script" uid="uid://csycjt4prp0au" path="res://scripts/ui/inventory/chest/chest_inventory_ui.gd" id="1_2j0nj"]
+[ext_resource type="Texture2D" uid="uid://civi4yk5t3044" path="res://art/placeholder/inventory_background.png" id="1_j0lnb"]
+[ext_resource type="PackedScene" uid="uid://dle6uayfrjw7x" path="res://scenes/ui/inventory/chest/chest_ui_slot.tscn" id="3_j0lnb"]
+[ext_resource type="PackedScene" uid="uid://crrigloaq0hlh" path="res://scenes/ui/inventory/inventory_context.tscn" id="4_j0lnb"]
+
+[node name="ChestInventoryUi" type="Control" unique_id=1815613746]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2j0nj")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=230585394]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_j0lnb")
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
+
+[node name="Label" type="Label" parent="NinePatchRect" unique_id=1418478198]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 316.0
+offset_right = 50.0
+offset_bottom = 339.0
+text = "Player"
+
+[node name="Label2" type="Label" parent="NinePatchRect" unique_id=1140429754]
+layout_mode = 0
+offset_left = 1001.0
+offset_top = 316.0
+offset_right = 1072.0
+offset_bottom = 344.0
+text = "Chest"
+
+[node name="ChestGridContainer" type="GridContainer" parent="NinePatchRect" unique_id=567291098]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -76.07651
+offset_top = -28.200008
+offset_bottom = 28.200008
+grow_horizontal = 0
+grow_vertical = 2
+offset_transform_enabled = true
+offset_transform_pivot_ratio = Vector2(0, 0)
+columns = 7
+
+[node name="Chest_UI_slot" parent="NinePatchRect/ChestGridContainer" unique_id=2019737328 instance=ExtResource("3_j0lnb")]
+layout_mode = 2
+is_from_chest = true
+
+[node name="Chest_UI_slot2" parent="NinePatchRect/ChestGridContainer" unique_id=1842986306 instance=ExtResource("3_j0lnb")]
+layout_mode = 2
+is_from_chest = true
+
+[node name="Chest_UI_slot3" parent="NinePatchRect/ChestGridContainer" unique_id=1659346296 instance=ExtResource("3_j0lnb")]
+layout_mode = 2
+is_from_chest = true
+
+[node name="Chest_UI_slot4" parent="NinePatchRect/ChestGridContainer" unique_id=1322464747 instance=ExtResource("3_j0lnb")]
+layout_mode = 2
+is_from_chest = true
+
+[node name="Chest_UI_slot5" parent="NinePatchRect/ChestGridContainer" unique_id=1199346931 instance=ExtResource("3_j0lnb")]
+layout_mode = 2
+is_from_chest = true
+
+[node name="Chest_UI_slot6" parent="NinePatchRect/ChestGridContainer" unique_id=387662865 instance=ExtResource("3_j0lnb")]
+layout_mode = 2
+is_from_chest = true
+
+[node name="Chest_UI_slot7" parent="NinePatchRect/ChestGridContainer" unique_id=1432340368 instance=ExtResource("3_j0lnb")]
+layout_mode = 2
+is_from_chest = true
+
+[node name="Chest_UI_slot8" parent="NinePatchRect/ChestGridContainer" unique_id=564461424 instance=ExtResource("3_j0lnb")]
+layout_mode = 2
+is_from_chest = true
+
+[node name="Chest_UI_slot9" parent="NinePatchRect/ChestGridContainer" unique_id=430171112 instance=ExtResource("3_j0lnb")]
+layout_mode = 2
+is_from_chest = true
+
+[node name="Chest_UI_slot10" parent="NinePatchRect/ChestGridContainer" unique_id=2050797158 instance=ExtResource("3_j0lnb")]
+layout_mode = 2
+is_from_chest = true
+
+[node name="Chest_UI_slot11" parent="NinePatchRect/ChestGridContainer" unique_id=1087257875 instance=ExtResource("3_j0lnb")]
+layout_mode = 2
+is_from_chest = true
+
+[node name="Chest_UI_slot12" parent="NinePatchRect/ChestGridContainer" unique_id=1600748552 instance=ExtResource("3_j0lnb")]
+layout_mode = 2
+is_from_chest = true
+
+[node name="Chest_UI_slot13" parent="NinePatchRect/ChestGridContainer" unique_id=546541084 instance=ExtResource("3_j0lnb")]
+layout_mode = 2
+is_from_chest = true
+
+[node name="Chest_UI_slot14" parent="NinePatchRect/ChestGridContainer" unique_id=343865196 instance=ExtResource("3_j0lnb")]
+layout_mode = 2
+is_from_chest = true
+
+[node name="Chest_UI_slot15" parent="NinePatchRect/ChestGridContainer" unique_id=589083911 instance=ExtResource("3_j0lnb")]
+layout_mode = 2
+is_from_chest = true
+
+[node name="Chest_UI_slot16" parent="NinePatchRect/ChestGridContainer" unique_id=1187231587 instance=ExtResource("3_j0lnb")]
+layout_mode = 2
+is_from_chest = true
+
+[node name="Chest_UI_slot17" parent="NinePatchRect/ChestGridContainer" unique_id=583165924 instance=ExtResource("3_j0lnb")]
+layout_mode = 2
+is_from_chest = true
+
+[node name="Chest_UI_slot18" parent="NinePatchRect/ChestGridContainer" unique_id=1782135757 instance=ExtResource("3_j0lnb")]
+layout_mode = 2
+is_from_chest = true
+
+[node name="Chest_UI_slot19" parent="NinePatchRect/ChestGridContainer" unique_id=1384024758 instance=ExtResource("3_j0lnb")]
+layout_mode = 2
+is_from_chest = true
+
+[node name="Chest_UI_slot20" parent="NinePatchRect/ChestGridContainer" unique_id=1763694127 instance=ExtResource("3_j0lnb")]
+layout_mode = 2
+is_from_chest = true
+
+[node name="Chest_UI_slot21" parent="NinePatchRect/ChestGridContainer" unique_id=1696009439 instance=ExtResource("3_j0lnb")]
+layout_mode = 2
+is_from_chest = true
+
+[node name="PlayerGridContainer" type="GridContainer" parent="NinePatchRect" unique_id=803437090]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -100.0
+offset_right = 268.0
+offset_bottom = 100.0
+grow_vertical = 2
+offset_transform_enabled = true
+offset_transform_pivot_ratio = Vector2(0, 0)
+columns = 4
+
+[node name="Chest_UI_slot" parent="NinePatchRect/PlayerGridContainer" unique_id=692058087 instance=ExtResource("3_j0lnb")]
+layout_mode = 2
+
+[node name="Chest_UI_slot2" parent="NinePatchRect/PlayerGridContainer" unique_id=267807478 instance=ExtResource("3_j0lnb")]
+layout_mode = 2
+
+[node name="Chest_UI_slot3" parent="NinePatchRect/PlayerGridContainer" unique_id=1342828169 instance=ExtResource("3_j0lnb")]
+layout_mode = 2
+
+[node name="Chest_UI_slot4" parent="NinePatchRect/PlayerGridContainer" unique_id=1911439158 instance=ExtResource("3_j0lnb")]
+layout_mode = 2
+
+[node name="Chest_UI_slot5" parent="NinePatchRect/PlayerGridContainer" unique_id=141767223 instance=ExtResource("3_j0lnb")]
+layout_mode = 2
+
+[node name="Chest_UI_slot6" parent="NinePatchRect/PlayerGridContainer" unique_id=1540314113 instance=ExtResource("3_j0lnb")]
+layout_mode = 2
+
+[node name="Chest_UI_slot7" parent="NinePatchRect/PlayerGridContainer" unique_id=1061591208 instance=ExtResource("3_j0lnb")]
+layout_mode = 2
+
+[node name="Chest_UI_slot8" parent="NinePatchRect/PlayerGridContainer" unique_id=1173626175 instance=ExtResource("3_j0lnb")]
+layout_mode = 2
+
+[node name="Chest_UI_slot9" parent="NinePatchRect/PlayerGridContainer" unique_id=796545057 instance=ExtResource("3_j0lnb")]
+layout_mode = 2
+
+[node name="Chest_UI_slot10" parent="NinePatchRect/PlayerGridContainer" unique_id=2055063522 instance=ExtResource("3_j0lnb")]
+layout_mode = 2
+
+[node name="Chest_UI_slot11" parent="NinePatchRect/PlayerGridContainer" unique_id=398351378 instance=ExtResource("3_j0lnb")]
+layout_mode = 2
+
+[node name="Chest_UI_slot12" parent="NinePatchRect/PlayerGridContainer" unique_id=1434422556 instance=ExtResource("3_j0lnb")]
+layout_mode = 2
+
+[node name="InventoryContext" parent="." unique_id=1779115200 instance=ExtResource("4_j0lnb")]
+visible = false
+layout_mode = 1
+offset_left = 1.0
+offset_top = 740.0
+offset_right = -1671.0
+offset_bottom = -289.0
