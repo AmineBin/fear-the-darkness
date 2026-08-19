@@ -1,0 +1,137 @@
+[gd_scene format=3 uid="uid://carrmofvblnfo"]
+
+[ext_resource type="Script" uid="uid://d2f4e8mddptgb" path="res://scripts/props/doors/door.gd" id="1_lbmyp"]
+[ext_resource type="AudioStream" uid="uid://ek766v8yaejf" path="res://sfx/prop/door/metal_door/metal_door_close.wav" id="2_8dmq6"]
+[ext_resource type="AudioStream" uid="uid://fx3jlfv353o" path="res://sfx/prop/door/metal_door/metal_door_open.wav" id="3_lbmyp"]
+[ext_resource type="AudioStream" uid="uid://c66gkrd2q8hqq" path="res://sfx/prop/door/metal_door/metal_door_slam.wav" id="3_vinnd"]
+[ext_resource type="AudioStream" uid="uid://cou7030tit0xj" path="res://sfx/prop/door/door_unlocking.wav" id="5_6s1ha"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_3xd07"]
+size = Vector3(1, 2, 0.1)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_j1p60"]
+points = PackedVector3Array(0.53174603, 1.0158731, 0.061086252, -0.5158731, -1.0158731, -0.06584816, -0.5158731, -1.0158731, 0.061086252, -0.5158731, 1.0158731, -0.06584816, 0.53174603, -1.0158731, -0.06584816, 0.53174603, -1.0158731, 0.061086252, -0.5158731, 1.0158731, 0.061086252, 0.53174603, 1.0158731, -0.06584816)
+
+[sub_resource type="Animation" id="Animation_j1p60"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("hinge:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_0ky7y"]
+resource_name = "close"
+length = 2.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("hinge:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 1.7453293, 0), Vector3(0, 0, 0)]
+}
+tracks/1/type = "audio"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AudioStreamPlayer3D")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"clips": [{
+"end_offset": 0.57011616,
+"start_offset": 0.1294,
+"stream": ExtResource("2_8dmq6")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/1/use_blend = true
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AudioStreamPlayer3D")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0513158,
+"start_offset": 0.40000007,
+"stream": ExtResource("3_vinnd")
+}],
+"times": PackedFloat32Array(0.96666664)
+}
+tracks/2/use_blend = true
+
+[sub_resource type="Animation" id="Animation_p37x8"]
+resource_name = "open"
+length = 2.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("hinge:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 1.7453293, 0)]
+}
+tracks/1/type = "audio"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AudioStreamPlayer3D")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_lbmyp")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/1/use_blend = true
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0ky7y"]
+_data = {
+&"RESET": SubResource("Animation_j1p60"),
+&"close": SubResource("Animation_0ky7y"),
+&"open": SubResource("Animation_p37x8")
+}
+
+[node name="MetalDoor" type="Node3D" unique_id=802934540 node_paths=PackedStringArray("animation_player")]
+script = ExtResource("1_lbmyp")
+animation_player = NodePath("AnimationPlayer")
+
+[node name="hinge" type="Node3D" parent="." unique_id=120252099]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.50545764, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="hinge" unique_id=1092827032 groups=["Door"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.50545764, 0, 0)
+collision_layer = 2
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="hinge/StaticBody3D" unique_id=1672940922]
+mesh = SubResource("BoxMesh_3xd07")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="hinge/StaticBody3D" unique_id=467756392]
+shape = SubResource("ConvexPolygonShape3D_j1p60")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=585081952]
+libraries/ = SubResource("AnimationLibrary_0ky7y")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=855230651]
+
+[node name="UnlockSFX" type="AudioStreamPlayer3D" parent="." unique_id=787203181]
+stream = ExtResource("5_6s1ha")

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://c66gkrd2q8hqq"
-path="res://.godot/imported/metal_door_slam.wav-b17b4531449ca51467ffcfe33bbc36d6.sample"
+path="res://.godot/imported/metal_door_slam.wav-b1ae239086f84afaa97d6f7042010dd6.sample"
 
 [deps]
 
-source_file="res://sfx/prop/metal_door_slam.wav"
-dest_files=["res://.godot/imported/metal_door_slam.wav-b17b4531449ca51467ffcfe33bbc36d6.sample"]
+source_file="res://sfx/prop/door/metal_door/metal_door_slam.wav"
+dest_files=["res://.godot/imported/metal_door_slam.wav-b1ae239086f84afaa97d6f7042010dd6.sample"]
 
 [params]
 
