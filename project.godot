@@ -15,6 +15,10 @@ run/main_scene="uid://bfjw5b02bmogu"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+psx_post_process="*uid://u3y0jxl0vtmg"
+
 [debug_draw_3d]
 
 settings/addon_root_folder="res://addons/debug_draw_3d"
@@ -29,7 +33,7 @@ window/stretch/aspect="expand"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/stairs/plugin.cfg")
+enabled=PackedStringArray("res://addons/psx/plugin.cfg", "res://addons/stairs/plugin.cfg")
 
 [input]
 
