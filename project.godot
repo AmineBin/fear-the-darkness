@@ -17,7 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-psx_post_process="*uid://u3y0jxl0vtmg"
+SoundPlayer="*uid://cv0ob8a7sdewj"
 
 [debug_draw_3d]
 
@@ -33,7 +33,19 @@ window/stretch/aspect="expand"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/psx/plugin.cfg", "res://addons/stairs/plugin.cfg")
+enabled=PackedStringArray("res://addons/stairs/plugin.cfg")
+
+[file_customization]
+
+folder_colors={
+"res://addons/": "green",
+"res://art/": "pink",
+"res://models/": "purple",
+"res://resources/": "orange",
+"res://scenes/": "blue",
+"res://scripts/": "teal",
+"res://sfx/": "gray"
+}
 
 [input]
 
@@ -65,7 +77,7 @@ move_back={
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":16,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":83,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
 ]
 }
-open_inventory={
+toggle_inventory={
 "deadzone": 0.2,
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":16,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":73,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
 ]
@@ -80,7 +92,7 @@ sprint={
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":16,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194325,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
 ]
 }
-close_current_ui={
+esc={
 "deadzone": 0.2,
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":16,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194305,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
 ]
