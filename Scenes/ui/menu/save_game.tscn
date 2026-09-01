@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://cyyo4jetp4o3b"]
+
+[ext_resource type="Script" uid="uid://1k3i73m3un8m" path="res://scripts/ui/menu/settings.gd" id="1_o7v8k"]
+[ext_resource type="PackedScene" uid="uid://uaktb6mru1ob" path="res://scenes/ui/menu/fade_transition.tscn" id="3_vstk4"]
+
+[node name="Settings" type="Control" unique_id=1400086558]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_o7v8k")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=907971479]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.1728327, 0.17283267, 0.17283267, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect" unique_id=153686336]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/VBoxContainer" unique_id=590388730]
+layout_mode = 2
+
+[node name=">>" type="Label" parent="ColorRect/VBoxContainer/HBoxContainer" unique_id=1746606009]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = ">>"
+
+[node name="SaveName" type="Label" parent="ColorRect/VBoxContainer/HBoxContainer" unique_id=1370003808]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Save 1"
+
+[node name="-" type="Label" parent="ColorRect/VBoxContainer/HBoxContainer" unique_id=568586791]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "-"
+
+[node name="PlayTime" type="Label" parent="ColorRect/VBoxContainer/HBoxContainer" unique_id=1353261496]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "3:13:54"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="ColorRect/VBoxContainer" unique_id=1700393986]
+layout_mode = 2
+
+[node name="Save" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer2" unique_id=817523933]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Save"
+
+[node name="Load" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer2" unique_id=958263878]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Load"
+
+[node name="Delete" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer2" unique_id=414711133]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Delete"
+
+[node name="FadeTransition" parent="." unique_id=1973854213 instance=ExtResource("3_vstk4")]
+visible = false
+layout_mode = 1
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="fade_timer" type="Timer" parent="FadeTransition" unique_id=182418946]
