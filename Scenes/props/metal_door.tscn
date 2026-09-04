@@ -7,10 +7,10 @@
 [ext_resource type="AudioStream" uid="uid://cou7030tit0xj" path="res://sfx/prop/door/door_unlocking.wav" id="5_6s1ha"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_3xd07"]
-size = Vector3(1, 2, 0.1)
+size = Vector3(1, 2, 0.07)
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_j1p60"]
-points = PackedVector3Array(0.53174603, 1.0158731, 0.061086252, -0.5158731, -1.0158731, -0.06584816, -0.5158731, -1.0158731, 0.061086252, -0.5158731, 1.0158731, -0.06584816, 0.53174603, -1.0158731, -0.06584816, 0.53174603, -1.0158731, 0.061086252, -0.5158731, 1.0158731, 0.061086252, 0.53174603, 1.0158731, -0.06584816)
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_6s1ha"]
+points = PackedVector3Array(0.53174603, 1.0158731, 0.044355754, -0.5158731, -1.0158731, -0.050863687, -0.5158731, -1.0158731, 0.044355754, -0.5158731, 1.0158731, -0.050863687, 0.53174603, -1.0158731, -0.050863687, 0.53174603, -1.0158731, 0.044355754, -0.5158731, 1.0158731, 0.044355754, 0.53174603, 1.0158731, -0.050863687)
 
 [sub_resource type="Animation" id="Animation_j1p60"]
 length = 0.001
@@ -125,8 +125,8 @@ collision_layer = 2
 [node name="MeshInstance3D" type="MeshInstance3D" parent="hinge/StaticBody3D" unique_id=1672940922]
 mesh = SubResource("BoxMesh_3xd07")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="hinge/StaticBody3D" unique_id=467756392]
-shape = SubResource("ConvexPolygonShape3D_j1p60")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="hinge/StaticBody3D" unique_id=964761716]
+shape = SubResource("ConvexPolygonShape3D_6s1ha")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=585081952]
 libraries/ = SubResource("AnimationLibrary_0ky7y")

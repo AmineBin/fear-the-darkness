@@ -2,10 +2,10 @@ extends StaticBody3D
 
 var toggle = false
 var interactable = true
+@onready var chest_inv_ui = get_node("/root/Playground/ChestInventory/ChestInventoryUi")
 
 func interact():
 	print("interaction")
-	var chest_inv_ui = get_node("/root/Playground/Player/ChestInventory/ChestInventoryUi")
 	var chest_open_sfx = $ChestOpen
 	if chest_inv_ui.is_open == false:
 		chest_open_sfx.play()

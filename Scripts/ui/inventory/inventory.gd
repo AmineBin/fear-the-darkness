@@ -17,3 +17,10 @@ func insert(item: InvItem):
 			empty_slots[0].item = item
 			empty_slots[0].amount = 1
 	update.emit()
+	
+func has_item(requested_item):
+	for slot in slots:
+		if slot.item == requested_item && slot.item != null:
+			return true
+	return false
+		

@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://x8ov0rgfasef"]
 
 [ext_resource type="Script" uid="uid://0x5benn8twun" path="res://scripts/props/chest.gd" id="1_xeosd"]
-[ext_resource type="AudioStream" uid="uid://b3qfiit7t1lx" path="res://sfx/prop/chest_open.wav" id="2_ak388"]
-[ext_resource type="AudioStream" uid="uid://btmm1vebrchjo" path="res://sfx/prop/chest_close.wav" id="2_r8mbp"]
+[ext_resource type="AudioStream" uid="uid://b3qfiit7t1lx" path="res://sfx/prop/chest/chest_open.wav" id="2_ak388"]
+[ext_resource type="AudioStream" uid="uid://btmm1vebrchjo" path="res://sfx/prop/chest/chest_close.wav" id="2_r8mbp"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_3xd07"]
 size = Vector3(1, 0.7, 0.7)

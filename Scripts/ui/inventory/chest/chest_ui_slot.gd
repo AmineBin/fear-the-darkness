@@ -20,5 +20,5 @@ func update(slot: InvSlot):
 		amount_text.text = str(current_slot_item.amount)
 
 func _on_pressed() -> void:
-	var chest_context_node = get_node("/root/Playground/Player/ChestInventory/ChestInventoryUi/InventoryContext")
+	var chest_context_node = get_node("/root/Playground/ChestInventory/ChestInventoryUi/InventoryContext")
 	chest_context_node.show_menu(current_slot_item, is_chest_interface, is_from_chest)

@@ -20,5 +20,5 @@ func update(slot: InvSlot):
 
 # Afficher le menu context
 func _on_pressed() -> void:
-	var inventory_context_node = get_node("/root/Playground/Player/Inventory/Inv_UI/VBoxContainer/InventoryContext")
+	var inventory_context_node = get_node("/root/Playground/Inventory/Inv_UI/VBoxContainer/InventoryContext")
 	inventory_context_node.show_menu(current_slot_item, is_chest_interface, is_from_chest)

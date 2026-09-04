@@ -1,8 +1,8 @@
 extends Area3D
 
 @export var item: InvItem
+@onready var player = get_node("/root/Playground/Player") 
 
 func interact():
-	var player = get_node("/root/Main/Player")
 	player.collect(item)
 	self.queue_free()

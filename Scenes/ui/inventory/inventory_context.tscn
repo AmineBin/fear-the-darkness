@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://crrigloaq0hlh"]
 
 [ext_resource type="Script" uid="uid://h730sqas58me" path="res://scripts/ui/inventory/inventory_context.gd" id="1_r88gv"]
+[ext_resource type="AudioStream" uid="uid://bewd7exrbdrte" path="res://sfx/ui/ui_click.ogg" id="2_eojww"]
 
 [node name="InventoryContext" type="Control" unique_id=1779115200]
 layout_mode = 3
@@ -38,6 +39,9 @@ text = "Transfer"
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "Cancel"
+
+[node name="UiClick" type="AudioStreamPlayer" parent="." unique_id=1786588723]
+stream = ExtResource("2_eojww")
 
 [connection signal="pressed" from="HBoxContainer/Use" to="." method="_on_use_pressed"]
 [connection signal="pressed" from="HBoxContainer/Discard" to="." method="_on_discard_pressed"]

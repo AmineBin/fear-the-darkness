@@ -28,4 +28,13 @@ func close():
 	is_open = false
 	context_menu.visible = false
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	
+
+func _unhandled_input(event: InputEvent) -> void:
+	if is_open:
+		if event.is_action_pressed("esc"):
+			close()
+			get_viewport().set_input_as_handled()
+	if event.is_action_pressed("toggle_inventory") && !is_open:
+		open()
+	elif event.is_action_pressed("toggle_inventory") && is_open:
+		close()
