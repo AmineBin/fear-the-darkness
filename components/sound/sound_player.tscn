@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cv0ob8a7sdewj"]
+
+[ext_resource type="Script" uid="uid://clyq0th827nm1" path="res://components/sound/sound_player.gd" id="1_lj42s"]
+
+[node name="SoundPlayer" type="Node" unique_id=26655764]
+script = ExtResource("1_lj42s")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=76719584]
+bus = &"SFX"

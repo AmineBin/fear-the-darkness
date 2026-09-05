@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Fear the darkness"
-run/main_scene="uid://bfjw5b02bmogu"
+run/main_scene="uid://c8puj0kfuhq5n"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -38,13 +38,16 @@ enabled=PackedStringArray("res://addons/stairs/plugin.cfg")
 [file_customization]
 
 folder_colors={
-"res://addons/": "green",
-"res://art/": "pink",
-"res://models/": "purple",
-"res://resources/": "orange",
+"res://assets/": "purple",
+"res://components/": "gray",
+"res://data/": "orange",
+"res://entities/": "red",
+"res://items/": "red",
+"res://props/": "red",
 "res://scenes/": "blue",
 "res://scripts/": "teal",
-"res://sfx/": "gray"
+"res://shaders/": "teal",
+"res://ui/": "green"
 }
 
 [input]

@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dab2qf3tvr0ou"]
+
+[ext_resource type="Script" uid="uid://udbonlu8gc3b" path="res://ui/health_display_ui/health_display_ui.gd" id="1_qh1js"]
+[ext_resource type="Texture2D" uid="uid://b7i3as8tnrscy" path="res://assets/textures/health/health4.jpg" id="2_mhhf5"]
+[ext_resource type="Texture2D" uid="uid://bx8pa3gphhssq" path="res://assets/textures/health/health3.jpg" id="3_mvnik"]
+[ext_resource type="Texture2D" uid="uid://b0tt3307rhhip" path="res://assets/textures/health/health2.jpg" id="4_ne5m7"]
+[ext_resource type="Texture2D" uid="uid://k4788caks1it" path="res://assets/textures/health/health1.jpg" id="5_l81yk"]
+
+[node name="Health" type="Control" unique_id=1676146403]
+custom_minimum_size = Vector2(128, 72)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 256.0
+offset_bottom = 144.0
+script = ExtResource("1_qh1js")
+textures = Array[Texture2D]([ExtResource("2_mhhf5"), ExtResource("3_mvnik"), ExtResource("4_ne5m7"), ExtResource("5_l81yk")])
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=219214627]
+position = Vector2(128.00002, 72)
+scale = Vector2(0.2, 0.2)

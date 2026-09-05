@@ -2,17 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://duho8yv63v5ba"
-path="res://.godot/imported/icon.svg-609470eca5c13afa16a17b93e78eee8c.ctex"
+uid="uid://civi4yk5t3044"
+path="res://.godot/imported/inventory_background.png-b7b8d47410a0addd36c5867c7fdfe366.ctex"
 metadata={
-"has_editor_variant": true,
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/stairs/icon.svg"
-dest_files=["res://.godot/imported/icon.svg-609470eca5c13afa16a17b93e78eee8c.ctex"]
+source_file="res://assets/textures/inventory/inventory_background.png"
+dest_files=["res://.godot/imported/inventory_background.png-b7b8d47410a0addd36c5867c7fdfe366.ctex"]
 
 [params]
 
@@ -39,6 +38,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=true
-editor/convert_colors_with_editor_theme=true

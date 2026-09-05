@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bjgw66pu3w8tk"]
+
+[ext_resource type="Script" uid="uid://xmc7yalsrp2f" path="res://components/inventory/inv_action/inv_action_handler.gd" id="1_gxbqy"]
+
+[node name="InvActionHandler" type="Node" unique_id=552902035]
+script = ExtResource("1_gxbqy")

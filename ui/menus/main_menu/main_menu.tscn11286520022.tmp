@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://bfjw5b02bmogu"]
+
+[ext_resource type="Script" uid="uid://bwgmjs1f8j7b6" path="res://ui/menus/main_menu/main_menu.gd" id="1_6s8a2"]
+[ext_resource type="PackedScene" uid="uid://uaktb6mru1ob" path="res://ui/menus/transition/fade_transition.tscn" id="2_ioe73"]
+[ext_resource type="AudioStream" uid="uid://cs5dav0lwjqd3" path="res://assets/audio/sfx/ui/menu/click.wav" id="2_j3h1s"]
+[ext_resource type="PackedScene" uid="uid://bd4j7mnm3sul5" path="res://ui/menus/settings/settings.tscn" id="3_igis3"]
+[ext_resource type="PackedScene" uid="uid://b0sorb1tab3bw" path="res://playground.tscn" id="4_m57jf"]
+
+[node name="MainMenu" type="Control" unique_id=1605592487]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_6s8a2")
+click_sfx = ExtResource("2_j3h1s")
+settings_scene = ExtResource("3_igis3")
+game_scene = ExtResource("4_m57jf")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=467886667]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.1728327, 0.17283267, 0.17283267, 1)
+
+[node name="ButtonManager" type="Control" parent="." unique_id=1428961532]
+anchors_preset = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 1921.0
+offset_bottom = 1081.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ButtonManager" unique_id=648295582]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 100.0
+offset_top = -83.5
+offset_right = 619.0
+offset_bottom = 83.5
+grow_vertical = 2
+
+[node name="New game" type="Button" parent="ButtonManager/VBoxContainer" unique_id=564111714]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = ">> New game"
+flat = true
+alignment = 0
+
+[node name="Load save" type="Button" parent="ButtonManager/VBoxContainer" unique_id=1927523260]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = ">> Load save"
+flat = true
+alignment = 0
+
+[node name="Settings" type="Button" parent="ButtonManager/VBoxContainer" unique_id=1273214449]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = ">> Settings"
+flat = true
+alignment = 0
+
+[node name="Quit" type="Button" parent="ButtonManager/VBoxContainer" unique_id=1793697925]
+layout_mode = 2
+theme_override_constants/h_separation = 4
+theme_override_font_sizes/font_size = 32
+text = ">> Quit"
+flat = true
+alignment = 0
+
+[node name="FadeTransition" parent="." unique_id=1973854213 instance=ExtResource("2_ioe73")]
+visible = false
+layout_mode = 1
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="fade_timer" type="Timer" parent="FadeTransition" unique_id=108684472]
+
+[connection signal="pressed" from="ButtonManager/VBoxContainer/New game" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="ButtonManager/VBoxContainer/Settings" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="ButtonManager/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="timeout" from="FadeTransition/fade_timer" to="." method="_on_fade_timer_timeout"]
