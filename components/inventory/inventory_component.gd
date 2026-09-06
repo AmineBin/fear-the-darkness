@@ -34,3 +34,4 @@ func transfer_item(target_inv: Inv, slot: InvSlot) -> void:
 		target_inv.insert(slot.item)
 		slot.discard_item()
 		update.emit()
+		target_inv.update.emit()

@@ -94,11 +94,10 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.23361439, 0.53336304,
 [node name="MetalDoor" parent="NavigationRegion3D" unique_id=802934540 instance=ExtResource("11_vnugj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4915462, 1.5, -4.7980866)
 
-[node name="MetalDoor2" parent="NavigationRegion3D" unique_id=423866632 node_paths=PackedStringArray("player_gui") instance=ExtResource("11_vnugj")]
+[node name="MetalDoor2" parent="NavigationRegion3D" unique_id=423866632 instance=ExtResource("11_vnugj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.30215, 1.4748201, -4.819416)
 key = ExtResource("12_2yo0f")
 key_needed = true
-player_gui = NodePath("../../GUI/PlayerGUI")
 
 [node name="MetalDoor3" parent="NavigationRegion3D" unique_id=1050218708 instance=ExtResource("11_vnugj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.2363105, 1.4748201, -4.758568)

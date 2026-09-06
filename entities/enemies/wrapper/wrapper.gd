@@ -20,6 +20,7 @@ var state_machine
 var player: CharacterBody3D
 
 func _ready() -> void:
+	speed = walk_speed
 	player = get_tree().get_first_node_in_group("player") as CharacterBody3D
 	if not player:
 		push_error("player not found")
@@ -34,7 +35,6 @@ func _process(delta):
 		velocity.y -= 2
 	
 	velocity = Vector3.ZERO
-	
 	
 	match state_machine.get_current_node():
 		"Run":
