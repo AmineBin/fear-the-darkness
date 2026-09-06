@@ -1,8 +1,0 @@
-[gd_scene format=3 uid="uid://quogcpd41rmv"]
-
-[ext_resource type="Script" uid="uid://dndkg4ylgcy6j" path="res://scripts/ui/menu/volume_slider.gd" id="1_mxvef"]
-
-[node name="VolumeSlider" type="HSlider" unique_id=921617575]
-max_value = 1.0
-step = 0.001
-script = ExtResource("1_mxvef")
