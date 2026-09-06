@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://carrmofvblnfo"]
 
-[ext_resource type="Script" uid="uid://d2f4e8mddptgb" path="res://props/doors/metal_door/door.gd" id="1_lbmyp"]
+[ext_resource type="Script" uid="uid://d2f4e8mddptgb" path="res://props/doors/door.gd" id="1_lbmyp"]
+[ext_resource type="Script" uid="uid://dtm6y3c5irkqx" path="res://components/props/proxy/interact_proxy.gd" id="2_2r7x4"]
 [ext_resource type="AudioStream" uid="uid://ek766v8yaejf" path="res://assets/audio/sfx/prop/door/metal_door/metal_door_close.wav" id="2_8dmq6"]
 [ext_resource type="AudioStream" uid="uid://fx3jlfv353o" path="res://assets/audio/sfx/prop/door/metal_door/metal_door_open.wav" id="3_lbmyp"]
 [ext_resource type="AudioStream" uid="uid://c66gkrd2q8hqq" path="res://assets/audio/sfx/prop/door/metal_door/metal_door_slam.wav" id="3_vinnd"]
@@ -118,14 +119,15 @@ animation_player = NodePath("AnimationPlayer")
 [node name="hinge" type="Node3D" parent="." unique_id=120252099]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.50545764, 0, 0)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="hinge" unique_id=1092827032 groups=["Door"]]
+[node name="PhysicalMetalDoor" type="StaticBody3D" parent="hinge" unique_id=1092827032 groups=["Door"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.50545764, 0, 0)
 collision_layer = 2
+script = ExtResource("2_2r7x4")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="hinge/StaticBody3D" unique_id=1672940922]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="hinge/PhysicalMetalDoor" unique_id=1672940922]
 mesh = SubResource("BoxMesh_3xd07")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="hinge/StaticBody3D" unique_id=964761716]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="hinge/PhysicalMetalDoor" unique_id=964761716]
 shape = SubResource("ConvexPolygonShape3D_6s1ha")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=585081952]

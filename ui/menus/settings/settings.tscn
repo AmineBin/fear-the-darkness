@@ -4,8 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://uaktb6mru1ob" path="res://ui/menus/transition/fade_transition.tscn" id="1_rqcjd"]
 [ext_resource type="PackedScene" uid="uid://quogcpd41rmv" path="res://components/volume_slider/volume_slider.tscn" id="2_37860"]
 [ext_resource type="AudioStream" uid="uid://cs5dav0lwjqd3" path="res://assets/audio/sfx/ui/menu/click.wav" id="2_kmdw2"]
-[ext_resource type="PackedScene" uid="uid://bfjw5b02bmogu" path="res://ui/menus/main_menu/main_menu.tscn" id="3_hmlsf"]
-[ext_resource type="PackedScene" uid="uid://b0sorb1tab3bw" path="res://playground.tscn" id="4_wkvjk"]
 
 [node name="Settings" type="Control" unique_id=1400086558]
 process_mode = 3
@@ -13,8 +11,6 @@ layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_dxr1k")
 click_sfx = ExtResource("2_kmdw2")
-main_menu_scene = ExtResource("3_hmlsf")
-game_scene = ExtResource("4_wkvjk")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=907971479]
 layout_mode = 0

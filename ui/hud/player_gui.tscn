@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bp1n7pltwm27g" path="res://ui/hud/player_gui.gd" id="1_2u3rc"]
 [ext_resource type="Texture2D" uid="uid://biof71vos4bju" path="res://assets/textures/gui/crosshair001.png" id="1_s3sex"]
+[ext_resource type="AudioStream" uid="uid://cs5dav0lwjqd3" path="res://assets/audio/sfx/ui/menu/click.wav" id="2_hffkq"]
 
 [node name="PlayerGUI" type="Control" unique_id=1809929944]
 layout_mode = 3
@@ -12,6 +13,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_2u3rc")
+type_sfx = ExtResource("2_hffkq")
 
 [node name="Crosshair" type="TextureRect" parent="." unique_id=1299088754]
 texture_filter = 1

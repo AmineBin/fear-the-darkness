@@ -4,9 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dwkuutr54e8u3" path="res://ui/hud/player_gui.tscn" id="2_jgc46"]
 [ext_resource type="PackedScene" uid="uid://bhl48kxd2a852" path="res://ui/inventory/player_inventory_ui/player_inventory_ui.tscn" id="3_dk0co"]
 [ext_resource type="PackedScene" uid="uid://2dh0may14cq5" path="res://ui/inventory/chest_inventory_ui/chest_inventory_ui.tscn" id="4_pactg"]
-[ext_resource type="PackedScene" uid="uid://bhb7tynm8e6f8" path="res://ui/menus/pause_menu/pause_menu.tscn" id="5_ycdrs"]
 [ext_resource type="PackedScene" uid="uid://bhb7tynm8e6f8" path="res://ui/menus/pause_menu/pause_menu.tscn" id="6_5m40n"]
-[ext_resource type="AudioStream" uid="uid://cs5dav0lwjqd3" path="res://assets/audio/sfx/ui/menu/click.wav" id="7_jgc46"]
 [ext_resource type="PackedScene" uid="uid://yifphocygbal" path="res://entities/player/player.tscn" id="7_x6kx1"]
 [ext_resource type="PackedScene" uid="uid://x8ov0rgfasef" path="res://props/chest/chest.tscn" id="8_jufm4"]
 [ext_resource type="PackedScene" uid="uid://cw0pf1c2n6n7g" path="res://props/collectible/key.tscn" id="9_ymgag"]
@@ -53,7 +51,8 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Inventory" type="CanvasLayer" parent="." unique_id=1815891989]
 
-[node name="Inv_UI" parent="Inventory" unique_id=1333805855 instance=ExtResource("3_dk0co")]
+[node name="Inv_UI" parent="Inventory" unique_id=1333805855 node_paths=PackedStringArray("player") instance=ExtResource("3_dk0co")]
+player = NodePath("../../Player")
 metadata/_edit_use_anchors_ = true
 
 [node name="ChestInventory" type="CanvasLayer" parent="." unique_id=903054976]
@@ -63,19 +62,15 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Settings" type="CanvasLayer" parent="." unique_id=2077003104]
 
-[node name="Settings" parent="Settings" unique_id=327072911 node_paths=PackedStringArray("pause_menu") instance=ExtResource("5_ycdrs")]
+[node name="Settings" parent="Settings" unique_id=327072911 instance=ExtResource("6_5m40n")]
 visible = false
-pause_menu = NodePath("../../PauseMenu/PauseMenu")
 
 [node name="PauseMenu" type="CanvasLayer" parent="." unique_id=1098256807]
 
-[node name="PauseMenu" parent="PauseMenu" unique_id=873590892 node_paths=PackedStringArray("inventory_ui", "chest_inventory_ui", "settings_node", "pause_menu") instance=ExtResource("6_5m40n")]
+[node name="PauseMenu" parent="PauseMenu" unique_id=873590892 node_paths=PackedStringArray("inventory_ui", "chest_inventory_ui") instance=ExtResource("6_5m40n")]
 inventory_ui = NodePath("../../Inventory/Inv_UI")
 chest_inventory_ui = NodePath("../../ChestInventory/ChestInventoryUi")
-settings_node = NodePath("../../Settings/Settings")
-pause_menu = NodePath("../../Settings/Settings")
-click_sfx = ExtResource("7_jgc46")
-settings_scene = ExtResource("5_ycdrs")
+settings_scene = ExtResource("6_5m40n")
 
 [node name="Player" parent="." unique_id=865410242 instance=ExtResource("7_x6kx1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7075804, 1.316277, 0)
@@ -99,10 +94,11 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.23361439, 0.53336304,
 [node name="MetalDoor" parent="NavigationRegion3D" unique_id=802934540 instance=ExtResource("11_vnugj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4915462, 1.5, -4.7980866)
 
-[node name="MetalDoor2" parent="NavigationRegion3D" unique_id=423866632 instance=ExtResource("11_vnugj")]
+[node name="MetalDoor2" parent="NavigationRegion3D" unique_id=423866632 node_paths=PackedStringArray("player_gui") instance=ExtResource("11_vnugj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.30215, 1.4748201, -4.819416)
-key_needed = true
 key = ExtResource("12_2yo0f")
+key_needed = true
+player_gui = NodePath("../../GUI/PlayerGUI")
 
 [node name="MetalDoor3" parent="NavigationRegion3D" unique_id=1050218708 instance=ExtResource("11_vnugj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.2363105, 1.4748201, -4.758568)

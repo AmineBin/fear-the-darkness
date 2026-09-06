@@ -1,17 +1,26 @@
 extends Control
 
-@export var player_gui_dialog: Control
-@export var click_sfx: AudioStream
+@onready var label: RichTextLabel = $RichTextLabel
+@export var type_sfx: AudioStream
+var is_displaying: bool = false
 
 func show_text(new_text):
-	if player_gui_dialog.text != "":
+	if is_displaying:
 		return
-	else:
-		$RichTextLabel.text = new_text
-		$RichTextLabel.visible_characters = 1
-		for i in range(new_text.length()+1):
-				$RichTextLabel.visible_characters = i
-				await get_tree().create_timer(0.05).timeout
-				SoundPlayer.audio_play(click_sfx)
-		await get_tree().create_timer(3.0, false).timeout
-		player_gui_dialog.text = ""
+	
+	is_displaying = true
+	label.text = new_text
+	label.visible_characters = 1
+	
+	for i in range(1, new_text.length() + 1):
+			label.visible_characters = i
+			
+			if type_sfx and new_text[i - 1] != " ":
+				SoundPlayer.audio_play(type_sfx)
+			await get_tree().create_timer(0.05).timeout
+	
+	await get_tree().create_timer(3.0, false).timeout
+	
+	label.text = ""
+	
+	is_displaying = false

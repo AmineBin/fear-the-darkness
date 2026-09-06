@@ -22,7 +22,6 @@ func _on_use_pressed() -> void:
 	hide()
 
 func _on_discard_pressed() -> void:
-	print("bouton appuyé")
 	discard.emit(current_slot)
 	hide()
 

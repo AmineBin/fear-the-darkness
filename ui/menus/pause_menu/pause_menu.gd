@@ -2,8 +2,7 @@ extends Control
 
 @export var inventory_ui: Control
 @export var chest_inventory_ui: Control
-@export var settings_node: Control
-@export var pause_menu: Control
+@export var pause_menu_ui: Control
 @export var click_sfx: AudioStream
 
 @export var settings_scene: PackedScene
@@ -45,10 +44,10 @@ func _on_quit_desktop_pressed() -> void:
 func _on_settings_pressed() -> void:
 	SoundPlayer.audio_play(click_sfx)
 	hide()
-	pause_menu.show()
+	pause_menu_ui.show()
 	
 func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("esc") && inventory_ui.is_open == false && chest_inventory_ui.is_open == false && settings_node.visible == false:
+	if event.is_action_pressed("esc") && inventory_ui.is_open == false && chest_inventory_ui.is_open == false && settings_scene.visible == false:
 		if get_tree().paused:
 			resume()
 			print("esc")

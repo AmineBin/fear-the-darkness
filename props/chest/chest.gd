@@ -4,7 +4,7 @@ var toggle = false
 var interactable = true
 @export var chest_inv_ui: Control
 
-func interact():
+func interact(user:Node = null):
 	print("interaction")
 	var chest_open_sfx = $ChestOpen
 	if chest_inv_ui.is_open == false:

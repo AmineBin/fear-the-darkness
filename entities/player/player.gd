@@ -24,6 +24,7 @@ var gravity = 9.8
 @onready var head = $Head
 @onready var camera = $Head/Camera3D
 @onready var seecast = $Head/Camera3D/SeeCast
+@onready var gui = $PlayerGUI
 
 @export var inv: Inv
 
@@ -72,12 +73,7 @@ func _physics_process(delta):
 	var target_fov = base_fov + fov_change * velocity_clamped
 	camera.fov = lerp(camera.fov, target_fov, delta * 8.0)
 	
-	# Si le joueur est à porté d'un prop il peut intéragir avec
-	if seecast.is_colliding():
-		var target = seecast.get_collider()
-		if Input.is_action_just_pressed("interact"):
-			if target.has_method("interact"):
-				target.interact(self)
+	interact()
 	
 	move_and_slide()
 
@@ -96,3 +92,15 @@ func take_damage(amount):
 	
 func die():
 	self.queue_free()
+	
+# Si le joueur est à porté d'un prop il peut intéragir avec
+func interact():
+	if seecast.is_colliding():
+		var target = seecast.get_collider()
+		if Input.is_action_just_pressed("interact"):
+			if target.has_method("interact"):
+				target.interact(self)
+				
+func display_message(text: String) -> void:
+	if gui and gui.has_method("show_text"):
+		gui.show_text(text)

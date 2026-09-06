@@ -64,88 +64,109 @@ offset_transform_enabled = true
 offset_transform_pivot_ratio = Vector2(0, 0)
 columns = 7
 
-[node name="Chest_UI_slot" parent="NinePatchRect/ChestGridContainer" unique_id=2019737328 instance=ExtResource("3_j0lnb")]
+[node name="Chest_UI_slot" parent="NinePatchRect/ChestGridContainer" unique_id=2019737328 node_paths=PackedStringArray("context_menu") instance=ExtResource("3_j0lnb")]
 layout_mode = 2
+context_menu = NodePath("../../../InventoryContext")
 is_from_chest = true
 
-[node name="Chest_UI_slot2" parent="NinePatchRect/ChestGridContainer" unique_id=1842986306 instance=ExtResource("3_j0lnb")]
+[node name="Chest_UI_slot2" parent="NinePatchRect/ChestGridContainer" unique_id=1842986306 node_paths=PackedStringArray("context_menu") instance=ExtResource("3_j0lnb")]
 layout_mode = 2
+context_menu = NodePath("../../../InventoryContext")
 is_from_chest = true
 
-[node name="Chest_UI_slot3" parent="NinePatchRect/ChestGridContainer" unique_id=1659346296 instance=ExtResource("3_j0lnb")]
+[node name="Chest_UI_slot3" parent="NinePatchRect/ChestGridContainer" unique_id=1659346296 node_paths=PackedStringArray("context_menu") instance=ExtResource("3_j0lnb")]
 layout_mode = 2
+context_menu = NodePath("../../../InventoryContext")
 is_from_chest = true
 
-[node name="Chest_UI_slot4" parent="NinePatchRect/ChestGridContainer" unique_id=1322464747 instance=ExtResource("3_j0lnb")]
+[node name="Chest_UI_slot4" parent="NinePatchRect/ChestGridContainer" unique_id=1322464747 node_paths=PackedStringArray("context_menu") instance=ExtResource("3_j0lnb")]
 layout_mode = 2
+context_menu = NodePath("../../../InventoryContext")
 is_from_chest = true
 
-[node name="Chest_UI_slot5" parent="NinePatchRect/ChestGridContainer" unique_id=1199346931 instance=ExtResource("3_j0lnb")]
+[node name="Chest_UI_slot5" parent="NinePatchRect/ChestGridContainer" unique_id=1199346931 node_paths=PackedStringArray("context_menu") instance=ExtResource("3_j0lnb")]
 layout_mode = 2
+context_menu = NodePath("../../../InventoryContext")
 is_from_chest = true
 
-[node name="Chest_UI_slot6" parent="NinePatchRect/ChestGridContainer" unique_id=387662865 instance=ExtResource("3_j0lnb")]
+[node name="Chest_UI_slot6" parent="NinePatchRect/ChestGridContainer" unique_id=387662865 node_paths=PackedStringArray("context_menu") instance=ExtResource("3_j0lnb")]
 layout_mode = 2
+context_menu = NodePath("../../../InventoryContext")
 is_from_chest = true
 
-[node name="Chest_UI_slot7" parent="NinePatchRect/ChestGridContainer" unique_id=1432340368 instance=ExtResource("3_j0lnb")]
+[node name="Chest_UI_slot7" parent="NinePatchRect/ChestGridContainer" unique_id=1432340368 node_paths=PackedStringArray("context_menu") instance=ExtResource("3_j0lnb")]
 layout_mode = 2
+context_menu = NodePath("../../../InventoryContext")
 is_from_chest = true
 
-[node name="Chest_UI_slot8" parent="NinePatchRect/ChestGridContainer" unique_id=564461424 instance=ExtResource("3_j0lnb")]
+[node name="Chest_UI_slot8" parent="NinePatchRect/ChestGridContainer" unique_id=564461424 node_paths=PackedStringArray("context_menu") instance=ExtResource("3_j0lnb")]
 layout_mode = 2
+context_menu = NodePath("../../../InventoryContext")
 is_from_chest = true
 
-[node name="Chest_UI_slot9" parent="NinePatchRect/ChestGridContainer" unique_id=430171112 instance=ExtResource("3_j0lnb")]
+[node name="Chest_UI_slot9" parent="NinePatchRect/ChestGridContainer" unique_id=430171112 node_paths=PackedStringArray("context_menu") instance=ExtResource("3_j0lnb")]
 layout_mode = 2
+context_menu = NodePath("../../../InventoryContext")
 is_from_chest = true
 
-[node name="Chest_UI_slot10" parent="NinePatchRect/ChestGridContainer" unique_id=2050797158 instance=ExtResource("3_j0lnb")]
+[node name="Chest_UI_slot10" parent="NinePatchRect/ChestGridContainer" unique_id=2050797158 node_paths=PackedStringArray("context_menu") instance=ExtResource("3_j0lnb")]
 layout_mode = 2
+context_menu = NodePath("../../../InventoryContext")
 is_from_chest = true
 
-[node name="Chest_UI_slot11" parent="NinePatchRect/ChestGridContainer" unique_id=1087257875 instance=ExtResource("3_j0lnb")]
+[node name="Chest_UI_slot11" parent="NinePatchRect/ChestGridContainer" unique_id=1087257875 node_paths=PackedStringArray("context_menu") instance=ExtResource("3_j0lnb")]
 layout_mode = 2
+context_menu = NodePath("../../../InventoryContext")
 is_from_chest = true
 
-[node name="Chest_UI_slot12" parent="NinePatchRect/ChestGridContainer" unique_id=1600748552 instance=ExtResource("3_j0lnb")]
+[node name="Chest_UI_slot12" parent="NinePatchRect/ChestGridContainer" unique_id=1600748552 node_paths=PackedStringArray("context_menu") instance=ExtResource("3_j0lnb")]
 layout_mode = 2
+context_menu = NodePath("../../../InventoryContext")
 is_from_chest = true
 
-[node name="Chest_UI_slot13" parent="NinePatchRect/ChestGridContainer" unique_id=546541084 instance=ExtResource("3_j0lnb")]
+[node name="Chest_UI_slot13" parent="NinePatchRect/ChestGridContainer" unique_id=546541084 node_paths=PackedStringArray("context_menu") instance=ExtResource("3_j0lnb")]
 layout_mode = 2
+context_menu = NodePath("../../../InventoryContext")
 is_from_chest = true
 
-[node name="Chest_UI_slot14" parent="NinePatchRect/ChestGridContainer" unique_id=343865196 instance=ExtResource("3_j0lnb")]
+[node name="Chest_UI_slot14" parent="NinePatchRect/ChestGridContainer" unique_id=343865196 node_paths=PackedStringArray("context_menu") instance=ExtResource("3_j0lnb")]
 layout_mode = 2
+context_menu = NodePath("../../../InventoryContext")
 is_from_chest = true
 
-[node name="Chest_UI_slot15" parent="NinePatchRect/ChestGridContainer" unique_id=589083911 instance=ExtResource("3_j0lnb")]
+[node name="Chest_UI_slot15" parent="NinePatchRect/ChestGridContainer" unique_id=589083911 node_paths=PackedStringArray("context_menu") instance=ExtResource("3_j0lnb")]
 layout_mode = 2
+context_menu = NodePath("../../../InventoryContext")
 is_from_chest = true
 
-[node name="Chest_UI_slot16" parent="NinePatchRect/ChestGridContainer" unique_id=1187231587 instance=ExtResource("3_j0lnb")]
+[node name="Chest_UI_slot16" parent="NinePatchRect/ChestGridContainer" unique_id=1187231587 node_paths=PackedStringArray("context_menu") instance=ExtResource("3_j0lnb")]
 layout_mode = 2
+context_menu = NodePath("../../../InventoryContext")
 is_from_chest = true
 
-[node name="Chest_UI_slot17" parent="NinePatchRect/ChestGridContainer" unique_id=583165924 instance=ExtResource("3_j0lnb")]
+[node name="Chest_UI_slot17" parent="NinePatchRect/ChestGridContainer" unique_id=583165924 node_paths=PackedStringArray("context_menu") instance=ExtResource("3_j0lnb")]
 layout_mode = 2
+context_menu = NodePath("../../../InventoryContext")
 is_from_chest = true
 
-[node name="Chest_UI_slot18" parent="NinePatchRect/ChestGridContainer" unique_id=1782135757 instance=ExtResource("3_j0lnb")]
+[node name="Chest_UI_slot18" parent="NinePatchRect/ChestGridContainer" unique_id=1782135757 node_paths=PackedStringArray("context_menu") instance=ExtResource("3_j0lnb")]
 layout_mode = 2
+context_menu = NodePath("../../../InventoryContext")
 is_from_chest = true
 
-[node name="Chest_UI_slot19" parent="NinePatchRect/ChestGridContainer" unique_id=1384024758 instance=ExtResource("3_j0lnb")]
+[node name="Chest_UI_slot19" parent="NinePatchRect/ChestGridContainer" unique_id=1384024758 node_paths=PackedStringArray("context_menu") instance=ExtResource("3_j0lnb")]
 layout_mode = 2
+context_menu = NodePath("../../../InventoryContext")
 is_from_chest = true
 
-[node name="Chest_UI_slot20" parent="NinePatchRect/ChestGridContainer" unique_id=1763694127 instance=ExtResource("3_j0lnb")]
+[node name="Chest_UI_slot20" parent="NinePatchRect/ChestGridContainer" unique_id=1763694127 node_paths=PackedStringArray("context_menu") instance=ExtResource("3_j0lnb")]
 layout_mode = 2
+context_menu = NodePath("../../../InventoryContext")
 is_from_chest = true
 
-[node name="Chest_UI_slot21" parent="NinePatchRect/ChestGridContainer" unique_id=1696009439 instance=ExtResource("3_j0lnb")]
+[node name="Chest_UI_slot21" parent="NinePatchRect/ChestGridContainer" unique_id=1696009439 node_paths=PackedStringArray("context_menu") instance=ExtResource("3_j0lnb")]
 layout_mode = 2
+context_menu = NodePath("../../../InventoryContext")
 is_from_chest = true
 
 [node name="PlayerGridContainer" type="GridContainer" parent="NinePatchRect" unique_id=803437090]
@@ -161,41 +182,53 @@ offset_transform_enabled = true
 offset_transform_pivot_ratio = Vector2(0, 0)
 columns = 4
 
-[node name="Chest_UI_slot" parent="NinePatchRect/PlayerGridContainer" unique_id=692058087 instance=ExtResource("3_j0lnb")]
+[node name="Chest_UI_slot" parent="NinePatchRect/PlayerGridContainer" unique_id=692058087 node_paths=PackedStringArray("context_menu") instance=ExtResource("3_j0lnb")]
 layout_mode = 2
+context_menu = NodePath("../../../InventoryContext")
 
-[node name="Chest_UI_slot2" parent="NinePatchRect/PlayerGridContainer" unique_id=267807478 instance=ExtResource("3_j0lnb")]
+[node name="Chest_UI_slot2" parent="NinePatchRect/PlayerGridContainer" unique_id=267807478 node_paths=PackedStringArray("context_menu") instance=ExtResource("3_j0lnb")]
 layout_mode = 2
+context_menu = NodePath("../../../InventoryContext")
 
-[node name="Chest_UI_slot3" parent="NinePatchRect/PlayerGridContainer" unique_id=1342828169 instance=ExtResource("3_j0lnb")]
+[node name="Chest_UI_slot3" parent="NinePatchRect/PlayerGridContainer" unique_id=1342828169 node_paths=PackedStringArray("context_menu") instance=ExtResource("3_j0lnb")]
 layout_mode = 2
+context_menu = NodePath("../../../InventoryContext")
 
-[node name="Chest_UI_slot4" parent="NinePatchRect/PlayerGridContainer" unique_id=1911439158 instance=ExtResource("3_j0lnb")]
+[node name="Chest_UI_slot4" parent="NinePatchRect/PlayerGridContainer" unique_id=1911439158 node_paths=PackedStringArray("context_menu") instance=ExtResource("3_j0lnb")]
 layout_mode = 2
+context_menu = NodePath("../../../InventoryContext")
 
-[node name="Chest_UI_slot5" parent="NinePatchRect/PlayerGridContainer" unique_id=141767223 instance=ExtResource("3_j0lnb")]
+[node name="Chest_UI_slot5" parent="NinePatchRect/PlayerGridContainer" unique_id=141767223 node_paths=PackedStringArray("context_menu") instance=ExtResource("3_j0lnb")]
 layout_mode = 2
+context_menu = NodePath("../../../InventoryContext")
 
-[node name="Chest_UI_slot6" parent="NinePatchRect/PlayerGridContainer" unique_id=1540314113 instance=ExtResource("3_j0lnb")]
+[node name="Chest_UI_slot6" parent="NinePatchRect/PlayerGridContainer" unique_id=1540314113 node_paths=PackedStringArray("context_menu") instance=ExtResource("3_j0lnb")]
 layout_mode = 2
+context_menu = NodePath("../../../InventoryContext")
 
-[node name="Chest_UI_slot7" parent="NinePatchRect/PlayerGridContainer" unique_id=1061591208 instance=ExtResource("3_j0lnb")]
+[node name="Chest_UI_slot7" parent="NinePatchRect/PlayerGridContainer" unique_id=1061591208 node_paths=PackedStringArray("context_menu") instance=ExtResource("3_j0lnb")]
 layout_mode = 2
+context_menu = NodePath("../../../InventoryContext")
 
-[node name="Chest_UI_slot8" parent="NinePatchRect/PlayerGridContainer" unique_id=1173626175 instance=ExtResource("3_j0lnb")]
+[node name="Chest_UI_slot8" parent="NinePatchRect/PlayerGridContainer" unique_id=1173626175 node_paths=PackedStringArray("context_menu") instance=ExtResource("3_j0lnb")]
 layout_mode = 2
+context_menu = NodePath("../../../InventoryContext")
 
-[node name="Chest_UI_slot9" parent="NinePatchRect/PlayerGridContainer" unique_id=796545057 instance=ExtResource("3_j0lnb")]
+[node name="Chest_UI_slot9" parent="NinePatchRect/PlayerGridContainer" unique_id=796545057 node_paths=PackedStringArray("context_menu") instance=ExtResource("3_j0lnb")]
 layout_mode = 2
+context_menu = NodePath("../../../InventoryContext")
 
-[node name="Chest_UI_slot10" parent="NinePatchRect/PlayerGridContainer" unique_id=2055063522 instance=ExtResource("3_j0lnb")]
+[node name="Chest_UI_slot10" parent="NinePatchRect/PlayerGridContainer" unique_id=2055063522 node_paths=PackedStringArray("context_menu") instance=ExtResource("3_j0lnb")]
 layout_mode = 2
+context_menu = NodePath("../../../InventoryContext")
 
-[node name="Chest_UI_slot11" parent="NinePatchRect/PlayerGridContainer" unique_id=398351378 instance=ExtResource("3_j0lnb")]
+[node name="Chest_UI_slot11" parent="NinePatchRect/PlayerGridContainer" unique_id=398351378 node_paths=PackedStringArray("context_menu") instance=ExtResource("3_j0lnb")]
 layout_mode = 2
+context_menu = NodePath("../../../InventoryContext")
 
-[node name="Chest_UI_slot12" parent="NinePatchRect/PlayerGridContainer" unique_id=1434422556 instance=ExtResource("3_j0lnb")]
+[node name="Chest_UI_slot12" parent="NinePatchRect/PlayerGridContainer" unique_id=1434422556 node_paths=PackedStringArray("context_menu") instance=ExtResource("3_j0lnb")]
 layout_mode = 2
+context_menu = NodePath("../../../InventoryContext")
 
 [node name="InventoryContext" parent="." unique_id=1779115200 instance=ExtResource("4_j0lnb")]
 visible = false
@@ -204,3 +237,7 @@ offset_left = 1.0
 offset_top = 740.0
 offset_right = -1671.0
 offset_bottom = -289.0
+
+[connection signal="discard" from="InventoryContext" to="." method="_on_inventory_context_discard"]
+[connection signal="transfer" from="InventoryContext" to="." method="_on_inventory_context_transfer"]
+[connection signal="use_item" from="InventoryContext" to="." method="_on_inventory_context_use_item"]

@@ -4,6 +4,7 @@
 [ext_resource type="Resource" uid="uid://d3sp8lxeb34fa" path="res://data/player_inventory_data.tres" id="2_gdab3"]
 [ext_resource type="Shader" uid="uid://dq6x5ajqcg4d" path="res://shaders/overlay.gdshader" id="3_tgyl1"]
 [ext_resource type="PackedScene" uid="uid://chcjof76xykh8" path="res://components/health/health_component.tscn" id="4_bls4j"]
+[ext_resource type="PackedScene" uid="uid://dwkuutr54e8u3" path="res://ui/hud/player_gui.tscn" id="5_fkugw"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_fsx4v"]
 height = 1.75
@@ -59,3 +60,5 @@ extra_cull_margin = 16384.0
 mesh = SubResource("QuadMesh_jq8tk")
 
 [node name="HealthComponent" parent="." unique_id=829658769 instance=ExtResource("4_bls4j")]
+
+[node name="PlayerGUI" parent="." unique_id=1809929944 instance=ExtResource("5_fkugw")]

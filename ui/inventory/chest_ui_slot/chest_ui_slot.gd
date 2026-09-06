@@ -2,6 +2,7 @@ extends Button
 
 @onready var item_visual: Sprite2D = $CenterContainer/Panel/ItemDisplay
 @onready var amount_text: Label = $CenterContainer/Panel/Label
+@export var context_menu: Control
 
 var current_slot_item: InvSlot
 var is_chest_interface = true
@@ -20,5 +21,4 @@ func update(slot: InvSlot):
 		amount_text.text = str(current_slot_item.amount)
 
 func _on_pressed() -> void:
-	var chest_context_node = get_node("/root/Playground/ChestInventory/ChestInventoryUi/InventoryContext")
-	chest_context_node.show_menu(current_slot_item, is_chest_interface, is_from_chest)
+	context_menu.show_menu(current_slot_item, is_chest_interface, is_from_chest)

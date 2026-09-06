@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://neaesepynan6" path="res://ui/menus/pause_menu/pause_menu.gd" id="1_3wgvu"]
 [ext_resource type="Shader" uid="uid://li2fyfgh5bxg" path="res://ui/menus/pause_menu/pause_menu.gdshader" id="1_kmitm"]
+[ext_resource type="AudioStream" uid="uid://cs5dav0lwjqd3" path="res://assets/audio/sfx/ui/menu/click.wav" id="2_cid4m"]
+[ext_resource type="PackedScene" uid="uid://bd4j7mnm3sul5" path="res://ui/menus/settings/settings.tscn" id="3_yio2i"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_620c7"]
 shader = ExtResource("1_kmitm")
@@ -306,7 +308,7 @@ _data = {
 &"blur": SubResource("Animation_62434")
 }
 
-[node name="PauseMenu" type="Control" unique_id=873590892]
+[node name="PauseMenu" type="Control" unique_id=873590892 node_paths=PackedStringArray("pause_menu_ui")]
 process_mode = 3
 layout_mode = 3
 anchors_preset = 15
@@ -315,6 +317,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_3wgvu")
+pause_menu_ui = NodePath(".")
+click_sfx = ExtResource("2_cid4m")
+settings_scene = ExtResource("3_yio2i")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=276430727]
 material = SubResource("ShaderMaterial_620c7")

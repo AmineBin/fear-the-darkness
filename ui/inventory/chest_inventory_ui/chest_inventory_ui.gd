@@ -4,6 +4,8 @@ extends Control
 @export var chest_inv: Inv
 @onready var chest_slots: Array = $NinePatchRect/ChestGridContainer.get_children()
 @onready var player_slots: Array = $NinePatchRect/PlayerGridContainer.get_children()
+@export var player: CharacterBody3D
+
 var current_chest_node
 
 var is_open = false
@@ -28,7 +30,7 @@ func open(chest):
 func close():
 	visible = false
 	is_open = false
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)	
 	
 func _unhandled_input(event: InputEvent) -> void:
 	if is_open:
@@ -39,3 +41,24 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("toggle_inventory") && is_open:
 		close()
 	
+func _on_inventory_context_discard(current_slot: InvSlot) -> void:
+	if current_slot in player_inv.slots:
+		player_inv.discard_item(current_slot)
+	elif current_slot in chest_inv.slots:
+		chest_inv.discard_item(current_slot)
+	
+func _on_inventory_context_transfer(current_slot: InvSlot) -> void:
+	if current_slot in player_inv.slots:
+		player_inv.transfer_item(chest_inv, current_slot)
+	elif current_slot in chest_inv.slots:
+		chest_inv.transfer_item(player_inv, current_slot)
+
+func _on_inventory_context_use_item(current_slot: InvSlot) -> void:
+	if current_slot and not current_slot.is_empty_slot():
+		var was_used = current_slot.item.use(player)
+		
+		if was_used:
+			if current_slot in player_inv.slots:
+				player_inv.discard_item(current_slot)
+			elif current_slot in chest_inv.slots:
+				chest_inv.discard_item(current_slot)
