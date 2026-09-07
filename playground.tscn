@@ -60,17 +60,11 @@ metadata/_edit_use_anchors_ = true
 [node name="ChestInventoryUi" parent="ChestInventory" unique_id=1815613746 instance=ExtResource("4_pactg")]
 metadata/_edit_use_anchors_ = true
 
-[node name="Settings" type="CanvasLayer" parent="." unique_id=2077003104]
-
-[node name="Settings" parent="Settings" unique_id=327072911 instance=ExtResource("6_5m40n")]
-visible = false
-
 [node name="PauseMenu" type="CanvasLayer" parent="." unique_id=1098256807]
 
 [node name="PauseMenu" parent="PauseMenu" unique_id=873590892 node_paths=PackedStringArray("inventory_ui", "chest_inventory_ui") instance=ExtResource("6_5m40n")]
 inventory_ui = NodePath("../../Inventory/Inv_UI")
 chest_inventory_ui = NodePath("../../ChestInventory/ChestInventoryUi")
-settings_scene = ExtResource("6_5m40n")
 
 [node name="Player" parent="." unique_id=865410242 instance=ExtResource("7_x6kx1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7075804, 1.316277, 0)

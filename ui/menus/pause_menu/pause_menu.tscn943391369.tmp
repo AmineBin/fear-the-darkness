@@ -308,7 +308,7 @@ _data = {
 &"blur": SubResource("Animation_62434")
 }
 
-[node name="PauseMenu" type="Control" unique_id=873590892]
+[node name="PauseMenu" type="Control" unique_id=873590892 node_paths=PackedStringArray("pause_menu_ui")]
 process_mode = 3
 layout_mode = 3
 anchors_preset = 15
@@ -317,6 +317,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_3wgvu")
+pause_menu_ui = NodePath(".")
 click_sfx = ExtResource("2_cid4m")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=276430727]
@@ -387,10 +388,8 @@ alignment = 0
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1320915946]
 libraries/ = SubResource("AnimationLibrary_mw7mh")
 
-[node name="Settings" parent="." unique_id=1400086558 node_paths=PackedStringArray("pause_menu") instance=ExtResource("3_yio2i")]
-visible = false
+[node name="Settings" parent="." unique_id=1400086558 instance=ExtResource("3_yio2i")]
 layout_mode = 0
-pause_menu = NodePath("..")
 
 [connection signal="pressed" from="VBoxContainer/Resume" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_settings_pressed"]
