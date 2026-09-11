@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://f5cbcdd8h18a"]
+
+[ext_resource type="PackedScene" uid="uid://cyyo4jetp4o3b" path="res://ui/menus/save/slots/save_slots_display.tscn" id="1_ui110"]
+[ext_resource type="Script" uid="uid://mgu622sgycv2" path="res://ui/menus/save/save_data/save_ui.gd" id="2_p1q27"]
+
+[node name="SaveUi" unique_id=1400086558 instance=ExtResource("1_ui110")]
+visible = false
+script = ExtResource("2_p1q27")
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="ColorRect" parent_id_path=PackedInt32Array(907971479) index="1" unique_id=627570088]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -189.0
+offset_top = 67.0
+offset_right = 190.0
+offset_bottom = 120.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Save" type="Button" parent="ColorRect/HBoxContainer3" index="0" unique_id=43904774]
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_font_sizes/font_size = 32
+text = "Save data"
+
+[connection signal="pressed" from="ColorRect/HBoxContainer3/Save" to="." method="_on_save_pressed"]

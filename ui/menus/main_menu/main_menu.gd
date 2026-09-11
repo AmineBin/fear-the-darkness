@@ -4,6 +4,7 @@ var button_type = null
 @export var click_sfx: AudioStream
 @export_file("*.tscn") var settings_scene_path: String
 @export_file("*.tscn") var game_scene_path: String
+@export_file("*.tscn") var save_load_scene_path: String
 
 func _on_start_pressed() -> void:
 	SoundPlayer.audio_play(click_sfx)
@@ -11,6 +12,18 @@ func _on_start_pressed() -> void:
 	$FadeTransition/fade_timer.start()
 	$FadeTransition/AnimationPlayer.play("fade_in")
 	get_tree().change_scene_to_file(game_scene_path)
+
+func _on_load_save_pressed() -> void:
+	var confirm_control = ConfirmMenuUi.get_node_or_null("Control")
+	confirm_control.show()
+	confirm_control.confirm.connect(_change_scene_to_save)
+	
+func _change_scene_to_save() -> void:
+	SoundPlayer.audio_play(click_sfx)
+	$FadeTransition.show()
+	$FadeTransition/fade_timer.start()
+	$FadeTransition/AnimationPlayer.play("fade_in")
+	get_tree().change_scene_to_file(save_load_scene_path)
 	
 func _on_options_pressed() -> void:
 	SoundPlayer.audio_play(click_sfx)

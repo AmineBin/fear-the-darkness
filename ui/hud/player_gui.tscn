@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://biof71vos4bju" path="res://assets/textures/gui/crosshair001.png" id="1_s3sex"]
 [ext_resource type="AudioStream" uid="uid://cs5dav0lwjqd3" path="res://assets/audio/sfx/ui/menu/click.wav" id="2_hffkq"]
 
-[node name="PlayerGUI" type="Control" unique_id=1809929944]
+[node name="PlayerGUI" type="Control" unique_id=1809929944 groups=["gui"]]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

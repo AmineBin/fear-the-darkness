@@ -18,6 +18,9 @@ config/icon="res://icon.svg"
 [autoload]
 
 SoundPlayer="*uid://cv0ob8a7sdewj"
+SaveLoad="*uid://crlf648y5uvpm"
+ConfirmMenuUi="*uid://bejxmyojkb2gq"
+PlayTimeTracker="*uid://cscwc7cheixhs"
 
 [debug_draw_3d]
 
@@ -39,6 +42,7 @@ enabled=PackedStringArray("res://addons/gut/plugin.cfg", "res://addons/stairs/pl
 
 folder_colors={
 "res://assets/": "purple",
+"res://auto_load/": "gray",
 "res://components/": "gray",
 "res://data/": "orange",
 "res://entities/": "red",

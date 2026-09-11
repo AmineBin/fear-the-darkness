@@ -112,14 +112,14 @@ _data = {
 &"open": SubResource("Animation_p37x8")
 }
 
-[node name="MetalDoor" type="Node3D" unique_id=802934540 node_paths=PackedStringArray("animation_player")]
+[node name="MetalDoor" type="Node3D" unique_id=802934540 node_paths=PackedStringArray("animation_player") groups=["doors"]]
 script = ExtResource("1_lbmyp")
 animation_player = NodePath("AnimationPlayer")
 
 [node name="hinge" type="Node3D" parent="." unique_id=120252099]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.50545764, 0, 0)
 
-[node name="PhysicalMetalDoor" type="StaticBody3D" parent="hinge" unique_id=1092827032 groups=["Door"]]
+[node name="PhysicalMetalDoor" type="StaticBody3D" parent="hinge" unique_id=1092827032]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.50545764, 0, 0)
 collision_layer = 2
 script = ExtResource("2_2r7x4")

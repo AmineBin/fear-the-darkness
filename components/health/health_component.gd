@@ -7,10 +7,12 @@ class_name HealthComponent
 
 signal died
 signal health_changed
+signal hit
 
 func take_damage(amount):
 	health = clamp(health - amount, 0, max_health) 
 	health_changed.emit(health)
+	hit.emit()
 	if health <= 0:
 		died.emit()
 		

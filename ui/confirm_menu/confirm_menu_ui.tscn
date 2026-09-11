@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://bejxmyojkb2gq"]
+
+[ext_resource type="Script" uid="uid://ctwnoc56ijl8x" path="res://auto_load/confirm_menu/confirm_menu_ui.gd" id="1_fxf2k"]
+
+[node name="ConfirmMenuUi" type="CanvasLayer" unique_id=1774387845]
+
+[node name="Control" type="Control" parent="." unique_id=1146420908]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_fxf2k")
+
+[node name="ColorRect" type="ColorRect" parent="Control" unique_id=1274994144]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 536.0
+offset_top = 292.75
+offset_right = 1344.0
+offset_bottom = 747.25
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.1728327, 0.17283267, 0.17283267, 1)
+
+[node name="Label" type="Label" parent="Control" unique_id=585810900]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 686.0
+offset_top = 423.0
+offset_right = 1194.0
+offset_bottom = 468.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
+theme_override_font_sizes/font_size = 32
+text = "Are you sure you wanna do this ?"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control" unique_id=1258405595]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 805.0
+offset_top = 540.0
+offset_right = 1076.0
+offset_bottom = 593.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Yes" type="Button" parent="Control/HBoxContainer" unique_id=536003010]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_font_sizes/font_size = 32
+text = ">> Yes"
+flat = true
+alignment = 0
+
+[node name="No" type="Button" parent="Control/HBoxContainer" unique_id=380245447]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_font_sizes/font_size = 32
+text = ">> No"
+flat = true
+alignment = 0
+
+[connection signal="pressed" from="Control/HBoxContainer/Yes" to="." method="_on_yes_pressed"]
+[connection signal="pressed" from="Control/HBoxContainer/Yes" to="Control" method="_on_yes_pressed"]
+[connection signal="pressed" from="Control/HBoxContainer/No" to="." method="_on_no_pressed"]
+[connection signal="pressed" from="Control/HBoxContainer/No" to="Control" method="_on_no_pressed"]

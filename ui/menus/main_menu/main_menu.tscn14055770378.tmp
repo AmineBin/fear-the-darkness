@@ -15,7 +15,7 @@ script = ExtResource("1_6s8a2")
 click_sfx = ExtResource("2_j3h1s")
 settings_scene_path = "uid://bd4j7mnm3sul5"
 game_scene_path = "uid://b0sorb1tab3bw"
-save_load_scene_path = "uid://cs2ccqo2w3oxj"
+save_scene_path = "uid://cyyo4jetp4o3b"
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=849592585]
 layout_mode = 0

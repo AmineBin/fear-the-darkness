@@ -8,16 +8,22 @@ var sprint_speed = 3.5
 var health = 4
 var jump_velocity = 3
 var gravity = 9.8
+var damage = 1
 
 const detection_range = 10.0
 const attack_trigger_range = 2.0
 const attack_register_range = 3.5
+
 var can_attack = true
 var attack_cooldown = 1.0
 var state_machine
+
 @onready var nav_agent = $NavigationAgent3D
 @onready var anim_tree = $AnimationTree
-var player: CharacterBody3D
+
+@onready var player = get_tree().get_first_node_in_group("player")
+
+signal target_hit
 
 func _ready() -> void:
 	speed = walk_speed
@@ -69,9 +75,11 @@ func hit_finished():
 		return
 	if global_position.distance_to(player.global_position) < attack_register_range:
 		can_attack = false
-		player.take_damage(1)
+		var player_health_component = player.get_node_or_null("HealthComponent")
+		deal_damage(player_health_component, damage)
 		await get_tree().create_timer(attack_cooldown).timeout
 		can_attack = true
 		
 func deal_damage(target, damage):
-	target.health -= damage
+		target.take_damage(damage)
+		target_hit.emit()

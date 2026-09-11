@@ -4,3 +4,5 @@
 
 [node name="HealthComponent" type="Node" unique_id=829658769]
 script = ExtResource("1_t2tvt")
+
+[connection signal="hit" from="." to="." method="_on_hit"]

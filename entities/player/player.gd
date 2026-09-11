@@ -17,18 +17,16 @@ var held_object = null
 var speed
 var walk_speed = 2.0
 var sprint_speed = 3.5
-var health = 4
 var jump_velocity = 3
 var gravity = 9.8
 
 @onready var head = $Head
 @onready var camera = $Head/Camera3D
 @onready var seecast = $Head/Camera3D/SeeCast
-@onready var gui = $PlayerGUI
+@onready var gui = get_tree().get_first_node_in_group("gui")
 
 @export var inv: Inv
 
-signal player_hit(current_health: int)
 
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -87,12 +85,6 @@ func _headbob(time) -> Vector3:
 func collect(item):
 	inv.insert(item)
 	
-func take_damage(amount):
-	player_hit.emit(health)
-	
-func die():
-	self.queue_free()
-	
 # Si le joueur est à porté d'un prop il peut intéragir avec
 func interact():
 	if seecast.is_colliding():
@@ -104,3 +96,6 @@ func interact():
 func display_message(text: String) -> void:
 	if gui and gui.has_method("show_text"):
 		gui.show_text(text)
+
+func _on_health_component_died() -> void:
+	self.queue_free()

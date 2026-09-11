@@ -112,5 +112,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.281483, 0.5000365, -5.378
 
 [node name="Save" parent="." unique_id=143762462 instance=ExtResource("14_ofol1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.131048, 1, -4.985965)
-
-[connection signal="player_hit" from="Player" to="." method="_on_player_player_hit"]

@@ -1,13 +1,12 @@
 [gd_scene format=3 uid="uid://cyyo4jetp4o3b"]
 
-[ext_resource type="Script" uid="uid://1k3i73m3un8m" path="res://ui/menus/settings/settings.gd" id="1_o7v8k"]
-[ext_resource type="PackedScene" uid="uid://uaktb6mru1ob" path="res://ui/menus/transition/fade_transition.tscn" id="3_vstk4"]
+[ext_resource type="Script" uid="uid://dwwe0a21skha4" path="res://ui/menus/save/slots/save_slots_display.gd" id="1_1gn37"]
+[ext_resource type="PackedScene" uid="uid://uaktb6mru1ob" path="res://ui/menus/transition/fade_transition.tscn" id="2_ffsan"]
 
-[node name="Settings" type="Control" unique_id=1400086558]
-process_mode = 3
+[node name="SaveUi" type="Control" unique_id=1400086558]
 layout_mode = 3
 anchors_preset = 0
-script = ExtResource("1_o7v8k")
+script = ExtResource("1_1gn37")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=907971479]
 layout_mode = 0
@@ -52,25 +51,7 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = "3:13:54"
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="ColorRect/VBoxContainer" unique_id=1700393986]
-layout_mode = 2
-
-[node name="Save" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer2" unique_id=817523933]
-layout_mode = 2
-theme_override_font_sizes/font_size = 32
-text = "Save"
-
-[node name="Load" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer2" unique_id=958263878]
-layout_mode = 2
-theme_override_font_sizes/font_size = 32
-text = "Load"
-
-[node name="Delete" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer2" unique_id=414711133]
-layout_mode = 2
-theme_override_font_sizes/font_size = 32
-text = "Delete"
-
-[node name="FadeTransition" parent="." unique_id=1973854213 instance=ExtResource("3_vstk4")]
+[node name="FadeTransition" parent="." unique_id=1973854213 instance=ExtResource("2_ffsan")]
 visible = false
 layout_mode = 1
 offset_right = 1920.0
