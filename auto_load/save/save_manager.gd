@@ -90,6 +90,12 @@ func load_inventories():
 	player_inv_ui.set_inventory(save_file_data.player_inventory)
 	chest_ui.set_inventory(save_file_data.chest_inventory, save_file_data.player_inventory)
 
+func load_props():
+	var items = get_tree().get_nodes_in_group("items")
+	for item in items:
+		if str(item.get_path()) in save_file_data.picked_up_items:
+			item.queue_free()
+
 func load_all():
 	_load()
 	if get_tree().current_scene.scene_file_path != game_scene_path:
@@ -98,3 +104,8 @@ func load_all():
 	load_player()
 	load_doors()
 	load_inventories()
+	load_props()
+
+# Vider la mémoire de tout élément sauvegardé
+func reset_save_data():
+	save_file_data = SaveDataResource.new()

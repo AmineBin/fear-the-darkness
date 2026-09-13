@@ -10,7 +10,7 @@ albedo_color = Color(1, 1, 0.02745098, 1)
 
 [sub_resource type="PrismMesh" id="PrismMesh_3xd07"]
 
-[node name="Key" type="Area3D" unique_id=927341689]
+[node name="Key" type="Area3D" unique_id=927341689 groups=["items"]]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 collision_layer = 2
 script = ExtResource("1_ivv6y")
