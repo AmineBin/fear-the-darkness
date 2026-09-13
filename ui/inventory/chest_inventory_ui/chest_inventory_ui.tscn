@@ -7,7 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://dle6uayfrjw7x" path="res://ui/inventory/chest_ui_slot/chest_ui_slot.tscn" id="3_j0lnb"]
 [ext_resource type="PackedScene" uid="uid://crrigloaq0hlh" path="res://ui/inventory/inventory_context_ui/inventory_context.tscn" id="4_j0lnb"]
 
-[node name="ChestInventoryUi" type="Control" unique_id=1815613746]
+[node name="ChestInventoryUi" type="Control" unique_id=1815613746 groups=["chest_inv_ui"]]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

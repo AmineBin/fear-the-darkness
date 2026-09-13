@@ -36,7 +36,8 @@ func _unhandled_input(event):
 		head.rotate_y(-event.relative.x * sensitivity)
 		camera.rotate_x(-event.relative.y * sensitivity)
 		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-70), deg_to_rad(70))
-
+	
+	
 func _physics_process(delta):
 	
 	if not is_on_floor():

@@ -1,0 +1,1 @@
+Ajouter un Autoload pour fermer toutes les UI quand on fait echap et resume le jeu

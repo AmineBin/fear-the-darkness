@@ -13,6 +13,7 @@ func _ready():
 
 # Mettre à jour les slots
 func update_slots():
+	print("update_slots appelée")
 	for i in range(min(inv.slots.size(), slots.size())):
 		slots[i].update(inv.slots[i])
 	
@@ -53,3 +54,9 @@ func _on_inventory_context_use_item(slot: InvSlot) -> void:
 		
 		if was_used:
 			inv.discard_item(slot)
+
+# Reconnecter l'inventaire	
+func set_inventory(new_inv: Inv):
+	inv = new_inv
+	inv.update.connect(update_slots)
+	update_slots()

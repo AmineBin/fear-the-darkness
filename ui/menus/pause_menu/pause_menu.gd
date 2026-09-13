@@ -5,6 +5,7 @@ extends Control
 @export var click_sfx: AudioStream
 
 @onready var settings_ui: Control = $Settings
+@export_file("*.tscn") var main_menu_scene_path: String
 
 var is_game_paused = false 
 func _ready() -> void:
@@ -15,7 +16,6 @@ func resume():
 	hide()
 	settings_ui.visible = false
 	$AnimationPlayer.play_backwards("blur")
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	is_game_paused = false
 	
 func pause():
@@ -34,12 +34,14 @@ func ui_opened():
 func _on_resume_pressed() -> void:
 	SoundPlayer.audio_play(click_sfx)
 	resume()
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func _on_quit_menu_pressed() -> void:
-	get_tree().paused = false
 	SoundPlayer.audio_play(click_sfx)
-	settings_ui.visible = false
 	hide()
+	settings_ui.visible = false
+	get_tree().paused = false
+	get_tree().change_scene_to_file(main_menu_scene_path)
 	
 func _on_quit_desktop_pressed() -> void:
 	SoundPlayer.audio_play(click_sfx)
@@ -50,9 +52,10 @@ func _on_settings_pressed() -> void:
 	settings_ui.show()
 	
 func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("esc") && inventory_ui.is_open == false && chest_inventory_ui.is_open == false:
+	if event.is_action_pressed("esc") && inventory_ui.is_open == false && ChestInventoryUi.is_open == false:
 		if is_game_paused:
 			resume()
+			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 		else:
 			pause()
 		

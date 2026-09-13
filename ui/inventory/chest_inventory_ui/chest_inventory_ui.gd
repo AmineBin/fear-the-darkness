@@ -13,9 +13,10 @@ var is_open = false
 func _ready():
 	player_inv.update.connect(update_slots)
 	update_slots()
-	close()
+	visible = false
+	is_open = false
 	
-func update_slots():
+func update_slots(): 
 	for i in range(min(player_inv.slots.size(), player_slots.size())):
 		player_slots[i].update(player_inv.slots[i])
 	for i in range(min(chest_inv.slots.size(), chest_slots.size())):
@@ -62,3 +63,13 @@ func _on_inventory_context_use_item(current_slot: InvSlot) -> void:
 				player_inv.discard_item(current_slot)
 			elif current_slot in chest_inv.slots:
 				chest_inv.discard_item(current_slot)
+
+# Reconnecter les inventaires			
+func set_inventory(new_chest_inv:Inv, new_player_inv: Inv):
+	chest_inv = new_chest_inv
+	chest_inv.update.connect(update_slots)
+	
+	player_inv = new_player_inv
+	player_inv.update.connect(update_slots)
+		
+	update_slots()

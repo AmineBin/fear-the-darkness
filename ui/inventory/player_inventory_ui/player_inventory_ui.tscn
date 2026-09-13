@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dab2qf3tvr0ou" path="res://ui/health_display_ui/health_display_ui.tscn" id="4_mme0t"]
 [ext_resource type="PackedScene" uid="uid://crrigloaq0hlh" path="res://ui/inventory/inventory_context_ui/inventory_context.tscn" id="5_iy21j"]
 
-[node name="Inv_UI" type="Control" unique_id=1333805855]
+[node name="Inv_UI" type="Control" unique_id=1333805855 groups=["player_inv"]]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

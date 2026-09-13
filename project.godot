@@ -21,6 +21,7 @@ SoundPlayer="*uid://cv0ob8a7sdewj"
 SaveLoad="*uid://crlf648y5uvpm"
 ConfirmMenuUi="*uid://bejxmyojkb2gq"
 PlayTimeTracker="*uid://cscwc7cheixhs"
+ChestInventoryUi="*uid://2dh0may14cq5"
 
 [debug_draw_3d]
 

@@ -318,6 +318,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_3wgvu")
 click_sfx = ExtResource("2_cid4m")
+main_menu_scene_path = "uid://c8puj0kfuhq5n"
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=276430727]
 material = SubResource("ShaderMaterial_620c7")
