@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("1_kwxk8")
-name = "med_kit"
+name = "med kit"
 texture = ExtResource("2_ksb27")
 item_type = "heal"
 metadata/_custom_type_script = "uid://dev7jwrvam3ah"

@@ -14,11 +14,6 @@ func _on_start_pressed() -> void:
 	get_tree().change_scene_to_file(game_scene_path)
 
 func _on_load_save_pressed() -> void:
-	var confirm_control = ConfirmMenuUi.get_node_or_null("Control")
-	confirm_control.show()
-	confirm_control.confirm.connect(_change_scene_to_save)
-	
-func _change_scene_to_save() -> void:
 	SoundPlayer.audio_play(click_sfx)
 	$FadeTransition.show()
 	$FadeTransition/fade_timer.start()
