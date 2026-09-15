@@ -32,7 +32,8 @@ func discard_item_from_slot(slot: InvSlot) -> void:
 	if slot and not slot.is_empty_slot():
 		slot.discard_item()
 		update.emit()
-		
+
+# transférer l'item du slot
 func transfer_item(target_inv: Inv, slot: InvSlot) -> void:
 	if slot and not slot.is_empty_slot() and target_inv:
 		target_inv.insert(slot.item)

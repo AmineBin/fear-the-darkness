@@ -12,7 +12,10 @@ var is_open = false
 func _ready():
 	visible = false
 	is_open = false
-	
+	var inv_action_ui_ctrl = InvActionUi.get_node_or_null("Control")
+	inv_action_ui_ctrl.discard.connect(_on_inventory_context_discard)
+	inv_action_ui_ctrl.use_item.connect(_on_inventory_context_use_item)
+	inv_action_ui_ctrl.transfer.connect(_on_inventory_context_transfer)
 
 # faudra modifier
 func update_slots(): 
@@ -42,30 +45,30 @@ func _unhandled_input(event: InputEvent) -> void:
 		close()
 
 # On garde
-func _on_inventory_context_discard(slot: InvSlot) -> void:
-	if slot in player_inv.slots:
-		player_inv.discard_item_from_slot(slot)
-	elif slot in chest_inv.slots:
-		chest_inv.discard_item_from_slot(slot)
+func _on_inventory_context_discard(current_slot: InvSlot) -> void:
+	if current_slot in player_inv.slots:
+		player_inv.discard_item_from_slot(current_slot)
+	elif current_slot in chest_inv.slots:
+		chest_inv.discard_item_from_slot(current_slot)
 
-# On garde
-#func _on_inventory_context_transfer(current_slot: InvSlot) -> void:
-	#if current_slot in player_inv.slots:
-		#player_inv.transfer_item(chest_inv, current_slot)
-	#elif current_slot in chest_inv.slots:
-		#chest_inv.transfer_item(player_inv, current_slot)
+func _on_inventory_context_use_item(current_slot: InvSlot) -> void:
+	var player = get_tree().get_first_node_in_group("player")
+	if current_slot and not current_slot.is_empty_slot():
+		var was_used = current_slot.item.use(player)
+		
+		if was_used:
+			if current_slot in player_inv.slots:
+				player_inv.discard_item(current_slot)
+			elif current_slot in chest_inv.slots:
+				chest_inv.discard_item(current_slot)
 
-#func _on_inventory_context_use_item(current_slot: InvSlot) -> void:
-	#var player = get_tree().get_first_node_in_group("player")
-	#if current_slot and not current_slot.is_empty_slot():
-		#var was_used = current_slot.item.use(player)
-		#
-		#if was_used:
-			#if current_slot in player_inv.slots:
-				#player_inv.discard_item(current_slot)
-			#elif current_slot in chest_inv.slots:
-				#chest_inv.discard_item(current_slot)
-
+# Demander à l'inventaire de transférer l'item du slot
+func _on_inventory_context_transfer(current_slot: InvSlot) -> void:
+	if current_slot in player_inv.slots:
+		player_inv.transfer_item(chest_inv, current_slot)
+	elif current_slot in chest_inv.slots:
+		chest_inv.transfer_item(player_inv, current_slot)
+		
 # Reconnecter les inventaires			
 func set_inventories(new_chest_inv:Inv, new_player_inv: Inv):
 	set_chest_inventory(new_chest_inv)

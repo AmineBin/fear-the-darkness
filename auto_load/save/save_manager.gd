@@ -76,11 +76,15 @@ func load_doors() -> void:
 			
 func load_inventories():
 	var player = get_tree().get_first_node_in_group("player")
-	player.inv = save_file_data.player_inventory
 	var player_inv_ui = get_tree().get_first_node_in_group("player_inv_ui")
+	var chest_inv_ui = get_tree().get_first_node_in_group("chest_inv_ui")
+	
+	player.inv = save_file_data.player_inventory
+	chest_inv_ui.chest_inv = save_file_data.chest_inventory
+	
 	player_inv_ui.set_inventory(player.inv)
-	for s in player.inv.slots:
-		print(s.item, " x", s.amount)
+	chest_inv_ui.set_inventories(chest_inv_ui.chest_inv, player.inv)
+	
 
 func load_props():
 	var items = get_tree().get_nodes_in_group("items")

@@ -62,87 +62,66 @@ columns = 7
 
 [node name="inventory_UI_slot" parent="NinePatchRect/ChestGridContainer" unique_id=2019737328 instance=ExtResource("3_4yo3x")]
 layout_mode = 2
-is_from_chest_ui = true
 
 [node name="inventory_UI_slot2" parent="NinePatchRect/ChestGridContainer" unique_id=1126578001 instance=ExtResource("3_4yo3x")]
 layout_mode = 2
-is_from_chest_ui = true
 
 [node name="inventory_UI_slot3" parent="NinePatchRect/ChestGridContainer" unique_id=525893259 instance=ExtResource("3_4yo3x")]
 layout_mode = 2
-is_from_chest_ui = true
 
 [node name="inventory_UI_slot4" parent="NinePatchRect/ChestGridContainer" unique_id=1266495720 instance=ExtResource("3_4yo3x")]
 layout_mode = 2
-is_from_chest_ui = true
 
 [node name="inventory_UI_slot5" parent="NinePatchRect/ChestGridContainer" unique_id=582001285 instance=ExtResource("3_4yo3x")]
 layout_mode = 2
-is_from_chest_ui = true
 
 [node name="inventory_UI_slot6" parent="NinePatchRect/ChestGridContainer" unique_id=1846720499 instance=ExtResource("3_4yo3x")]
 layout_mode = 2
-is_from_chest_ui = true
 
 [node name="inventory_UI_slot7" parent="NinePatchRect/ChestGridContainer" unique_id=413252531 instance=ExtResource("3_4yo3x")]
 layout_mode = 2
-is_from_chest_ui = true
 
 [node name="inventory_UI_slot8" parent="NinePatchRect/ChestGridContainer" unique_id=1511878312 instance=ExtResource("3_4yo3x")]
 layout_mode = 2
-is_from_chest_ui = true
 
 [node name="inventory_UI_slot9" parent="NinePatchRect/ChestGridContainer" unique_id=1182177746 instance=ExtResource("3_4yo3x")]
 layout_mode = 2
-is_from_chest_ui = true
 
 [node name="inventory_UI_slot10" parent="NinePatchRect/ChestGridContainer" unique_id=1093660975 instance=ExtResource("3_4yo3x")]
 layout_mode = 2
-is_from_chest_ui = true
 
 [node name="inventory_UI_slot11" parent="NinePatchRect/ChestGridContainer" unique_id=804677956 instance=ExtResource("3_4yo3x")]
 layout_mode = 2
-is_from_chest_ui = true
 
 [node name="inventory_UI_slot12" parent="NinePatchRect/ChestGridContainer" unique_id=1878248547 instance=ExtResource("3_4yo3x")]
 layout_mode = 2
-is_from_chest_ui = true
 
 [node name="inventory_UI_slot13" parent="NinePatchRect/ChestGridContainer" unique_id=1956049137 instance=ExtResource("3_4yo3x")]
 layout_mode = 2
-is_from_chest_ui = true
 
 [node name="inventory_UI_slot14" parent="NinePatchRect/ChestGridContainer" unique_id=25299316 instance=ExtResource("3_4yo3x")]
 layout_mode = 2
-is_from_chest_ui = true
 
 [node name="inventory_UI_slot15" parent="NinePatchRect/ChestGridContainer" unique_id=1698997497 instance=ExtResource("3_4yo3x")]
 layout_mode = 2
-is_from_chest_ui = true
 
 [node name="inventory_UI_slot16" parent="NinePatchRect/ChestGridContainer" unique_id=2026009019 instance=ExtResource("3_4yo3x")]
 layout_mode = 2
-is_from_chest_ui = true
 
 [node name="inventory_UI_slot17" parent="NinePatchRect/ChestGridContainer" unique_id=377230835 instance=ExtResource("3_4yo3x")]
 layout_mode = 2
-is_from_chest_ui = true
 
 [node name="inventory_UI_slot18" parent="NinePatchRect/ChestGridContainer" unique_id=210525474 instance=ExtResource("3_4yo3x")]
 layout_mode = 2
-is_from_chest_ui = true
 
 [node name="inventory_UI_slot19" parent="NinePatchRect/ChestGridContainer" unique_id=38792460 instance=ExtResource("3_4yo3x")]
 layout_mode = 2
-is_from_chest_ui = true
 
 [node name="inventory_UI_slot20" parent="NinePatchRect/ChestGridContainer" unique_id=2049578482 instance=ExtResource("3_4yo3x")]
 layout_mode = 2
-is_from_chest_ui = true
 
 [node name="inventory_UI_slot21" parent="NinePatchRect/ChestGridContainer" unique_id=1044902193 instance=ExtResource("3_4yo3x")]
 layout_mode = 2
-is_from_chest_ui = true
 
 [node name="PlayerGridContainer" type="GridContainer" parent="NinePatchRect" unique_id=803437090]
 layout_mode = 1
@@ -159,51 +138,39 @@ columns = 4
 
 [node name="inventory_UI_slot" parent="NinePatchRect/PlayerGridContainer" unique_id=841610343 instance=ExtResource("3_4yo3x")]
 layout_mode = 2
-is_from_chest_ui = true
 
 [node name="inventory_UI_slot2" parent="NinePatchRect/PlayerGridContainer" unique_id=1938202789 instance=ExtResource("3_4yo3x")]
 layout_mode = 2
-is_from_chest_ui = true
 
 [node name="inventory_UI_slot3" parent="NinePatchRect/PlayerGridContainer" unique_id=248277750 instance=ExtResource("3_4yo3x")]
 layout_mode = 2
-is_from_chest_ui = true
 
 [node name="inventory_UI_slot4" parent="NinePatchRect/PlayerGridContainer" unique_id=1777469731 instance=ExtResource("3_4yo3x")]
 layout_mode = 2
-is_from_chest_ui = true
 
 [node name="inventory_UI_slot5" parent="NinePatchRect/PlayerGridContainer" unique_id=1099502475 instance=ExtResource("3_4yo3x")]
 layout_mode = 2
-is_from_chest_ui = true
 
 [node name="inventory_UI_slot6" parent="NinePatchRect/PlayerGridContainer" unique_id=1212757940 instance=ExtResource("3_4yo3x")]
 layout_mode = 2
-is_from_chest_ui = true
 
 [node name="inventory_UI_slot7" parent="NinePatchRect/PlayerGridContainer" unique_id=1348205872 instance=ExtResource("3_4yo3x")]
 layout_mode = 2
-is_from_chest_ui = true
 
 [node name="inventory_UI_slot8" parent="NinePatchRect/PlayerGridContainer" unique_id=1094275684 instance=ExtResource("3_4yo3x")]
 layout_mode = 2
-is_from_chest_ui = true
 
 [node name="inventory_UI_slot9" parent="NinePatchRect/PlayerGridContainer" unique_id=371114902 instance=ExtResource("3_4yo3x")]
 layout_mode = 2
-is_from_chest_ui = true
 
 [node name="inventory_UI_slot10" parent="NinePatchRect/PlayerGridContainer" unique_id=1401960042 instance=ExtResource("3_4yo3x")]
 layout_mode = 2
-is_from_chest_ui = true
 
 [node name="inventory_UI_slot11" parent="NinePatchRect/PlayerGridContainer" unique_id=759002772 instance=ExtResource("3_4yo3x")]
 layout_mode = 2
-is_from_chest_ui = true
 
 [node name="inventory_UI_slot12" parent="NinePatchRect/PlayerGridContainer" unique_id=1870172068 instance=ExtResource("3_4yo3x")]
 layout_mode = 2
-is_from_chest_ui = true
 
 [node name="InventoryContext" parent="." unique_id=1779115200 instance=ExtResource("4_j0lnb")]
 visible = false
