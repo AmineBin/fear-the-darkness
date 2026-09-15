@@ -3,8 +3,6 @@ extends Button
 @onready var item_visual: Sprite2D = $CenterContainer/Panel/ItemDisplay
 @onready var amount_text: Label = $CenterContainer/Panel/Label
 var current_slot_item: InvSlot
-var is_chest_interface = false
-var is_from_chest = false
 
 # Mettre à jour le slot actuel
 func update(slot: InvSlot):
@@ -20,5 +18,5 @@ func update(slot: InvSlot):
 
 # Afficher le menu context
 func _on_pressed() -> void:
-	var inventory_context_node = get_node("/root/Playground/Inventory/Inv_UI/VBoxContainer/InventoryContext")
-	inventory_context_node.show_menu(current_slot_item, is_chest_interface, is_from_chest)
+	var inv_action_ui_ctrl = InvActionUi.get_node_or_null("Control")
+	inv_action_ui_ctrl.show_menu(current_slot_item, self)

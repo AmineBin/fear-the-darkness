@@ -8,13 +8,16 @@ signal use_item
 signal discard
 signal transfer
 
+func _ready() -> void:
+	visible = false
+	
 # Afficher le menu context
-func show_menu(slot, is_chest_interface, from_chest):
-	if is_chest_interface == true:
-		transfer_context_button.visible = true
+func show_menu(slot, visual_slot):
+	if not slot or slot.is_empty_slot():
+		return
 	current_slot = slot
-	is_from_chest = from_chest
 	if current_slot.item:
+		global_position = visual_slot.get_global_position() + Vector2(visual_slot.size.x, 0)
 		visible = true
 
 func _on_use_pressed() -> void:

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bejxmyojkb2gq"]
 
-[ext_resource type="Script" uid="uid://ctwnoc56ijl8x" path="res://auto_load/confirm_menu/confirm_menu_ui.gd" id="1_fxf2k"]
-[ext_resource type="AudioStream" uid="uid://cs5dav0lwjqd3" path="res://assets/audio/sfx/ui/menu/click.wav" id="2_ois0j"]
+[ext_resource type="Script" uid="uid://ctwnoc56ijl8x" path="res://auto_load/confirm_menu/confirm_menu_ui.gd" id="1_wt3i0"]
+[ext_resource type="AudioStream" uid="uid://cs5dav0lwjqd3" path="res://assets/audio/sfx/ui/menu/click.wav" id="2_8oxyj"]
 
 [node name="ConfirmMenuUi" type="CanvasLayer" unique_id=1774387845]
 layer = 3
@@ -13,8 +13,8 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
-script = ExtResource("1_fxf2k")
-click_sfx = ExtResource("2_ois0j")
+script = ExtResource("1_wt3i0")
+click_sfx = ExtResource("2_8oxyj")
 
 [node name="ColorRect" type="ColorRect" parent="Control" unique_id=1274994144]
 layout_mode = 1

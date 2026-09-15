@@ -47,7 +47,7 @@ func _quit_to_menu():
 	hide()
 	settings_ui.visible = false
 	get_tree().paused = false
-	SaveLoad.reset_save_data()
+	SaveManager.reset_save_data()
 	get_tree().change_scene_to_file(main_menu_scene_path)
 
 func _on_quit_desktop_pressed() -> void:

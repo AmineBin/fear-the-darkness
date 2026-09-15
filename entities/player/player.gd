@@ -25,10 +25,11 @@ var gravity = 9.8
 @onready var seecast = $Head/Camera3D/SeeCast
 @onready var gui = get_tree().get_first_node_in_group("gui")
 
-@export var inv: Inv
-
+var inv: Inv
 
 func _ready() -> void:
+	inv = Inv.new()
+	SaveManager.sync_inventories()
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func _unhandled_input(event):
@@ -36,7 +37,6 @@ func _unhandled_input(event):
 		head.rotate_y(-event.relative.x * sensitivity)
 		camera.rotate_x(-event.relative.y * sensitivity)
 		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-70), deg_to_rad(70))
-	
 	
 func _physics_process(delta):
 	

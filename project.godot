@@ -18,10 +18,11 @@ config/icon="res://icon.svg"
 [autoload]
 
 SoundPlayer="*uid://cv0ob8a7sdewj"
-SaveLoad="*uid://crlf648y5uvpm"
+SaveManager="*uid://crlf648y5uvpm"
 ConfirmMenuUi="*uid://bejxmyojkb2gq"
 PlayTimeTracker="*uid://cscwc7cheixhs"
 ChestInventoryUi="*uid://2dh0may14cq5"
+InvActionUi="*uid://crrigloaq0hlh"
 
 [debug_draw_3d]
 

@@ -6,6 +6,10 @@ signal update
 
 @export var slots: Array[InvSlot]
 
+func _init(nb_slots: int = 12):
+	for i in range(nb_slots):
+		slots.append(InvSlot.new())
+		
 # Ajouter un item dans l'inventaire
 func insert(item: InvItem):
 	var item_slots = slots.filter(func(slot): return slot.item == item)
@@ -24,7 +28,7 @@ func has_item(requested_item):
 			return true
 	return false
 	
-func discard_item(slot: InvSlot) -> void:
+func discard_item_from_slot(slot: InvSlot) -> void:
 	if slot and not slot.is_empty_slot():
 		slot.discard_item()
 		update.emit()

@@ -2,12 +2,12 @@
 
 [ext_resource type="Script" uid="uid://bxqoporv7ocni" path="res://ui/inventory/player_inventory_ui/player_inventory_ui.gd" id="1_qedko"]
 [ext_resource type="Texture2D" uid="uid://civi4yk5t3044" path="res://assets/textures/inventory/inventory_background.png" id="2_7cyi0"]
-[ext_resource type="Resource" uid="uid://d3sp8lxeb34fa" path="res://data/player_inventory_data.tres" id="2_s0qkl"]
 [ext_resource type="PackedScene" uid="uid://wc7uffhgcws" path="res://ui/inventory/inventory_ui_slot/inventory_ui_slot.tscn" id="3_8ojme"]
 [ext_resource type="PackedScene" uid="uid://dab2qf3tvr0ou" path="res://ui/health_display_ui/health_display_ui.tscn" id="4_mme0t"]
-[ext_resource type="PackedScene" uid="uid://crrigloaq0hlh" path="res://ui/inventory/inventory_context_ui/inventory_context.tscn" id="5_iy21j"]
+[ext_resource type="PackedScene" uid="uid://crrigloaq0hlh" path="res://auto_load/inv_action_menu/inv_action_ui.tscn" id="5_iy21j"]
 
-[node name="Inv_UI" type="Control" unique_id=1333805855 groups=["player_inv"]]
+[node name="Inv_UI" type="Control" unique_id=1333805855 groups=["player_inv_ui"]]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -15,7 +15,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_qedko")
-inv = ExtResource("2_s0qkl")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=245060836]
 texture_filter = 1

@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://yifphocygbal"]
 
 [ext_resource type="Script" uid="uid://ctt14yh2mestg" path="res://entities/player/player.gd" id="1_1obkj"]
-[ext_resource type="Resource" uid="uid://d3sp8lxeb34fa" path="res://data/player_inventory_data.tres" id="2_gdab3"]
 [ext_resource type="Shader" uid="uid://dq6x5ajqcg4d" path="res://shaders/overlay.gdshader" id="3_tgyl1"]
 [ext_resource type="PackedScene" uid="uid://chcjof76xykh8" path="res://components/health/health_component.tscn" id="4_bls4j"]
 
@@ -25,7 +24,6 @@ size = Vector2(2, 2)
 collision_layer = 8
 collision_mask = 7
 script = ExtResource("1_1obkj")
-inv = ExtResource("2_gdab3")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=318328075]
 visible = false

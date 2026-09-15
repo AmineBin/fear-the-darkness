@@ -3,8 +3,6 @@ extends Node
 const save_location = "user://fear_the_darkness/savegame.tres"
 var save_file_data: SaveDataResource = SaveDataResource.new()
 var game_scene_path = "res://playground.tscn"
-
-@export var player_inventory: Resource
 	
 func _save():
 	DirAccess.make_dir_recursive_absolute("user://fear_the_darkness")
@@ -32,8 +30,8 @@ func save_inventories() -> void:
 	var player_inventory = player.inv
 	var chest_inventory = chest_ui.chest_inv
 	
-	var new_player_inventory = Inv.new()
-	var new_chest_inventory = Inv.new()
+	var new_player_inventory = Inv.new(0)
+	var new_chest_inventory = Inv.new(0)
 	
 	for slot in player_inventory.slots:
 		var new_slot = InvSlot.new()
@@ -75,20 +73,14 @@ func load_doors() -> void:
 			door.key_needed = door_data["locked"]
 			door.is_open = door_data["open"]
 			door.update_visual()
-
+			
 func load_inventories():
 	var player = get_tree().get_first_node_in_group("player")
-	var player_inv_ui = get_tree().get_first_node_in_group("player_inv")
-	var chest_ui = get_tree().get_first_node_in_group("chest_inv_ui")
-	
 	player.inv = save_file_data.player_inventory
-	chest_ui.chest_inv = save_file_data.chest_inventory
-	
-	player_inv_ui.inv = save_file_data.player_inventory
-	chest_ui.chest_inv = save_file_data.chest_inventory
-	
-	player_inv_ui.set_inventory(save_file_data.player_inventory)
-	chest_ui.set_inventory(save_file_data.chest_inventory, save_file_data.player_inventory)
+	var player_inv_ui = get_tree().get_first_node_in_group("player_inv_ui")
+	player_inv_ui.set_inventory(player.inv)
+	for s in player.inv.slots:
+		print(s.item, " x", s.amount)
 
 func load_props():
 	var items = get_tree().get_nodes_in_group("items")
@@ -109,3 +101,10 @@ func load_all():
 # Vider la mémoire de tout élément sauvegardé
 func reset_save_data():
 	save_file_data = SaveDataResource.new()
+	
+func sync_inventories():
+	var player = get_tree().get_first_node_in_group("player")
+	var player_inv_ui = get_tree().get_first_node_in_group("player_inv_ui")
+	var chest_inv_ui = get_tree().get_first_node_in_group("chest_inv_ui")
+	player_inv_ui.set_inventory(player.inv)
+	chest_inv_ui.set_player_inventory(player.inv)
