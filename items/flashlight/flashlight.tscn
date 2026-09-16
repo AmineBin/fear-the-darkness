@@ -1,11 +1,19 @@
 [gd_scene format=3 uid="uid://dg6vbxu0uw324"]
 
 [ext_resource type="PackedScene" uid="uid://b003koty7p8yp" path="res://items/flashlight/Flashlight.glb" id="1_tl6ba"]
+[ext_resource type="Script" uid="uid://c2ppshcnj7tr4" path="res://items/flashlight/flashlight.gd" id="2_i8hij"]
+[ext_resource type="AudioStream" uid="uid://s1mf7tyq02g" path="res://assets/audio/sfx/item/flashlight/flashlight_off.wav" id="3_yqesg"]
+[ext_resource type="AudioStream" uid="uid://dovy2ehufb8ij" path="res://assets/audio/sfx/item/flashlight/flashlight_on.wav" id="4_57frg"]
 
 [node name="Flashlight2" unique_id=438735374 instance=ExtResource("1_tl6ba")]
+script = ExtResource("2_i8hij")
+flashlight_toggle_off = ExtResource("3_yqesg")
+flashlight_toggle_on = ExtResource("4_57frg")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="." index="1" unique_id=1545557079]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.3848562)
 spot_range = 10.0
 spot_angle = 25.0
 spot_angle_attenuation = 0.68301964
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="2" unique_id=571403772]
