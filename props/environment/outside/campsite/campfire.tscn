@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://b4745q004afag"]
+
+[ext_resource type="PackedScene" uid="uid://bn7kk11yo6hd1" path="res://assets/models/Campfire.glb" id="1_qflc5"]
+
+[node name="Campfire" unique_id=2071885591 instance=ExtResource("1_qflc5")]

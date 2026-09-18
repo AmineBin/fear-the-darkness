@@ -1,0 +1,157 @@
+[gd_scene format=3 uid="uid://dmr1e2tkxqhy5"]
+
+[ext_resource type="Texture2D" uid="uid://crov6xwnowcwq" path="res://assets/textures/terrain/Grass_19-128x128.png" id="1_xfie6"]
+[ext_resource type="PackedScene" uid="uid://dwkuutr54e8u3" path="res://ui/hud/player_gui.tscn" id="2_kiiyc"]
+[ext_resource type="PackedScene" uid="uid://yifphocygbal" path="res://entities/player/player.tscn" id="2_rq1to"]
+[ext_resource type="PackedScene" uid="uid://bhl48kxd2a852" path="res://ui/inventory/player_inventory_ui/player_inventory_ui.tscn" id="3_hbg4v"]
+[ext_resource type="PackedScene" uid="uid://bhb7tynm8e6f8" path="res://ui/menus/pause_menu/pause_menu.tscn" id="4_56tgx"]
+[ext_resource type="MeshLibrary" uid="uid://bhfr8bn70tqv4" path="res://props/environment/outside/trees/tree_mesh_library.tres" id="13_hbg4v"]
+[ext_resource type="Script" uid="uid://dgqq1tf8prx5s" path="res://addons/proton_scatter/src/scatter.gd" id="14_48yux"]
+[ext_resource type="Script" uid="uid://ba8jou0xje0c7" path="res://addons/proton_scatter/src/stack/modifier_stack.gd" id="15_8apv8"]
+[ext_resource type="Script" uid="uid://bbwcpx3d6w1mu" path="res://addons/proton_scatter/src/modifiers/offset_scale.gd" id="15_pqrra"]
+[ext_resource type="Script" uid="uid://b5s7ggmsi8g5u" path="res://addons/proton_scatter/src/modifiers/base_modifier.gd" id="16_f5vda"]
+[ext_resource type="Script" uid="uid://gjjh4mw1wn51" path="res://addons/proton_scatter/src/modifiers/create_inside_random.gd" id="17_oo80g"]
+[ext_resource type="Script" uid="uid://b0332hlb7q5t1" path="res://addons/proton_scatter/src/modifiers/randomize_transforms.gd" id="18_g7jj5"]
+[ext_resource type="Script" uid="uid://devkng6iaf5do" path="res://addons/proton_scatter/src/shapes/box_shape.gd" id="18_pqrra"]
+[ext_resource type="Script" uid="uid://dc4rwlje6dfca" path="res://addons/proton_scatter/src/modifiers/relax.gd" id="19_odhmh"]
+[ext_resource type="PackedScene" uid="uid://b4745q004afag" path="res://props/environment/outside/campsite/campfire.tscn" id="19_ps2xm"]
+[ext_resource type="Script" uid="uid://it6ja2wjneak" path="res://addons/proton_scatter/src/modifiers/project_on_geometry.gd" id="20_hrycg"]
+[ext_resource type="Script" uid="uid://bnnhlwucy4sl0" path="res://addons/proton_scatter/src/modifiers/offset_rotation.gd" id="21_w35jy"]
+[ext_resource type="Script" uid="uid://c85i0481q4uog" path="res://addons/proton_scatter/src/scatter_item.gd" id="22_4sgby"]
+[ext_resource type="Script" uid="uid://dx7e7heldjwmg" path="res://addons/proton_scatter/src/scatter_shape.gd" id="23_x3v6b"]
+
+[sub_resource type="Environment" id="Environment_5jqh1"]
+background_mode = 1
+background_color = Color(0.011702105, 0.011702111, 0.011702101, 1)
+fog_height = 822.75
+volumetric_fog_density = 0.01
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bjbsk"]
+albedo_texture = ExtResource("1_xfie6")
+uv1_scale = Vector3(100, 100, 100)
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_g4v7s"]
+lightmap_size_hint = Vector2i(1003, 1003)
+material = SubResource("StandardMaterial3D_bjbsk")
+size = Vector2(200, 200)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_kiiyc"]
+points = PackedVector3Array(-100, 0, -100, -100, 0, 100, 100, 0, -100, 100, 0, 100)
+
+[sub_resource type="Resource" id="Resource_tvyfh"]
+script = ExtResource("17_oo80g")
+amount = 1500
+restrict_height = true
+reference_frame = 1
+
+[sub_resource type="Resource" id="Resource_accms"]
+script = ExtResource("18_g7jj5")
+position = Vector3(0.15, 0.15, 0.15)
+rotation = Vector3(0.3, 0, 0.3)
+scale = Vector3(0.2, 0.2, 0.2)
+reference_frame = 2
+
+[sub_resource type="Resource" id="Resource_1ldhq"]
+script = ExtResource("19_odhmh")
+offset_step = 0.2
+consecutive_step_multiplier = 0.75
+restrict_height = true
+
+[sub_resource type="Resource" id="Resource_46gwp"]
+script = ExtResource("20_hrycg")
+ray_length = 5.0
+ray_offset = 5.0
+remove_points_on_miss = false
+
+[sub_resource type="Resource" id="Resource_olien"]
+script = ExtResource("21_w35jy")
+rotation = Vector3(-90, 0, 0)
+reference_frame = 2
+
+[sub_resource type="Resource" id="Resource_ps2xm"]
+script = ExtResource("15_pqrra")
+scale = Vector3(0.2, 0.2, 0.2)
+reference_frame = 2
+
+[sub_resource type="Resource" id="Resource_bhpbx"]
+script = ExtResource("15_8apv8")
+stack = Array[ExtResource("16_f5vda")]([SubResource("Resource_tvyfh"), SubResource("Resource_accms"), SubResource("Resource_1ldhq"), SubResource("Resource_46gwp"), SubResource("Resource_olien"), SubResource("Resource_ps2xm")])
+
+[sub_resource type="Resource" id="Resource_g4v7s"]
+script = ExtResource("18_pqrra")
+size = Vector3(200, 1, 200)
+metadata/_custom_type_script = "uid://devkng6iaf5do"
+
+[node name="FlatForest" type="Node3D" unique_id=551468452]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=900978223]
+environment = SubResource("Environment_5jqh1")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=740870834]
+transform = Transform3D(1, 0, 0, 0, 0.22533074, 0.9742824, 0, -0.9742824, 0.22533074, 0, 10.5032835, 7.593382)
+
+[node name="GUI" type="CanvasLayer" parent="." unique_id=212685679]
+
+[node name="PlayerGUI" parent="GUI" unique_id=1809929944 instance=ExtResource("2_kiiyc")]
+metadata/_edit_use_anchors_ = true
+
+[node name="Inventory" type="CanvasLayer" parent="." unique_id=1499826952]
+
+[node name="Inv_UI" parent="Inventory" unique_id=1333805855 instance=ExtResource("3_hbg4v")]
+metadata/_edit_use_anchors_ = true
+
+[node name="PauseMenu" type="CanvasLayer" parent="." unique_id=1124118569]
+
+[node name="PauseMenu" parent="PauseMenu" unique_id=873590892 instance=ExtResource("4_56tgx")]
+metadata/_edit_use_anchors_ = true
+
+[node name="Player" parent="." unique_id=865410242 instance=ExtResource("2_rq1to")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.2214, 0.97497404, 21.97294)
+collision_mask = 23
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1746423921]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=120081245]
+mesh = SubResource("PlaneMesh_g4v7s")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=275638193]
+shape = SubResource("ConvexPolygonShape3D_kiiyc")
+
+[node name="GridMap" type="GridMap" parent="." unique_id=305248375]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+mesh_library = ExtResource("13_hbg4v")
+cell_size = Vector3(1, 2, 1)
+cell_scale = 0.2
+
+[node name="ProtonScatter" type="Node3D" parent="." unique_id=1311711850]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+script = ExtResource("14_48yux")
+modifier_stack = SubResource("Resource_bhpbx")
+Performance/use_chunks = true
+Performance/chunk_dimensions = Vector3(15, 15, 15)
+metadata/_custom_type_script = "uid://dgqq1tf8prx5s"
+
+[node name="ScatterItem" type="Node3D" parent="ProtonScatter" unique_id=1149648704]
+script = ExtResource("22_4sgby")
+path = "uid://cb448f7p71e5o"
+
+[node name="ScatterShape" type="Node3D" parent="ProtonScatter" unique_id=1674546469]
+transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 0, 0, 0)
+script = ExtResource("23_x3v6b")
+shape = SubResource("Resource_g4v7s")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1303221150]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.720856, 0.14384943, -46.007137)
+use_collision = true
+size = Vector3(1.2, 0.3, 1.2)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="CSGBox3D" unique_id=1224790602]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0.124858856, 20.945799, -0.13074684)
+light_color = Color(1, 1, 0.8117647, 1)
+light_energy = 16.0
+spot_range = 36.198
+spot_angle = 16.31
+
+[node name="Campfire" parent="." unique_id=2071885591 instance=ExtResource("19_ps2xm")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 47, 0, 19)

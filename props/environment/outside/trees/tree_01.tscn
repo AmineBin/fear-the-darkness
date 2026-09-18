@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cb448f7p71e5o"]
+
+[ext_resource type="ArrayMesh" uid="uid://cl6n00ca07cy7" path="res://props/environment/outside/trees/tree_01_mesh.tres" id="1_o3vh4"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_yf5fn"]
+
+[node name="Tree_01" type="MeshInstance3D" unique_id=505095929]
+transform = Transform3D(0.3993593, 0, 0, 0, -1.7456548e-08, 0.4424575, 0, -0.39935926, -1.9340431e-08, 0, 0, 0)
+mesh = ExtResource("1_o3vh4")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1007371978]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1371794428]
+transform = Transform3D(1.5000001, 0, 0, 0, -4.3711384e-07, -1.5, 0, 10, -6.5567086e-08, 0, -4.2860512e-07, 8.850239)
+shape = SubResource("CylinderShape3D_yf5fn")

@@ -38,7 +38,7 @@ window/stretch/aspect="expand"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/gut/plugin.cfg", "res://addons/stairs/plugin.cfg")
+enabled=PackedStringArray("res://addons/gut/plugin.cfg", "res://addons/proton_scatter/plugin.cfg", "res://addons/stairs/plugin.cfg")
 
 [file_customization]
 
@@ -55,6 +55,16 @@ folder_colors={
 "res://shaders/": "teal",
 "res://tests/": "pink",
 "res://ui/": "green"
+}
+
+[filesystem]
+
+import/blender/enabled=false
+
+[importer_defaults]
+
+animation_library={
+&"materials/extract": 1
 }
 
 [input]
