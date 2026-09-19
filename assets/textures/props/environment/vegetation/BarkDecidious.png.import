@@ -2,20 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drveov3udq6dn"
-path.s3tc="res://.godot/imported/Flashlight_Flashlight_Texture.png-c4f69ab885ca57ef67bb380a6f1e20d5.s3tc.ctex"
+uid="uid://dprfmri68m4js"
+path.s3tc="res://.godot/imported/BarkDecidious.png-c99786464eef5ffb45c2d36c9f9e2a04.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "1eea107ac3f5e8f3ce2828a434a67c20"
-}
 
 [deps]
 
-source_file="res://items/flashlight/Flashlight_Flashlight_Texture.png"
-dest_files=["res://.godot/imported/Flashlight_Flashlight_Texture.png-c4f69ab885ca57ef67bb380a6f1e20d5.s3tc.ctex"]
+source_file="res://assets/textures/props/environment/vegetation/BarkDecidious.png"
+dest_files=["res://.godot/imported/BarkDecidious.png-c99786464eef5ffb45c2d36c9f9e2a04.s3tc.ctex"]
 
 [params]
 
