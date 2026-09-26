@@ -9,23 +9,22 @@ extends Control
 
 var context_text = ""
 
-var is_game_paused = false 
 func _ready() -> void:
 	hide()
 
 func resume():
-	get_tree().paused = false
-	hide()
-	settings_ui.visible = false
-	$AnimationPlayer.play_backwards("blur")
-	is_game_paused = false
+	if PauseGame.is_game_paused == true:
+		PauseGame.resume_game()
+		hide()
+		settings_ui.visible = false
+		$AnimationPlayer.play_backwards("blur")
 	
 func pause():
-	get_tree().paused = true
-	show()
-	$AnimationPlayer.play("blur")
-	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-	is_game_paused = true
+	if PauseGame.is_game_paused == false:
+		PauseGame.pause_game()
+		show()
+		$AnimationPlayer.play("blur")
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	
 func ui_opened():
 	if inventory_ui.visible:
@@ -64,7 +63,7 @@ func _on_settings_pressed() -> void:
 	
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("esc") :
-		if is_game_paused:
+		if PauseGame.is_game_paused == true:
 			resume()
 			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 		else:

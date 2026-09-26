@@ -23,6 +23,7 @@ ConfirmMenuUi="*uid://bejxmyojkb2gq"
 PlayTimeTracker="*uid://cscwc7cheixhs"
 ChestInventoryUi="*uid://2dh0may14cq5"
 InvActionUi="*uid://crrigloaq0hlh"
+PauseGame="*uid://crffcqcy8657l"
 
 [debug_draw_3d]
 
@@ -123,9 +124,10 @@ toggle_flashlight={
 [layer_names]
 
 3d_physics/layer_1="World"
-3d_physics/layer_2="Props"
-3d_physics/layer_3="Items"
-3d_physics/layer_4="Player"
+3d_physics/layer_2="WorldObjects"
+3d_physics/layer_3="Props"
+3d_physics/layer_4="Items"
+3d_physics/layer_5="Player"
 
 [physics]
 

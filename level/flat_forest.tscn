@@ -13,13 +13,14 @@
 [ext_resource type="Script" uid="uid://gjjh4mw1wn51" path="res://addons/proton_scatter/src/modifiers/create_inside_random.gd" id="17_oo80g"]
 [ext_resource type="Script" uid="uid://b0332hlb7q5t1" path="res://addons/proton_scatter/src/modifiers/randomize_transforms.gd" id="18_g7jj5"]
 [ext_resource type="Script" uid="uid://devkng6iaf5do" path="res://addons/proton_scatter/src/shapes/box_shape.gd" id="18_pqrra"]
-[ext_resource type="PackedScene" uid="uid://6sr7mr1e3xyf" path="res://props/environment/outside/trappe.tscn" id="19_mrttu"]
+[ext_resource type="PackedScene" uid="uid://6sr7mr1e3xyf" path="res://props/environment/objects/trapdoor.tscn" id="19_mrttu"]
 [ext_resource type="Script" uid="uid://dc4rwlje6dfca" path="res://addons/proton_scatter/src/modifiers/relax.gd" id="19_odhmh"]
 [ext_resource type="PackedScene" uid="uid://b4745q004afag" path="res://props/environment/outside/campsite/campfire.tscn" id="19_ps2xm"]
 [ext_resource type="Script" uid="uid://it6ja2wjneak" path="res://addons/proton_scatter/src/modifiers/project_on_geometry.gd" id="20_hrycg"]
 [ext_resource type="PackedScene" uid="uid://bb7xxjhvte4j5" path="res://props/environment/outside/campsite/tent_yellow.tscn" id="20_xx12f"]
 [ext_resource type="Script" uid="uid://bnnhlwucy4sl0" path="res://addons/proton_scatter/src/modifiers/offset_rotation.gd" id="21_w35jy"]
 [ext_resource type="Script" uid="uid://c85i0481q4uog" path="res://addons/proton_scatter/src/scatter_item.gd" id="22_4sgby"]
+[ext_resource type="PackedScene" uid="uid://dyuj3bmbrxb33" path="res://props/environment/objects/radio.tscn" id="22_5jqh1"]
 [ext_resource type="Script" uid="uid://dx7e7heldjwmg" path="res://addons/proton_scatter/src/scatter_shape.gd" id="23_x3v6b"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_5jqh1"]
@@ -53,89 +54,89 @@ size = Vector2(200, 200)
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_kiiyc"]
 points = PackedVector3Array(-100, 0, -100, -100, 0, 100, 100, 0, -100, 100, 0, 100)
 
-[sub_resource type="Resource" id="Resource_mrttu"]
+[sub_resource type="Resource" id="Resource_5jqh1"]
 script = ExtResource("17_oo80g")
 amount = 1500
 restrict_height = true
 reference_frame = 1
 
-[sub_resource type="Resource" id="Resource_5jqh1"]
+[sub_resource type="Resource" id="Resource_10ql6"]
 script = ExtResource("18_g7jj5")
 position = Vector3(0.15, 0.15, 0.15)
 rotation = Vector3(0.3, 180, 0.3)
 scale = Vector3(2, 2, 2)
 reference_frame = 2
 
-[sub_resource type="Resource" id="Resource_10ql6"]
+[sub_resource type="Resource" id="Resource_48yux"]
 script = ExtResource("19_odhmh")
 offset_step = 0.2
 consecutive_step_multiplier = 0.75
 restrict_height = true
 
-[sub_resource type="Resource" id="Resource_48yux"]
+[sub_resource type="Resource" id="Resource_8apv8"]
 script = ExtResource("20_hrycg")
 ray_length = 5.0
 ray_offset = 5.0
 remove_points_on_miss = false
 
-[sub_resource type="Resource" id="Resource_8apv8"]
+[sub_resource type="Resource" id="Resource_f5vda"]
 script = ExtResource("21_w35jy")
 rotation = Vector3(-90, 0, 0)
 reference_frame = 2
 
-[sub_resource type="Resource" id="Resource_f5vda"]
+[sub_resource type="Resource" id="Resource_oo80g"]
 script = ExtResource("15_pqrra")
 scale = Vector3(0.2, 0.2, 0.2)
 reference_frame = 2
 
-[sub_resource type="Resource" id="Resource_oo80g"]
+[sub_resource type="Resource" id="Resource_g7jj5"]
 script = ExtResource("15_8apv8")
-stack = Array[ExtResource("16_f5vda")]([SubResource("Resource_mrttu"), SubResource("Resource_5jqh1"), SubResource("Resource_10ql6"), SubResource("Resource_48yux"), SubResource("Resource_8apv8"), SubResource("Resource_f5vda")])
+stack = Array[ExtResource("16_f5vda")]([SubResource("Resource_5jqh1"), SubResource("Resource_10ql6"), SubResource("Resource_48yux"), SubResource("Resource_8apv8"), SubResource("Resource_f5vda"), SubResource("Resource_oo80g")])
 
 [sub_resource type="Resource" id="Resource_g4v7s"]
 script = ExtResource("18_pqrra")
 size = Vector3(200, 1, 200)
 metadata/_custom_type_script = "uid://devkng6iaf5do"
 
-[sub_resource type="Resource" id="Resource_g7jj5"]
+[sub_resource type="Resource" id="Resource_odhmh"]
 script = ExtResource("17_oo80g")
 amount = 10000
 restrict_height = true
 reference_frame = 1
 
-[sub_resource type="Resource" id="Resource_odhmh"]
+[sub_resource type="Resource" id="Resource_hrycg"]
 script = ExtResource("18_g7jj5")
 position = Vector3(0.15, 0.15, 0.15)
 reference_frame = 2
 
-[sub_resource type="Resource" id="Resource_hrycg"]
+[sub_resource type="Resource" id="Resource_w35jy"]
 script = ExtResource("19_odhmh")
 offset_step = 0.2
 consecutive_step_multiplier = 0.75
 restrict_height = true
 
-[sub_resource type="Resource" id="Resource_w35jy"]
+[sub_resource type="Resource" id="Resource_4sgby"]
 script = ExtResource("20_hrycg")
 ray_length = 5.0
 ray_offset = 5.0
 remove_points_on_miss = false
 
-[sub_resource type="Resource" id="Resource_4sgby"]
+[sub_resource type="Resource" id="Resource_x3v6b"]
 script = ExtResource("21_w35jy")
 reference_frame = 2
 
-[sub_resource type="Resource" id="Resource_x3v6b"]
+[sub_resource type="Resource" id="Resource_ms6dn"]
 script = ExtResource("15_pqrra")
 scale = Vector3(0.2, 0.2, 0.2)
 reference_frame = 2
 
-[sub_resource type="Resource" id="Resource_ms6dn"]
+[sub_resource type="Resource" id="Resource_tvyfh"]
 script = ExtResource("20_hrycg")
 exclude_mask = 2
 
-[sub_resource type="Resource" id="Resource_tvyfh"]
+[sub_resource type="Resource" id="Resource_accms"]
 script = ExtResource("15_8apv8")
-stack = Array[ExtResource("16_f5vda")]([SubResource("Resource_g7jj5"), SubResource("Resource_odhmh"), SubResource("Resource_hrycg"), SubResource("Resource_w35jy"), SubResource("Resource_4sgby"), SubResource("Resource_x3v6b"), SubResource("Resource_ms6dn")])
+stack = Array[ExtResource("16_f5vda")]([SubResource("Resource_odhmh"), SubResource("Resource_hrycg"), SubResource("Resource_w35jy"), SubResource("Resource_4sgby"), SubResource("Resource_x3v6b"), SubResource("Resource_ms6dn"), SubResource("Resource_tvyfh")])
 
 [sub_resource type="Resource" id="Resource_57qmd"]
 script = ExtResource("18_pqrra")
@@ -182,7 +183,7 @@ shape = SubResource("ConvexPolygonShape3D_kiiyc")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 script = ExtResource("14_48yux")
 render_mode = 1
-modifier_stack = SubResource("Resource_oo80g")
+modifier_stack = SubResource("Resource_g7jj5")
 Performance/use_chunks = true
 Performance/chunk_dimensions = Vector3(15, 15, 15)
 metadata/_custom_type_script = "uid://dgqq1tf8prx5s"
@@ -206,7 +207,7 @@ shape = SubResource("Resource_g4v7s")
 
 [node name="ProtonScatter2" type="Node3D" parent="." unique_id=587793840]
 script = ExtResource("14_48yux")
-modifier_stack = SubResource("Resource_tvyfh")
+modifier_stack = SubResource("Resource_accms")
 Performance/use_chunks = true
 Performance/chunk_dimensions = Vector3(15, 15, 15)
 metadata/_custom_type_script = "uid://dgqq1tf8prx5s"
@@ -221,11 +222,14 @@ transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 0, 0, 0)
 script = ExtResource("23_x3v6b")
 shape = SubResource("Resource_57qmd")
 
-[node name="CSGBox3D" parent="." unique_id=1891694859 instance=ExtResource("19_mrttu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.385677, 0.14384943, -42.965317)
-
 [node name="Campfire" parent="." unique_id=2071885591 instance=ExtResource("19_ps2xm")]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 46.94269, 0, 21.005478)
 
 [node name="TentYellow" parent="." unique_id=1325089507 instance=ExtResource("20_xx12f")]
 transform = Transform3D(0.43776852, 0, 0.89908767, 0, 1, 0, -0.89908767, 0, 0.43776852, 51.949482, 0.7753523, 19.854744)
+
+[node name="StaticBody3D3" parent="." unique_id=174974490 instance=ExtResource("19_mrttu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.15103, 0.4552567, -43.384087)
+
+[node name="StaticBody3D4" parent="." unique_id=1106363981 instance=ExtResource("22_5jqh1")]
+transform = Transform3D(2.8960495, -0.7828783, -3.4220694e-08, 0, -1.3113416e-07, 3, -0.7828783, -2.8960495, -1.2659034e-07, -22.475887, 2.1124375e-05, -41.672836)

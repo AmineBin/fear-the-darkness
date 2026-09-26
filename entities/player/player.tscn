@@ -22,7 +22,7 @@ flip_faces = true
 size = Vector2(2, 2)
 
 [node name="Player" type="CharacterBody3D" unique_id=865410242 groups=["player"]]
-collision_layer = 8
+collision_layer = 16
 collision_mask = 7
 script = ExtResource("1_1obkj")
 
@@ -42,7 +42,7 @@ current = true
 [node name="SeeCast" type="RayCast3D" parent="Head/Camera3D" unique_id=1783945742]
 transform = Transform3D(1.9106855e-15, 6.556708e-08, 1, 1, -6.556708e-08, 0, 4.371139e-08, 1.5, -4.371139e-08, 0, 0.014913142, 0)
 exclude_parent = false
-collision_mask = 14
+collision_mask = 12
 collide_with_areas = true
 
 [node name="Marker3D" type="Marker3D" parent="Head/Camera3D" unique_id=1212342809]

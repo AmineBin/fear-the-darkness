@@ -121,7 +121,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.50545764, 0, 0)
 
 [node name="PhysicalMetalDoor" type="StaticBody3D" parent="hinge" unique_id=1092827032]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.50545764, 0, 0)
-collision_layer = 2
+collision_layer = 4
 script = ExtResource("2_2r7x4")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="hinge/PhysicalMetalDoor" unique_id=1672940922]

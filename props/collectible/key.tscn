@@ -12,7 +12,7 @@ albedo_color = Color(1, 1, 0.02745098, 1)
 
 [node name="Key" type="Area3D" unique_id=927341689 groups=["items"]]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
-collision_layer = 2
+collision_layer = 4
 script = ExtResource("1_ivv6y")
 item = ExtResource("2_ivv6y")
 

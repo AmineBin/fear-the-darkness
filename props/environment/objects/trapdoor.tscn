@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://6sr7mr1e3xyf"]
+
+[ext_resource type="Script" uid="uid://18sxw81mjdvb" path="res://props/environment/objects/trapdoor.gd" id="1_3d304"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_okudf"]
+size = Vector3(1.2, 0.1, 1.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h5vwo"]
+size = Vector3(1.3, 0.8, 1.3)
+
+[node name="StaticBody3D" type="StaticBody3D" unique_id=174974490]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.41161692, 0)
+collision_layer = 4
+script = ExtResource("1_3d304")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=288991161]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0553993, 0)
+light_color = Color(0.82729924, 0.43640128, 5.7756904e-07, 1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2048820111]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.38232306, 0)
+mesh = SubResource("BoxMesh_okudf")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1767996303]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.38232306, 0)
+shape = SubResource("BoxShape3D_h5vwo")
