@@ -46,6 +46,7 @@ light_energy = 16.0
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1884007057]
 transform = Transform3D(1, 0, 0, 0, 0.22533074, 0.9742824, 0, -0.9742824, 0.22533074, 0, 10.5032835, 7.593382)
+visible = false
 
 [node name="GUI" type="CanvasLayer" parent="." unique_id=1066223972]
 
