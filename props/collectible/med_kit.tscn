@@ -4,7 +4,6 @@
 [ext_resource type="Resource" uid="uid://j8vwf02x534k" path="res://items/medkit/med_kit.tres" id="2_xb5hw"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jq8tk"]
-size = Vector3(1, 2.565918, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jyhfs"]
 albedo_color = Color(1, 1, 0.627451, 1)
@@ -18,7 +17,7 @@ script = ExtResource("1_fu71b")
 item = ExtResource("2_xb5hw")
 
 [node name="interact_area" type="CollisionShape3D" parent="." unique_id=1883438349]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 1.565918, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4323759, 0)
 shape = SubResource("BoxShape3D_jq8tk")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=813554701]

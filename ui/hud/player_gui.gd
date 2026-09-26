@@ -34,3 +34,7 @@ func _on_hit() -> void:
 	$ColorRect.visible = true
 	await get_tree().create_timer(0.2).timeout
 	$ColorRect.visible = false
+
+func show_text_interact():
+	var key_name = OS.get_keycode_string(InputMap.action_get_events("interact")[0].physical_keycode)
+	$InteractLabel.text = "Press [" + key_name + "] to interact"

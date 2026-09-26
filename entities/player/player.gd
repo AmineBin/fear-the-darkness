@@ -88,11 +88,19 @@ func collect(item):
 	
 # Si le joueur est à porté d'un prop il peut intéragir avec
 func interact():
+	var interact_label = gui.get_node("InteractLabel")
 	if seecast.is_colliding():
 		var target = seecast.get_collider()
 		if Input.is_action_just_pressed("interact"):
 			if target.has_method("interact"):
 				target.interact(self)
+				
+		
+		interact_label.visible = true
+		gui.show_text_interact()
+	else:
+		interact_label.visible = false
+		
 				
 func display_message(text: String) -> void:
 	if gui and gui.has_method("show_text"):

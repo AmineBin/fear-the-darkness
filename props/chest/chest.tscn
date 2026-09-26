@@ -10,16 +10,16 @@ size = Vector3(1, 0.7, 0.7)
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_lt3a8"]
 points = PackedVector3Array(-0.34594616, -0.19999999, -0.19999999, 0.34592876, 0.19999999, 0.19999999, 0.34592876, -0.19999999, 0.19999999, 0.34592876, 0.19999999, -0.19999999, -0.34594616, 0.19999999, 0.19999999, 0.34592876, -0.19999999, -0.19999999, -0.34594616, -0.19999999, 0.19999999, -0.34594616, 0.19999999, -0.19999999)
 
-[node name="Chest" type="StaticBody3D" unique_id=1895985010 node_paths=PackedStringArray("chest_inv_ui") groups=["chest"]]
+[node name="Chest" type="StaticBody3D" unique_id=1895985010 groups=["chest"]]
 collision_layer = 2
 collision_mask = 7
 script = ExtResource("1_xeosd")
-chest_inv_ui = NodePath("")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2030560013]
 mesh = SubResource("BoxMesh_3xd07")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2042541372]
+transform = Transform3D(1.7, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_lt3a8")
 
 [node name="ChestClose" type="AudioStreamPlayer3D" parent="." unique_id=1184407941]

@@ -63,7 +63,7 @@ func _on_settings_pressed() -> void:
 	settings_ui.show()
 	
 func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("esc") && inventory_ui.is_open == false && ChestInventoryUi.is_open == false:
+	if event.is_action_pressed("esc") :
 		if is_game_paused:
 			resume()
 			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)

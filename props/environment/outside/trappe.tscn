@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://6sr7mr1e3xyf"]
 
 [ext_resource type="Script" uid="uid://cq4e85uagqekp" path="res://props/environment/outside/trappe.gd" id="1_ldgiy"]
-[ext_resource type="AudioStream" uid="uid://barvq8rjkrquk" path="res://assets/audio/sfx/freesound_community-alarma-5-77183.wav" id="1_rrg8b"]
+[ext_resource type="AudioStream" uid="uid://dlr2f6c4op4kl" path="res://assets/audio/sfx/alarm1.wav" id="2_ldgiy"]
 
 [node name="CSGBox3D" type="CSGBox3D" unique_id=1891694859]
 use_collision = true
@@ -9,8 +9,8 @@ size = Vector3(1.2, 0.3, 1.2)
 script = ExtResource("1_ldgiy")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=12383946]
-stream = ExtResource("1_rrg8b")
-volume_db = 5.906
+stream = ExtResource("2_ldgiy")
+volume_db = 5.0
 max_distance = 516.13
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=288991161]
