@@ -112,3 +112,16 @@ func sync_inventories():
 	var chest_inv_ui = get_tree().get_first_node_in_group("chest_inv_ui")
 	player_inv_ui.set_inventory(player.inv)
 	chest_inv_ui.set_player_inventory(player.inv)
+	
+var session_player_inv: Resource = null
+var session_health: int = -1
+
+func save_session_data() -> void:
+	var player = get_tree().get_first_node_in_group("player")
+	if player:
+		if player.inv:
+			session_player_inv = player.inv.duplicate(true)
+		
+		var health_component = player.get_node_or_null("HealthComponent")
+		if health_component:
+			session_health = health_component.health

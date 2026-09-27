@@ -7,4 +7,5 @@ func interact(user:Node = null):
 	confirm_control.show_context_menu("Enter the trapdoor?", _enter_emit)
 
 func _enter_emit():
+	SaveManager.save_inventories()
 	change_scene.emit()

@@ -24,6 +24,7 @@ PlayTimeTracker="*uid://cscwc7cheixhs"
 ChestInventoryUi="*uid://2dh0may14cq5"
 InvActionUi="*uid://crrigloaq0hlh"
 PauseGame="*uid://crffcqcy8657l"
+UiManager="*uid://cpys5kcjjwen3"
 
 [debug_draw_3d]
 

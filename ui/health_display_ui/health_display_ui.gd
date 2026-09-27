@@ -11,4 +11,3 @@ func _ready() -> void:
 
 func _on_health_changed(current_health: int) -> void:
 	health_sprite.texture = textures[current_health - 1]
-	

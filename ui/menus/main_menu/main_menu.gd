@@ -6,6 +6,9 @@ var button_type = null
 @export_file("*.tscn") var game_scene_path: String
 @export_file("*.tscn") var save_load_scene_path: String
 
+func _ready() -> void:
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+
 func _on_start_pressed() -> void:
 	SoundPlayer.audio_play(click_sfx)
 	$FadeTransition.show()
