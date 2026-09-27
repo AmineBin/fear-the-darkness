@@ -60,11 +60,14 @@ func _quit_to_desk():
 func _on_settings_pressed() -> void:
 	SoundPlayer.audio_play(click_sfx)
 	settings_ui.show()
-	
+
+# C'est très crade mais ça marche
 func _unhandled_input(event: InputEvent) -> void:
+	var player_inv_ui = get_tree().get_first_node_in_group("player_inv_ui")
+	var chest_inv_ui = get_tree().get_first_node_in_group("chest_inv_ui")
 	if event.is_action_pressed("esc") :
 		if PauseGame.is_game_paused == true:
 			resume()
 			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-		else:
+		elif player_inv_ui.is_open == false && chest_inv_ui.is_open == false:
 			pause()

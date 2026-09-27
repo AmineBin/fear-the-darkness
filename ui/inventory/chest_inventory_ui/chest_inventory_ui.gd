@@ -34,15 +34,12 @@ func close():
 	visible = false
 	is_open = false
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)	
-	
+
 func _unhandled_input(event: InputEvent) -> void:
 	if is_open:
 		if event.is_action_pressed("esc")  or event.is_action_pressed("toggle_inventory"):
 			close()
 			get_viewport().set_input_as_handled()
-			
-	if event.is_action_pressed("toggle_inventory") && is_open:
-		close()
 
 # On garde
 func _on_inventory_context_discard(current_slot: InvSlot) -> void:

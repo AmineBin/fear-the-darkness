@@ -308,7 +308,7 @@ _data = {
 &"blur": SubResource("Animation_62434")
 }
 
-[node name="PauseMenu" type="Control" unique_id=873590892]
+[node name="PauseMenu" type="Control" unique_id=873590892 groups=["pause_menu_ui"]]
 process_mode = 3
 layout_mode = 3
 anchors_preset = 15

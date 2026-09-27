@@ -49,10 +49,10 @@ func set_inventory(new_inv: Inv):
 	inv = new_inv
 	inv.update.connect(update_slots)
 	update_slots()
-	
+
+# C'est crade mais ça marche
 func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("toggle_inventory"):
-		if !is_open:
-			open()
-		else:
-			close()
+	if event.is_action_pressed("toggle_inventory") && !is_open && ChestInventoryUi.is_open == false:
+		open()
+	elif event.is_action_pressed("toggle_inventory") or event.is_action_pressed("esc"):
+		close()
