@@ -5,9 +5,8 @@ extends Node3D
 @export var flashlight_toggle_off:AudioStreamWAV
 @export var flashlight_toggle_on:AudioStreamWAV
 
-var battery: float = 15.0
-var max_battery: float = 15.0 
-var drain_rate: float = 1.0
+var battery: float = 10.0
+var drain_rate: float = 0.2
 
 func _ready() -> void:
 	light.visible = false
@@ -29,14 +28,16 @@ func _process(delta: float) -> void:
 		
 	else:
 		light.light_energy = 0.0 
-		
+
+# Eteindre la lampe petit à petit	
 func light_dying():
-	var ratio = battery / max_battery
-	light.light_energy = ratio * 2.0
+	var ratio = battery / 3.0
+	light.light_energy = ratio * 1.0
 	return 2.0 * ratio
-	
+
+# Choisir un nombre aléatoire et faire varier l'energie en fonction du résultat
 func light_flicker(energy:float):
-	var random_number = randi_range(1, 10)
+	var random_number = randi_range(1, 30)
 	if random_number == 1:
 		var flicker = randf_range(0.3, 1.0)
 		light.light_energy = energy * flicker

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dmr1e2tkxqhy5"]
 
 [ext_resource type="Texture2D" uid="uid://x3xc08k53du5" path="res://assets/textures/props/environment/SkyboxNight.png" id="1_5jqh1"]
+[ext_resource type="Script" uid="uid://cr31ywc6xu65c" path="res://level/flat_forest.gd" id="1_10ql6"]
 [ext_resource type="Texture2D" uid="uid://crov6xwnowcwq" path="res://assets/textures/terrain/Grass_19-128x128.png" id="1_xfie6"]
 [ext_resource type="PackedScene" uid="uid://dwkuutr54e8u3" path="res://ui/hud/player_gui.tscn" id="2_kiiyc"]
 [ext_resource type="PackedScene" uid="uid://yifphocygbal" path="res://entities/player/player.tscn" id="2_rq1to"]
@@ -41,102 +42,102 @@ fog_sky_affect = 0.0
 fog_height = 822.75
 volumetric_fog_density = 0.01
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bjbsk"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_48yux"]
 albedo_texture = ExtResource("1_xfie6")
 uv1_scale = Vector3(100, 100, 100)
 texture_filter = 0
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_g4v7s"]
 lightmap_size_hint = Vector2i(1003, 1003)
-material = SubResource("StandardMaterial3D_bjbsk")
+material = SubResource("StandardMaterial3D_48yux")
 size = Vector2(200, 200)
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_kiiyc"]
 points = PackedVector3Array(-100, 0, -100, -100, 0, 100, 100, 0, -100, 100, 0, 100)
 
-[sub_resource type="Resource" id="Resource_5jqh1"]
+[sub_resource type="Resource" id="Resource_8apv8"]
 script = ExtResource("17_oo80g")
 amount = 1500
 restrict_height = true
 reference_frame = 1
 
-[sub_resource type="Resource" id="Resource_10ql6"]
+[sub_resource type="Resource" id="Resource_f5vda"]
 script = ExtResource("18_g7jj5")
 position = Vector3(0.15, 0.15, 0.15)
 rotation = Vector3(0.3, 180, 0.3)
 scale = Vector3(2, 2, 2)
 reference_frame = 2
 
-[sub_resource type="Resource" id="Resource_48yux"]
+[sub_resource type="Resource" id="Resource_oo80g"]
 script = ExtResource("19_odhmh")
 offset_step = 0.2
 consecutive_step_multiplier = 0.75
 restrict_height = true
 
-[sub_resource type="Resource" id="Resource_8apv8"]
+[sub_resource type="Resource" id="Resource_g7jj5"]
 script = ExtResource("20_hrycg")
 ray_length = 5.0
 ray_offset = 5.0
 remove_points_on_miss = false
 
-[sub_resource type="Resource" id="Resource_f5vda"]
+[sub_resource type="Resource" id="Resource_odhmh"]
 script = ExtResource("21_w35jy")
 rotation = Vector3(-90, 0, 0)
 reference_frame = 2
 
-[sub_resource type="Resource" id="Resource_oo80g"]
+[sub_resource type="Resource" id="Resource_hrycg"]
 script = ExtResource("15_pqrra")
 scale = Vector3(0.2, 0.2, 0.2)
 reference_frame = 2
 
-[sub_resource type="Resource" id="Resource_g7jj5"]
+[sub_resource type="Resource" id="Resource_w35jy"]
 script = ExtResource("15_8apv8")
-stack = Array[ExtResource("16_f5vda")]([SubResource("Resource_5jqh1"), SubResource("Resource_10ql6"), SubResource("Resource_48yux"), SubResource("Resource_8apv8"), SubResource("Resource_f5vda"), SubResource("Resource_oo80g")])
+stack = Array[ExtResource("16_f5vda")]([SubResource("Resource_8apv8"), SubResource("Resource_f5vda"), SubResource("Resource_oo80g"), SubResource("Resource_g7jj5"), SubResource("Resource_odhmh"), SubResource("Resource_hrycg")])
 
 [sub_resource type="Resource" id="Resource_g4v7s"]
 script = ExtResource("18_pqrra")
 size = Vector3(200, 1, 200)
 metadata/_custom_type_script = "uid://devkng6iaf5do"
 
-[sub_resource type="Resource" id="Resource_odhmh"]
+[sub_resource type="Resource" id="Resource_4sgby"]
 script = ExtResource("17_oo80g")
 amount = 10000
 restrict_height = true
 reference_frame = 1
 
-[sub_resource type="Resource" id="Resource_hrycg"]
+[sub_resource type="Resource" id="Resource_x3v6b"]
 script = ExtResource("18_g7jj5")
 position = Vector3(0.15, 0.15, 0.15)
 reference_frame = 2
 
-[sub_resource type="Resource" id="Resource_w35jy"]
+[sub_resource type="Resource" id="Resource_ms6dn"]
 script = ExtResource("19_odhmh")
 offset_step = 0.2
 consecutive_step_multiplier = 0.75
 restrict_height = true
 
-[sub_resource type="Resource" id="Resource_4sgby"]
+[sub_resource type="Resource" id="Resource_tvyfh"]
 script = ExtResource("20_hrycg")
 ray_length = 5.0
 ray_offset = 5.0
 remove_points_on_miss = false
 
-[sub_resource type="Resource" id="Resource_x3v6b"]
+[sub_resource type="Resource" id="Resource_accms"]
 script = ExtResource("21_w35jy")
 reference_frame = 2
 
-[sub_resource type="Resource" id="Resource_ms6dn"]
+[sub_resource type="Resource" id="Resource_1ldhq"]
 script = ExtResource("15_pqrra")
 scale = Vector3(0.2, 0.2, 0.2)
 reference_frame = 2
 
-[sub_resource type="Resource" id="Resource_tvyfh"]
+[sub_resource type="Resource" id="Resource_46gwp"]
 script = ExtResource("20_hrycg")
 exclude_mask = 2
 
-[sub_resource type="Resource" id="Resource_accms"]
+[sub_resource type="Resource" id="Resource_olien"]
 script = ExtResource("15_8apv8")
-stack = Array[ExtResource("16_f5vda")]([SubResource("Resource_odhmh"), SubResource("Resource_hrycg"), SubResource("Resource_w35jy"), SubResource("Resource_4sgby"), SubResource("Resource_x3v6b"), SubResource("Resource_ms6dn"), SubResource("Resource_tvyfh")])
+stack = Array[ExtResource("16_f5vda")]([SubResource("Resource_4sgby"), SubResource("Resource_x3v6b"), SubResource("Resource_ms6dn"), SubResource("Resource_tvyfh"), SubResource("Resource_accms"), SubResource("Resource_1ldhq"), SubResource("Resource_46gwp")])
 
 [sub_resource type="Resource" id="Resource_57qmd"]
 script = ExtResource("18_pqrra")
@@ -144,6 +145,8 @@ size = Vector3(200, 1, 200)
 metadata/_custom_type_script = "uid://devkng6iaf5do"
 
 [node name="FlatForest" type="Node3D" unique_id=551468452]
+script = ExtResource("1_10ql6")
+level1 = "uid://kj0wfprnq8g0"
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=900978223]
 environment = SubResource("Environment_5jqh1")
@@ -183,7 +186,7 @@ shape = SubResource("ConvexPolygonShape3D_kiiyc")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 script = ExtResource("14_48yux")
 render_mode = 1
-modifier_stack = SubResource("Resource_g7jj5")
+modifier_stack = SubResource("Resource_w35jy")
 Performance/use_chunks = true
 Performance/chunk_dimensions = Vector3(15, 15, 15)
 metadata/_custom_type_script = "uid://dgqq1tf8prx5s"
@@ -207,7 +210,7 @@ shape = SubResource("Resource_g4v7s")
 
 [node name="ProtonScatter2" type="Node3D" parent="." unique_id=587793840]
 script = ExtResource("14_48yux")
-modifier_stack = SubResource("Resource_accms")
+modifier_stack = SubResource("Resource_olien")
 Performance/use_chunks = true
 Performance/chunk_dimensions = Vector3(15, 15, 15)
 metadata/_custom_type_script = "uid://dgqq1tf8prx5s"
@@ -228,8 +231,10 @@ transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 46.94269, 0, 21.005478)
 [node name="TentYellow" parent="." unique_id=1325089507 instance=ExtResource("20_xx12f")]
 transform = Transform3D(0.43776852, 0, 0.89908767, 0, 1, 0, -0.89908767, 0, 0.43776852, 51.949482, 0.7753523, 19.854744)
 
-[node name="StaticBody3D3" parent="." unique_id=174974490 instance=ExtResource("19_mrttu")]
+[node name="Trapdoor" parent="." unique_id=174974490 instance=ExtResource("19_mrttu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.15103, 0.4552567, -43.384087)
 
-[node name="StaticBody3D4" parent="." unique_id=1106363981 instance=ExtResource("22_5jqh1")]
+[node name="Radio" parent="." unique_id=1106363981 instance=ExtResource("22_5jqh1")]
 transform = Transform3D(2.8960495, -0.7828783, -3.4220694e-08, 0, -1.3113416e-07, 3, -0.7828783, -2.8960495, -1.2659034e-07, -22.475887, 2.1124375e-05, -41.672836)
+
+[connection signal="change_scene" from="Trapdoor" to="." method="_on_change_scene"]

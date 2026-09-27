@@ -34,6 +34,7 @@ points = PackedVector3Array(-0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5
 
 [node name="Playground" type="Node3D" unique_id=243384110]
 script = ExtResource("1_f7pug")
+level1 = "uid://kj0wfprnq8g0"
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1130030279]
 environment = SubResource("Environment_3xd07")
@@ -115,3 +116,5 @@ transform = Transform3D(4, 0, 0, 0, -1.7484555e-07, 4, 0, -4, -1.7484555e-07, 12
 
 [node name="StaticBody3D2" parent="." unique_id=174974490 instance=ExtResource("13_yjl7g")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.249016, 0.93381035, -5.2165556)
+
+[connection signal="change_scene" from="StaticBody3D2" to="." method="_on_change_scene"]
