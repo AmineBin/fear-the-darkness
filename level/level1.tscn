@@ -26,10 +26,62 @@ operation = 2
 size = Vector3(6.6, 3.3, 6.6)
 material = SubResource("StandardMaterial3D_afkyo")
 
-[node name="Porte1" type="CSGBox3D" parent="Home" unique_id=1223462486]
+[node name="Door1" type="CSGBox3D" parent="Home" unique_id=1223462486]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2, -0.65, 0)
 operation = 2
 size = Vector3(1, 2, 2)
+
+[node name="Home2" type="CSGCombiner3D" parent="." unique_id=683001447]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, 0)
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Home2" unique_id=2089884198]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 2.5, 0)
+size = Vector3(15, 10, 20)
+material = SubResource("StandardMaterial3D_afkyo")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Home2" unique_id=71264998]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9500008, 2.6, -0.049999952)
+operation = 2
+size = Vector3(14.5, 8.5, 18.5)
+material = SubResource("StandardMaterial3D_afkyo")
+
+[node name="Door1" type="CSGBox3D" parent="Home2" unique_id=149706916]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7999992, -0.65, 0)
+operation = 2
+size = Vector3(1, 2, 2)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Home2" unique_id=1202615695]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 2.5, -8)
+size = Vector3(15, 0.3, 2)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Home2" unique_id=758401020]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 2.5, 8.5)
+size = Vector3(15, 0.3, 2)
+
+[node name="Main" type="CSGCombiner3D" parent="." unique_id=1283972892]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.95, 0, 0)
+visible = false
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Main" unique_id=22658231]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.589999, 2.82, 0)
+size = Vector3(20, 10, 15)
+material = SubResource("StandardMaterial3D_afkyo")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Main" unique_id=1466655894]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.4399996, 2.8649998, 0)
+operation = 2
+size = Vector3(19.16, 9.03, 14)
+material = SubResource("StandardMaterial3D_afkyo")
+
+[node name="Door1" type="CSGBox3D" parent="Main" unique_id=379031768]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1899996, -0.65, 0)
+operation = 2
+size = Vector3(1, 2, 2)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Main" unique_id=1119649226]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6.5)
 
 [node name="Hallway1" type="CSGCombiner3D" parent="." unique_id=1749056917]
 use_collision = true
@@ -40,9 +92,9 @@ size = Vector3(7, 3, 3)
 material = SubResource("StandardMaterial3D_afkyo")
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="Hallway1" unique_id=1843774860]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.7599993, -0.5, 0.03999996)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.939999, -0.5, 0.03999996)
 operation = 2
-size = Vector3(7, 2.3, 2.6)
+size = Vector3(7.3599997, 2.3, 2.6)
 material = SubResource("StandardMaterial3D_afkyo")
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=2134147659]
