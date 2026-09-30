@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://byf5afsf5k1jf"]
+
+[node name="Table1" type="CSGBox3D" unique_id=101897012]
+use_collision = true
+size = Vector3(1, 0.7003174, 2)

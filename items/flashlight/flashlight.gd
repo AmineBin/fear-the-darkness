@@ -5,7 +5,7 @@ extends Node3D
 @export var flashlight_toggle_off:AudioStreamWAV
 @export var flashlight_toggle_on:AudioStreamWAV
 
-var battery: float = 10.0
+var battery: float = 100.0
 var drain_rate: float = 0.2
 
 func _ready() -> void:

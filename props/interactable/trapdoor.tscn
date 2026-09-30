@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://6sr7mr1e3xyf"]
 
-[ext_resource type="Script" uid="uid://18sxw81mjdvb" path="res://props/environment/objects/trapdoor.gd" id="1_3d304"]
+[ext_resource type="Script" uid="uid://18sxw81mjdvb" path="res://props/interactable/trapdoor.gd" id="1_3d304"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_okudf"]
 size = Vector3(1.2, 0.1, 1.2)

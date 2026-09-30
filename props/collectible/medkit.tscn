@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://xhj505s5uuhc"]
 
 [ext_resource type="Script" uid="uid://cinmq7qdq6fpo" path="res://props/collectible/item.gd" id="1_fu71b"]
-[ext_resource type="Resource" uid="uid://j8vwf02x534k" path="res://items/medkit/med_kit.tres" id="2_xb5hw"]
+[ext_resource type="Resource" uid="uid://j8vwf02x534k" path="res://items/medkit/medkit.tres" id="2_xb5hw"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jq8tk"]
 

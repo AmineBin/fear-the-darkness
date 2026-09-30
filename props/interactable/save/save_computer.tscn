@@ -1,0 +1,222 @@
+[gd_scene format=4 uid="uid://bet6rfgjanj8"]
+
+[ext_resource type="Texture2D" uid="uid://cee8671wy7rqf" path="res://assets/models/psx_retro_computer_1.png" id="2_6fotw"]
+[ext_resource type="Texture2D" uid="uid://brxqdg865jxm4" path="res://assets/models/psx_retro_computer_2.png" id="3_u12dd"]
+[ext_resource type="Texture2D" uid="uid://d08tvljesncfa" path="res://assets/models/psx_retro_computer_3.png" id="4_w0lbt"]
+[ext_resource type="PackedScene" uid="uid://f5cbcdd8h18a" path="res://ui/menus/save/save_data/save_ui.tscn" id="5_vhmmn"]
+
+[sub_resource type="GDScript" id="GDScript_mtgrr"]
+script/source = "extends StaticBody3D
+
+@export var save_ui: Control
+
+func interact(user:Node = null):
+	save_ui.open()
+"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rba24"]
+resource_name = "M_RetroComputer"
+cull_mode = 2
+albedo_texture = ExtResource("2_6fotw")
+texture_filter = 0
+metadata/_gltf_primary_texture_coord = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_et6jw"]
+_surfaces = [{
+"aabb": AABB(-0.12000002, -0.3, 0, 0.24000004, 0.6, 0.6),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAACAAEAAwAEAAEABQAAAAIAAwAAAAUABAAGAAIABQACAAYAAwAHAAQAAwAFAAcABwAGAAQABwAFAAYA"),
+"name": "M_RetroComputer",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAD//wAAAAD+//////8AAAAA/////wAA/v///wAAAAD//wAA//8AAAAAAAAAAAAAAAAAAP//AAD//wAAAAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_6gx3b"]
+resource_name = "Sketchfab_Scene_RetroComputer_M_RetroComputer_0"
+_surfaces = [{
+"aabb": AABB(-0.12000002, -0.3, 0, 0.24000004, 0.6, 0.6),
+"attribute_data": PackedByteArray("/39/2v/X////13/a/3/////X/3//f//X/9f/1/9//3////9/f9n/1////9d/2f9//3//f//X/9f/f//X/9f/f/+V/3//1/+f/9f/f/+V/5//1/9//5X/n/+V/3//1/+f"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
+"material": SubResource("StandardMaterial3D_rba24"),
+"name": "M_RetroComputer",
+"primitive": 3,
+"uv_scale": Vector4(2, 2, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAD//wAAqir+//////+qKgAA/////6oq/v///wAAqir+////AACqKv//AAD//6oq/v//////qir//wAAAACqKv//AAAAAP8/AAAAAP///z///wAA////PwAAAAAAAP8/AAAAAAAAVNUAAP////9U1QAAAAD//1TVAAD//wAAVNX+////AAAAAAAAAAAAAAAA//8AAAAAAAAAAP//AAAAAP//AAD///+/AAD//////7/+////////vwAAAAD///+/qqqqqqqqqqqqqqqqqqqqqqoqqiqqKqoqqiqqKqoqqioAAP9/AAD/fwAA/38AAP9/VNVU1VTVVNVU1VTVVNVU1f8//7//P/+//z//v/8//7//f/9//3//f/9//3//f/9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_et6jw")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_mtgrr"]
+points = PackedVector3Array(0.119976535, 0.3, 0.6, -0.12000002, 0.3, 0.6, 0.12000002, -0.3, 0.6, 0.119976535, 0.3, 0, -0.12000002, 0.3, 0, -0.12000002, -0.3, 0.6, 0.12000002, -0.3, 0, -0.12000002, -0.3, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xb5f8"]
+resource_name = "M_RetroKeyboardMouse"
+cull_mode = 2
+albedo_texture = ExtResource("3_u12dd")
+texture_filter = 0
+metadata/_gltf_primary_texture_coord = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_qdpxb"]
+_surfaces = [{
+"aabb": AABB(-0.3, -0.10500003, 0, 0.6, 0.21000005, 0.030000001),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAACAAEAAwAEAAEABQAAAAIAAwAAAAUABAAGAAIABQACAAYAAwAHAAQAAwAFAAcABwAGAAQABwAFAAYA"),
+"name": "M_RetroKeyboardMouse",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAD+/wAAAAD///////8AAAAA/v///wAA/////wAAAAD//wAAPnUAAAAAAAAAAAAAAAAAAD51AAD//wAAAAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_rgtyq"]
+resource_name = "Sketchfab_Scene_RetroKeyboard_M_RetroKeyboardMouse_0"
+_surfaces = [{
+"aabb": AABB(-0.3, -0.10500003, 0, 0.6, 0.21000005, 0.030000001),
+"attribute_data": PackedByteArray("ZdoFAzLH3AZl2twGMscFAzLHBQP/s9wGMsfcBv+zBQP/swUDzKDcBv+z3AbMoAUDzKAFA5mN3AbMoNwGmY0FAwAA/1b//wAAAAAAAP///1bt/xBYEQDut+3/7rcRABBY"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
+"material": SubResource("StandardMaterial3D_xb5f8"),
+"name": "M_RetroKeyboardMouse",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAD+/wAAAAD///////8AAAAA/v///wAA/////wAAAAD/////AADnKP//AAA+dYIq////////0yj//wAAAACqKv//AAAAAP8/AAAAAD51/z///wAAPnX/PwAAAAAAAP8/AAAAAAAA/igAAP7///+WKgAAAAA+ddMoAAD+/wAAqir/////AAAAAAAAAAAAAAAA//8AAAAAAAAAAP7/AAAAAP//AAA+ddl8AAD+////2Xz////////ZfAAAAAA+ddl8/3//v/9//7//f/+//3//v5UotCt5KsIqfijAK6oqqioAAP9/AAD/fwAA/38AAP9/V1SvqEhVkao/VH6oVFWqqv9/////f////3////9///8AAP9/AAD/fwAA/38AAP9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_qdpxb")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_vhmmn"]
+points = PackedVector3Array(0.3, 0.10500003, 0.030000001, 0.3, 0.10500003, 0, -0.3, 0.10497946, 0.030000001, 0.3, -0.10500003, 0.013737275, 0.3, -0.10500003, 0, -0.3, 0.10497946, 0, -0.3, -0.10500003, 0.013737275, -0.3, -0.10500003, 0)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_cdfom"]
+_surfaces = [{
+"aabb": AABB(-0.036654294, -0.06356493, 0, 0.07342921, 0.12748541, 0.03299999),
+"format": 34896613377,
+"index_count": 96,
+"index_data": PackedByteArray("AAABAAIAAAADAAEAAwAEAAEABAACAAEABQAAAAIAAwAGAAQAAwAAAAcAAwAHAAYAAAAIAAcAAAAFAAgABQACAAkACAAFAAkABAAKAAIACgAJAAIABgALAAQACwAKAAQABgAMAAsACgANAAkACAAJAA0ACwAOAAoADAAOAAsADgANAAoABgAPAAwADAAPAA4ABgAHAA8ADgAQAA0ADwAQAA4AEQAIAA0ABwAIABEAEQANABAABwARAA8ADwARABAA"),
+"name": "M_RetroKeyboardMouse",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 18,
+"vertex_data": PackedByteArray("/3///wAAAAC13dnb4rUAAP9/KujitQAAlug87AAAAADE3G5qTdsAAGgXPOwAAAAA//+DhwAAAAD/f4OHAAAAAAAAg4cAAAAA3iHZ2+K1AAD/f25q//8AAKvTXRvKngAAlugHDwAAAADOIm5qTdsAAP9/FhcbsgAA/38AAAAAAABTLF0byp4AAGgXBw8AAAAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_v6eci"]
+resource_name = "Sketchfab_Scene_RetroMouse_M_RetroKeyboardMouse_0"
+_surfaces = [{
+"aabb": AABB(-0.036654294, -0.06356493, 0, 0.07342921, 0.12748541, 0.03299999),
+"attribute_data": PackedByteArray("QlgM0+tQ3cUcUifT0FIbxUU5oMOwH7fKFTHlyWgcusUzE4jUaBzY4CobVtSsGujlFzpb6H9RouC9MSHjAlb449LDz9XYoebEpJ3h1cnDCcHcw5Xq6KHY5pzjpujF5b/ViuPdwpIx2tN/UaLgHFIn070xIeMVMeXJHFIn0+tQ3cWSMdrTaBy6xSobVtSwH7fKMxOI1AJW+OMcUifTf1Gi4EJYDNOwH7fKkjHa0xUx5ckqG1bUKhtW1L0xIeOSMdrTaBzY4Kwa6OW9MSHjaBzY4Bc6W+jQUhvFFTHlyetQjsznNKDD"),
+"format": 34896613399,
+"index_count": 96,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAQABIAFAASABUAFgAQABQAFgAXABAAFwATABAAFwAYABMAGQAaABsAGQAcABoAHQAeAB8AHQAgAB4AIQAiACMAIQAkACIAJQAmACcAJQAoACYAKQAqACsAKQAsACoALQAuAC8ALQAwAC4AMQAyADMAMQA0ADIANQA2ADcANQA4ADYA"),
+"material": SubResource("StandardMaterial3D_xb5f8"),
+"name": "M_RetroKeyboardMouse",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 57,
+"vertex_data": PackedByteArray("/3///wAA6ji13dnb4rUnOf9/KujitaU3lug87AAAUDr//4OHAAByLavTXRvKnjQvxNxuak3bziuW6AcPAACGMP9/AAAAAOA0UyxdG8qenjT/fxYXG7IlNmgXBw8AAGozAACDhwAA4ijeIdnb4rX7Js4ibmpN2/wpaBc87AAAmyX/f4OHAAAAAGgXBw8AAAAA/38AAAAAAAAAAIOHAAAAAP//g4cAAAAAlugHDwAAAACW6DzsAAAAAP9///8AAAAAaBc87AAAAAD/f25q///rPN4h2dvitfA9/38q6OK1eT7OIm5qTdtNPMTcbmpN28c9/38q6OK1yTu13dnb4rVyOv9/bmr//+k+lugHDwAA1TP/fxYXG7IUM6vTXRvKnng4/38AAAAApi9oFzzsAACxMP9/KujitVQw3iHZ2+K1jjL/f///AACmLqvTXRvKngI+/39uav//iD7E3G5qTdsjP/9/FhcbsmU9/38WFxuyokDOIm5qTdv5P/9/bmr//zo/UyxdG8qegUFoFwcPAAA4N84ibmpN29s1UyxdG8qe3zgAAIOHAAAONZboPOwAADk0xNxuak3bIjO13dnb4rVbNf//g4cAABsyYdPfHnDTGx8U058duNNLIAAe0iuWH0ArkBxWLM8g0CrsKq7h/irr4ZcqguBMK//iduPl0w3lR9OG4kPULebW0rO/S8AOwPC/DsDwv2fAl7/7vgLBDsDwv1W/qcC7wEO/eMKFvYr+Kwyu/lQMwf5qDHX+EwyP87YAxvNmAOnzMgBw8+UAyBxO1CId+dR4GtzPox7c193kdyux5CkrxeUMLerjzykFBOjs7APE7M0DmuwkBBLtlhPR+4ETAPxqEzX8shOR+yHPieGq0MbgKs2C4ojRWOCaLAQidyuNItQtcCFtKgsj")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_cdfom")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_2yvra"]
+points = PackedVector3Array(-0.036654294, 0.0039089993, 0, -0.026943754, 0.045913294, 0.02344498, -0.029941011, 0.054074556, 0, -0.029941011, -0.05609001, 0, -0.02667781, -0.010566633, 0.028267708, 5.312264e-05, 0.05204048, 0.02344498, 5.312264e-05, 0.06390801, 0, 5.312264e-05, -0.010566633, 0.03299999, 5.312264e-05, -0.06356493, 0, -0.023946498, -0.049950343, 0.020466711, 0.026935004, 0.045913294, 0.02344498, 0.03005445, 0.054074556, 0, 0.026669055, -0.010566633, 0.028267708, 5.312264e-05, -0.052071773, 0.022957215, 0.024059933, -0.049950343, 0.020466711, 0.03005445, -0.05609001, 0, 0.03677492, 0.0039089993, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q51r3"]
+resource_name = "M_RetroMonitor"
+cull_mode = 2
+albedo_texture = ExtResource("4_w0lbt")
+texture_filter = 0
+metadata/_gltf_primary_texture_coord = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_w5i7d"]
+_surfaces = [{
+"aabb": AABB(-0.24000001, -0.21600002, 0, 0.48000002, 0.504, 0.54),
+"format": 34359742465,
+"index_count": 222,
+"index_data": PackedByteArray("AAABAAIAAgABAAMAAwABAAQAAAAEAAEAAwAEAAUABgAEAAAABgAFAAQABwADAAUABwAFAAYAAgADAAcACAAGAAAACQAAAAIACAAAAAkACgACAAcACQACAAoACwAHAAYACwAGAAgACgAHAAsADAAIAAkADQAJAAoADAAJAA0ADgANAAoADwAMAA0ACAAMAA8ADQAOAA8AEAALAAgADwAQAAgACwARAAoACgARAA4ACwAQABEADgASAA8AEAAPABIADgARABMAEQAQABMAEwAUAA4ADgAUABIAEwAVABQAEgAWABAAFgATABAAEgAXABYAFgAYABMAEwAYABUAFgAXABgAFAAVABkAFAAZABIAGQAVABgAEgAZABcAGQAYABcAGgAbABwAHAAbAB0AHAAdAB4AGgAfABsAIAAfABoAHgAhACAAIAAhAB8AHgAdACEAHwAiABsAGwAjAB0AGwAiACMAHQAkACEAHQAjACQAIQAlAB8AHwAlACIAIQAkACUAIgAmACMAJAAnACUAJQAoACIAIgAoACYAJQAnACgAIwAmACkAIwApACQAKAApACYAJAApACcAKAAnACkA"),
+"name": "M_RetroMonitor",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 42,
+"vertex_data": PackedByteArray("p5tEvrl0kz0bL909fvIwvrx0kz7YEvI+p5tEvrl0kz1t5/s+fPIwPrx0kz7YEvI+fvIwvrx0kz63QAI+fPIwPrx0kz63QAI+p5tEPr10kz0bL909p5tEPr10kz1t5/s+kMJ1PqSbRL2QwnU9kMJ1vq6bRL2QwnU9kMJ1vq6bRL1xPQo/kMJ1PqSbRL1xPQo/kcJ1PhovXb6QwnU9j8J1vhwvXb6QwnU9j8J1vhwvXb4W0h4+kcJ1PhovXb4W0h4+kcJ1PhovXb5xPQo/j8J1vhwvXb5xPQo/MLxDPhovXb4W0h4+UYZHvhwvXb7QpPc+UYZHvhwvXb4W0h4+UYZHvtD3U74W0h4+MLxDPhovXb7QpPc+MLxDPs73U77QpPc+UYZHvtD3U77QpPc+MLxDPs73U74W0h4+Z2bmPWhm5j3pm+U9r0ehPa9Hob2jwnU8Z2bmPWZm5r3vm+U9rkehva9Hob2jwnU8Z2bmvWZm5r3vm+U9rkehPa5HoT2MwnU8Z2bmvWhm5j3pm+U9r0ehva1HoT2MwnU8EFgpPhFYKb6jwnU8EFgpvhFYKb6jwnU8EFgpvg9YKT6IwnU8EFgpPhBYKT6IwnU8EFgpvhFYKb6QwnUyEFgpPhBYKT4AAAAAEFgpPhFYKb6QwnUyEFgpvg9YKT4AAAAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_slyfp"]
+resource_name = "Sketchfab_Scene_RetroMonitor_M_RetroMonitor_0"
+_surfaces = [{
+"aabb": AABB(-0.24000001, -0.21600002, 0, 0.48000002, 0.504, 0.54),
+"attribute_data": PackedByteArray("RaJ5Ph7SCT5W4uI+ceHNPkWieT7uFtU+VuLiPh09GD6Q1hE87BVvPneC8z0Iddg+kNYRPAh12D6AgvM97hVvPi0L/z1Qjcs9RaJ5Pu4W1T4tC/89rBznPkWieT4e0gk+d4L/PQh12D5JNng+YaKHPoCC/z3uFW8+RDZ4PqBdyD6AgvM97hVvPpDWETwIddg+d4LzPQh12D6Q1hE87BVvPoCC/z3uFW8+RDZ4PqBdyD53gv89CHXYPkk2eD5hooc+LQv/Pawc5z5Fonk+HtIJPi0L/z1Qjcs9RaJ5Pu4W1T5gJds+8xWHPgzwVz4Q6sg+IDxMPvEVhz5pS9U+EOrIPkWieT7uFtU+VuLiPh09GD5Fonk+HtIJPlbi4j5x4c0+het1P4TrdT97FA8/exQVP4XrdT97FBU/exQPP4TrdT8D8uU+0PlzP6qlQD3Q+XM/qqVAPdD5cz8D8uU+0PlzPwPy4z7S/SY/qqVQPdD5cT8D8uM+0PlxP6ilUD3S/SY/qKVAPdL9JT8D8uU+0v0lPwPy5T7S/SU/qKVAPdL9JT+qpSg90PlyP6ilKD3S/SY/qKUoPdL9Jj+qpSg90PlyPwPy6D7S/SY/A/LoPtD5cj8D8ug+0PlyPwPy6D7S/SY/IDxMPvEVhz5pS9U+EOrIPmAl2z7zFYc+DPBXPhDqyD4IbeM+zMyUPnxJAj/gehQ+CG3jPtDMzD18SQI/IIV7Pght4z7QzMw9fEkCPyCFez4IbeM+zMyUPnxJAj/gehQ+CG3jPszMlD58SQI/4HoUPght4z7QzMw9fEkCPyCFez4IbeM+0MzMPXxJAj8ghXs+CG3jPszMlD58SQI/4HoUPh2Fqz4hhZU+9SicPg3XzT4dhas+43q+PvMonD75KIY+33rUPuN6vj4J1+M+9yiGPt961D4hhZU+CdfjPg3XzT5Ym/4+NDOTPlSyAD8wM7M9WJv+PjAzsz1UsgA/NDOTPlib/j4wM7M9VLIAPzQzkz5Ym/4+NDOTPlSyAD8wM7M9WJv+PjQzkz5UsgA/MDOzPVib/j4wM7M9VLIAPzQzkz5Ym/4+MDOzPVSyAD80M5M+WJv+PjQzkz5UsgA/MDOzPR2Fqz7jer4+CdfjPg3XzT7fetQ+43q+PvUonD4N180+33rUPiGFlT7zKJw++SiGPh2Fqz4hhZU+CdfjPvcohj74ktQ+4HoUPnxJAj8ghXs++JLUPiCFez58SQI/4HoUPgAAAD8AAIA/AAAAP9L9Jj8D8uc+0v0mPwPy5z7Q+XI/qqUvPdD5cj8AAAAAAACAP+pHTbLS/SY/qKUvPdL9Jj8AAAA/0v0lPwAAAD8AABE/AACAsgAAET/qR02y0v0lPwPy5T7S/SU/qKVAPdL9JT8tC/89rBzqPoC5rjqsHOo+gLmuOkAwMz6Aua46UI3XPS0L/z1Qjdc9LQv/PVCN1z2Aua46UI3XPYC5rjpAMDM+gLmuOqwc6j4tC/89rBzqPg=="),
+"format": 34359742487,
+"index_count": 222,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUAKAApACoAKAArACkALAAtAC4ALAAvAC0AMAAxADIAMAAzADEANAA1ADYANAA3ADUAOAA5ADoAOAA7ADkAPAA9AD4APAA/AD0AQABBAEIAQABDAEEARABFAEYARABHAEUASABJAEoASABLAEkATABNAE4ATABPAE0AUABRAFIAUABTAFEAVABVAFYAVABXAFUAWABZAFoAWABbAFkAXABdAF4AXABfAF0AYABhAGIAYABjAGEAZABlAGYAZABnAGUAaABpAGoAaABrAGkAbABtAG4AbABvAG0AcABxAHIAcABzAHEAdAB1AHYAdgB3AHQAdwB4AHQAeQB0AHgAegB5AHgAeAB7AHoAfAB9AH4AfgB/AHwAfwCAAHwAfwCBAIAAggCDAIQAhACFAIIAhQCGAIIAhwCIAIkAiQCKAIcAigCLAIcA"),
+"material": SubResource("StandardMaterial3D_q51r3"),
+"name": "M_RetroMonitor",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 140,
+"vertex_data": PackedByteArray("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/3+RpElHGA7/f/9//38AAP9//3//fwAA/3//f/9/AAD/f/9//38AAJIk//9MkiznkiT//1Jy0+iSJP//rmt05pIk//8xnKTjbNuRpG1bSRJs25GkbVtJEmzbkaRtW0kSbNuRpG1bSRKM9f//////v4z1///+//+/jPX///7//7+M9f//////v4z1coqMdTkFjPVyiox1OQWM9XKKjHU5BYz1coqMdTkF/3///////7//f///////v/9///////+//3///////7//////////v/////////+//////////7//////////v/9/AAD+//8//38AAP7//z//fwAA/v//P/9/AAD+//8//3//f////z//f/9/////P/9//3////8//3//f////z////9/////v////3////+/////f////7////9/////vwAA/3////+/AAD/f////78AAP9/////vwAA/3////+//39yiv7//z//f3KK/v//P/9/cor+//8//39yiv///z////xeawznDv///F7eBB5w///8Xn8QnnH///xeBhzkDAAA/F6T8+aOAAD8XiD7HvAAAPxef++e8QAA/F744+OM/F7//84dyXn8Xv//PeCQffxe//894793/F7//8gZ/HECoQAAMOLJ+QKhAADBH4/9AqEAAMEcv/cCoQAANub78f9//38q85U5/3//f6j0qkX/f/9/GeFyT/9//39N7Cc2/3//fyrzlTn/f/9/qPSqRf9//38Z4XJP/3//f03sJzb///9///8AAP///3///wAA////f///AAD///9///8AAAAA/3//////AAD/f/////8AAP9//////wAA/3///////3//////AAD/f/////8AAP9//////wAA/3//////AAD/fwAA//////9/AAD//////38AAP//////fwAA//////9//3////8//3//f////z//f/9/////P/9//3////8//3//f/7//z//f/9//v//P/9//3////8//3//f/7//z///wAA/3//////AAD/f/////8AAP9//////wAA/3////9/AAD///8//38AAP///z//fwAA////P/9/AAD///8//38AAP7//z//fwAA/v//P/9/AAD///8//38AAP///z//fwAA////P/9/AAD+//8//38AAP///z//fwAA/v//P/9/AAD///+//38AAP///78AAP9//3///wAA/3//f///AAD/f/9//v8AAP9//3///wAA/3//f////v//f/9/AAD+//9//38AAP7//3//fwAA/v//f/9/AAD+//9//38AAA==")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_w5i7d")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ewrl0"]
+points = PackedVector3Array(-0.24000001, -0.21600002, 0.05999413, -0.24000001, -0.04801646, 0.05999413, -0.16538763, -0.16538295, 0, 0.24000001, -0.21600002, 0.05999413, -0.24000001, -0.21600002, 0.54, -0.16538763, 0.16535473, 0, -0.24000001, -0.04801646, 0.54, -0.17281128, 0.2879507, 0.12717699, 0.16534063, -0.16538295, 0, 0.24000001, -0.04801646, 0.05999413, 0.24000001, -0.21600002, 0.54, 0.16534063, 0.16535473, 0, 0.24000001, -0.04801646, 0.54, -0.17281128, 0.2879507, 0.4727643, 0.1727643, 0.2879507, 0.12717699, 0.1727643, 0.2879507, 0.4727643)
+
+[node name="ComputerSave" type="StaticBody3D" unique_id=729736860 node_paths=PackedStringArray("save_ui")]
+collision_layer = 4
+collision_mask = 7
+script = SubResource("GDScript_mtgrr")
+save_ui = NodePath("SaveUi")
+
+[node name="RetroComputer_M_RetroComputer_0" type="MeshInstance3D" parent="." unique_id=1029518036]
+transform = Transform3D(1, 0, 0, 0, -1.6292067e-07, 1, 0, -1, -1.6292067e-07, 0.5, 0, 0)
+mesh = SubResource("ArrayMesh_6gx3b")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=580136026]
+transform = Transform3D(1, 0, 0, 0, -1.6292067e-07, 1, 0, -1, -1.6292067e-07, 0.5, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_mtgrr")
+
+[node name="RetroKeyboard_M_RetroKeyboardMouse_0" type="MeshInstance3D" parent="." unique_id=330452786]
+transform = Transform3D(1, 0, 0, 0, -1.6292067e-07, 1, 0, -1, -1.6292067e-07, 0, -1.110223e-16, 0.5)
+mesh = SubResource("ArrayMesh_rgtyq")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="." unique_id=687307224]
+transform = Transform3D(1, 0, 0, 0, -1.6292067e-07, 1, 0, -1, -1.6292067e-07, 0, -1.110223e-16, 0.5)
+shape = SubResource("ConvexPolygonShape3D_vhmmn")
+
+[node name="RetroMouse" type="MeshInstance3D" parent="." unique_id=1626974556]
+transform = Transform3D(1, 0, 0, 0, -1.6292067e-07, 1, 0, -1, -1.6292067e-07, 0.5, -1.110223e-16, 0.5)
+mesh = SubResource("ArrayMesh_v6eci")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="." unique_id=1479567033]
+transform = Transform3D(1, 0, 0, 0, -1.6292067e-07, 1, 0, -1, -1.6292067e-07, 0.5, -1.110223e-16, 0.5)
+shape = SubResource("ConvexPolygonShape3D_2yvra")
+
+[node name="RetroMonitor" type="MeshInstance3D" parent="." unique_id=1581637057]
+transform = Transform3D(1, 0, 0, 0, -1.6292067e-07, 1, 0, -1, -1.6292067e-07, 0, 0, 0)
+mesh = SubResource("ArrayMesh_slyfp")
+
+[node name="AreaLight3D" type="AreaLight3D" parent="RetroMonitor" unique_id=2020529482]
+transform = Transform3D(1, 0, 0, 0, 1.3113416e-07, 1, 0, -1, 1.3113416e-07, 0, -0.20943046, 0.32021585)
+light_color = Color(0.48703498, 0.9999997, 0.9976688, 1)
+light_energy = 0.25
+area_size = Vector2(0.38036773, 0.32929718)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1035951185]
+transform = Transform3D(1, 0, 0, 0, -1.6292067e-07, 1, 0, -1, -1.6292067e-07, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_ewrl0")
+
+[node name="SaveUi" parent="." unique_id=1400086558 instance=ExtResource("5_vhmmn")]

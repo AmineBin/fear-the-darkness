@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://dyuj3bmbrxb33"]
 
-[ext_resource type="Script" uid="uid://bqq1cuoqt07op" path="res://props/environment/objects/radio.gd" id="1_31stb"]
+[ext_resource type="Script" uid="uid://bqq1cuoqt07op" path="res://props/interactable/radio.gd" id="1_31stb"]
 [ext_resource type="Texture2D" uid="uid://cbu7ysneuyws7" path="res://assets/models/radio_0.png" id="1_n2vwd"]
 [ext_resource type="AudioStream" uid="uid://dlr2f6c4op4kl" path="res://assets/audio/sfx/alarm1.wav" id="2_qey4x"]
 

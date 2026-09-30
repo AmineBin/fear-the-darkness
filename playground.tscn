@@ -5,15 +5,14 @@
 [ext_resource type="PackedScene" uid="uid://bhl48kxd2a852" path="res://ui/inventory/player_inventory_ui/player_inventory_ui.tscn" id="3_dk0co"]
 [ext_resource type="PackedScene" uid="uid://bhb7tynm8e6f8" path="res://ui/menus/pause_menu/pause_menu.tscn" id="6_5m40n"]
 [ext_resource type="PackedScene" uid="uid://yifphocygbal" path="res://entities/player/player.tscn" id="7_x6kx1"]
-[ext_resource type="PackedScene" uid="uid://x8ov0rgfasef" path="res://props/chest/chest.tscn" id="8_jufm4"]
+[ext_resource type="PackedScene" uid="uid://x8ov0rgfasef" path="res://props/interactable/chest/chest.tscn" id="8_jufm4"]
 [ext_resource type="PackedScene" uid="uid://cw0pf1c2n6n7g" path="res://props/collectible/key.tscn" id="9_ymgag"]
-[ext_resource type="PackedScene" uid="uid://xhj505s5uuhc" path="res://props/collectible/med_kit.tscn" id="10_u2qr3"]
-[ext_resource type="PackedScene" uid="uid://carrmofvblnfo" path="res://props/doors/metal_door/metal_door.tscn" id="11_vnugj"]
+[ext_resource type="PackedScene" uid="uid://xhj505s5uuhc" path="res://props/collectible/medkit.tscn" id="10_u2qr3"]
+[ext_resource type="PackedScene" uid="uid://carrmofvblnfo" path="res://props/interactable/doors/metal_door/metal_door.tscn" id="11_vnugj"]
 [ext_resource type="Resource" uid="uid://d0tt6ykltt3wg" path="res://items/key/key.tres" id="12_2yo0f"]
 [ext_resource type="PackedScene" uid="uid://dadtil6r03215" path="res://entities/enemies/wrapper/wrapper.tscn" id="13_3i8ot"]
-[ext_resource type="PackedScene" uid="uid://6sr7mr1e3xyf" path="res://props/environment/objects/trapdoor.tscn" id="13_yjl7g"]
-[ext_resource type="PackedScene" uid="uid://dyuj3bmbrxb33" path="res://props/environment/objects/radio.tscn" id="14_f7pug"]
-[ext_resource type="PackedScene" uid="uid://cpamjhxchtvun" path="res://props/save/save.tscn" id="14_ofol1"]
+[ext_resource type="PackedScene" uid="uid://6sr7mr1e3xyf" path="res://props/interactable/trapdoor.tscn" id="13_yjl7g"]
+[ext_resource type="PackedScene" uid="uid://dyuj3bmbrxb33" path="res://props/interactable/radio.tscn" id="14_f7pug"]
 
 [sub_resource type="Environment" id="Environment_3xd07"]
 background_mode = 1
@@ -47,6 +46,7 @@ light_energy = 16.0
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1884007057]
 transform = Transform3D(1, 0, 0, 0, 0.22533074, 0.9742824, 0, -0.9742824, 0.22533074, 0, 10.5032835, 7.593382)
+visible = false
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=1066223972]
 
@@ -103,9 +103,6 @@ shape = SubResource("ConvexPolygonShape3D_2bfhc")
 
 [node name="Wrapper" parent="." unique_id=1260034797 instance=ExtResource("13_3i8ot")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.281483, 0.5000365, -5.3784804)
-
-[node name="Save" parent="." unique_id=143762462 instance=ExtResource("14_ofol1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.131048, 1, -4.985965)
 
 [node name="StaticBody3D" parent="." unique_id=1106363981 instance=ExtResource("14_f7pug")]
 transform = Transform3D(4, 0, 0, 0, -1.7484555e-07, 4, 0, -4, -1.7484555e-07, 12.28856, 0.500028, -5.0506954)

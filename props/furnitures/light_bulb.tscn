@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://c8acsi773ttad"]
+
+[node name="LightBulb" type="CSGSphere3D" unique_id=136457553]
+radius = 0.2
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1563181930]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5)
+light_color = Color(0.88060987, 0.32044923, 5.0055983e-06, 1)
+light_energy = 0.5
+light_size = 0.297
