@@ -210,9 +210,11 @@ transform = Transform3D(1, 0, 0, 0, -1.6292067e-07, 1, 0, -1, -1.6292067e-07, 0,
 mesh = SubResource("ArrayMesh_slyfp")
 
 [node name="AreaLight3D" type="AreaLight3D" parent="RetroMonitor" unique_id=2020529482]
-transform = Transform3D(1, 0, 0, 0, 1.3113416e-07, 1, 0, -1, 1.3113416e-07, 0, -0.20943046, 0.32021585)
+transform = Transform3D(1, 0, 0, 0, 1.3311835e-07, 1, 0, -1, 1.3311835e-07, 0, -0.21746337, 0.32021585)
 light_color = Color(0.48703498, 0.9999997, 0.9976688, 1)
 light_energy = 0.25
+area_range = 0.389
+area_attenuation = 2.386
 area_size = Vector2(0.38036773, 0.32929718)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1035951185]
