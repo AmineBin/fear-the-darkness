@@ -26,10 +26,6 @@ albedo_color = Color(0, 0, 0, 1)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pkqcj"]
 albedo_color = Color(0.59690034, 0.17184046, 2.8878452e-07, 1)
 
-[sub_resource type="Environment" id="Environment_qae1c"]
-background_mode = 1
-background_color = Color(0.011702105, 0.011702111, 0.011702101, 1)
-
 [node name="Level1" type="Node3D" unique_id=800279432]
 script = ExtResource("1_a1r6t")
 
@@ -427,6 +423,30 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -5, 10.875)
 operation = 2
 size = Vector3(2.5, 3, 0.25)
 
+[node name="Room3" type="CSGCombiner3D" parent="Rooms" unique_id=1262590036]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, -10.75, -16.25)
+use_collision = true
+
+[node name="Floor5" type="CSGBox3D" parent="Rooms/Room3" unique_id=1946721617]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33, 0.125, -0.25)
+size = Vector3(70.5, 0.25, 1.5)
+
+[node name="Wall1" type="CSGBox3D" parent="Rooms/Room3" unique_id=1444080010]
+transform = Transform3D(0.9998477, 0, -0.017452406, 0, 1, 0, 0.017452406, 0, 0.9998477, -5.3833, 1.375, 0.37485504)
+size = Vector3(15.266602, 2.25, 0.25)
+
+[node name="Wall2" type="CSGBox3D" parent="Rooms/Room3" unique_id=371271629]
+transform = Transform3D(0.9998477, 0, 0.017452406, 0, 1, 0, -0.017452406, 0, 0.9998477, -5.381591, 1.375, -0.87488556)
+size = Vector3(15.263184, 2.25, 0.25)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Rooms/Room3" unique_id=1410506464]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.75, 1.375, -0.7431679)
+size = Vector3(53.5, 2.25, 0.25)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Rooms/Room3" unique_id=632675202]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.625, 1.375, 0.2418766)
+size = Vector3(53.25, 2.25, 0.25)
+
 [node name="Furniture" type="Node3D" parent="." unique_id=1079558131]
 
 [node name="Table1" parent="Furniture" unique_id=101897012 instance=ExtResource("6_xsfx6")]
@@ -531,6 +551,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.75, -0.75, -2.75)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=983709190]
 transform = Transform3D(1, 0, 0, 0, -0.50000006, 0.8660254, 0, -0.8660254, -0.50000006, 21.75, -6.25, -33)
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=703244393]
-environment = SubResource("Environment_qae1c")
