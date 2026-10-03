@@ -26,6 +26,10 @@ albedo_color = Color(0, 0, 0, 1)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pkqcj"]
 albedo_color = Color(0.59690034, 0.17184046, 2.8878452e-07, 1)
 
+[sub_resource type="Environment" id="Environment_qae1c"]
+background_mode = 1
+background_color = Color(0.011702105, 0.011702111, 0.011702101, 1)
+
 [node name="Level1" type="Node3D" unique_id=800279432]
 script = ExtResource("1_a1r6t")
 
@@ -42,7 +46,7 @@ inventory_ui = NodePath("../Inv_UI")
 metadata/_edit_use_anchors_ = true
 
 [node name="Player" parent="." unique_id=865410242 instance=ExtResource("2_w28nb")]
-transform = Transform3D(2.9802322e-08, 0, 1, 0, 1, 0, -1, 0, 2.9802322e-08, 20.452, -0.5, 0.14299774)
+transform = Transform3D(5.7620454e-08, 0, -1, 0, 1, 0, 1, 0, 5.7620454e-08, 1.9519997, -8.75, -25.107002)
 
 [node name="Rooms" type="Node3D" parent="." unique_id=1870520931]
 
@@ -88,6 +92,11 @@ size = Vector3(0.25, 2, 1)
 [node name="Floor2" type="CSGBox3D" parent="Rooms/Room1" unique_id=370340901]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -1.625, 0.875)
 size = Vector3(8, 0.25, 9.25)
+
+[node name="ElevatorDoor1" type="CSGBox3D" parent="Rooms/Room1" unique_id=1456304690]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -0.5, 5.25)
+operation = 2
+size = Vector3(2, 2, 1)
 
 [node name="Hallway1" type="CSGCombiner3D" parent="Rooms" unique_id=560487540]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, 0, 0)
@@ -237,6 +246,14 @@ size = Vector3(30.5, 0.25, 49.75)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.125, -5.125, 8)
 size = Vector3(10.25, 0.25, 2)
 
+[node name="Floor3" type="CSGBox3D" parent="Rooms/Room2" unique_id=1706668463]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.75, -5.125, 7.75)
+size = Vector3(8.5, 0.25, 9)
+
+[node name="Floor4" type="CSGBox3D" parent="Rooms/Room2" unique_id=471413190]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.75, -7.125, 7.75)
+size = Vector3(8.5, 0.25, 9)
+
 [node name="Ceiling" type="CSGBox3D" parent="Rooms/Room2" unique_id=2138307016]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.75, 2.875, -20.125)
 visible = false
@@ -253,6 +270,14 @@ size = Vector3(3.75, 3, 0.25)
 [node name="Wall21" type="CSGBox3D" parent="Rooms/Room2" unique_id=2147275413]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.125, -4.625, 7.125)
 size = Vector3(10.75, 3.75, 0.25)
+
+[node name="Wall24" type="CSGBox3D" parent="Rooms/Room2" unique_id=987451800]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.875, -4.625, 3.125)
+size = Vector3(8.75, 3.75, 0.25)
+
+[node name="Wall27" type="CSGBox3D" parent="Rooms/Room2" unique_id=896306318]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.875, -4.625, 12.375)
+size = Vector3(8.75, 3.75, 0.25)
 
 [node name="Wall22" type="CSGBox3D" parent="Rooms/Room2" unique_id=493485152]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, -4.625, 8.75)
@@ -315,6 +340,26 @@ size = Vector3(0.25, 3, 39.75)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.375, -3.875, 10.5)
 size = Vector3(0.25, 2.25, 4)
 
+[node name="Wall28" type="CSGBox3D" parent="Rooms/Room2" unique_id=2070833497]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.125, -3.875, 7.75)
+size = Vector3(0.25, 2.25, 9.5)
+
+[node name="Wall29" type="CSGBox3D" parent="Rooms/Room2" unique_id=614695482]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.875, -6.375, 7.75)
+size = Vector3(0.25, 2.25, 7)
+
+[node name="Wall30" type="CSGBox3D" parent="Rooms/Room2" unique_id=101749304]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.625, -6.375, 7.75)
+size = Vector3(0.25, 2.25, 7)
+
+[node name="Wall31" type="CSGBox3D" parent="Rooms/Room2" unique_id=572061939]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.75, -6.375, 4.125)
+size = Vector3(6, 2.25, 0.25)
+
+[node name="Wall32" type="CSGBox3D" parent="Rooms/Room2" unique_id=1685138498]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.75, -6.375, 11.375)
+size = Vector3(6, 2.25, 0.25)
+
 [node name="Wall26" type="CSGBox3D" parent="Rooms/Room2" unique_id=1538101040]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.375, -3.875, 5.25)
 size = Vector3(0.25, 2.25, 4)
@@ -371,6 +416,16 @@ size = Vector3(3.25, 1.5, 6.25)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.125, -5, 8.625)
 operation = 2
 size = Vector3(1.25, 0.5, 0.75)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Rooms/Room2" unique_id=2021140487]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.75, -5, 7.75)
+operation = 2
+size = Vector3(6, 0.5, 7)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Rooms/Room2" unique_id=883855885]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -5, 10.875)
+operation = 2
+size = Vector3(2.5, 3, 0.25)
 
 [node name="Furniture" type="Node3D" parent="." unique_id=1079558131]
 
@@ -459,6 +514,13 @@ size = Vector3(1.2508545, 1.5, 2)
 step_count = 6
 metadata/_custom_type_script = "uid://m2fvd5j6jd46"
 
+[node name="Stairs2" type="Node3D" parent="Environment/Stairs" unique_id=1124488726]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 32.160217, -10.0043335, -29)
+script = ExtResource("10_qae1c")
+size = Vector3(1, 1.991333, 2.8204346)
+step_count = 17
+metadata/_custom_type_script = "uid://m2fvd5j6jd46"
+
 [node name="Interactable" type="Node3D" parent="." unique_id=2124057384]
 
 [node name="MetalDoor" parent="Interactable" unique_id=802934540 instance=ExtResource("8_hoo32")]
@@ -469,3 +531,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.75, -0.75, -2.75)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=983709190]
 transform = Transform3D(1, 0, 0, 0, -0.50000006, 0.8660254, 0, -0.8660254, -0.50000006, 21.75, -6.25, -33)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=703244393]
+environment = SubResource("Environment_qae1c")
