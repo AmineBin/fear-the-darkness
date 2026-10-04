@@ -186,10 +186,10 @@ debug_fill = false
 [node name="Node3D" type="Node3D" parent="." unique_id=1767678249]
 
 [node name="Tube10" parent="." unique_id=1957449517 instance=ExtResource("3_jivrr")]
-transform = Transform3D(1.9470718e-07, -7.54979e-08, 1, -9.8924275e-15, 1, 7.54979e-08, -1, -2.4592412e-14, 1.9470718e-07, 5, 1, -0.75)
+transform = Transform3D(1.9470718e-07, -7.54979e-08, 1, -9.8924275e-15, 1, 7.54979e-08, -1, -2.4592412e-14, 1.9470718e-07, 5, 1.25, -0.75)
 
 [node name="Tube11" parent="." unique_id=336946436 instance=ExtResource("3_jivrr")]
-transform = Transform3D(1.9470718e-07, -7.54979e-08, 1, -9.8924275e-15, 1, 7.54979e-08, -1, -2.4592412e-14, 1.9470718e-07, 15, 1, -0.75)
+transform = Transform3D(1.9470718e-07, -7.54979e-08, 1, -9.8924275e-15, 1, 7.54979e-08, -1, -2.4592412e-14, 1.9470718e-07, 15, 1.25, -0.75)
 
 [node name="Sketchfab_Scene" parent="." unique_id=1441538094 instance=ExtResource("4_hid02")]
-transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 5.25, -1, 0.75)
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 6, -1, 0.75)
