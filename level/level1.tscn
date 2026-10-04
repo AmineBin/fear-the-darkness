@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://bhb7tynm8e6f8" path="res://ui/menus/pause_menu/pause_menu.tscn" id="5_pkqcj"]
 [ext_resource type="PackedScene" uid="uid://cw0pf1c2n6n7g" path="res://props/collectible/key.tscn" id="6_a1r6t"]
 [ext_resource type="PackedScene" uid="uid://bvjll2kscjiuy" path="res://level/rooms/lvl1_hallway_1.tscn" id="6_n6f2s"]
-[ext_resource type="PackedScene" uid="uid://c8acsi773ttad" path="res://props/furnitures/light_bulb.tscn" id="6_pkqcj"]
 [ext_resource type="PackedScene" uid="uid://byf5afsf5k1jf" path="res://props/furnitures/table_1.tscn" id="6_xsfx6"]
 [ext_resource type="PackedScene" uid="uid://xhj505s5uuhc" path="res://props/collectible/medkit.tscn" id="7_vscsl"]
 [ext_resource type="PackedScene" uid="uid://carrmofvblnfo" path="res://props/interactable/doors/metal_door/metal_door.tscn" id="8_hoo32"]
@@ -22,8 +21,9 @@ albedo_color = Color(0.23392558, 0.2339254, 0.23392543, 1)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_okudf"]
 albedo_color = Color(0.9739981, 0.8656828, 0.56224984, 1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pkqcj"]
-albedo_color = Color(0.59690034, 0.17184046, 2.8878452e-07, 1)
+[sub_resource type="Environment" id="Environment_n6f2s"]
+background_mode = 1
+background_color = Color(0.011702105, 0.011702111, 0.011702101, 1)
 
 [node name="Level1" type="Node3D" unique_id=800279432]
 script = ExtResource("1_a1r6t")
@@ -94,7 +94,7 @@ operation = 2
 size = Vector3(2, 2, 1)
 
 [node name="Hallway1" parent="Rooms" unique_id=1606809133 instance=ExtResource("6_n6f2s")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.75, 0, -0.25)
 
 [node name="StairCase1" type="CSGCombiner3D" parent="Rooms" unique_id=1660255155]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.75, 0, -7.75)
@@ -511,15 +511,6 @@ transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0
 light_color = Color(1, 0.7529412, 0.4117647, 1)
 light_energy = 2.0
 
-[node name="Barrel1" type="CSGCylinder3D" parent="Furniture" unique_id=992866658]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, -0.9967041, 0.75)
-use_collision = true
-radius = 0.35
-height = 1.0065918
-
-[node name="LightBulb" parent="Furniture" unique_id=136457553 instance=ExtResource("6_pkqcj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, 1, 1.25)
-
 [node name="MedKit" parent="Furniture" unique_id=927341689 instance=ExtResource("7_vscsl")]
 transform = Transform3D(0.4829629, 0, 0.12940952, 0, 0.5, 0, -0.12940952, 0, 0.4829629, -2, -0.76682866, -0.75)
 
@@ -529,12 +520,6 @@ transform = Transform3D(0.4829629, 0, 0.12940952, 0, 0.5, 0, -0.12940952, 0, 0.4
 transform = Transform3D(0.36993822, 0, -0.3363714, 0, 0.5, 0, 0.3363714, 0, 0.36993822, -1.9943223, -0.5496826, 0.31725526)
 
 [node name="Environment" type="Node3D" parent="." unique_id=41424157]
-
-[node name="Pipe1" type="CSGCylinder3D" parent="Environment" unique_id=2034704700]
-transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 13.25, 1.0000002, -1.25)
-radius = 0.25
-height = 16.5
-material = SubResource("StandardMaterial3D_pkqcj")
 
 [node name="Stairs" type="Node3D" parent="Environment" unique_id=1512144648]
 
@@ -597,3 +582,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.75, -0.75, -2.75)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=983709190]
 transform = Transform3D(1, 0, 0, 0, -0.50000006, 0.8660254, 0, -0.8660254, -0.50000006, 21.75, -6.25, -33)
+visible = false
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1719177919]
+environment = SubResource("Environment_n6f2s")

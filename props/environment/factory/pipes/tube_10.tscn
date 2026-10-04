@@ -1,0 +1,53 @@
+[gd_scene format=4 uid="uid://c0dnl3gt4pimd"]
+
+[ext_resource type="Texture2D" uid="uid://bd2to00ok6twh" path="res://assets/models/environment/factory/industrial_pipe_construction_kit_psx_style_0.png" id="1_h20od"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l5sj2"]
+resource_name = "Tubes"
+cull_mode = 2
+albedo_texture = ExtResource("1_h20od")
+metadata/_gltf_primary_texture_coord = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_nnw04"]
+_surfaces = [{
+"aabb": AABB(-0.3, -0.3, -9.5, 0.6, 0.6, 10),
+"format": 34896613377,
+"index_count": 48,
+"index_data": PackedByteArray("AAABAAIAAgABAAMAAAAEAAEAAgADAAUABgAEAAAABQADAAcABgAIAAQABQAHAAkACgAIAAYACQAHAAsACgAMAAgACQALAA0ADgAMAAoADQALAA8ADgAPAAwADQAPAA4A"),
+"name": "Tubes",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("/3//////AACB2oHaAAAAAIHagdr//wAA////fwAAAAD/f///AAAAAP///3///wAAfSWB2v//AACB2n0lAAAAAH0lgdoAAAAAgdp9Jf//AAAAAP9///8AAP9/AAAAAAAAAAD/fwAAAAD/fwAA//8AAH0lfSX//wAAfSV9JQAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_1i6jj"]
+resource_name = "Sketchfab_Scene_Tube10_Tubes_0"
+_surfaces = [{
+"aabb": AABB(-0.3, -0.3, -9.5, 0.6, 0.6, 10),
+"attribute_data": PackedByteArray("///Qs64/gsD//4LArj81za4/0LP//zXN//8dp64/59muPx2n//9rmq4/a5r//+fZrj+a5v//muauP0zz//9M864//v//////"),
+"format": 34896613399,
+"index_count": 48,
+"index_data": PackedByteArray("AAABAAIAAgABAAMAAAAEAAEAAgADAAUABgAEAAAABQADAAcABgAIAAQACQAIAAYACQAKAAgABQAHAAsACwAHAAwACwAMAA0ADQAMAA4ADQAOAA8ADwAOABAADwAQABEA"),
+"material": SubResource("StandardMaterial3D_l5sj2"),
+"name": "Tubes",
+"primitive": 3,
+"uv_scale": Vector4(3.091697, 1.011957, 0, 0),
+"vertex_count": 18,
+"vertex_data": PackedByteArray("/3//////qiqB2oHaAABUFoHagdr//1QW////fwAAAAD/f///AACqKv///3///wAAfSWB2v//AjqB2n0lAABUFn0lgdoAAAI6AAD/f////z8AAP9/AAD/P4HafSX//1QW/38AAAAAqir/fwAA//+qKn0lfSUAAAI6fSV9Jf//AjoAAP9/AAD/PwAA/3////8/qaqqqgS19ZUEtfWV/7//f6mqqqr/v/9//pwAxvYV+sr+nADG/3////9////2FfrKqipU1aoqVNUBRv/iAUb/4v9/////f/7/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_nnw04")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_gjk2k"]
+data = PackedVector3Array(0, 0.29999998, 0.5, 0.2121, 0.2121, -9.5, 0.2121, 0.2121, 0.5, 0.2121, 0.2121, 0.5, 0.2121, 0.2121, -9.5, 0.29999998, 0, -9.5, 0, 0.29999998, 0.5, 0, 0.29999998, -9.5, 0.2121, 0.2121, -9.5, 0.2121, 0.2121, 0.5, 0.29999998, 0, -9.5, 0.29999998, 0, 0.5, -0.2121, 0.2121, 0.5, 0, 0.29999998, -9.5, 0, 0.29999998, 0.5, 0.29999998, 0, 0.5, 0.29999998, 0, -9.5, 0.2121, -0.2121, -9.5, -0.2121, 0.2121, 0.5, -0.2121, 0.2121, -9.5, 0, 0.29999998, -9.5, -0.29999998, 0, 0.5, -0.2121, 0.2121, -9.5, -0.2121, 0.2121, 0.5, -0.29999998, 0, 0.5, -0.29999998, 0, -9.5, -0.2121, 0.2121, -9.5, 0.29999998, 0, 0.5, 0.2121, -0.2121, -9.5, 0.2121, -0.2121, 0.5, 0.2121, -0.2121, 0.5, 0.2121, -0.2121, -9.5, 0, -0.29999998, -9.5, 0.2121, -0.2121, 0.5, 0, -0.29999998, -9.5, 0, -0.29999998, 0.5, 0, -0.29999998, 0.5, 0, -0.29999998, -9.5, -0.2121, -0.2121, -9.5, 0, -0.29999998, 0.5, -0.2121, -0.2121, -9.5, -0.2121, -0.2121, 0.5, -0.2121, -0.2121, 0.5, -0.2121, -0.2121, -9.5, -0.29999998, 0, -9.5, -0.2121, -0.2121, 0.5, -0.29999998, 0, -9.5, -0.29999998, 0, 0.5)
+
+[node name="Tube10" type="StaticBody3D" unique_id=1957449517]
+transform = Transform3D(-1, -2.1292294e-14, 1.509958e-07, -9.8924275e-15, 1, 7.54979e-08, -1.509958e-07, 7.54979e-08, -1, 0, 0, 0)
+
+[node name="Tube10_Tubes_0" type="MeshInstance3D" parent="." unique_id=2079982239]
+mesh = SubResource("ArrayMesh_1i6jj")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1566257746]
+shape = SubResource("ConcavePolygonShape3D_gjk2k")
