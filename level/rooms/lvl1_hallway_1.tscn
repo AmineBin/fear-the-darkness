@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://bvjll2kscjiuy"]
+
+[sub_resource type="DrawableTexture2D" id="DrawableTexture2D_t0khj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vscsl"]
+albedo_texture = SubResource("DrawableTexture2D_t0khj")
+
+[node name="Hallway1" type="CSGCombiner3D" unique_id=1606809133]
+use_collision = true
+
+[node name="Wall1" type="CSGBox3D" parent="." unique_id=912437367]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 1.375)
+size = Vector3(17, 4, 0.25)
+
+[node name="Wall2" type="CSGBox3D" parent="." unique_id=345666539]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -1.625)
+size = Vector3(17, 4, 0.25)
+
+[node name="Door1" type="CSGBox3D" parent="." unique_id=1905249676]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.25, -0.5, -0.25)
+operation = 2
+size = Vector3(1.5, 2, 1)
+material = SubResource("StandardMaterial3D_vscsl")
+
+[node name="Floor1" type="CSGBox3D" parent="." unique_id=210499148]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.125, -1.625, -0.125)
+size = Vector3(17.25, 0.25, 3.25)
+
+[node name="Wall7" type="CSGBox3D" parent="." unique_id=75251952]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.625, 0, -0.125)
+size = Vector3(0.25, 4, 3.25)
