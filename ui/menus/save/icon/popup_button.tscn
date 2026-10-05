@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://bxfcwx76ci55k"]
+
+[ext_resource type="Script" uid="uid://cb6skp78twyon" path="res://ui/menus/save/icon/popup_button.gd" id="1_0rfp1"]
+[ext_resource type="Texture2D" uid="uid://bdrtycueqrnjt" path="res://assets/textures/ui/save/icons/popup-button.png" id="1_q3rrf"]
+[ext_resource type="FontFile" uid="uid://c25s10h6bx4ct" path="res://assets/fonts/PixelOperator.ttf" id="2_8cu0x"]
+
+[node name="PopUpButton" type="Button" unique_id=1567148761]
+offset_right = 128.0
+offset_bottom = 48.0
+flat = true
+script = ExtResource("1_0rfp1")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=459996943]
+texture_filter = 1
+layout_mode = 0
+offset_right = 128.0
+offset_bottom = 48.0
+texture = ExtResource("1_q3rrf")
+
+[node name="Label" type="Label" parent="TextureRect" unique_id=1111985631]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -24.0
+offset_right = 64.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_8cu0x")
+theme_override_font_sizes/font_size = 32
+text = "Yes"
+horizontal_alignment = 1
+vertical_alignment = 1

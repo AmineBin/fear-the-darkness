@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bhh6rfdal27t"]
+
+[ext_resource type="Texture2D" uid="uid://blutsbtn1ilmy" path="res://assets/textures/ui/save/icons/close.png" id="1_4754h"]
+
+[node name="ClosePopUpButton" type="Button" unique_id=1567148761]
+offset_right = 48.0
+offset_bottom = 48.0
+flat = true
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1591336109]
+texture_filter = 1
+layout_mode = 0
+offset_right = 48.0
+offset_bottom = 48.0
+texture = ExtResource("1_4754h")

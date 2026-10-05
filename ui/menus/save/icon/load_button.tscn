@@ -1,9 +1,7 @@
-[gd_scene format=3 uid="uid://dpnfpiq24qn57"]
+[gd_scene format=3 uid="uid://ica62orufwl6"]
 
-[ext_resource type="FontFile" uid="uid://c25s10h6bx4ct" path="res://assets/fonts/PixelOperator.ttf" id="2_fmn0f"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8lt2w"]
-load_path = "res://.godot/imported/SaveIcon.png-11b0572f68635915d87c9ed2bade7387.ctex"
+[ext_resource type="FontFile" uid="uid://c25s10h6bx4ct" path="res://assets/fonts/PixelOperator.ttf" id="1_cqpen"]
+[ext_resource type="Texture2D" uid="uid://o0bxt2fjf8xe" path="res://assets/textures/ui/save/icons/load_icon.png" id="1_tib4u"]
 
 [node name="SaveIconButton" type="Button" unique_id=1567148761]
 offset_right = 128.0
@@ -15,14 +13,14 @@ texture_filter = 1
 layout_mode = 0
 offset_right = 128.0
 offset_bottom = 128.0
-texture = SubResource("CompressedTexture2D_8lt2w")
+texture = ExtResource("1_tib4u")
 
 [node name="Label" type="Label" parent="." unique_id=749517370]
 layout_mode = 0
 offset_top = 128.0
 offset_right = 128.0
 offset_bottom = 160.0
-theme_override_fonts/font = ExtResource("2_fmn0f")
+theme_override_fonts/font = ExtResource("1_cqpen")
 theme_override_font_sizes/font_size = 32
-text = "Save data"
+text = "Load data"
 horizontal_alignment = 1
