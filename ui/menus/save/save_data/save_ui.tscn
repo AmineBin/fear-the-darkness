@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://bt1jviv51itq1"]
 
 [ext_resource type="Script" uid="uid://mgu622sgycv2" path="res://ui/menus/save/save_data/save_ui.gd" id="2_p1q27"]
-[ext_resource type="Texture2D" uid="uid://dq5e780igghxp" path="res://assets/textures/ui/save/Sprite-0003.png" id="3_hwuo8"]
+[ext_resource type="Texture2D" uid="uid://d14fnigi3d6p2" path="res://assets/textures/ui/save/OSBackground.png" id="3_hwuo8"]
 [ext_resource type="PackedScene" uid="uid://uaktb6mru1ob" path="res://ui/menus/transition/fade_transition.tscn" id="3_ibyww"]
+[ext_resource type="PackedScene" uid="uid://dpnfpiq24qn57" path="res://ui/menus/save/icon/save_button.tscn" id="3_v82s4"]
 
 [node name="SaveUi" type="Control" unique_id=124565276]
 layout_mode = 3
@@ -20,7 +21,15 @@ offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("3_hwuo8")
 
+[node name="SaveIconButton" parent="TextureRect" unique_id=1567148761 instance=ExtResource("3_v82s4")]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 64.0
+offset_right = 192.0
+offset_bottom = 192.0
+
 [node name="VBoxContainer" type="VBoxContainer" parent="TextureRect" unique_id=1751687631]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5

@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://dpnfpiq24qn57"]
+
+[ext_resource type="Texture2D" uid="uid://bxuc6tjjfv1jm" path="res://assets/textures/ui/save/icons/SaveIcon.png" id="1_fmn0f"]
+[ext_resource type="FontFile" uid="uid://c25s10h6bx4ct" path="res://assets/fonts/PixelOperator.ttf" id="2_fmn0f"]
+
+[node name="SaveIconButton" type="Button" unique_id=1567148761]
+offset_right = 128.0
+offset_bottom = 128.0
+flat = true
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1591336109]
+texture_filter = 1
+layout_mode = 0
+offset_right = 128.0
+offset_bottom = 128.0
+texture = ExtResource("1_fmn0f")
+
+[node name="Label" type="Label" parent="." unique_id=749517370]
+layout_mode = 0
+offset_top = 128.0
+offset_right = 128.0
+offset_bottom = 160.0
+theme_override_fonts/font = ExtResource("2_fmn0f")
+theme_override_font_sizes/font_size = 32
+text = "Save data"
+horizontal_alignment = 1

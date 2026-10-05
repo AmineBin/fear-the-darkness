@@ -16,7 +16,7 @@ func _process(delta: float) -> void:
 		battery -= drain_rate * delta
 		battery = max(battery, 0.0)
 		
-		var current_energy:float = 0.2
+		var current_energy:float = 0.5
 		
 		if battery <= 3:
 			current_energy = light_dying()

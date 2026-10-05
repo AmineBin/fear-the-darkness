@@ -12,10 +12,9 @@ resource_name = "Material_0"
 resource_name = "Material.001"
 cull_mode = 2
 albedo_texture = ExtResource("1_slcbn")
-metallic_specular = 0.0
 roughness = 0.5
-uv1_scale = Vector3(5, 5, 1)
-uv1_offset = Vector3(0, -4, 0)
+uv1_scale = Vector3(10, 10, 1)
+uv1_offset = Vector3(0, -9, 0)
 texture_filter = 2
 metadata/_gltf_primary_texture_coord = 0
 
@@ -23,8 +22,9 @@ metadata/_gltf_primary_texture_coord = 0
 resource_name = "Material.002"
 cull_mode = 2
 albedo_texture = ExtResource("1_slcbn")
-metallic_specular = 0.0
 roughness = 0.5
+uv1_scale = Vector3(2, 2, 1)
+uv1_offset = Vector3(0, -1, 0)
 texture_filter = 2
 metadata/_gltf_primary_texture_coord = 0
 
@@ -32,7 +32,6 @@ metadata/_gltf_primary_texture_coord = 0
 resource_name = "Material.003"
 cull_mode = 2
 albedo_texture = ExtResource("2_jivrr")
-metallic_specular = 0.0
 roughness = 0.5
 uv1_scale = Vector3(5, 5, 1)
 uv1_offset = Vector3(-5, 1.0000002, 0)
@@ -43,9 +42,9 @@ metadata/_gltf_primary_texture_coord = 0
 resource_name = "Material.004"
 cull_mode = 2
 albedo_texture = ExtResource("1_slcbn")
-metallic_specular = 0.0
 roughness = 0.5
-uv1_offset = Vector3(-1, 1, 0)
+uv1_scale = Vector3(2, 2, 1)
+uv1_offset = Vector3(-2, 1.0000001, 0)
 texture_filter = 2
 metadata/_gltf_primary_texture_coord = 0
 
@@ -169,27 +168,26 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_hnxft")
 
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_slcbn"]
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_rq1iw"]
 data = PackedVector3Array(-4.75, -1.5, -0.5, -4.5, -1.5, 0.5, -4.75, -1.5, 0.5, -4.75, -1.5, -0.5, -4.5, -1.5, -0.5, -4.5, -1.5, 0.5, -4.75, -1.5, 0.5, -4.5, 0.5, 0.5, -4.75, 0.5, 0.5, -4.75, -1.5, 0.5, -4.5, -1.5, 0.5, -4.5, 0.5, 0.5, -4.5, -1.5, -0.5, -4.75, 0.5, -0.5, -4.5, 0.5, -0.5, -4.5, -1.5, -0.5, -4.75, -1.5, -0.5, -4.75, 0.5, -0.5, -4.5, 0.5, 0.5, -4.75, 0.5, -0.5, -4.75, 0.5, 0.5, -4.5, 0.5, 0.5, -4.5, 0.5, -0.5, -4.75, 0.5, -0.5, -4.5, 1.75, 1.25, 12.5, -1.5, 1.25, 12.5, 1.75, 1.25, -4.5, 1.75, 1.25, -4.5, -1.5, 1.25, 12.5, -1.5, 1.25, -4.5, -1.5, -1.25, 12.5, 1.75, -1.25, 12.5, -1.5, -1.25, -4.5, -1.5, -1.25, -4.5, 1.75, -1.25, 12.5, 1.75, -1.25, 12.5, 1.75, 1.25, 12.5, -1.5, -1.25, 12.5, 1.75, -1.25, 12.5, 1.75, 1.25, 12.5, -1.5, 1.25, 12.5, -1.5, -1.25, -4.5, -1.5, 1.25, 12.5, -1.5, -1.25, 12.5, -1.5, 1.25, -4.5, -1.5, 0.5, 12.5, -1.5, -1.25, -4.5, -1.5, 1.25, 12.5, -1.5, -1.25, -4.5, -1.5, 0.5, -4.5, -1.5, -0.5, 12.5, -1.5, -1.25, -4.5, -1.5, -0.5, -4.5, -1.5, -1.25, 12.5, 1.75, -1.25, -4.5, 1.75, 1.25, 12.5, 1.75, 1.25, 12.5, 1.75, -1.25, -4.5, 1.75, -1.25, -4.5, 1.75, 1.25, -4.5, -1.5, -0.5, -4.5, 1.75, -1.25, -4.5, -1.5, -1.25, -4.5, 0.5, -0.5, -4.5, 1.75, -1.25, -4.5, -1.5, -0.5, -4.5, 1.75, -1.25, -4.5, 0.5, -0.5, -4.5, 1.75, 1.25, -4.5, 1.75, 1.25, -4.5, 0.5, -0.5, -4.5, 0.5, 0.5, -4.5, 1.75, 1.25, -4.5, 0.5, 0.5, -4.5, -1.5, 0.5, -4.5, 1.75, 1.25, -4.5, -1.5, 0.5, -4.5, -1.5, 1.25)
 
-[node name="lvl1-Hallway1" type="Node3D" unique_id=1605660742]
+[node name="lvl1-Hallway1" type="StaticBody3D" unique_id=1861102824]
 
-[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=2057648076]
-
-[node name="Hallway12" type="MeshInstance3D" parent="StaticBody3D" unique_id=1424298719]
+[node name="Hallway12" type="MeshInstance3D" parent="." unique_id=633385967]
 mesh = SubResource("ArrayMesh_ohsh4")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=53353712]
-shape = SubResource("ConcavePolygonShape3D_slcbn")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=460424798]
+visible = false
+shape = SubResource("ConcavePolygonShape3D_rq1iw")
 debug_fill = false
 
-[node name="Node3D" type="Node3D" parent="." unique_id=1767678249]
+[node name="Node3D" type="Node3D" parent="." unique_id=1607461846]
 
-[node name="Tube10" parent="." unique_id=1957449517 instance=ExtResource("3_jivrr")]
+[node name="Tube10" parent="Node3D" unique_id=1957449517 instance=ExtResource("3_jivrr")]
 transform = Transform3D(1.9470718e-07, -7.54979e-08, 1, -9.8924275e-15, 1, 7.54979e-08, -1, -2.4592412e-14, 1.9470718e-07, 5, 1.25, -0.75)
 
-[node name="Tube11" parent="." unique_id=336946436 instance=ExtResource("3_jivrr")]
+[node name="Tube11" parent="Node3D" unique_id=1693916134 instance=ExtResource("3_jivrr")]
 transform = Transform3D(1.9470718e-07, -7.54979e-08, 1, -9.8924275e-15, 1, 7.54979e-08, -1, -2.4592412e-14, 1.9470718e-07, 15, 1.25, -0.75)
 
-[node name="Sketchfab_Scene" parent="." unique_id=1441538094 instance=ExtResource("4_hid02")]
+[node name="Sketchfab_Scene" parent="Node3D" unique_id=1441538094 instance=ExtResource("4_hid02")]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 6, -1, 0.75)

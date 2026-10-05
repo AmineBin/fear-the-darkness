@@ -179,7 +179,7 @@ points = PackedVector3Array(-0.24000001, -0.21600002, 0.05999413, -0.24000001, -
 collision_layer = 4
 collision_mask = 7
 script = SubResource("GDScript_mtgrr")
-save_ui = NodePath("SaveUi")
+save_ui = NodePath("CanvasLayer/SaveUi")
 
 [node name="RetroComputer_M_RetroComputer_0" type="MeshInstance3D" parent="." unique_id=1029518036]
 transform = Transform3D(1, 0, 0, 0, -1.6292067e-07, 1, 0, -1, -1.6292067e-07, 0.5, 0, 0)
@@ -221,5 +221,8 @@ area_size = Vector2(0.38036773, 0.32929718)
 transform = Transform3D(1, 0, 0, 0, -1.6292067e-07, 1, 0, -1, -1.6292067e-07, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_ewrl0")
 
-[node name="SaveUi" parent="." unique_id=124565276 instance=ExtResource("5_vhmmn")]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1436431548]
+layer = 2
+
+[node name="SaveUi" parent="CanvasLayer" unique_id=124565276 instance=ExtResource("5_vhmmn")]
 visible = false
