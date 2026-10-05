@@ -1,30 +1,75 @@
-[gd_scene format=3 uid="uid://f5cbcdd8h18a"]
+[gd_scene format=3 uid="uid://bt1jviv51itq1"]
 
-[ext_resource type="PackedScene" uid="uid://cyyo4jetp4o3b" path="res://ui/menus/save/slots/save_slots_display.tscn" id="1_ui110"]
 [ext_resource type="Script" uid="uid://mgu622sgycv2" path="res://ui/menus/save/save_data/save_ui.gd" id="2_p1q27"]
+[ext_resource type="Texture2D" uid="uid://dq5e780igghxp" path="res://assets/textures/ui/save/Sprite-0003.png" id="3_hwuo8"]
+[ext_resource type="PackedScene" uid="uid://uaktb6mru1ob" path="res://ui/menus/transition/fade_transition.tscn" id="3_ibyww"]
 
-[node name="SaveUi" unique_id=1400086558 instance=ExtResource("1_ui110")]
-visible = false
+[node name="SaveUi" type="Control" unique_id=124565276]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("2_p1q27")
 
-[node name="HBoxContainer3" type="HBoxContainer" parent="ColorRect" parent_id_path=PackedInt32Array(907971479) index="1" unique_id=627570088]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=19044433]
+texture_filter = 1
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("3_hwuo8")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect" unique_id=1751687631]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -189.0
-offset_top = 67.0
-offset_right = 190.0
-offset_bottom = 120.0
+offset_left = -133.5
+offset_top = -22.5
+offset_right = 133.5
+offset_bottom = 22.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Save" type="Button" parent="ColorRect/HBoxContainer3" index="0" unique_id=43904774]
+[node name="HBoxContainer" type="HBoxContainer" parent="TextureRect/VBoxContainer" unique_id=1372977074]
+layout_mode = 2
+
+[node name=">>" type="Label" parent="TextureRect/VBoxContainer/HBoxContainer" unique_id=225670045]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = ">>"
+
+[node name="SaveName" type="Label" parent="TextureRect/VBoxContainer/HBoxContainer" unique_id=1404309815]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Save 1"
+
+[node name="-" type="Label" parent="TextureRect/VBoxContainer/HBoxContainer" unique_id=514782536]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "-"
+
+[node name="PlayTime" type="Label" parent="TextureRect/VBoxContainer/HBoxContainer" unique_id=2083020984]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "3:13:54"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="TextureRect/VBoxContainer" unique_id=908698229]
+layout_mode = 2
+
+[node name="Save" type="Button" parent="TextureRect/VBoxContainer/HBoxContainer3" unique_id=2107895749]
 layout_mode = 2
 size_flags_horizontal = 6
 theme_override_font_sizes/font_size = 32
 text = "Save data"
 
-[connection signal="pressed" from="ColorRect/HBoxContainer3/Save" to="." method="_on_save_pressed"]
+[node name="FadeTransition" parent="TextureRect" unique_id=1973854213 instance=ExtResource("3_ibyww")]
+visible = false
+layout_mode = 1
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="fade_timer" type="Timer" parent="TextureRect/FadeTransition" unique_id=75558539]

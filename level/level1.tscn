@@ -25,6 +25,10 @@ albedo_color = Color(0.9739981, 0.8656828, 0.56224984, 1)
 [sub_resource type="Environment" id="Environment_n6f2s"]
 background_mode = 1
 background_color = Color(0.011702105, 0.011702111, 0.011702101, 1)
+fog_enabled = true
+fog_light_color = Color(0.028936002, 0.034062658, 0.04553201, 1)
+fog_light_energy = 0.1
+fog_density = 0.2
 
 [node name="Level1" type="Node3D" unique_id=800279432]
 script = ExtResource("1_a1r6t")

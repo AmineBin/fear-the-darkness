@@ -3,7 +3,7 @@ extends Control
 class_name SaveSlotsDisplay
 
 var is_open = false
-@onready var play_time_label = $ColorRect/VBoxContainer/HBoxContainer/PlayTime
+@onready var play_time_label = $TextureRect/VBoxContainer/HBoxContainer/PlayTime
 
 func _ready() -> void:
 	update_visual()
