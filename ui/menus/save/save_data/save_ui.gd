@@ -14,7 +14,9 @@ func _on_save_pressed() -> void:
 	
 func _on_save_icon_button_pressed() -> void:
 	pop_up_save.show()
+	pop_up_load_data.hide()
 	
 func _on_save_icon_button_2_pressed() -> void:
 	pop_up_load_data.show()
+	pop_up_save.hide()
 	
