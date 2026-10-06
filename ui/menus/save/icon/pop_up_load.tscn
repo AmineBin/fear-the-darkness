@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://cwmaw16j7cy4d"]
+
+[ext_resource type="Script" uid="uid://bqgwhh4233vra" path="res://ui/menus/save/icon/pop_up.gd" id="1_4vi6n"]
+[ext_resource type="Texture2D" uid="uid://mvi02l3asc33" path="res://assets/textures/ui/save/data.png" id="2_kyc3p"]
+[ext_resource type="PackedScene" uid="uid://bf7dkgc6mg2uf" path="res://ui/menus/save/icon/reduce_pop_up_button.tscn" id="3_fsr16"]
+[ext_resource type="PackedScene" uid="uid://ctuaqap1ku7su" path="res://ui/menus/save/icon/full_screen_pop_up_button.tscn" id="4_gtj2p"]
+[ext_resource type="PackedScene" uid="uid://bhh6rfdal27t" path="res://ui/menus/save/icon/close_pop_up_button.tscn" id="5_b4ts6"]
+
+[node name="PopUpLoadData" type="Control" unique_id=2130997338]
+layout_mode = 3
+anchor_left = 0.3
+anchor_top = 0.32200003
+anchor_right = 0.70000005
+anchor_bottom = 0.67800003
+offset_top = 0.23995972
+offset_right = -0.00012207031
+offset_bottom = -0.24005127
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4vi6n")
+
+[node name="PopUp" type="TextureRect" parent="." unique_id=1591336109]
+texture_filter = 1
+layout_mode = 1
+offset_right = 768.0
+offset_bottom = 576.0
+texture = ExtResource("2_kyc3p")
+expand_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PopUp" unique_id=1814287982]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -175.0
+offset_top = 24.0
+offset_right = -23.0
+offset_bottom = 72.0
+grow_horizontal = 0
+
+[node name="ReducePopUpIconButton" parent="PopUp/HBoxContainer" unique_id=1316845308 instance=ExtResource("3_fsr16")]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[node name="FullScreenPopUpIconButton" parent="PopUp/HBoxContainer" unique_id=1567148761 instance=ExtResource("4_gtj2p")]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[node name="ClosePopUpButton" parent="PopUp/HBoxContainer" unique_id=1014345203 instance=ExtResource("5_b4ts6")]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[node name="GridContainer" type="GridContainer" parent="PopUp" unique_id=29209490]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 84.0
+offset_right = 750.0
+offset_bottom = 556.0
+columns = 8
+
+[connection signal="pressed" from="PopUp/HBoxContainer/ClosePopUpButton" to="." method="_on_close_pop_up_button_pressed"]

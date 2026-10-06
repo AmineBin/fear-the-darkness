@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://coe6lh3h67dlt"]
+
+[ext_resource type="Texture2D" uid="uid://dwmgvqxw1u24e" path="res://assets/textures/ui/save/icons/cursor.png" id="1_0cbkr"]
+
+[node name="ReducePopUpIconButton" type="Control" unique_id=346539871]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 128.0
+offset_bottom = 128.0
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1591336109]
+texture_filter = 1
+layout_mode = 0
+offset_right = 128.0
+offset_bottom = 128.0
+texture = ExtResource("1_0cbkr")
