@@ -11,9 +11,6 @@ var t_bob = 0.0
 const base_fov = 75.0
 const fov_change = 1.5
 
-var is_holding_object = false
-var held_object = null
-
 var speed
 var walk_speed = 2.0
 var sprint_speed = 3.0

@@ -4,7 +4,6 @@ class_name Wrapper
 
 var speed
 var walk_speed = 2.0
-var sprint_speed = 3.5
 var health = 4
 var jump_velocity = 3
 var gravity = 9.8
