@@ -6,11 +6,17 @@ var game_scene_path = "res://playground.tscn"
 	
 func _save():
 	DirAccess.make_dir_recursive_absolute("user://fear_the_darkness")
-	var err = ResourceSaver.save(save_file_data, save_location)
+	var error = ResourceSaver.save(save_file_data, save_location)
+	if error != OK:
+		push_error("Unable to save game: %s" % error)
 
 func save_player() -> void:
 	var player = get_tree().get_first_node_in_group("player")
+	if not player:
+		return
 	var health_component = player.get_node_or_null("HealthComponent")
+	if not health_component:
+		return
 	save_file_data.health = health_component.health
 	save_file_data.position = player.global_position
 	save_file_data.play_time = PlayTimeTracker.play_time
@@ -26,6 +32,8 @@ func save_doors() -> void:
 func save_inventories() -> void:
 	var player = get_tree().get_first_node_in_group("player")
 	var chest_ui = get_tree().get_first_node_in_group("chest_inv_ui")
+	if not player or not chest_ui or not player.inv or not chest_ui.chest_inv:
+		return
 	
 	var player_inventory = player.inv
 	var chest_inventory = chest_ui.chest_inv
@@ -56,11 +64,17 @@ func save_all():
 		
 func _load():
 	if FileAccess.file_exists(save_location):
-		save_file_data = ResourceLoader.load(save_location).duplicate(true)
+		var loaded_data = ResourceLoader.load(save_location) as SaveDataResource
+		if loaded_data:
+			save_file_data = loaded_data
 
 func load_player():
 	var player = get_tree().get_first_node_in_group("player")
+	if not player:
+		return
 	var health_component = player.get_node_or_null("HealthComponent")
+	if not health_component:
+		return
 	health_component.health = save_file_data.health
 	player.global_position = save_file_data.position
 	PlayTimeTracker.play_time = save_file_data.play_time
@@ -78,6 +92,8 @@ func load_inventories():
 	var player = get_tree().get_first_node_in_group("player")
 	var player_inv_ui = get_tree().get_first_node_in_group("player_inv_ui")
 	var chest_inv_ui = get_tree().get_first_node_in_group("chest_inv_ui")
+	if not player or not player_inv_ui or not chest_inv_ui:
+		return
 	
 	player.inv = save_file_data.player_inventory
 	chest_inv_ui.chest_inv = save_file_data.chest_inventory

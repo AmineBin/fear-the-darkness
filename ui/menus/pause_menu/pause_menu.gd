@@ -69,5 +69,5 @@ func _unhandled_input(event: InputEvent) -> void:
 		if PauseGame.is_game_paused == true:
 			resume()
 			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-		elif player_inv_ui.is_open == false && chest_inv_ui.is_open == false:
+		elif (not player_inv_ui or not player_inv_ui.is_open) and (not chest_inv_ui or not chest_inv_ui.is_open):
 			pause()
