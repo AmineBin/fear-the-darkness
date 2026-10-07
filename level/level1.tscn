@@ -16,19 +16,8 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xsfx6"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h5vwo"]
-albedo_color = Color(0.23392558, 0.2339254, 0.23392543, 1)
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_okudf"]
 albedo_color = Color(0.9739981, 0.8656828, 0.56224984, 1)
-
-[sub_resource type="Environment" id="Environment_n6f2s"]
-background_mode = 1
-background_color = Color(0.011702105, 0.011702111, 0.011702101, 1)
-fog_enabled = true
-fog_light_color = Color(0.028936002, 0.034062658, 0.04553201, 1)
-fog_light_energy = 0.1
-fog_density = 0.2
 
 [node name="Level1" type="Node3D" unique_id=800279432]
 script = ExtResource("1_a1r6t")
@@ -242,11 +231,6 @@ size = Vector3(53.5, 2.25, 0.25)
 
 [node name="Enigme1" type="Node3D" parent="Puzzle" unique_id=564430257]
 
-[node name="CSGBox3D" type="CSGBox3D" parent="Puzzle/Enigme1" unique_id=1914879854]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.375, -10, -30.875)
-size = Vector3(2.25, 1.5, 0.25)
-material = SubResource("StandardMaterial3D_h5vwo")
-
 [node name="Drawer1 (scissors)" type="CSGBox3D" parent="Puzzle/Enigme1" unique_id=376295599]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.75, -10, -22.25)
 
@@ -352,6 +336,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.75, -0.75, -2.75)
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=983709190]
 transform = Transform3D(1, 0, 0, 0, -0.50000006, 0.8660254, 0, -0.8660254, -0.50000006, 21.75, -6.25, -33)
 visible = false
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=30571819]
-environment = SubResource("Environment_n6f2s")

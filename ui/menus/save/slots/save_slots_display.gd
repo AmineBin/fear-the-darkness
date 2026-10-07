@@ -25,7 +25,8 @@ func format_playtime(hours: float) -> String:
 	return "%dh %dmin %dsec" % [h, m, s]
 	
 func update_visual():
-	play_time_label.text = format_playtime(SaveManager.save_file_data.play_time)
+	if play_time_label:
+		play_time_label.text = format_playtime(SaveManager.save_file_data.play_time)
 	
 func _unhandled_input(event: InputEvent) -> void:
 	if is_open:

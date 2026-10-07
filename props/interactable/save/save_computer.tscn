@@ -172,7 +172,7 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_w5i7d")
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ewrl0"]
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_55777"]
 points = PackedVector3Array(-0.24000001, -0.21600002, 0.05999413, -0.24000001, -0.04801646, 0.05999413, -0.16538763, -0.16538295, 0, 0.24000001, -0.21600002, 0.05999413, -0.24000001, -0.21600002, 0.54, -0.16538763, 0.16535473, 0, -0.24000001, -0.04801646, 0.54, -0.17281128, 0.2879507, 0.12717699, 0.16534063, -0.16538295, 0, 0.24000001, -0.04801646, 0.05999413, 0.24000001, -0.21600002, 0.54, 0.16534063, 0.16535473, 0, 0.24000001, -0.04801646, 0.54, -0.17281128, 0.2879507, 0.4727643, 0.1727643, 0.2879507, 0.12717699, 0.1727643, 0.2879507, 0.4727643)
 
 [node name="ComputerSave" type="StaticBody3D" unique_id=729736860 node_paths=PackedStringArray("save_ui")]
@@ -182,27 +182,27 @@ script = SubResource("GDScript_mtgrr")
 save_ui = NodePath("CanvasLayer/SaveUi")
 
 [node name="RetroComputer_M_RetroComputer_0" type="MeshInstance3D" parent="." unique_id=1029518036]
-transform = Transform3D(1, 0, 0, 0, -1.6292067e-07, 1, 0, -1, -1.6292067e-07, 0.5, 0, 0)
+transform = Transform3D(0.981934, -0.18922359, -3.0828435e-08, 0, -1.6292067e-07, 1, -0.18922359, -0.981934, -1.5997735e-07, 0.68765867, 0, -0.09457725)
 mesh = SubResource("ArrayMesh_6gx3b")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=580136026]
-transform = Transform3D(1, 0, 0, 0, -1.6292067e-07, 1, 0, -1, -1.6292067e-07, 0.5, 0, 0)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1688845041]
+transform = Transform3D(0.981934, -0.18922359, -3.0828435e-08, 0, -1.6292067e-07, 1, -0.18922359, -0.981934, -1.5997735e-07, 0.68765867, 0, -0.09457725)
 shape = SubResource("ConvexPolygonShape3D_mtgrr")
 
 [node name="RetroKeyboard_M_RetroKeyboardMouse_0" type="MeshInstance3D" parent="." unique_id=330452786]
-transform = Transform3D(1, 0, 0, 0, -1.6292067e-07, 1, 0, -1, -1.6292067e-07, 0, -1.110223e-16, 0.5)
+transform = Transform3D(0.996153, 0.08763125, 1.4276941e-08, 0, -1.6292067e-07, 1, 0.08763125, -0.996153, -1.6229392e-07, -0.14366534, -1.110223e-16, 0.51489276)
 mesh = SubResource("ArrayMesh_rgtyq")
 
-[node name="CollisionShape3D3" type="CollisionShape3D" parent="." unique_id=687307224]
-transform = Transform3D(1, 0, 0, 0, -1.6292067e-07, 1, 0, -1, -1.6292067e-07, 0, -1.110223e-16, 0.5)
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=1604834660]
+transform = Transform3D(0.996153, 0.08763125, 1.4276941e-08, 0, -1.6292067e-07, 1, 0.08763125, -0.996153, -1.6229392e-07, -0.14366534, -1.110223e-16, 0.51489276)
 shape = SubResource("ConvexPolygonShape3D_vhmmn")
 
 [node name="RetroMouse" type="MeshInstance3D" parent="." unique_id=1626974556]
-transform = Transform3D(1, 0, 0, 0, -1.6292067e-07, 1, 0, -1, -1.6292067e-07, 0.5, -1.110223e-16, 0.5)
+transform = Transform3D(0.97462875, -0.22382753, -3.646613e-08, 0, -1.6292067e-07, 1, -0.22382753, -0.97462875, -1.5878717e-07, 0.5, -1.110223e-16, 0.37998593)
 mesh = SubResource("ArrayMesh_v6eci")
 
-[node name="CollisionShape3D4" type="CollisionShape3D" parent="." unique_id=1479567033]
-transform = Transform3D(1, 0, 0, 0, -1.6292067e-07, 1, 0, -1, -1.6292067e-07, 0.5, -1.110223e-16, 0.5)
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="." unique_id=1830858104]
+transform = Transform3D(0.97462875, -0.22382753, -3.646613e-08, 0, -1.6292067e-07, 1, -0.22382753, -0.97462875, -1.5878717e-07, 0.5, -1.110223e-16, 0.37998593)
 shape = SubResource("ConvexPolygonShape3D_2yvra")
 
 [node name="RetroMonitor" type="MeshInstance3D" parent="." unique_id=1581637057]
@@ -212,20 +212,20 @@ mesh = SubResource("ArrayMesh_slyfp")
 [node name="AreaLight3D" type="AreaLight3D" parent="RetroMonitor" unique_id=2020529482]
 transform = Transform3D(1, 0, 0, 0, 1.3311835e-07, 1, 0, -1, 1.3311835e-07, 0, -0.21746337, 0.32021585)
 light_color = Color(0, 0.49803922, 0.49803922, 1)
-light_energy = 11.48
-area_range = 0.389
+light_energy = 10.0
+area_range = 1.0
 area_size = Vector2(0.38036773, 0.32929718)
 
 [node name="AreaLight3D2" type="AreaLight3D" parent="RetroMonitor" unique_id=66236327]
 transform = Transform3D(1, 0, 0, 0, -4.569557e-08, -1, 0, 1, -4.569557e-08, 0, -0.21746337, 0.32021585)
 light_color = Color(0, 0.49803922, 0.49803922, 1)
-light_energy = 1.5
+light_energy = 20.0
 area_range = 0.024
 area_size = Vector2(0.38036773, 0.32929718)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1035951185]
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="." unique_id=1446222802]
 transform = Transform3D(1, 0, 0, 0, -1.6292067e-07, 1, 0, -1, -1.6292067e-07, 0, 0, 0)
-shape = SubResource("ConvexPolygonShape3D_ewrl0")
+shape = SubResource("ConvexPolygonShape3D_55777")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1436431548]
 layer = 2

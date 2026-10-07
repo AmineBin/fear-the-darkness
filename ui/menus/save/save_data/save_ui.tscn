@@ -6,8 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://uaktb6mru1ob" path="res://ui/menus/transition/fade_transition.tscn" id="3_ibyww"]
 [ext_resource type="PackedScene" uid="uid://dpnfpiq24qn57" path="res://ui/menus/save/icon/save_button.tscn" id="3_v82s4"]
 [ext_resource type="PackedScene" uid="uid://ica62orufwl6" path="res://ui/menus/save/icon/load_button.tscn" id="4_v82s4"]
-[ext_resource type="PackedScene" uid="uid://f5t3wx6nceyh" path="res://ui/menus/save/icon/pop_up.tscn" id="6_eej1h"]
-[ext_resource type="PackedScene" uid="uid://cwmaw16j7cy4d" path="res://ui/menus/save/icon/pop_up_load.tscn" id="7_053uw"]
+[ext_resource type="PackedScene" uid="uid://f5t3wx6nceyh" path="res://ui/menus/save/popups/pop_up_save.tscn" id="6_eej1h"]
+[ext_resource type="PackedScene" uid="uid://cwmaw16j7cy4d" path="res://ui/menus/save/popups/pop_up_load.tscn" id="7_053uw"]
 [ext_resource type="Shader" uid="uid://dth7y84nojqsq" path="res://ui/menus/save/save_data/save_ui.gdshader" id="8_jow33"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_h5vwo"]

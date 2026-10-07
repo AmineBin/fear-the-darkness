@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://dadtil6r03215" path="res://entities/enemies/wrapper/wrapper.tscn" id="13_3i8ot"]
 [ext_resource type="PackedScene" uid="uid://6sr7mr1e3xyf" path="res://props/interactable/trapdoor.tscn" id="13_yjl7g"]
 [ext_resource type="PackedScene" uid="uid://dyuj3bmbrxb33" path="res://props/interactable/radio.tscn" id="14_f7pug"]
+[ext_resource type="PackedScene" uid="uid://bet6rfgjanj8" path="res://props/interactable/save/save_computer.tscn" id="14_jgc46"]
 
 [sub_resource type="Environment" id="Environment_3xd07"]
 background_mode = 1
@@ -109,5 +110,8 @@ transform = Transform3D(4, 0, 0, 0, -1.7484555e-07, 4, 0, -4, -1.7484555e-07, 12
 
 [node name="StaticBody3D2" parent="." unique_id=174974490 instance=ExtResource("13_yjl7g")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.249016, 0.93381035, -5.2165556)
+
+[node name="ComputerSave" parent="." unique_id=729736860 instance=ExtResource("14_jgc46")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.009007, 1.3444326, -4.5835133)
 
 [connection signal="change_scene" from="StaticBody3D2" to="." method="_on_change_scene"]

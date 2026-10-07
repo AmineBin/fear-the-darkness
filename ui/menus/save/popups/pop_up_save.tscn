@@ -1,12 +1,13 @@
 [gd_scene format=3 uid="uid://f5t3wx6nceyh"]
 
-[ext_resource type="Script" uid="uid://bqgwhh4233vra" path="res://ui/menus/save/icon/pop_up.gd" id="1_8wqse"]
-[ext_resource type="Texture2D" uid="uid://c6kln1oupm8f0" path="res://assets/textures/ui/save/popup1.png" id="2_6mtew"]
-[ext_resource type="PackedScene" uid="uid://bf7dkgc6mg2uf" path="res://ui/menus/save/icon/reduce_pop_up_button.tscn" id="3_ei7yl"]
-[ext_resource type="PackedScene" uid="uid://ctuaqap1ku7su" path="res://ui/menus/save/icon/full_screen_pop_up_button.tscn" id="4_3sm18"]
-[ext_resource type="PackedScene" uid="uid://bhh6rfdal27t" path="res://ui/menus/save/icon/close_pop_up_button.tscn" id="5_2n1xx"]
-[ext_resource type="PackedScene" uid="uid://bxfcwx76ci55k" path="res://ui/menus/save/icon/popup_button.tscn" id="6_6mtew"]
-[ext_resource type="FontFile" uid="uid://c25s10h6bx4ct" path="res://assets/fonts/PixelOperator.ttf" id="6_ghxt6"]
+[ext_resource type="Script" uid="uid://bqgwhh4233vra" path="res://ui/menus/save/popups/pop_up_save.gd" id="1_buv5c"]
+[ext_resource type="Texture2D" uid="uid://c6kln1oupm8f0" path="res://assets/textures/ui/save/popup1.png" id="2_7outy"]
+[ext_resource type="PackedScene" uid="uid://bf7dkgc6mg2uf" path="res://ui/menus/save/icon/reduce_pop_up_button.tscn" id="3_1k8m6"]
+[ext_resource type="PackedScene" uid="uid://ctuaqap1ku7su" path="res://ui/menus/save/icon/full_screen_pop_up_button.tscn" id="4_7lynw"]
+[ext_resource type="PackedScene" uid="uid://bhh6rfdal27t" path="res://ui/menus/save/icon/close_pop_up_button.tscn" id="5_xr0wx"]
+[ext_resource type="FontFile" uid="uid://c0t61x3b7ghsw" path="res://assets/fonts/PixelOperator-Bold.ttf" id="6_7outy"]
+[ext_resource type="FontFile" uid="uid://c25s10h6bx4ct" path="res://assets/fonts/PixelOperator.ttf" id="6_kyqpd"]
+[ext_resource type="PackedScene" uid="uid://bxfcwx76ci55k" path="res://ui/menus/save/popups/popup_button.tscn" id="7_clnj7"]
 
 [node name="Control" type="Control" unique_id=2130997338]
 layout_mode = 3
@@ -19,14 +20,14 @@ offset_right = -0.00012207031
 offset_bottom = -0.24005127
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_8wqse")
+script = ExtResource("1_buv5c")
 
 [node name="PopUp" type="TextureRect" parent="." unique_id=1591336109]
 texture_filter = 1
 layout_mode = 1
 offset_right = 768.0
 offset_bottom = 384.0
-texture = ExtResource("2_6mtew")
+texture = ExtResource("2_7outy")
 expand_mode = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="PopUp" unique_id=1814287982]
@@ -41,19 +42,19 @@ offset_right = -23.0
 offset_bottom = 72.0
 grow_horizontal = 0
 
-[node name="ReducePopUpIconButton" parent="PopUp/HBoxContainer" unique_id=1316845308 instance=ExtResource("3_ei7yl")]
+[node name="ReducePopUpIconButton" parent="PopUp/HBoxContainer" unique_id=1316845308 instance=ExtResource("3_1k8m6")]
 custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
 expand_icon = true
 metadata/_edit_use_anchors_ = true
 
-[node name="FullScreenPopUpIconButton" parent="PopUp/HBoxContainer" unique_id=1567148761 instance=ExtResource("4_3sm18")]
+[node name="FullScreenPopUpIconButton" parent="PopUp/HBoxContainer" unique_id=1567148761 instance=ExtResource("4_7lynw")]
 custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
 expand_icon = true
 metadata/_edit_use_anchors_ = true
 
-[node name="ClosePopUpButton" parent="PopUp/HBoxContainer" unique_id=1014345203 instance=ExtResource("5_2n1xx")]
+[node name="ClosePopUpButton" parent="PopUp/HBoxContainer" unique_id=1014345203 instance=ExtResource("5_xr0wx")]
 custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
 expand_icon = true
@@ -74,9 +75,28 @@ offset_bottom = -45.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("6_ghxt6")
+theme_override_fonts/font = ExtResource("6_7outy")
 theme_override_font_sizes/font_size = 32
 text = "Save current data?"
+
+[node name="Label2" type="Label" parent="PopUp" unique_id=1573338004]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -118.0
+offset_top = 11.0
+offset_right = 118.0
+offset_bottom = 43.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_kyqpd")
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="PopUp" unique_id=29967174]
 layout_mode = 1
@@ -92,13 +112,14 @@ offset_bottom = 114.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="PopUpButtonNo" parent="PopUp/HBoxContainer2" unique_id=649641346 instance=ExtResource("6_6mtew")]
-custom_minimum_size = Vector2(128, 48)
+[node name="PopUpButtonNo" parent="PopUp/HBoxContainer2" unique_id=1930168437 instance=ExtResource("7_clnj7")]
+custom_minimum_size = Vector2(128, 0)
 layout_mode = 2
+size_flags_horizontal = 2
 label_text = "No"
 
-[node name="PopUpButtonYes" parent="PopUp/HBoxContainer2" unique_id=953732931 instance=ExtResource("6_6mtew")]
-custom_minimum_size = Vector2(128, 48)
+[node name="PopUpButtonYes" parent="PopUp/HBoxContainer2" unique_id=75807823 instance=ExtResource("7_clnj7")]
+custom_minimum_size = Vector2(128, 0)
 layout_mode = 2
 size_flags_horizontal = 10
 label_text = "Yes"

@@ -1,9 +1,0 @@
-[gd_scene format=3 uid="uid://coe6lh3h67dlt"]
-
-[ext_resource type="Texture2D" uid="uid://cg3hei3k7rs66" path="res://assets/textures/ui/save/icons/cursor.png" id="1_0cbkr"]
-
-[node name="TextureRect" type="TextureRect" unique_id=1591336109]
-texture_filter = 1
-offset_right = 128.0
-offset_bottom = 128.0
-texture = ExtResource("1_0cbkr")
