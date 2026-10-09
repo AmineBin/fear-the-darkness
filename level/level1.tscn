@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://xhj505s5uuhc" path="res://props/collectible/medkit.tscn" id="7_vscsl"]
 [ext_resource type="PackedScene" uid="uid://carrmofvblnfo" path="res://props/interactable/doors/metal_door/metal_door.tscn" id="8_hoo32"]
 [ext_resource type="Script" uid="uid://m2fvd5j6jd46" path="res://addons/stairs/stairs.gd" id="10_qae1c"]
-[ext_resource type="PackedScene" uid="uid://bet6rfgjanj8" path="res://props/interactable/save/save_computer.tscn" id="10_t0khj"]
+[ext_resource type="PackedScene" uid="uid://bet6rfgjanj8" path="res://props/interactable/save_computer.tscn" id="10_t0khj"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xsfx6"]
 

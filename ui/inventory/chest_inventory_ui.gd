@@ -72,11 +72,17 @@ func set_inventories(new_chest_inv:Inv, new_player_inv: Inv):
 	set_player_inventory(new_player_inv)
 
 func set_chest_inventory(new_chest_inv: Inv):
+	if chest_inv and chest_inv.update.is_connected(update_slots):
+		chest_inv.update.disconnect(update_slots)
 	chest_inv = new_chest_inv
-	chest_inv.update.connect(update_slots)
+	if not chest_inv.update.is_connected(update_slots):
+		chest_inv.update.connect(update_slots)
 	update_slots()
 
 func set_player_inventory(new_player_inv: Inv):
+	if player_inv and player_inv.update.is_connected(update_slots):
+		player_inv.update.disconnect(update_slots)
 	player_inv = new_player_inv
-	player_inv.update.connect(update_slots)
+	if not player_inv.update.is_connected(update_slots):
+		player_inv.update.connect(update_slots)
 	update_slots()

@@ -42,8 +42,11 @@ func _on_inventory_context_use_item(slot: InvSlot) -> void:
 
 # Reconnecter l'inventaire	
 func set_inventory(new_inv: Inv):
+	if inv and inv.update.is_connected(update_slots):
+		inv.update.disconnect(update_slots)
 	inv = new_inv
-	inv.update.connect(update_slots)
+	if not inv.update.is_connected(update_slots):
+		inv.update.connect(update_slots)
 	update_slots()
 
 # C'est crade mais ça marche

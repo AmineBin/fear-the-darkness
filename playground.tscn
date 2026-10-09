@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bhl48kxd2a852" path="res://ui/inventory/player_inventory_ui.tscn" id="3_dk0co"]
 [ext_resource type="PackedScene" uid="uid://bhb7tynm8e6f8" path="res://ui/menus/pause_menu/pause_menu.tscn" id="6_5m40n"]
 [ext_resource type="PackedScene" uid="uid://yifphocygbal" path="res://entities/player/player.tscn" id="7_x6kx1"]
-[ext_resource type="PackedScene" uid="uid://x8ov0rgfasef" path="res://props/interactable/chest/chest.tscn" id="8_jufm4"]
+[ext_resource type="PackedScene" uid="uid://x8ov0rgfasef" path="res://props/interactable/chest.tscn" id="8_jufm4"]
 [ext_resource type="PackedScene" uid="uid://cw0pf1c2n6n7g" path="res://props/collectible/key.tscn" id="9_ymgag"]
 [ext_resource type="PackedScene" uid="uid://xhj505s5uuhc" path="res://props/collectible/medkit.tscn" id="10_u2qr3"]
 [ext_resource type="PackedScene" uid="uid://carrmofvblnfo" path="res://props/interactable/doors/metal_door/metal_door.tscn" id="11_vnugj"]
@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://dadtil6r03215" path="res://entities/enemies/wrapper/wrapper.tscn" id="13_3i8ot"]
 [ext_resource type="PackedScene" uid="uid://6sr7mr1e3xyf" path="res://props/interactable/trapdoor.tscn" id="13_yjl7g"]
 [ext_resource type="PackedScene" uid="uid://dyuj3bmbrxb33" path="res://props/interactable/radio.tscn" id="14_f7pug"]
-[ext_resource type="PackedScene" uid="uid://bet6rfgjanj8" path="res://props/interactable/save/save_computer.tscn" id="14_jgc46"]
+[ext_resource type="PackedScene" uid="uid://bet6rfgjanj8" path="res://props/interactable/save_computer.tscn" id="14_jgc46"]
 
 [sub_resource type="Environment" id="Environment_3xd07"]
 background_mode = 1
