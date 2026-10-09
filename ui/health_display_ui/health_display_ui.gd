@@ -7,7 +7,7 @@ extends Control
 func _ready() -> void:
 	if not player or textures.is_empty():
 		return
-	var health_component := player.get_node_or_null("HealthComponent") as HealthComponent
+	var health_component = player.get_node_or_null("HealthComponent") as HealthComponent
 	if not health_component:
 		return
 	health_component.health_changed.connect(_on_health_changed)

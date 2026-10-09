@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://crov6xwnowcwq" path="res://assets/textures/terrain/Grass_19-128x128.png" id="1_xfie6"]
 [ext_resource type="PackedScene" uid="uid://dwkuutr54e8u3" path="res://ui/hud/player_gui.tscn" id="2_kiiyc"]
 [ext_resource type="PackedScene" uid="uid://yifphocygbal" path="res://entities/player/player.tscn" id="2_rq1to"]
-[ext_resource type="PackedScene" uid="uid://bhl48kxd2a852" path="res://ui/inventory/player_inventory_ui/player_inventory_ui.tscn" id="3_hbg4v"]
+[ext_resource type="PackedScene" uid="uid://bhl48kxd2a852" path="res://ui/inventory/player_inventory_ui.tscn" id="3_hbg4v"]
 [ext_resource type="PackedScene" uid="uid://bhb7tynm8e6f8" path="res://ui/menus/pause_menu/pause_menu.tscn" id="4_56tgx"]
 [ext_resource type="Script" uid="uid://dgqq1tf8prx5s" path="res://addons/proton_scatter/src/scatter.gd" id="14_48yux"]
 [ext_resource type="Script" uid="uid://ba8jou0xje0c7" path="res://addons/proton_scatter/src/stack/modifier_stack.gd" id="15_8apv8"]

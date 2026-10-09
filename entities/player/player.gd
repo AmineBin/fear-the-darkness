@@ -81,7 +81,7 @@ func _headbob(time) -> Vector3:
 	
 # Mettre un item dans l'inventaire du joueur
 func collect(item):
-	inv.insert(item)
+	return inv.insert(item)
 	
 # Si le joueur est à porté d'un prop il peut intéragir avec
 func interact():

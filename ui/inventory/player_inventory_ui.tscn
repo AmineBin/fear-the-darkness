@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://bhl48kxd2a852"]
 
-[ext_resource type="Script" uid="uid://bxqoporv7ocni" path="res://ui/inventory/player_inventory_ui/player_inventory_ui.gd" id="1_qedko"]
+[ext_resource type="Script" uid="uid://bxqoporv7ocni" path="res://ui/inventory/player_inventory_ui.gd" id="1_qedko"]
 [ext_resource type="Texture2D" uid="uid://civi4yk5t3044" path="res://assets/textures/inventory/inventory_background.png" id="2_7cyi0"]
-[ext_resource type="PackedScene" uid="uid://wc7uffhgcws" path="res://ui/inventory/inventory_ui_slot/inventory_ui_slot.tscn" id="3_8ojme"]
+[ext_resource type="PackedScene" uid="uid://wc7uffhgcws" path="res://ui/inventory/inventory_ui_slot.tscn" id="3_8ojme"]
 [ext_resource type="PackedScene" uid="uid://dab2qf3tvr0ou" path="res://ui/health_display_ui/health_display_ui.tscn" id="4_mme0t"]
 
 [node name="Inv_UI" type="Control" unique_id=1333805855 groups=["player_inv_ui"]]

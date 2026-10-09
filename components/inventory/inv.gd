@@ -4,6 +4,8 @@ class_name Inv
 
 signal update
 
+var inv_full
+
 @export var slots: Array[InvSlot]
 
 func _init(nb_slots: int = 12):
@@ -12,16 +14,21 @@ func _init(nb_slots: int = 12):
 		
 # Ajouter un item dans l'inventaire
 func insert(item: InvItem):
-	var item_slots = slots.filter(func(slot): return slot.item == item)
-	if !item_slots.is_empty():
-		item_slots[0].amount += 1
-	else:
-		var empty_slots = slots.filter(func(slot): return slot.item == null)
-		if !empty_slots.is_empty():
-			empty_slots[0].item = item
-			empty_slots[0].amount = 1
-	update.emit()
-	
+	# Ajouter un item en plus à l'item actuel
+	for slot in slots:
+		if slot.item == item and slot.amount < item.max_amount:
+			slot.amount += 1
+			update.emit()
+			return true
+	# Ajouter un item
+	for slot in slots:
+		if slot.is_empty_slot():
+			slot.item = item
+			slot.amount = 1
+			update.emit()
+			return true
+	return false
+
 func has_item(requested_item):
 	for slot in slots:
 		if slot.item == requested_item && slot.item != null:
@@ -40,3 +47,10 @@ func transfer_item(target_inv: Inv, slot: InvSlot) -> void:
 		slot.discard_item()
 		update.emit()
 		target_inv.update.emit()
+		
+func is_inv_full():
+	for slot in slots:
+		if slot.is_empty_slot():
+			return false
+	return true
+	

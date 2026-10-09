@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://crrigloaq0hlh"]
 
-[ext_resource type="Script" uid="uid://h730sqas58me" path="res://auto_load/inv_action_menu/inv_action_ui.gd" id="1_wg6ig"]
+[ext_resource type="Script" uid="uid://h730sqas58me" path="res://auto_load/inventory/inv_action_ui.gd" id="1_wg6ig"]
 [ext_resource type="AudioStream" uid="uid://bewd7exrbdrte" path="res://assets/audio/sfx/ui/inventory/click.ogg" id="2_wg6ig"]
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=1812745193]

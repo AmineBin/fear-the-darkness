@@ -7,7 +7,8 @@ func _ready() -> void:
 		queue_free()
 
 func interact(user: Node = null) -> void:
-	if user.has_method("collect"):
+	if not user.has_method("collect"):
+		return
+	if user.collect(item):
 		SaveManager.save_file_data.picked_up_items.append(str(get_path()))
-		user.collect(item)
 		queue_free()
