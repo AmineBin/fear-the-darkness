@@ -43,24 +43,30 @@ func _unhandled_input(event: InputEvent) -> void:
 
 # On garde
 func _on_inventory_context_discard(current_slot: InvSlot) -> void:
+	if not is_open:
+		return
 	if current_slot in player_inv.slots:
 		player_inv.discard_item_from_slot(current_slot)
 	elif current_slot in chest_inv.slots:
 		chest_inv.discard_item_from_slot(current_slot)
 
 func _on_inventory_context_use_item(current_slot: InvSlot) -> void:
+	if not is_open:
+		return
 	var player = get_tree().get_first_node_in_group("player")
 	if current_slot and not current_slot.is_empty_slot():
 		var was_used = current_slot.item.use(player)
 		
 		if was_used:
 			if current_slot in player_inv.slots:
-				player_inv.discard_item(current_slot)
+				player_inv.discard_item_from_slot(current_slot)
 			elif current_slot in chest_inv.slots:
-				chest_inv.discard_item(current_slot)
+				chest_inv.discard_item_from_slot(current_slot)
 
 # Demander à l'inventaire de transférer l'item du slot
 func _on_inventory_context_transfer(current_slot: InvSlot) -> void:
+	if not is_open:
+		return
 	if current_slot in player_inv.slots:
 		player_inv.transfer_item(chest_inv, current_slot)
 	elif current_slot in chest_inv.slots:

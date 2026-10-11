@@ -6,9 +6,13 @@ class_name InvItem
 @export var texture: Texture2D
 @export var item_type: String
 @export var max_amount: int
+@export var can_be_used: bool
 
 func use(target: Node) -> bool:
-	return true
+	if can_be_used == true:
+		return true
+	else:
+		return false
 
 func can_discard() -> bool:
 	return true

@@ -28,7 +28,7 @@ func test_use_returns_false_when_health_full():
 	
 	target.free()
 	
-func test_use_returns_true_when_health_full():
+func test_use_returns_true_when_health_not_full():
 	var medkit = MedKit.new()
 	var target = Node.new()
 	var health_component = HealthComponent.new()

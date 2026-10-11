@@ -78,7 +78,5 @@ text = ">> No"
 flat = true
 alignment = 0
 
-[connection signal="pressed" from="Control/HBoxContainer/Yes" to="." method="_on_yes_pressed"]
 [connection signal="pressed" from="Control/HBoxContainer/Yes" to="Control" method="_on_yes_pressed"]
-[connection signal="pressed" from="Control/HBoxContainer/No" to="." method="_on_no_pressed"]
 [connection signal="pressed" from="Control/HBoxContainer/No" to="Control" method="_on_no_pressed"]

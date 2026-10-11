@@ -25,7 +25,7 @@ func show_menu(slot, visual_slot, is_from_chest_ui):
 
 func _on_use_pressed() -> void:
 	var confirm_control = ConfirmMenuUi.get_node_or_null("Control")
-	confirm_control.show_context_menu("Use " + current_slot.item.name + " ?", _use_emit)
+	confirm_control.show_context_menu("Use " + current_slot.item.name + " ?", _use_emit, false)
 
 func _use_emit():
 	use_item.emit(current_slot)
@@ -33,7 +33,7 @@ func _use_emit():
 
 func _on_discard_pressed() -> void:
 	var confirm_control = ConfirmMenuUi.get_node_or_null("Control")
-	confirm_control.show_context_menu("Discard " + current_slot.item.name + " ?", _discard_emit)
+	confirm_control.show_context_menu("Discard " + current_slot.item.name + " ?", _discard_emit, false)
 
 func _discard_emit():
 	discard.emit(current_slot)

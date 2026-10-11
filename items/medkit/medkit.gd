@@ -12,4 +12,5 @@ func use(target: Node) -> bool:
 		return false
 	
 	health_component.regain_health(4)
+	
 	return true

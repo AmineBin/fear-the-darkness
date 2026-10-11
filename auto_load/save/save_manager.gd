@@ -76,6 +76,7 @@ func load_player():
 	if not health_component:
 		return
 	health_component.health = save_file_data.health
+	health_component.health_changed.emit(health_component.health)
 	player.global_position = save_file_data.position
 	PlayTimeTracker.play_time = save_file_data.play_time
 	

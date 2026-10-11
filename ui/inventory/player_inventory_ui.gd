@@ -31,9 +31,13 @@ func close():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 		
 func _on_inventory_context_discard(slot: InvSlot) -> void:
+	if not is_open:
+		return
 	inv.discard_item_from_slot(slot)
 	
 func _on_inventory_context_use_item(slot: InvSlot) -> void:
+	if not is_open:
+		return
 	var player = get_tree().get_first_node_in_group("player")
 	if slot and not slot.is_empty_slot():
 		var was_used = slot.item.use(player)

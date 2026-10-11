@@ -1,6 +1,6 @@
-[gd_resource type="Resource" script_class="InvItem" format=3 uid="uid://j8vwf02x534k"]
+[gd_resource type="Resource" script_class="MedKit" format=3 uid="uid://j8vwf02x534k"]
 
-[ext_resource type="Script" uid="uid://dev7jwrvam3ah" path="res://components/inventory/inv_item.gd" id="1_lia6y"]
+[ext_resource type="Script" uid="uid://cc81wjbu3ourr" path="res://items/medkit/medkit.gd" id="1_lia6y"]
 [ext_resource type="Texture2D" uid="uid://cs5k7pe36g6tx" path="res://assets/textures/items/med_kit.png" id="2_ksb27"]
 
 [resource]
@@ -9,4 +9,5 @@ name = "med kit"
 texture = ExtResource("2_ksb27")
 item_type = "heal"
 max_amount = 4
-metadata/_custom_type_script = "uid://dev7jwrvam3ah"
+can_be_used = true
+metadata/_custom_type_script = "uid://cc81wjbu3ourr"

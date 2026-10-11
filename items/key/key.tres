@@ -9,4 +9,5 @@ name = "key"
 texture = ExtResource("2_5ufv8")
 item_type = "key"
 max_amount = 1
+can_be_used = false
 metadata/_custom_type_script = "uid://dev7jwrvam3ah"

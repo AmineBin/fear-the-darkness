@@ -5,11 +5,12 @@ signal confirm
 @export var click_sfx: AudioStream
 @onready var label:Label = $Label
 var current_action: Callable
+var capture_mouse_on_close := true
 
 func _on_yes_pressed() -> void:
 	SoundPlayer.audio_play(click_sfx)
-	Control.MOUSE_FILTER_STOP
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	if capture_mouse_on_close:
+		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	confirm.emit()
 	current_action = Callable()
 	hide()
@@ -17,8 +18,8 @@ func _on_yes_pressed() -> void:
 
 func _on_no_pressed() -> void:
 	SoundPlayer.audio_play(click_sfx)
-	Control.MOUSE_FILTER_IGNORE
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	if capture_mouse_on_close:
+		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	hide()
 	if current_action and confirm.is_connected(current_action):
 		confirm.disconnect(current_action)
@@ -28,12 +29,13 @@ func _on_no_pressed() -> void:
 func change_label(context_text):
 	label.text = context_text
 	
-func show_context_menu(context_text, action):
+func show_context_menu(context_text: String, action: Callable, capture_mouse := true):
 	PauseGame.pause_game()
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	if current_action and confirm.is_connected(current_action):
 		confirm.disconnect(current_action)
 	current_action = action
+	capture_mouse_on_close = capture_mouse
 	show()
 	change_label(context_text)
 	confirm.connect(action, CONNECT_ONE_SHOT)
