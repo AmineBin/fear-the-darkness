@@ -1,11 +1,21 @@
 extends Node
-
-const save_location = "user://fear_the_darkness/savegame.tres"
+const MAX_SAVE_SLOTS: int = 4
+var save_nb = 1
 var save_file_data: SaveDataResource = SaveDataResource.new()
 var game_scene_path = "res://playground.tscn"
-	
+
+func set_save_slot(save_slot: int) -> void:
+	if save_slot < 1 or save_slot > MAX_SAVE_SLOTS:
+		push_error("Invalid save slot: %d" % save_slot)
+		return
+	save_nb = save_slot
+
+func get_save_path():
+	return "user://fear_the_darkness/savegame" + str(save_nb) + ".tres"
+
 func _save():
 	DirAccess.make_dir_recursive_absolute("user://fear_the_darkness")
+	var save_location = get_save_path()
 	var error = ResourceSaver.save(save_file_data, save_location)
 	if error != OK:
 		push_error("Unable to save game: %s" % error)
@@ -62,7 +72,11 @@ func save_all():
 	save_inventories()
 	_save()
 		
-func _load():
+func _load(slot: int):
+	set_save_slot(slot)
+	
+	var save_location = get_save_path()
+	
 	if FileAccess.file_exists(save_location):
 		var loaded_data = ResourceLoader.load(save_location) as SaveDataResource
 		if loaded_data:
@@ -109,8 +123,8 @@ func load_props():
 		if str(item.get_path()) in save_file_data.picked_up_items:
 			item.queue_free()
 
-func load_all():
-	_load()
+func load_all(save_slot):
+	_load(save_slot)
 	if get_tree().current_scene.scene_file_path != game_scene_path:
 		get_tree().change_scene_to_file(game_scene_path)
 		await get_tree().scene_changed
