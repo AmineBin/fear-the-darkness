@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://bt1jviv51itq1"]
 
 [ext_resource type="Script" uid="uid://mgu622sgycv2" path="res://ui/menus/save/save_data/save_ui.gd" id="2_p1q27"]
-[ext_resource type="Texture2D" uid="uid://cg3hei3k7rs66" path="res://assets/textures/ui/save/icons/cursor.png" id="2_y3l15"]
 [ext_resource type="Texture2D" uid="uid://d14fnigi3d6p2" path="res://assets/textures/ui/save/os_background.png" id="3_hwuo8"]
 [ext_resource type="PackedScene" uid="uid://uaktb6mru1ob" path="res://ui/menus/transition/fade_transition.tscn" id="3_ibyww"]
 [ext_resource type="PackedScene" uid="uid://dpnfpiq24qn57" path="res://ui/menus/save/icon/save_button.tscn" id="3_v82s4"]
@@ -30,7 +29,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("2_p1q27")
-curseur = ExtResource("2_y3l15")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=19044433]
 texture_filter = 1

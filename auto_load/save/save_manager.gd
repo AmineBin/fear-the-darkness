@@ -10,12 +10,12 @@ func set_save_slot(save_slot: int) -> void:
 		return
 	save_nb = save_slot
 
-func get_save_path():
-	return "user://fear_the_darkness/savegame" + str(save_nb) + ".tres"
+func get_save_path(save_slot: int):
+	return "user://save/save_slot_" + str(save_slot) + ".tres"
 
-func _save():
-	DirAccess.make_dir_recursive_absolute("user://fear_the_darkness")
-	var save_location = get_save_path()
+func _save(save_slot):
+	DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path("user://save"))
+	var save_location = get_save_path(save_slot)
 	var error = ResourceSaver.save(save_file_data, save_location)
 	if error != OK:
 		push_error("Unable to save game: %s" % error)
@@ -66,16 +66,16 @@ func save_inventories() -> void:
 	save_file_data.player_inventory = new_player_inventory
 	save_file_data.chest_inventory = new_chest_inventory
 	
-func save_all():
+func save_all(save_slot):
 	save_player()
 	save_doors()
 	save_inventories()
-	_save()
+	_save(save_slot)
 		
-func _load(slot: int):
-	set_save_slot(slot)
+func _load(save_slot: int):
+	set_save_slot(save_slot)
 	
-	var save_location = get_save_path()
+	var save_location = get_save_path(save_slot)
 	
 	if FileAccess.file_exists(save_location):
 		var loaded_data = ResourceLoader.load(save_location) as SaveDataResource
