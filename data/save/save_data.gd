@@ -8,3 +8,4 @@ class_name SaveDataResource
 @export var player_inventory: Inv = Inv.new()
 @export var chest_inventory: Inv = Inv.new(24)
 @export var picked_up_items: Array[String] = []
+@export var current_scene: PackedScene

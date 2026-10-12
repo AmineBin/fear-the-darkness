@@ -31,7 +31,12 @@ func save_player() -> void:
 	save_file_data.position = player.global_position
 	save_file_data.play_time = PlayTimeTracker.play_time
 
-func save_doors() -> void:
+func save_scene() -> void:
+	# Récupérer la scene actuelle
+	var scene = get_tree().get_current_scene()
+	save_file_data.current_scene = load(scene.scene_file_path)
+	
+	# Save doors state
 	var doors = get_tree().get_nodes_in_group("doors")
 	for door in doors:
 		save_file_data.door_states[str(door.get_path())] = {
@@ -68,7 +73,7 @@ func save_inventories() -> void:
 	
 func save_all(save_slot):
 	save_player()
-	save_doors()
+	save_scene()
 	save_inventories()
 	_save(save_slot)
 		
@@ -94,7 +99,11 @@ func load_player():
 	player.global_position = save_file_data.position
 	PlayTimeTracker.play_time = save_file_data.play_time
 	
-func load_doors() -> void:
+func load_scene() -> void:
+	var scene: PackedScene = save_file_data.current_scene
+	if scene and get_tree().current_scene.scene_file_path != scene.resource_path:
+		await get_tree().change_scene_to_packed(scene)
+		
 	var doors = get_tree().get_nodes_in_group("doors")
 	for door in doors:
 		if save_file_data.door_states.has(str(door.get_path())): # Vérifie que la porte a un door_state
@@ -102,6 +111,11 @@ func load_doors() -> void:
 			door.key_needed = door_data["locked"]
 			door.is_open = door_data["open"]
 			door.update_visual()
+	
+	var items = get_tree().get_nodes_in_group("items")
+	for item in items:
+		if str(item.get_path()) in save_file_data.picked_up_items:
+			item.queue_free()
 			
 func load_inventories():
 	var player = get_tree().get_first_node_in_group("player")
@@ -117,21 +131,11 @@ func load_inventories():
 	chest_inv_ui.set_inventories(chest_inv_ui.chest_inv, player.inv)
 	
 
-func load_props():
-	var items = get_tree().get_nodes_in_group("items")
-	for item in items:
-		if str(item.get_path()) in save_file_data.picked_up_items:
-			item.queue_free()
-
 func load_all(save_slot):
 	_load(save_slot)
-	if get_tree().current_scene.scene_file_path != game_scene_path:
-		get_tree().change_scene_to_file(game_scene_path)
-		await get_tree().scene_changed
+	load_scene()
 	load_player()
-	load_doors()
 	load_inventories()
-	load_props()
 
 # Vider la mémoire de tout élément sauvegardé
 func reset_save_data():
