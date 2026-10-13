@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://cpfg54rnq6foe" path="res://ui/menus/save/load_data/load_data_ui.gd" id="2_freus"]
 [ext_resource type="PackedScene" uid="uid://uaktb6mru1ob" path="res://ui/menus/transition/fade_transition.tscn" id="2_kpcqq"]
 
+[sub_resource type="ButtonGroup" id="ButtonGroup_h5vwo"]
+
 [node name="LoadUi" type="Control" unique_id=1792571149]
 layout_mode = 3
 anchors_preset = 15
@@ -39,6 +41,8 @@ columns = 4
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 size_flags_horizontal = 3
+toggle_mode = true
+button_group = SubResource("ButtonGroup_h5vwo")
 
 [node name="Empty Slot" type="Label" parent="ColorRect/GridContainer2/Button1" unique_id=568686392]
 layout_mode = 1
@@ -60,6 +64,8 @@ text = "Empty Slot"
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 size_flags_horizontal = 3
+toggle_mode = true
+button_group = SubResource("ButtonGroup_h5vwo")
 
 [node name="Empty Slot" type="Label" parent="ColorRect/GridContainer2/Button2" unique_id=1556119035]
 layout_mode = 1
@@ -81,6 +87,8 @@ text = "Empty Slot"
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 size_flags_horizontal = 3
+toggle_mode = true
+button_group = SubResource("ButtonGroup_h5vwo")
 
 [node name="Empty Slot" type="Label" parent="ColorRect/GridContainer2/Button3" unique_id=373549826]
 layout_mode = 1
@@ -102,6 +110,8 @@ text = "Empty Slot"
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 size_flags_horizontal = 3
+toggle_mode = true
+button_group = SubResource("ButtonGroup_h5vwo")
 
 [node name="Empty Slot" type="Label" parent="ColorRect/GridContainer2/Button4" unique_id=564776094]
 layout_mode = 1

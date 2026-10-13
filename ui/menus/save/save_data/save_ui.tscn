@@ -9,6 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://cwmaw16j7cy4d" path="res://ui/menus/save/popups/pop_up_load.tscn" id="7_053uw"]
 [ext_resource type="Shader" uid="uid://dth7y84nojqsq" path="res://ui/menus/save/save_data/save_ui.gdshader" id="8_jow33"]
 
+[sub_resource type="ButtonGroup" id="ButtonGroup_jow33"]
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_h5vwo"]
 shader = ExtResource("8_jow33")
 shader_parameter/curvature = 0.022000001045
@@ -43,6 +45,7 @@ offset_left = 64.0
 offset_top = 64.0
 offset_right = 192.0
 offset_bottom = 192.0
+button_group = SubResource("ButtonGroup_jow33")
 
 [node name="SaveIconButton2" parent="TextureRect" unique_id=1976050434 instance=ExtResource("4_v82s4")]
 layout_mode = 0
@@ -109,10 +112,18 @@ offset_bottom = 1080.0
 [node name="PopUp" parent="." unique_id=2130997338 instance=ExtResource("6_eej1h")]
 visible = false
 layout_mode = 1
+offset_left = -136.0
+offset_top = -43.76004
+offset_right = -136.00012
+offset_bottom = -44.24005
 
 [node name="PopUpLoadData" parent="." unique_id=332970969 instance=ExtResource("7_053uw")]
 visible = false
 layout_mode = 1
+offset_left = 224.0
+offset_top = 28.23996
+offset_right = 223.99988
+offset_bottom = 27.759949
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=45161342]
 material = SubResource("ShaderMaterial_h5vwo")

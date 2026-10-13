@@ -9,6 +9,11 @@
 [ext_resource type="FontFile" uid="uid://c25s10h6bx4ct" path="res://assets/fonts/PixelOperator.ttf" id="6_kyqpd"]
 [ext_resource type="PackedScene" uid="uid://bxfcwx76ci55k" path="res://ui/menus/save/popups/popup_button.tscn" id="7_clnj7"]
 
+[sub_resource type="ButtonGroup" id="ButtonGroup_h5vwo"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7outy"]
+load_path = "res://.godot/imported/SaveIcon.png-11b0572f68635915d87c9ed2bade7387.ctex"
+
 [node name="Control" type="Control" unique_id=2130997338]
 layout_mode = 3
 anchor_left = 0.3
@@ -106,98 +111,120 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -336.0
-offset_top = -25.0
+offset_top = -80.0
 offset_right = 336.0
-offset_bottom = 25.0
+offset_bottom = 80.0
 grow_horizontal = 2
 grow_vertical = 2
-offset_transform_enabled = true
-offset_transform_pivot_ratio = Vector2(0, 0)
 columns = 4
 
-[node name="Button1" type="Button" parent="PopUp/GridContainer2" unique_id=107952025]
-custom_minimum_size = Vector2(50, 50)
+[node name="SlotButton1" type="Button" parent="PopUp/GridContainer2" unique_id=997270018]
+custom_minimum_size = Vector2(256, 160)
 layout_mode = 2
-size_flags_horizontal = 3
+toggle_mode = true
+button_group = SubResource("ButtonGroup_h5vwo")
 
-[node name="Empty Slot" type="Label" parent="PopUp/GridContainer2/Button1" unique_id=2068408300]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -82.5
-offset_top = -22.5
-offset_right = 82.5
-offset_bottom = 22.5
-grow_horizontal = 2
-grow_vertical = 2
+[node name="TextureRect" type="TextureRect" parent="PopUp/GridContainer2/SlotButton1" unique_id=338234335]
+texture_filter = 1
+layout_mode = 0
+offset_left = 64.0
+offset_right = 192.0
+offset_bottom = 128.0
+mouse_filter = 2
+texture = SubResource("CompressedTexture2D_7outy")
+
+[node name="Label" type="Label" parent="PopUp/GridContainer2/SlotButton1" unique_id=1307886028]
+custom_maximum_size = Vector2(256, 72)
+layout_mode = 0
+offset_top = 128.0
+offset_right = 256.0
+offset_bottom = 160.0
+theme_override_fonts/font = ExtResource("6_kyqpd")
 theme_override_font_sizes/font_size = 32
-text = "Empty Slot"
+text = "Kitchen - 2:05"
+horizontal_alignment = 1
+autowrap_mode = 2
 
-[node name="Button2" type="Button" parent="PopUp/GridContainer2" unique_id=617961616]
-custom_minimum_size = Vector2(50, 50)
+[node name="SlotButton2" type="Button" parent="PopUp/GridContainer2" unique_id=704246367]
+custom_minimum_size = Vector2(256, 160)
 layout_mode = 2
-size_flags_horizontal = 3
+toggle_mode = true
+button_group = SubResource("ButtonGroup_h5vwo")
 
-[node name="Empty Slot" type="Label" parent="PopUp/GridContainer2/Button2" unique_id=1999846527]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -82.5
-offset_top = -22.5
-offset_right = 82.5
-offset_bottom = 22.5
-grow_horizontal = 2
-grow_vertical = 2
+[node name="TextureRect" type="TextureRect" parent="PopUp/GridContainer2/SlotButton2" unique_id=635213207]
+texture_filter = 1
+layout_mode = 0
+offset_left = 64.0
+offset_right = 192.0
+offset_bottom = 128.0
+mouse_filter = 2
+texture = SubResource("CompressedTexture2D_7outy")
+
+[node name="Label" type="Label" parent="PopUp/GridContainer2/SlotButton2" unique_id=1743599056]
+custom_maximum_size = Vector2(256, 72)
+layout_mode = 0
+offset_top = 128.0
+offset_right = 256.0
+offset_bottom = 160.0
+theme_override_fonts/font = ExtResource("6_kyqpd")
 theme_override_font_sizes/font_size = 32
-text = "Empty Slot"
+text = "Kitchen - 2:05"
+horizontal_alignment = 1
+autowrap_mode = 2
 
-[node name="Button3" type="Button" parent="PopUp/GridContainer2" unique_id=566087794]
-custom_minimum_size = Vector2(50, 50)
+[node name="SlotButton3" type="Button" parent="PopUp/GridContainer2" unique_id=875174240]
+custom_minimum_size = Vector2(256, 160)
 layout_mode = 2
-size_flags_horizontal = 3
+toggle_mode = true
+button_group = SubResource("ButtonGroup_h5vwo")
 
-[node name="Empty Slot" type="Label" parent="PopUp/GridContainer2/Button3" unique_id=1491061548]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -82.5
-offset_top = -22.5
-offset_right = 82.5
-offset_bottom = 22.5
-grow_horizontal = 2
-grow_vertical = 2
+[node name="TextureRect" type="TextureRect" parent="PopUp/GridContainer2/SlotButton3" unique_id=1994725567]
+texture_filter = 1
+layout_mode = 0
+offset_left = 64.0
+offset_right = 192.0
+offset_bottom = 128.0
+mouse_filter = 2
+texture = SubResource("CompressedTexture2D_7outy")
+
+[node name="Label" type="Label" parent="PopUp/GridContainer2/SlotButton3" unique_id=210397657]
+custom_maximum_size = Vector2(256, 72)
+layout_mode = 0
+offset_top = 128.0
+offset_right = 256.0
+offset_bottom = 160.0
+theme_override_fonts/font = ExtResource("6_kyqpd")
 theme_override_font_sizes/font_size = 32
-text = "Empty Slot"
+text = "Kitchen - 2:05"
+horizontal_alignment = 1
+autowrap_mode = 2
 
-[node name="Button4" type="Button" parent="PopUp/GridContainer2" unique_id=2108806822]
-custom_minimum_size = Vector2(50, 50)
+[node name="SlotButton4" type="Button" parent="PopUp/GridContainer2" unique_id=2016397958]
+custom_minimum_size = Vector2(256, 160)
 layout_mode = 2
-size_flags_horizontal = 3
+toggle_mode = true
+button_group = SubResource("ButtonGroup_h5vwo")
 
-[node name="Empty Slot" type="Label" parent="PopUp/GridContainer2/Button4" unique_id=1068721999]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -82.5
-offset_top = -22.5
-offset_right = 82.5
-offset_bottom = 22.5
-grow_horizontal = 2
-grow_vertical = 2
+[node name="TextureRect" type="TextureRect" parent="PopUp/GridContainer2/SlotButton4" unique_id=1325766031]
+texture_filter = 1
+layout_mode = 0
+offset_left = 64.0
+offset_right = 192.0
+offset_bottom = 128.0
+mouse_filter = 2
+texture = SubResource("CompressedTexture2D_7outy")
+
+[node name="Label" type="Label" parent="PopUp/GridContainer2/SlotButton4" unique_id=730189819]
+custom_maximum_size = Vector2(256, 72)
+layout_mode = 0
+offset_top = 128.0
+offset_right = 256.0
+offset_bottom = 160.0
+theme_override_fonts/font = ExtResource("6_kyqpd")
 theme_override_font_sizes/font_size = 32
-text = "Empty Slot"
+text = "Kitchen - 2:05"
+horizontal_alignment = 1
+autowrap_mode = 2
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="PopUp" unique_id=29967174]
 layout_mode = 1

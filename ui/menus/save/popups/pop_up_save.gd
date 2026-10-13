@@ -2,10 +2,10 @@ extends Control
 
 @onready var save_validate: Label = $PopUp/Label2
 @onready var slot_buttons: Array[Button] = [
-	$PopUp/GridContainer2/Button1,
-	$PopUp/GridContainer2/Button2,
-	$PopUp/GridContainer2/Button3,
-	$PopUp/GridContainer2/Button4
+	$PopUp/GridContainer2/SlotButton1,
+	$PopUp/GridContainer2/SlotButton2,
+	$PopUp/GridContainer2/SlotButton3,
+	$PopUp/GridContainer2/SlotButton4
 ]
 var save_slot = 1
 func _ready() -> void:
@@ -17,7 +17,7 @@ func _ready() -> void:
 func select_save_slot(i):
 	save_slot = i
 	print(save_slot)
-	
+		
 func _on_close_pop_up_button_pressed() -> void:
 	hide()
 
