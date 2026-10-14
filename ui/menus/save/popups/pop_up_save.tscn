@@ -30,8 +30,10 @@ script = ExtResource("1_buv5c")
 [node name="PopUp" type="TextureRect" parent="." unique_id=1591336109]
 texture_filter = 1
 layout_mode = 1
-offset_right = 768.0
-offset_bottom = 384.0
+offset_left = -128.0
+offset_top = -92.0
+offset_right = 704.0
+offset_bottom = 460.0
 texture = ExtResource("2_7outy")
 expand_mode = 2
 
@@ -41,11 +43,13 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -175.0
-offset_top = 24.0
-offset_right = -23.0
-offset_bottom = 72.0
+offset_left = -254.0
+offset_top = 34.0
+offset_right = -102.0
+offset_bottom = 82.0
 grow_horizontal = 0
+scale = Vector2(1.5, 1.5)
+offset_transform_scale = Vector2(2, 2)
 
 [node name="ReducePopUpIconButton" parent="PopUp/HBoxContainer" unique_id=1316845308 instance=ExtResource("3_1k8m6")]
 custom_minimum_size = Vector2(48, 48)
@@ -73,10 +77,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -88.0
-offset_top = -84.0
-offset_right = 82.0
-offset_bottom = -52.0
+offset_left = -104.0
+offset_top = -140.0
+offset_right = 105.0
+offset_bottom = -103.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -92,10 +96,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -118.0
-offset_top = 11.0
-offset_right = 118.0
-offset_bottom = 43.0
+offset_left = -120.0
+offset_top = 124.0
+offset_right = 116.0
+offset_bottom = 156.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -119,7 +123,7 @@ grow_vertical = 2
 columns = 4
 
 [node name="SlotButton1" type="Button" parent="PopUp/GridContainer2" unique_id=997270018]
-custom_minimum_size = Vector2(256, 160)
+custom_minimum_size = Vector2(176, 155)
 layout_mode = 2
 toggle_mode = true
 button_group = SubResource("ButtonGroup_h5vwo")
@@ -127,102 +131,106 @@ button_group = SubResource("ButtonGroup_h5vwo")
 [node name="TextureRect" type="TextureRect" parent="PopUp/GridContainer2/SlotButton1" unique_id=338234335]
 texture_filter = 1
 layout_mode = 0
-offset_left = 64.0
-offset_right = 192.0
-offset_bottom = 128.0
+offset_left = 24.0
+offset_top = 4.0
+offset_right = 152.0
+offset_bottom = 132.0
 mouse_filter = 2
 texture = SubResource("CompressedTexture2D_7outy")
 
 [node name="Label" type="Label" parent="PopUp/GridContainer2/SlotButton1" unique_id=1307886028]
 custom_maximum_size = Vector2(256, 72)
 layout_mode = 0
-offset_top = 128.0
-offset_right = 256.0
-offset_bottom = 160.0
+offset_top = 124.0
+offset_right = 176.0
+offset_bottom = 156.0
 theme_override_fonts/font = ExtResource("6_kyqpd")
 theme_override_font_sizes/font_size = 32
-text = "Kitchen - 2:05"
+text = "Slot1 - 2:05"
 horizontal_alignment = 1
 autowrap_mode = 2
 
-[node name="SlotButton2" type="Button" parent="PopUp/GridContainer2" unique_id=704246367]
-custom_minimum_size = Vector2(256, 160)
+[node name="SlotButton2" type="Button" parent="PopUp/GridContainer2" unique_id=130721913]
+custom_minimum_size = Vector2(176, 155)
 layout_mode = 2
 toggle_mode = true
 button_group = SubResource("ButtonGroup_h5vwo")
 
-[node name="TextureRect" type="TextureRect" parent="PopUp/GridContainer2/SlotButton2" unique_id=635213207]
+[node name="TextureRect" type="TextureRect" parent="PopUp/GridContainer2/SlotButton2" unique_id=142075920]
 texture_filter = 1
 layout_mode = 0
-offset_left = 64.0
-offset_right = 192.0
-offset_bottom = 128.0
+offset_left = 24.0
+offset_top = 4.0
+offset_right = 152.0
+offset_bottom = 132.0
 mouse_filter = 2
 texture = SubResource("CompressedTexture2D_7outy")
 
-[node name="Label" type="Label" parent="PopUp/GridContainer2/SlotButton2" unique_id=1743599056]
+[node name="Label" type="Label" parent="PopUp/GridContainer2/SlotButton2" unique_id=1613559329]
 custom_maximum_size = Vector2(256, 72)
 layout_mode = 0
-offset_top = 128.0
-offset_right = 256.0
-offset_bottom = 160.0
+offset_top = 124.0
+offset_right = 176.0
+offset_bottom = 156.0
 theme_override_fonts/font = ExtResource("6_kyqpd")
 theme_override_font_sizes/font_size = 32
-text = "Kitchen - 2:05"
+text = "Slot1 - 2:05"
 horizontal_alignment = 1
 autowrap_mode = 2
 
-[node name="SlotButton3" type="Button" parent="PopUp/GridContainer2" unique_id=875174240]
-custom_minimum_size = Vector2(256, 160)
+[node name="SlotButton3" type="Button" parent="PopUp/GridContainer2" unique_id=1967513784]
+custom_minimum_size = Vector2(176, 155)
 layout_mode = 2
 toggle_mode = true
 button_group = SubResource("ButtonGroup_h5vwo")
 
-[node name="TextureRect" type="TextureRect" parent="PopUp/GridContainer2/SlotButton3" unique_id=1994725567]
+[node name="TextureRect" type="TextureRect" parent="PopUp/GridContainer2/SlotButton3" unique_id=398706824]
 texture_filter = 1
 layout_mode = 0
-offset_left = 64.0
-offset_right = 192.0
-offset_bottom = 128.0
+offset_left = 24.0
+offset_top = 4.0
+offset_right = 152.0
+offset_bottom = 132.0
 mouse_filter = 2
 texture = SubResource("CompressedTexture2D_7outy")
 
-[node name="Label" type="Label" parent="PopUp/GridContainer2/SlotButton3" unique_id=210397657]
+[node name="Label" type="Label" parent="PopUp/GridContainer2/SlotButton3" unique_id=505740881]
 custom_maximum_size = Vector2(256, 72)
 layout_mode = 0
-offset_top = 128.0
-offset_right = 256.0
-offset_bottom = 160.0
+offset_top = 124.0
+offset_right = 176.0
+offset_bottom = 156.0
 theme_override_fonts/font = ExtResource("6_kyqpd")
 theme_override_font_sizes/font_size = 32
-text = "Kitchen - 2:05"
+text = "Slot1 - 2:05"
 horizontal_alignment = 1
 autowrap_mode = 2
 
-[node name="SlotButton4" type="Button" parent="PopUp/GridContainer2" unique_id=2016397958]
-custom_minimum_size = Vector2(256, 160)
+[node name="SlotButton4" type="Button" parent="PopUp/GridContainer2" unique_id=1582778967]
+custom_minimum_size = Vector2(176, 155)
 layout_mode = 2
 toggle_mode = true
 button_group = SubResource("ButtonGroup_h5vwo")
 
-[node name="TextureRect" type="TextureRect" parent="PopUp/GridContainer2/SlotButton4" unique_id=1325766031]
+[node name="TextureRect" type="TextureRect" parent="PopUp/GridContainer2/SlotButton4" unique_id=2074635732]
 texture_filter = 1
 layout_mode = 0
-offset_left = 64.0
-offset_right = 192.0
-offset_bottom = 128.0
+offset_left = 24.0
+offset_top = 4.0
+offset_right = 152.0
+offset_bottom = 132.0
 mouse_filter = 2
 texture = SubResource("CompressedTexture2D_7outy")
 
-[node name="Label" type="Label" parent="PopUp/GridContainer2/SlotButton4" unique_id=730189819]
+[node name="Label" type="Label" parent="PopUp/GridContainer2/SlotButton4" unique_id=628899943]
 custom_maximum_size = Vector2(256, 72)
 layout_mode = 0
-offset_top = 128.0
-offset_right = 256.0
-offset_bottom = 160.0
+offset_top = 124.0
+offset_right = 176.0
+offset_bottom = 156.0
 theme_override_fonts/font = ExtResource("6_kyqpd")
 theme_override_font_sizes/font_size = 32
-text = "Kitchen - 2:05"
+text = "Slot1 - 2:05"
 horizontal_alignment = 1
 autowrap_mode = 2
 
@@ -234,9 +242,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -176.0
-offset_top = 115.0
+offset_top = 196.0
 offset_right = 176.0
-offset_bottom = 163.0
+offset_bottom = 244.0
 grow_horizontal = 2
 grow_vertical = 2
 

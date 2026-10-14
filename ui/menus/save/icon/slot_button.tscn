@@ -8,28 +8,39 @@
 load_path = "res://.godot/imported/SaveIcon.png-11b0572f68635915d87c9ed2bade7387.ctex"
 
 [node name="SlotIconButton" type="Button" unique_id=1567148761]
+offset_left = 88.0
 offset_right = 256.0
 offset_bottom = 160.0
+size_flags_horizontal = 4
 toggle_mode = true
 button_group = SubResource("ButtonGroup_1k8m6")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1591336109]
 texture_filter = 1
-layout_mode = 0
-offset_left = 64.0
-offset_right = 192.0
-offset_bottom = 128.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = -80.0
+offset_right = 68.0
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 2
 texture = SubResource("CompressedTexture2D_8lt2w")
 
 [node name="Label" type="Label" parent="." unique_id=749517370]
 custom_maximum_size = Vector2(256, 72)
 layout_mode = 0
+offset_left = 8.0
 offset_top = 128.0
-offset_right = 256.0
+offset_right = 160.0
 offset_bottom = 160.0
 theme_override_fonts/font = ExtResource("1_nmi2i")
 theme_override_font_sizes/font_size = 32
-text = "Kitchen - 2:05"
+text = "Slot1 - 2:05"
 horizontal_alignment = 1
 autowrap_mode = 2
