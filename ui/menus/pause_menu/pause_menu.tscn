@@ -357,13 +357,6 @@ text = ">> Resume"
 flat = true
 alignment = 0
 
-[node name="Load" type="Button" parent="VBoxContainer" unique_id=1424579573]
-layout_mode = 2
-theme_override_font_sizes/font_size = 32
-text = ">> Load "
-flat = true
-alignment = 0
-
 [node name="Settings" type="Button" parent="VBoxContainer" unique_id=2060387432]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32

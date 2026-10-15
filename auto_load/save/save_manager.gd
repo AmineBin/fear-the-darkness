@@ -94,15 +94,19 @@ func load_player():
 	var health_component = player.get_node_or_null("HealthComponent")
 	if not health_component:
 		return
+	
 	health_component.health = save_file_data.health
 	health_component.health_changed.emit(health_component.health)
 	player.global_position = save_file_data.position
 	PlayTimeTracker.play_time = save_file_data.play_time
 	
+	
 func load_scene() -> void:
 	var scene: PackedScene = save_file_data.current_scene
 	if scene and get_tree().current_scene.scene_file_path != scene.resource_path:
-		await get_tree().change_scene_to_packed(scene)
+		get_tree().change_scene_to_packed(scene)
+		await get_tree().process_frame
+		await get_tree().process_frame
 		
 	var doors = get_tree().get_nodes_in_group("doors")
 	for door in doors:
@@ -133,7 +137,7 @@ func load_inventories():
 
 func load_all(save_slot):
 	_load(save_slot)
-	load_scene()
+	await load_scene()
 	load_player()
 	load_inventories()
 

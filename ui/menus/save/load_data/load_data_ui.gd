@@ -17,7 +17,6 @@ func _ready() -> void:
 		# Le slot change en fonction du bouton sélectionné
 		button.pressed.connect(select_save_slot.bind(i + 1))
 
-
 func select_save_slot(i):
 	save_slot = i
 	print(save_slot)
