@@ -13,7 +13,7 @@ anchors_preset = 0
 offset_right = 256.0
 offset_bottom = 144.0
 script = ExtResource("1_qh1js")
-textures = Array[Texture2D]([ExtResource("2_mhhf5"), ExtResource("3_mvnik"), ExtResource("4_ne5m7"), ExtResource("5_l81yk")])
+textures = Array[Texture2D]([ExtResource("5_l81yk"), ExtResource("4_ne5m7"), ExtResource("3_mvnik"), ExtResource("2_mhhf5")])
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=219214627]
 position = Vector2(128.00002, 72)
