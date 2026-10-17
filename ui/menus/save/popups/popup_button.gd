@@ -1,6 +1,6 @@
 extends Button
 
-@onready var label: Label = $TextureRect/Label
+@onready var label: Label = $NinePatchRect/Label
 @export var label_text: String = ""
 
 func _ready() -> void:

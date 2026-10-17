@@ -20,6 +20,15 @@ func _save(save_slot):
 	if error != OK:
 		push_error("Unable to save game: %s" % error)
 
+func delete(save_slot:int):
+	set_save_slot(save_slot)
+	
+	var save_location = get_save_path(save_slot)
+	
+	if FileAccess.file_exists(save_location):
+		var err = DirAccess.remove_absolute(save_location)
+		if err != OK:
+			print("Erreur : ", err)
 func save_player() -> void:
 	var player = get_tree().get_first_node_in_group("player")
 	if not player:
@@ -100,7 +109,6 @@ func load_player():
 	player.global_position = save_file_data.position
 	PlayTimeTracker.play_time = save_file_data.play_time
 	
-	
 func load_scene() -> void:
 	var scene: PackedScene = save_file_data.current_scene
 	if scene and get_tree().current_scene.scene_file_path != scene.resource_path:
@@ -133,7 +141,6 @@ func load_inventories():
 	
 	player_inv_ui.set_inventory(player.inv)
 	chest_inv_ui.set_inventories(chest_inv_ui.chest_inv, player.inv)
-	
 
 func load_all(save_slot):
 	_load(save_slot)

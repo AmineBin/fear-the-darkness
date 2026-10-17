@@ -7,7 +7,7 @@ var is_open = false
 
 func _ready() -> void:
 	update_visual()
-	
+
 func open():
 	visible = true
 	is_open = true
@@ -16,18 +16,18 @@ func open():
 func close():
 	visible = false
 	is_open = false
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)	
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func format_playtime(hours: float) -> String:
 	var h = int(hours)
 	var m = int((hours - h) * 60)
 	var s = int(((hours - h) * 60 -m) * 60 )
 	return "%dh %dmin %dsec" % [h, m, s]
-	
+
 func update_visual():
 	if play_time_label:
 		play_time_label.text = format_playtime(SaveManager.save_file_data.play_time)
-	
+
 func _unhandled_input(event: InputEvent) -> void:
 	if is_open:
 		if event.is_action_pressed("esc")  or event.is_action_pressed("toggle_inventory"):

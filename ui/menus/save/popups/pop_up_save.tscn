@@ -1,13 +1,14 @@
 [gd_scene format=3 uid="uid://f5t3wx6nceyh"]
 
 [ext_resource type="Script" uid="uid://bqgwhh4233vra" path="res://ui/menus/save/popups/pop_up_save.gd" id="1_buv5c"]
-[ext_resource type="Texture2D" uid="uid://c6kln1oupm8f0" path="res://assets/textures/ui/save/popup1.png" id="2_7outy"]
 [ext_resource type="PackedScene" uid="uid://bf7dkgc6mg2uf" path="res://ui/menus/save/icon/reduce_pop_up_button.tscn" id="3_1k8m6"]
+[ext_resource type="Texture2D" uid="uid://dsaharc8qge0e" path="res://assets/textures/ui/save/popup/popup_band.png" id="3_7lynw"]
 [ext_resource type="PackedScene" uid="uid://ctuaqap1ku7su" path="res://ui/menus/save/icon/full_screen_pop_up_button.tscn" id="4_7lynw"]
 [ext_resource type="PackedScene" uid="uid://bhh6rfdal27t" path="res://ui/menus/save/icon/close_pop_up_button.tscn" id="5_xr0wx"]
 [ext_resource type="FontFile" uid="uid://c0t61x3b7ghsw" path="res://assets/fonts/PixelOperator-Bold.ttf" id="6_7outy"]
 [ext_resource type="FontFile" uid="uid://c25s10h6bx4ct" path="res://assets/fonts/PixelOperator.ttf" id="6_kyqpd"]
 [ext_resource type="PackedScene" uid="uid://bxfcwx76ci55k" path="res://ui/menus/save/popups/popup_button.tscn" id="7_clnj7"]
+[ext_resource type="Texture2D" uid="uid://bay8a2vofbeqg" path="res://assets/textures/ui/save/popup/popup.png" id="8_7outy"]
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_h5vwo"]
 
@@ -20,56 +21,81 @@ anchor_left = 0.3
 anchor_top = 0.32200003
 anchor_right = 0.70000005
 anchor_bottom = 0.67800003
-offset_top = 0.23995972
-offset_right = -0.00012207031
-offset_bottom = -0.24005127
+offset_left = -576.0
+offset_top = -347.76004
+offset_right = 575.9999
+offset_bottom = 347.75995
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_buv5c")
 
-[node name="PopUp" type="TextureRect" parent="." unique_id=1591336109]
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=779742170]
 texture_filter = 1
 layout_mode = 1
-offset_left = -128.0
-offset_top = -92.0
-offset_right = 704.0
-offset_bottom = 460.0
-texture = ExtResource("2_7outy")
-expand_mode = 2
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -416.0
+offset_top = -256.0
+offset_right = 416.0
+offset_bottom = 256.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_7outy")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PopUp" unique_id=1814287982]
+[node name="TextureRect" type="TextureRect" parent="NinePatchRect" unique_id=721033085]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -240.0
+offset_right = 400.0
+offset_bottom = -176.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_7lynw")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="NinePatchRect" unique_id=1814287982]
 custom_minimum_size = Vector2(128, 0)
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -254.0
-offset_top = 34.0
-offset_right = -102.0
-offset_bottom = 82.0
+offset_left = -176.0
+offset_top = 24.0
+offset_right = -24.0
+offset_bottom = 72.0
 grow_horizontal = 0
-scale = Vector2(1.5, 1.5)
 offset_transform_scale = Vector2(2, 2)
 
-[node name="ReducePopUpIconButton" parent="PopUp/HBoxContainer" unique_id=1316845308 instance=ExtResource("3_1k8m6")]
+[node name="ReducePopUpIconButton" parent="NinePatchRect/HBoxContainer" unique_id=1316845308 instance=ExtResource("3_1k8m6")]
 custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
 expand_icon = true
 metadata/_edit_use_anchors_ = true
 
-[node name="FullScreenPopUpIconButton" parent="PopUp/HBoxContainer" unique_id=1567148761 instance=ExtResource("4_7lynw")]
+[node name="FullScreenPopUpIconButton" parent="NinePatchRect/HBoxContainer" unique_id=1567148761 instance=ExtResource("4_7lynw")]
 custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
 expand_icon = true
 metadata/_edit_use_anchors_ = true
 
-[node name="ClosePopUpButton" parent="PopUp/HBoxContainer" unique_id=1014345203 instance=ExtResource("5_xr0wx")]
+[node name="ClosePopUpButton" parent="NinePatchRect/HBoxContainer" unique_id=1014345203 instance=ExtResource("5_xr0wx")]
 custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
 expand_icon = true
 metadata/_edit_use_anchors_ = true
 
-[node name="Label" type="Label" parent="PopUp" unique_id=1382792006]
+[node name="Label" type="Label" parent="NinePatchRect" unique_id=1382792006]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -78,9 +104,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -104.0
-offset_top = -140.0
+offset_top = -160.0
 offset_right = 105.0
-offset_bottom = -103.0
+offset_bottom = -123.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -88,7 +114,7 @@ theme_override_fonts/font = ExtResource("6_7outy")
 theme_override_font_sizes/font_size = 36
 text = "Choose a slot"
 
-[node name="Label2" type="Label" parent="PopUp" unique_id=1573338004]
+[node name="Label2" type="Label" parent="NinePatchRect" unique_id=1573338004]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -97,9 +123,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -120.0
-offset_top = 124.0
+offset_top = 80.0
 offset_right = 116.0
-offset_bottom = 156.0
+offset_bottom = 112.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -107,159 +133,169 @@ theme_override_fonts/font = ExtResource("6_kyqpd")
 theme_override_font_sizes/font_size = 32
 horizontal_alignment = 1
 
-[node name="GridContainer2" type="GridContainer" parent="PopUp" unique_id=21576097]
+[node name="GridContainer" type="HBoxContainer" parent="NinePatchRect" unique_id=1727344473]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -336.0
-offset_top = -80.0
-offset_right = 336.0
-offset_bottom = 80.0
+offset_left = -320.0
+offset_top = -104.0
+offset_right = 324.0
+offset_bottom = 52.0
 grow_horizontal = 2
 grow_vertical = 2
-columns = 4
 
-[node name="SlotButton1" type="Button" parent="PopUp/GridContainer2" unique_id=997270018]
-custom_minimum_size = Vector2(176, 155)
+[node name="SlotButton1" type="Button" parent="NinePatchRect/GridContainer" unique_id=997270018]
+custom_minimum_size = Vector2(158, 155)
 layout_mode = 2
 toggle_mode = true
 button_group = SubResource("ButtonGroup_h5vwo")
 
-[node name="TextureRect" type="TextureRect" parent="PopUp/GridContainer2/SlotButton1" unique_id=338234335]
+[node name="TextureRect" type="TextureRect" parent="NinePatchRect/GridContainer/SlotButton1" unique_id=338234335]
 texture_filter = 1
 layout_mode = 0
-offset_left = 24.0
+offset_left = 14.0
 offset_top = 4.0
-offset_right = 152.0
+offset_right = 142.0
 offset_bottom = 132.0
 mouse_filter = 2
 texture = SubResource("CompressedTexture2D_7outy")
 
-[node name="Label" type="Label" parent="PopUp/GridContainer2/SlotButton1" unique_id=1307886028]
+[node name="Label" type="Label" parent="NinePatchRect/GridContainer/SlotButton1" unique_id=1307886028]
 custom_maximum_size = Vector2(256, 72)
 layout_mode = 0
 offset_top = 124.0
-offset_right = 176.0
+offset_right = 160.0
 offset_bottom = 156.0
 theme_override_fonts/font = ExtResource("6_kyqpd")
-theme_override_font_sizes/font_size = 32
-text = "Slot1 - 2:05"
+theme_override_font_sizes/font_size = 24
+text = "Slot1 - 2:05:12"
 horizontal_alignment = 1
+vertical_alignment = 1
 autowrap_mode = 2
 
-[node name="SlotButton2" type="Button" parent="PopUp/GridContainer2" unique_id=130721913]
-custom_minimum_size = Vector2(176, 155)
+[node name="SlotButton2" type="Button" parent="NinePatchRect/GridContainer" unique_id=226593748]
+custom_minimum_size = Vector2(158, 155)
 layout_mode = 2
 toggle_mode = true
 button_group = SubResource("ButtonGroup_h5vwo")
 
-[node name="TextureRect" type="TextureRect" parent="PopUp/GridContainer2/SlotButton2" unique_id=142075920]
+[node name="TextureRect" type="TextureRect" parent="NinePatchRect/GridContainer/SlotButton2" unique_id=708585273]
 texture_filter = 1
 layout_mode = 0
-offset_left = 24.0
+offset_left = 14.0
 offset_top = 4.0
-offset_right = 152.0
+offset_right = 142.0
 offset_bottom = 132.0
 mouse_filter = 2
 texture = SubResource("CompressedTexture2D_7outy")
 
-[node name="Label" type="Label" parent="PopUp/GridContainer2/SlotButton2" unique_id=1613559329]
+[node name="Label" type="Label" parent="NinePatchRect/GridContainer/SlotButton2" unique_id=811063496]
 custom_maximum_size = Vector2(256, 72)
 layout_mode = 0
 offset_top = 124.0
-offset_right = 176.0
+offset_right = 160.0
 offset_bottom = 156.0
 theme_override_fonts/font = ExtResource("6_kyqpd")
-theme_override_font_sizes/font_size = 32
-text = "Slot1 - 2:05"
+theme_override_font_sizes/font_size = 24
+text = "Slot1 - 2:05:12"
 horizontal_alignment = 1
+vertical_alignment = 1
 autowrap_mode = 2
 
-[node name="SlotButton3" type="Button" parent="PopUp/GridContainer2" unique_id=1967513784]
-custom_minimum_size = Vector2(176, 155)
+[node name="SlotButton3" type="Button" parent="NinePatchRect/GridContainer" unique_id=1458975901]
+custom_minimum_size = Vector2(158, 155)
 layout_mode = 2
 toggle_mode = true
 button_group = SubResource("ButtonGroup_h5vwo")
 
-[node name="TextureRect" type="TextureRect" parent="PopUp/GridContainer2/SlotButton3" unique_id=398706824]
+[node name="TextureRect" type="TextureRect" parent="NinePatchRect/GridContainer/SlotButton3" unique_id=541520986]
 texture_filter = 1
 layout_mode = 0
-offset_left = 24.0
+offset_left = 14.0
 offset_top = 4.0
-offset_right = 152.0
+offset_right = 142.0
 offset_bottom = 132.0
 mouse_filter = 2
 texture = SubResource("CompressedTexture2D_7outy")
 
-[node name="Label" type="Label" parent="PopUp/GridContainer2/SlotButton3" unique_id=505740881]
+[node name="Label" type="Label" parent="NinePatchRect/GridContainer/SlotButton3" unique_id=391999550]
 custom_maximum_size = Vector2(256, 72)
 layout_mode = 0
 offset_top = 124.0
-offset_right = 176.0
+offset_right = 160.0
 offset_bottom = 156.0
 theme_override_fonts/font = ExtResource("6_kyqpd")
-theme_override_font_sizes/font_size = 32
-text = "Slot1 - 2:05"
+theme_override_font_sizes/font_size = 24
+text = "Slot1 - 2:05:12"
 horizontal_alignment = 1
+vertical_alignment = 1
 autowrap_mode = 2
 
-[node name="SlotButton4" type="Button" parent="PopUp/GridContainer2" unique_id=1582778967]
-custom_minimum_size = Vector2(176, 155)
+[node name="SlotButton4" type="Button" parent="NinePatchRect/GridContainer" unique_id=1943109482]
+custom_minimum_size = Vector2(158, 155)
 layout_mode = 2
 toggle_mode = true
 button_group = SubResource("ButtonGroup_h5vwo")
 
-[node name="TextureRect" type="TextureRect" parent="PopUp/GridContainer2/SlotButton4" unique_id=2074635732]
+[node name="TextureRect" type="TextureRect" parent="NinePatchRect/GridContainer/SlotButton4" unique_id=1434935456]
 texture_filter = 1
 layout_mode = 0
-offset_left = 24.0
+offset_left = 14.0
 offset_top = 4.0
-offset_right = 152.0
+offset_right = 142.0
 offset_bottom = 132.0
 mouse_filter = 2
 texture = SubResource("CompressedTexture2D_7outy")
 
-[node name="Label" type="Label" parent="PopUp/GridContainer2/SlotButton4" unique_id=628899943]
+[node name="Label" type="Label" parent="NinePatchRect/GridContainer/SlotButton4" unique_id=427793296]
 custom_maximum_size = Vector2(256, 72)
 layout_mode = 0
 offset_top = 124.0
-offset_right = 176.0
+offset_right = 160.0
 offset_bottom = 156.0
 theme_override_fonts/font = ExtResource("6_kyqpd")
-theme_override_font_sizes/font_size = 32
-text = "Slot1 - 2:05"
+theme_override_font_sizes/font_size = 24
+text = "Slot1 - 2:05:12"
 horizontal_alignment = 1
+vertical_alignment = 1
 autowrap_mode = 2
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="PopUp" unique_id=29967174]
+[node name="HBoxContainer2" type="HBoxContainer" parent="NinePatchRect" unique_id=29967174]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -176.0
-offset_top = 196.0
-offset_right = 176.0
-offset_bottom = 244.0
+offset_left = -256.0
+offset_top = 152.0
+offset_right = 256.0
+offset_bottom = 200.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="PopUpButtonNo" parent="PopUp/HBoxContainer2" unique_id=1930168437 instance=ExtResource("7_clnj7")]
-custom_minimum_size = Vector2(128, 0)
-layout_mode = 2
-size_flags_horizontal = 2
-label_text = "No"
-
-[node name="PopUpButtonYes" parent="PopUp/HBoxContainer2" unique_id=75807823 instance=ExtResource("7_clnj7")]
+[node name="Delete" parent="NinePatchRect/HBoxContainer2" unique_id=355236218 instance=ExtResource("7_clnj7")]
 custom_minimum_size = Vector2(128, 0)
 layout_mode = 2
 size_flags_horizontal = 10
-label_text = "Yes"
+label_text = "Delete"
 
-[connection signal="pressed" from="PopUp/HBoxContainer/ClosePopUpButton" to="." method="_on_close_pop_up_button_pressed"]
-[connection signal="pressed" from="PopUp/HBoxContainer2/PopUpButtonNo" to="." method="_on_pop_up_button_no_pressed"]
-[connection signal="pressed" from="PopUp/HBoxContainer2/PopUpButtonYes" to="." method="_on_pop_up_button_yes_pressed"]
+[node name="Load" parent="NinePatchRect/HBoxContainer2" unique_id=1670702968 instance=ExtResource("7_clnj7")]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+label_text = "Load"
+
+[node name="Save" parent="NinePatchRect/HBoxContainer2" unique_id=471345615 instance=ExtResource("7_clnj7")]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+label_text = "Save"
+
+[connection signal="pressed" from="NinePatchRect/HBoxContainer/ClosePopUpButton" to="." method="_on_close_pop_up_button_pressed"]
+[connection signal="pressed" from="NinePatchRect/HBoxContainer2/Delete" to="." method="_on_delete_pressed"]
+[connection signal="pressed" from="NinePatchRect/HBoxContainer2/Load" to="." method="_on_load_pressed"]
+[connection signal="pressed" from="NinePatchRect/HBoxContainer2/Save" to="." method="_on_save_pressed"]

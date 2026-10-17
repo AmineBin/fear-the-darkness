@@ -9,6 +9,9 @@ signal died
 signal health_changed
 signal hit
 
+func _ready() -> void:
+	await get_tree().process_frame # My beloved processframe 
+	print("health ", health)
 func take_damage(amount):
 	health = clamp(health - amount, 0, max_health) 
 	health_changed.emit(health)

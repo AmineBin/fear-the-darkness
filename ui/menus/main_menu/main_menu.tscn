@@ -5,7 +5,7 @@
 [ext_resource type="AudioStream" uid="uid://cs5dav0lwjqd3" path="res://assets/audio/sfx/ui/menu/click.wav" id="2_j3h1s"]
 [ext_resource type="PackedScene" uid="uid://bd4j7mnm3sul5" path="res://ui/menus/settings/settings.tscn" id="3_igis3"]
 [ext_resource type="PackedScene" uid="uid://dmr1e2tkxqhy5" path="res://level/flat_forest.tscn" id="3_txwgg"]
-[ext_resource type="PackedScene" uid="uid://dbwlgktw1mqtk" path="res://ui/menus/save/load_data/load_data_ui.tscn" id="5_igis3"]
+[ext_resource type="PackedScene" uid="uid://bt1jviv51itq1" path="res://ui/menus/save/save_data/save_ui.tscn" id="5_igis3"]
 
 [node name="MainMenu" type="Control" unique_id=111744513]
 layout_mode = 3
@@ -18,7 +18,7 @@ script = ExtResource("1_6s8a2")
 click_sfx = ExtResource("2_j3h1s")
 settings_scene = ExtResource("3_igis3")
 game_scene = ExtResource("3_txwgg")
-save_load_scene = ExtResource("5_igis3")
+save_scene = ExtResource("5_igis3")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=849592585]
 layout_mode = 0
