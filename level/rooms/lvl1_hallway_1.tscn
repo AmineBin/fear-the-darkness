@@ -189,5 +189,5 @@ transform = Transform3D(1.9470718e-07, -7.54979e-08, 1, -9.8924275e-15, 1, 7.549
 [node name="Tube11" parent="Node3D" unique_id=1693916134 instance=ExtResource("3_jivrr")]
 transform = Transform3D(1.9470718e-07, -7.54979e-08, 1, -9.8924275e-15, 1, 7.54979e-08, -1, -2.4592412e-14, 1.9470718e-07, 15, 1.25, -0.75)
 
-[node name="Sketchfab_Scene" parent="Node3D" unique_id=1441538094 instance=ExtResource("4_hid02")]
+[node name="Barrel" parent="Node3D" unique_id=1441538094 instance=ExtResource("4_hid02")]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 6, -1, 0.75)

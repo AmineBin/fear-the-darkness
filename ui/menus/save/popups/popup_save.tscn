@@ -1,0 +1,242 @@
+[gd_scene format=3 uid="uid://f5t3wx6nceyh"]
+
+[ext_resource type="Script" uid="uid://bqgwhh4233vra" path="res://ui/menus/save/popups/popup_save.gd" id="1_buv5c"]
+[ext_resource type="PackedScene" uid="uid://b0sp46550nf4p" path="res://ui/menus/save/popups/popup_layout.tscn" id="2_qbfvf"]
+[ext_resource type="FontFile" uid="uid://c0t61x3b7ghsw" path="res://assets/fonts/PixelOperator-Bold.ttf" id="6_7outy"]
+[ext_resource type="FontFile" uid="uid://c25s10h6bx4ct" path="res://assets/fonts/PixelOperator.ttf" id="6_kyqpd"]
+[ext_resource type="PackedScene" uid="uid://bxfcwx76ci55k" path="res://ui/menus/save/popups/popup_button.tscn" id="7_clnj7"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_h5vwo"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7outy"]
+load_path = "res://.godot/imported/SaveIcon.png-11b0572f68635915d87c9ed2bade7387.ctex"
+
+[node name="Control" type="Control" unique_id=2130997338]
+layout_mode = 3
+anchor_left = 0.3
+anchor_top = 0.32200003
+anchor_right = 0.70000005
+anchor_bottom = 0.67800003
+offset_left = -576.0
+offset_top = -347.76004
+offset_right = 575.9999
+offset_bottom = 347.75995
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_buv5c")
+
+[node name="PopupLayout" parent="." unique_id=1404222729 instance=ExtResource("2_qbfvf")]
+custom_minimum_size = Vector2(832, 512)
+layout_mode = 1
+offset_left = -32.0
+offset_right = 32.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="Label" type="Label" parent="PopupLayout" unique_id=1382792006]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -106.0
+offset_top = -156.0
+offset_right = 103.0
+offset_bottom = -119.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_7outy")
+theme_override_font_sizes/font_size = 36
+text = "Choose a slot"
+
+[node name="Label2" type="Label" parent="PopupLayout" unique_id=1573338004]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -122.0
+offset_top = 84.0
+offset_right = 114.0
+offset_bottom = 116.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_kyqpd")
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+
+[node name="GridContainer" type="HBoxContainer" parent="PopupLayout" unique_id=1727344473]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -322.0
+offset_top = -100.0
+offset_right = 322.0
+offset_bottom = 56.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+
+[node name="SlotButton1" type="Button" parent="PopupLayout/GridContainer" unique_id=997270018]
+custom_minimum_size = Vector2(158, 155)
+layout_mode = 2
+toggle_mode = true
+button_group = SubResource("ButtonGroup_h5vwo")
+
+[node name="TextureRect" type="TextureRect" parent="PopupLayout/GridContainer/SlotButton1" unique_id=338234335]
+texture_filter = 1
+layout_mode = 0
+offset_left = 14.0
+offset_top = 4.0
+offset_right = 142.0
+offset_bottom = 132.0
+mouse_filter = 2
+texture = SubResource("CompressedTexture2D_7outy")
+
+[node name="Label" type="Label" parent="PopupLayout/GridContainer/SlotButton1" unique_id=1307886028]
+custom_maximum_size = Vector2(256, 72)
+layout_mode = 0
+offset_top = 124.0
+offset_right = 160.0
+offset_bottom = 156.0
+theme_override_fonts/font = ExtResource("6_kyqpd")
+theme_override_font_sizes/font_size = 24
+text = "Slot1 - 2:05:12"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="SlotButton2" type="Button" parent="PopupLayout/GridContainer" unique_id=226593748]
+custom_minimum_size = Vector2(158, 155)
+layout_mode = 2
+toggle_mode = true
+button_group = SubResource("ButtonGroup_h5vwo")
+
+[node name="TextureRect" type="TextureRect" parent="PopupLayout/GridContainer/SlotButton2" unique_id=708585273]
+texture_filter = 1
+layout_mode = 0
+offset_left = 14.0
+offset_top = 4.0
+offset_right = 142.0
+offset_bottom = 132.0
+mouse_filter = 2
+texture = SubResource("CompressedTexture2D_7outy")
+
+[node name="Label" type="Label" parent="PopupLayout/GridContainer/SlotButton2" unique_id=811063496]
+custom_maximum_size = Vector2(256, 72)
+layout_mode = 0
+offset_top = 124.0
+offset_right = 160.0
+offset_bottom = 156.0
+theme_override_fonts/font = ExtResource("6_kyqpd")
+theme_override_font_sizes/font_size = 24
+text = "Slot1 - 2:05:12"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="SlotButton3" type="Button" parent="PopupLayout/GridContainer" unique_id=1458975901]
+custom_minimum_size = Vector2(158, 155)
+layout_mode = 2
+toggle_mode = true
+button_group = SubResource("ButtonGroup_h5vwo")
+
+[node name="TextureRect" type="TextureRect" parent="PopupLayout/GridContainer/SlotButton3" unique_id=541520986]
+texture_filter = 1
+layout_mode = 0
+offset_left = 14.0
+offset_top = 4.0
+offset_right = 142.0
+offset_bottom = 132.0
+mouse_filter = 2
+texture = SubResource("CompressedTexture2D_7outy")
+
+[node name="Label" type="Label" parent="PopupLayout/GridContainer/SlotButton3" unique_id=391999550]
+custom_maximum_size = Vector2(256, 72)
+layout_mode = 0
+offset_top = 124.0
+offset_right = 160.0
+offset_bottom = 156.0
+theme_override_fonts/font = ExtResource("6_kyqpd")
+theme_override_font_sizes/font_size = 24
+text = "Slot1 - 2:05:12"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="SlotButton4" type="Button" parent="PopupLayout/GridContainer" unique_id=1943109482]
+custom_minimum_size = Vector2(158, 155)
+layout_mode = 2
+toggle_mode = true
+button_group = SubResource("ButtonGroup_h5vwo")
+
+[node name="TextureRect" type="TextureRect" parent="PopupLayout/GridContainer/SlotButton4" unique_id=1434935456]
+texture_filter = 1
+layout_mode = 0
+offset_left = 14.0
+offset_top = 4.0
+offset_right = 142.0
+offset_bottom = 132.0
+mouse_filter = 2
+texture = SubResource("CompressedTexture2D_7outy")
+
+[node name="Label" type="Label" parent="PopupLayout/GridContainer/SlotButton4" unique_id=427793296]
+custom_maximum_size = Vector2(256, 72)
+layout_mode = 0
+offset_top = 124.0
+offset_right = 160.0
+offset_bottom = 156.0
+theme_override_fonts/font = ExtResource("6_kyqpd")
+theme_override_font_sizes/font_size = 24
+text = "Slot1 - 2:05:12"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="PopupLayout" unique_id=29967174]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -258.0
+offset_top = 156.0
+offset_right = 254.0
+offset_bottom = 204.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+
+[node name="Delete" parent="PopupLayout/HBoxContainer2" unique_id=355236218 instance=ExtResource("7_clnj7")]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+size_flags_horizontal = 2
+label_text = "Delete"
+
+[node name="Load" parent="PopupLayout/HBoxContainer2" unique_id=1670702968 instance=ExtResource("7_clnj7")]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+size_flags_horizontal = 6
+label_text = "Load"
+
+[node name="Save" parent="PopupLayout/HBoxContainer2" unique_id=471345615 instance=ExtResource("7_clnj7")]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+label_text = "Save"
+
+[connection signal="pressed" from="PopupLayout/HBoxContainer2/Delete" to="." method="_on_delete_pressed"]
+[connection signal="pressed" from="PopupLayout/HBoxContainer2/Load" to="." method="_on_load_pressed"]
+[connection signal="pressed" from="PopupLayout/HBoxContainer2/Save" to="." method="_on_save_pressed"]

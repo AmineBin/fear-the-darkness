@@ -2,16 +2,16 @@ extends Control
 
 @onready var save_validate: Label = $PopUp/Label2
 @onready var slot_buttons: Array[Button] = [
-	$NinePatchRect/GridContainer/SlotButton1,
-	$NinePatchRect/GridContainer/SlotButton2,
-	$NinePatchRect/GridContainer/SlotButton3,
-	$NinePatchRect/GridContainer/SlotButton4,
+	$PopupLayout/GridContainer/SlotButton1,
+	$PopupLayout/GridContainer/SlotButton2,
+	$PopupLayout/GridContainer/SlotButton3,
+	$PopupLayout/GridContainer/SlotButton4,
 ]
 @onready var slot_labels: Array[Label] = [
-	$NinePatchRect/GridContainer/SlotButton1/Label,
-	$NinePatchRect/GridContainer/SlotButton2/Label,
-	$NinePatchRect/GridContainer/SlotButton3/Label,
-	$NinePatchRect/GridContainer/SlotButton4/Label,
+	$PopupLayout/GridContainer/SlotButton1/Label,
+	$PopupLayout/GridContainer/SlotButton2/Label,
+	$PopupLayout/GridContainer/SlotButton3/Label,
+	$PopupLayout/GridContainer/SlotButton4/Label,
 ]
 
 var save_slot = 1
@@ -53,7 +53,7 @@ func update_slot():
 		var path = SaveManager.get_save_path(slot_nb)
 		
 		if not FileAccess.file_exists(path):
-			slot_labels[i].text = "empty"
+			slot_labels[i].text = "slot" + str(slot_nb) + " - empty"
 		else:
 			var loaded_data = ResourceLoader.load(path, "", ResourceLoader.CACHE_MODE_IGNORE)
 			var play_time = format_hour(loaded_data.play_time)

@@ -5,10 +5,10 @@
 [ext_resource type="PackedScene" uid="uid://uaktb6mru1ob" path="res://ui/menus/transition/fade_transition.tscn" id="3_ibyww"]
 [ext_resource type="PackedScene" uid="uid://dpnfpiq24qn57" path="res://ui/menus/save/icon/save_button.tscn" id="3_v82s4"]
 [ext_resource type="PackedScene" uid="uid://ica62orufwl6" path="res://ui/menus/save/icon/load_button.tscn" id="4_v82s4"]
-[ext_resource type="PackedScene" uid="uid://f5t3wx6nceyh" path="res://ui/menus/save/popups/pop_up_save.tscn" id="6_eej1h"]
-[ext_resource type="Shader" uid="uid://dth7y84nojqsq" path="res://ui/menus/save/save_data/save_ui.gdshader" id="8_jow33"]
+[ext_resource type="PackedScene" uid="uid://f5t3wx6nceyh" path="res://ui/menus/save/popups/popup_save.tscn" id="6_eej1h"]
+[ext_resource type="Shader" uid="uid://dth7y84nojqsq" path="res://shaders/save_ui.gdshader" id="8_jow33"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_jow33"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_053uw"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_h5vwo"]
 shader = ExtResource("8_jow33")
@@ -44,7 +44,7 @@ offset_left = 64.0
 offset_top = 64.0
 offset_right = 192.0
 offset_bottom = 192.0
-button_group = SubResource("ButtonGroup_jow33")
+button_group = SubResource("ButtonGroup_053uw")
 
 [node name="SaveIconButton2" parent="TextureRect" unique_id=1976050434 instance=ExtResource("4_v82s4")]
 layout_mode = 0
@@ -108,15 +108,13 @@ offset_bottom = 1080.0
 
 [node name="fade_timer" type="Timer" parent="TextureRect/FadeTransition" unique_id=75558539]
 
-[node name="PopUp" parent="." unique_id=2130997338 instance=ExtResource("6_eej1h")]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1818399199]
+
+[node name="PopUpSave" parent="CanvasLayer" unique_id=2130997338 instance=ExtResource("6_eej1h")]
 visible = false
-layout_mode = 1
-offset_left = -136.0
-offset_top = -43.76004
-offset_right = -136.00012
-offset_bottom = -44.24005
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=45161342]
+visible = false
 material = SubResource("ShaderMaterial_h5vwo")
 layout_mode = 0
 offset_right = 1920.0
