@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://bb7wgv67fprc0"]
+
+[ext_resource type="PackedScene" uid="uid://d1pjvk3c0foow" path="res://props/interactable/doors/wooden_door_knobless.tscn" id="1_ab56w"]
+
+[node name="Hallway2" type="CSGCombiner3D" unique_id=509539961]
+use_collision = true
+
+[node name="Wall1" type="CSGBox3D" parent="." unique_id=162803087]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.125, 0, -10.25)
+size = Vector3(0.25, 2.5, 21.5)
+
+[node name="Wall2" type="CSGBox3D" parent="." unique_id=1570768415]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.125, 0, -10.25)
+size = Vector3(0.25, 2.5, 21.5)
+
+[node name="Floor" type="CSGBox3D" parent="." unique_id=354165754]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -1.375, -10.25)
+size = Vector3(2.5, 0.25, 21.5)
+
+[node name="Ceiling" type="CSGBox3D" parent="." unique_id=4240793]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.375, -10.25)
+size = Vector3(2.5, 0.25, 21.5)
+
+[node name="Door1" type="CSGBox3D" parent="." unique_id=2005026384]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.125, -0.25, -3.5)
+operation = 2
+size = Vector3(0.25, 2, 1)
+
+[node name="Door2" type="CSGBox3D" parent="." unique_id=73478021]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.125, -0.25, -3.5)
+operation = 2
+size = Vector3(0.25, 2, 1)
+
+[node name="Door3" type="CSGBox3D" parent="." unique_id=1139882842]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.125, -0.25, -8)
+operation = 2
+size = Vector3(0.25, 2, 1)
+
+[node name="Door4" type="CSGBox3D" parent="." unique_id=545585423]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.125, -0.25, -8)
+operation = 2
+size = Vector3(0.25, 2, 1)
+
+[node name="Door5" type="CSGBox3D" parent="." unique_id=1668435825]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.125, -0.25, -12.5)
+operation = 2
+size = Vector3(0.25, 2, 1)
+
+[node name="Door6" type="CSGBox3D" parent="." unique_id=698540491]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.125, -0.25, -12.5)
+operation = 2
+size = Vector3(0.25, 2, 1)
+
+[node name="Door7" type="CSGBox3D" parent="." unique_id=1523469652]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.125, -0.25, -16.75)
+operation = 2
+size = Vector3(0.25, 2, 1)
+
+[node name="Door8" type="CSGBox3D" parent="." unique_id=855626177]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.125, -0.25, -16.75)
+operation = 2
+size = Vector3(0.25, 2, 1)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1727711570]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -20.875)
+size = Vector3(2, 2.5, 0.25)
+
+[node name="wooden_door_knobless2" parent="." unique_id=1575932425 instance=ExtResource("1_ab56w")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.0584898, -1.25, -3.125)

@@ -108,10 +108,9 @@ offset_bottom = 1080.0
 
 [node name="fade_timer" type="Timer" parent="TextureRect/FadeTransition" unique_id=75558539]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1818399199]
-
-[node name="PopUpSave" parent="CanvasLayer" unique_id=2130997338 instance=ExtResource("6_eej1h")]
+[node name="PopUpSave" parent="." unique_id=2130997338 instance=ExtResource("6_eej1h")]
 visible = false
+layout_mode = 1
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=45161342]
 visible = false
