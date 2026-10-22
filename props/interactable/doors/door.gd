@@ -5,13 +5,24 @@ class_name Door
 var interactable = true
 
 @export var is_open = false
+
 @export var key: InvItem
 @export var key_needed = false
+
+@export var is_door_handle_needed: bool
+
 @export var animation_player: AnimationPlayer
 
+var door_handle: MeshInstance3D 
+
 func _ready() -> void:
-	pass
-	#update_visual()
+	door_handle = get_node_or_null("hinge/DoorHandle/DoorHandle")
+	
+	if door_handle:
+		if is_door_handle_needed == true:
+			door_handle.visible = false
+		else: 
+			door_handle.visible = true
 
 func interact(user:Node = null):
 	var target_user = user if user else get_tree().get_first_node_in_group("player")
@@ -20,6 +31,14 @@ func interact(user:Node = null):
 		if target_user and target_user.has_method("display_message"):
 			target_user.display_message("I need a key for this one.")
 		return
+	
+	if is_door_handle_needed and target_user and not target_user.inv.has_item(key):
+		if target_user and target_user.has_method("display_message"):
+			target_user.display_message("I need to find a handle for this door.")
+		return
+	
+	if door_handle:
+		door_handle.visible = true
 		
 	unlock_door()
 	
