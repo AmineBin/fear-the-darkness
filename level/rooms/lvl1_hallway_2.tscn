@@ -67,24 +67,30 @@ size = Vector3(2, 2.5, 0.25)
 
 [node name="WoodenDoor1" parent="." unique_id=1134493112 instance=ExtResource("2_6m81s")]
 transform = Transform3D(-4.8082526e-08, 0, -1, 0, 1.0299999, 0, 1.1, 0, -4.371139e-08, 0.11789614, -1.25, -3.9058301)
+is_door_no_open = true
 
 [node name="WoodenDoor2" parent="." unique_id=182052860 instance=ExtResource("2_6m81s")]
 transform = Transform3D(-4.8082526e-08, 0, -1, 0, 1.0299999, 0, 1.1, 0, -4.371139e-08, 0.11789614, -1.25, -8.40583)
+is_door_no_open = true
 
 [node name="WoodenDoor3" parent="." unique_id=300016015 instance=ExtResource("2_6m81s")]
 transform = Transform3D(-4.8082526e-08, 0, -1, 0, 1.0299999, 0, 1.1, 0, -4.371139e-08, 0.11789614, -1.25, -12.90583)
 
 [node name="WoodenDoor4" parent="." unique_id=1432431298 instance=ExtResource("2_6m81s")]
 transform = Transform3D(-4.8082526e-08, 0, -1, 0, 1.0299999, 0, 1.1, 0, -4.371139e-08, 0.11789614, -1.25, -17.15583)
+is_door_no_open = true
 
 [node name="WoodenDoor5" parent="." unique_id=2096514235 instance=ExtResource("2_6m81s")]
 transform = Transform3D(-4.8082523e-08, 0, 0.99999994, 0, 1.0299997, 0, -1.0999999, 0, -4.3711385e-08, -2.132104, -1.25, -16.349903)
+is_door_no_open = true
 
 [node name="WoodenDoor6" parent="." unique_id=1424717440 instance=ExtResource("2_6m81s")]
 transform = Transform3D(-4.8082523e-08, 0, 0.99999994, 0, 1.0299997, 0, -1.0999999, 0, -4.3711385e-08, -2.132104, -1.25, -12.099903)
+is_door_no_open = true
 
 [node name="WoodenDoor7" parent="." unique_id=1786461917 instance=ExtResource("2_6m81s")]
 transform = Transform3D(-4.8082523e-08, 0, 0.99999994, 0, 1.0299997, 0, -1.0999999, 0, -4.3711385e-08, -2.132104, -1.25, -7.599903)
+is_door_no_open = true
 
 [node name="WoodenDoor8" parent="." unique_id=1801826323 instance=ExtResource("2_6m81s")]
 transform = Transform3D(-4.8082523e-08, 0, 0.99999994, 0, 1.0299997, 0, -1.0999999, 0, -4.3711385e-08, -2.132104, -1.25, -3.099903)

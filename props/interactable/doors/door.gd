@@ -4,12 +4,12 @@ class_name Door
 
 var interactable = true
 
-@export var is_open = false
-
 @export var key: InvItem
-@export var key_needed = false
 
+@export var is_open: bool = false
+@export var key_needed = false
 @export var is_door_handle_needed: bool
+@export var is_door_no_open: bool
 
 @export var animation_player: AnimationPlayer
 
@@ -36,6 +36,11 @@ func interact(user:Node = null):
 		if target_user and target_user.has_method("display_message"):
 			target_user.display_message("I need to find a handle for this door.")
 		return
+		
+	if is_door_no_open and target_user and not target_user.inv.has_item(key):
+		if target_user and target_user.has_method("display_message"):
+			target_user.display_message("There is something behind this door.")
+		return
 	
 	if door_handle:
 		door_handle.visible = true
@@ -60,8 +65,8 @@ func unlock_door(user:Node = null):
 			key_needed = false
 			
 func update_visual():
-	if is_open == false:
-		animation_player.play("close")
-	else:
+	if is_open == false && animation_player:
+			animation_player.play("close")
+	elif is_open == true && animation_player:
 		animation_player.play("open")
 	

@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://x8ov0rgfasef" path="res://props/interactable/chest.tscn" id="8_jufm4"]
 [ext_resource type="PackedScene" uid="uid://cw0pf1c2n6n7g" path="res://props/collectible/key.tscn" id="9_ymgag"]
 [ext_resource type="PackedScene" uid="uid://xhj505s5uuhc" path="res://props/collectible/medkit.tscn" id="10_u2qr3"]
-[ext_resource type="PackedScene" uid="uid://carrmofvblnfo" path="res://props/interactable/doors/metal_door/metal_door.tscn" id="11_vnugj"]
+[ext_resource type="PackedScene" uid="uid://carrmofvblnfo" path="res://props/interactable/doors/metal_door.tscn" id="11_vnugj"]
 [ext_resource type="Resource" uid="uid://d0tt6ykltt3wg" path="res://items/key/key.tres" id="12_2yo0f"]
 [ext_resource type="PackedScene" uid="uid://dadtil6r03215" path="res://entities/enemies/wrapper/wrapper.tscn" id="13_3i8ot"]
 [ext_resource type="PackedScene" uid="uid://6sr7mr1e3xyf" path="res://props/interactable/trapdoor.tscn" id="13_yjl7g"]

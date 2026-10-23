@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bvjll2kscjiuy" path="res://level/rooms/lvl1_hallway_1.tscn" id="6_n6f2s"]
 [ext_resource type="PackedScene" uid="uid://x6fhvplluu8d" path="res://level/rooms/lvl1_appartment1.tscn" id="7_n6f2s"]
 [ext_resource type="PackedScene" uid="uid://hftf550eln31" path="res://level/rooms/lvl1_stair_case_1.tscn" id="7_xsfx6"]
-[ext_resource type="PackedScene" uid="uid://carrmofvblnfo" path="res://props/interactable/doors/metal_door/metal_door.tscn" id="8_hoo32"]
+[ext_resource type="PackedScene" uid="uid://carrmofvblnfo" path="res://props/interactable/doors/metal_door.tscn" id="8_hoo32"]
 [ext_resource type="PackedScene" uid="uid://bb7wgv67fprc0" path="res://level/rooms/lvl1_hallway_2.tscn" id="8_qae1c"]
 [ext_resource type="PackedScene" uid="uid://dt8ul0ikgkq7b" path="res://level/rooms/lvl1_safe1.tscn" id="8_ulkxl"]
 [ext_resource type="Script" uid="uid://m2fvd5j6jd46" path="res://addons/stairs/stairs.gd" id="10_qae1c"]
