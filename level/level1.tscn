@@ -46,7 +46,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.75, 0, -7.75)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -9.25, -13.25)
 
 [node name="Room2" parent="Rooms" unique_id=381013708 instance=ExtResource("7_n6f2s")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -4, -37.25)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.75, -4, -37.25)
 
 [node name="Room3" type="CSGCombiner3D" parent="Rooms" unique_id=1262590036]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, -10.75, -16.5)

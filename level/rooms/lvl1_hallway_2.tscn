@@ -1,97 +1,146 @@
-[gd_scene format=3 uid="uid://bb7wgv67fprc0"]
+[gd_scene format=4 uid="uid://bb7wgv67fprc0"]
 
 [ext_resource type="PackedScene" uid="uid://2g0ljm7l0oa6" path="res://props/interactable/doors/wooden_door_1.tscn" id="2_6m81s"]
+[ext_resource type="Texture2D" uid="uid://cqnl7tor034in" path="res://assets/models/levels/level1/rooms/hallway2_WoodFloor064_LowRes_Color.png" id="2_pb31h"]
+[ext_resource type="Texture2D" uid="uid://brgj0gy6kwagi" path="res://assets/models/levels/level1/rooms/hallway2_hallway_wall.png" id="3_re0tn"]
+[ext_resource type="Texture2D" uid="uid://crluylpy00jwd" path="res://assets/models/levels/level1/rooms/hallway2_ceiling1.png" id="4_ogrxo"]
 
-[node name="Hallway2" type="CSGCombiner3D" unique_id=509539961]
-use_collision = true
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1tje6"]
+resource_name = "Floor"
+albedo_texture = ExtResource("2_pb31h")
+metallic = 1.0
+metadata/_gltf_primary_texture_coord = 0
 
-[node name="Wall1" type="CSGBox3D" parent="." unique_id=162803087]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.125, 0, -10.25)
-size = Vector3(0.25, 2.5, 21.5)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5ru8k"]
+resource_name = "Walls"
+cull_mode = 2
+albedo_texture = ExtResource("3_re0tn")
+roughness = 0.5
+metadata/_gltf_primary_texture_coord = 0
 
-[node name="Wall2" type="CSGBox3D" parent="." unique_id=1570768415]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.125, 0, -10.25)
-size = Vector3(0.25, 2.5, 21.5)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8rly4"]
+resource_name = "Ceiling"
+cull_mode = 2
+albedo_texture = ExtResource("4_ogrxo")
+roughness = 0.5
+metadata/_gltf_primary_texture_coord = 0
 
-[node name="Floor" type="CSGBox3D" parent="." unique_id=354165754]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -1.375, -10.25)
-size = Vector3(2.5, 0.25, 21.5)
+[sub_resource type="ArrayMesh" id="ArrayMesh_be71f"]
+_surfaces = [{
+"aabb": AABB(-2, -1.25, -20.75, 2, 1e-05, 21.25),
+"format": 34896613377,
+"index_count": 60,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAADAAAABQADAAQABgADAAUABwADAAYACAADAAcACQADAAgACgADAAkACwAKAAwADQAKAAsACgANAAMAAwANAA4AAwAOAA8AAwAPABAAAwAQABEAAwARABIAAwASABMAAwATABQAAwAUABUA"),
+"name": "Floor",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 22,
+"vertex_data": PackedByteArray("AAAAANXVAAD/PwAA//8AAAAAAAD//wAA/78AAP//AAAAAAAAyckAAAAAAACfnwAAAAAAAJOTAAAAAAAAaWkAAAAAAABdXQAAAAAAADMzAAAAAAAAJycAAP//AAAAAAAAAAAAAAAAAAD//wAAJycAAP//AAAzMwAA//8AAF1dAAD//wAAaWkAAP//AACTkwAA//8AAJ+fAAD//wAAyckAAP//AADV1QAA//8AAP//AAA=")
+}, {
+"aabb": AABB(-2, -1.25, -20.75, 2, 2.5, 21.25),
+"format": 34896613377,
+"index_count": 132,
+"index_data": PackedByteArray("AAABAAIAAAADAAEAAwAEAAEAAwAFAAQAAAAGAAMABwAFAAMABgAAAAgABgAIAAkABgAJAAoACwAGAAoADAAGAAsABwANAAUADgAGAAwADQAPABAADQARAA8ABwARAA0ABwASABEAEwAOABQAFQAOABMAFQAGAA4AFgAGABUAEgAXABgAEgAZABcABwAZABIABwAaABkABgAWABsAGwAWABwAGwAcAB0ABgAbAB4AHwAeACAAIQAeAB8ABgAeACEABgAhACIABgAiACMAIwAiACQAJAAiACUAJgAjACQAJgAHACMAJwAHACYAKAAHACcAKQAHACgAGgAHACkAGgApACoAKgApACsA"),
+"name": "Walls",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 44,
+"vertex_data": PackedByteArray("/z/MzP//AAAAAAAA//8AAP8/AAD//wAAAAD/////AAAAAAAA1dUAAAAAzMzV1QAA////////AAAAAP//AAAAAP+/zMz//wAA/78AAP//AAD//wAA//8AAP//AADV1QAA///MzNXVAAAAAMzMyckAAP//zMzJyQAAAAAAAJ+fAAAAAAAAyckAAAAAzMyfnwAAAADMzJOTAAD//wAAn58AAP//AADJyQAA///MzJ+fAAD//8zMk5MAAAAAAABpaQAAAAAAAJOTAAAAAMzMaWkAAAAAzMxdXQAA///MzGlpAAD//wAAk5MAAP//AABpaQAA///MzF1dAAD//wAAMzMAAP//AABdXQAA///MzDMzAAD//8zMJycAAP////8AAAAA//8AAAAAAAD//wAAJycAAAAAAAAAAAAAAAAAACcnAAAAAMzMJycAAAAAzMwzMwAAAAAAAF1dAAAAAAAAMzMAAA==")
+}, {
+"aabb": AABB(-2, 1.25, -20.75, 2, 1e-05, 21.25),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"name": "Ceiling",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AAAAAAAAAAD//wAA//8AAP//AAAAAAAAAAAAAP//AAA=")
+}]
+blend_shape_mode = 0
 
-[node name="Ceiling" type="CSGBox3D" parent="." unique_id=4240793]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.375, -10.25)
-size = Vector3(2.5, 0.25, 21.5)
+[sub_resource type="ArrayMesh" id="ArrayMesh_uut3j"]
+resource_name = "hallway2_Hallway22"
+_surfaces = [{
+"aabb": AABB(-2, -1.25, -20.75, 2, 1e-05, 21.25),
+"attribute_data": PackedByteArray("tDz//zIWBuAyFv//MhYWoLRH//83bv//N3n//7mf//+6qv//PNH//z3c///+/x2A/////z3cHYA80R2AuqodgLmfHYA3eR2AN24dgLRHHYC0PB2AMhYdgA=="),
+"format": 34896613399,
+"index_count": 60,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAADAAAABQADAAQABgADAAUABwADAAYACAADAAcACQADAAgACgADAAkACwAKAAwADQAKAAsACgANAAMAAwANAA4AAwAOAA8AAwAPABAAAwAQABEAAwARABIAAwASABMAAwATABQAAwAUABUA"),
+"material": SubResource("StandardMaterial3D_1tje6"),
+"name": "Floor",
+"primitive": 3,
+"uv_scale": Vector4(11.612249, 1.9981554, 0, 0),
+"vertex_count": 22,
+"vertex_data": PackedByteArray("AAAAANXVqir/PwAA//+qKgAAAAD//6oq/78AAP//qioAAAAAycmqKgAAAACfn6oqAAAAAJOTqioAAAAAaWmqKgAAAABdXaoqAAAAADMzqioAAAAAJyeqKv//AAAAAKoqAAAAAAAAqir//wAAJyeqKv//AAAzM6oq//8AAF1dqir//wAAaWmqKv//AACTk6oq//8AAJ+fqir//wAAycmqKv//AADV1aoq//8AAP//qipU1aoqVNWqKlTVqipU1aoqVNWqKlTVqipU1aoqVNWqKlTVqipU1aoqVNWqKlTVqipU1aoqVNWqKlTVqipU1aoqVNWqKlTVqipU1aoqVNWqKlTVqipU1aoq")
+}, {
+"aabb": AABB(-2, -1.25, -20.75, 2, 2.5, 21.25),
+"attribute_data": PackedByteArray("z4i5m0SD///PiP//RIOognKZqILnk7mb55P//3KZ//+UP6b+1hzYhdYcpv6UPwGeRUoBnq9vpv5FSqb+r28Bnl96AZ7JnwGeX3qm/smfpv56qgGe5M8Bnnqqpv7kz6b+lNoBnv//2IWU2qb+//+m/nWi1Z0LfXr+daJ6/gt91Z3WHKyFW3LVnSat1Z2Q0nr+Jq16/pDS1Z1B3dWd//96/kHdev7//6yF8UzVnVtyev7xTHr+QELVnUBCev7WHHr+cpnY/0SDgYJEg9j/cpmBgg=="),
+"format": 34896613399,
+"index_count": 132,
+"index_data": PackedByteArray("AAABAAIAAAADAAEAAAAEAAMABAAAAAUABAAFAAYABAAGAAcACAAJAAoACwAJAAgADAAJAAsADQAMAA4ADwAMAA0ADwAJAAwACQAPABAACQAQABEAEQAQABIAEQASABMACQARABQACQAUABUAFQAUABYAFQAWABcACQAVABgACQAYABkAGQAYABoAGQAaABsAHAAdAB4AHAAfAB0AIAAfABwAHwAgACEAIAAcACIAIwAiACQAJQAiACMAIAAiACUAIAAlACYAJwAmACgAKQAmACcAIAAmACkAIQAgACoAIQAqACsAKwAqACwAKgAgAC0ALQAgAC4ALgAgAC8AMAAxADIAMAAzADEA"),
+"material": SubResource("StandardMaterial3D_5ru8k"),
+"name": "Walls",
+"primitive": 3,
+"uv_scale": Vector4(8.876834, 1.9637353, 0, 0),
+"vertex_count": 52,
+"vertex_data": PackedByteArray("/z/MzP//AAAAAAAA//8AAP8/AAD//wAAAAD/////AAD///////8AAP+/zMz//wAA/78AAP//AAD//wAA//8AAAAAAAAnJwAAAAD//wAAAAAAAAAAAAAAAAAAzMwnJwAAAADMzDMzAAAAAAAAXV0AAAAAAAAzMwAAAADMzF1dAAAAAMzMaWkAAAAAzMyTkwAAAAAAAGlpAAAAAAAAk5MAAAAAzMyfnwAAAADMzMnJAAAAAAAAn58AAAAAAADJyQAAAADMzNXVAAAAAP////8AAAAAAADV1QAAAAAAAP//AAD//8zMaWkAAP//AACTkwAA//8AAGlpAAD//8zMk5MAAP///////wAA///MzJ+fAAD//8zMXV0AAP//AAAzMwAA//8AAF1dAAD//8zMMzMAAP//zMwnJwAA//8AAAAAAAD//wAAJycAAP////8AAAAA///MzMnJAAD//wAAn58AAP//AADJyQAA///MzNXVAAD//wAA1dUAAP//AAD//wAAAAAAAAAAAAD/////AAAAAP//AAAAAAAAAAD//wAAAAD///9/////f////3////9/////f////3////9/////f/+//3//v/9//7//f/+//3//v/9//7//f/+//3//v/9//7//f/+//3//v/9//7//f/+//3//v/9//7//f/+//3//v/9//7//f/+//3//v/9//z//f/8//3//P/9//z//f/8//3//P/9//z//f/8//3//P/9//z//f/8//3//P/9//z//f/8//3//P/9//z//f/8//3//P/9//z//f/8//3//f/9//3//f/9//3//f/9/")
+}, {
+"aabb": AABB(-2, 1.25, -20.75, 2, 1e-05, 21.25),
+"attribute_data": PackedByteArray("GIFeFv///////14WGIH//w=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"material": SubResource("StandardMaterial3D_8rly4"),
+"name": "Ceiling",
+"primitive": 3,
+"uv_scale": Vector4(1.9829912, 11.444283, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AAAAAAAA/z///wAA////P///AAAAAP8/AAAAAP///z8AAP9/AAD/fwAA/38AAP9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_be71f")
 
-[node name="Door1" type="CSGBox3D" parent="." unique_id=2005026384]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.125, -0.25, -3.5)
-operation = 2
-size = Vector3(0.25, 2, 1)
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ic660"]
+data = PackedVector3Array(-2, -1.25, -3, -1.5, -1.25, 0.5, -2, -1.25, 0.5, -2, -1.25, -3, -0.5, -1.25, 0.5, -1.5, -1.25, 0.5, -2, -1.25, -4, -0.5, -1.25, 0.5, -2, -1.25, -3, -2, -1.25, -7.5, -0.5, -1.25, 0.5, -2, -1.25, -4, -2, -1.25, -8.5, -0.5, -1.25, 0.5, -2, -1.25, -7.5, -2, -1.25, -12, -0.5, -1.25, 0.5, -2, -1.25, -8.5, -2, -1.25, -13, -0.5, -1.25, 0.5, -2, -1.25, -12, -2, -1.25, -16.5, -0.5, -1.25, 0.5, -2, -1.25, -13, -2, -1.25, -17.5, -0.5, -1.25, 0.5, -2, -1.25, -16.5, 0, -1.25, -20.75, -2, -1.25, -17.5, -2, -1.25, -20.75, 0, -1.25, -17.5, -2, -1.25, -17.5, 0, -1.25, -20.75, -2, -1.25, -17.5, 0, -1.25, -17.5, -0.5, -1.25, 0.5, -0.5, -1.25, 0.5, 0, -1.25, -17.5, 0, -1.25, -16.5, -0.5, -1.25, 0.5, 0, -1.25, -16.5, 0, -1.25, -13, -0.5, -1.25, 0.5, 0, -1.25, -13, 0, -1.25, -12, -0.5, -1.25, 0.5, 0, -1.25, -12, 0, -1.25, -8.5, -0.5, -1.25, 0.5, 0, -1.25, -8.5, 0, -1.25, -7.5, -0.5, -1.25, 0.5, 0, -1.25, -7.5, 0, -1.25, -4, -0.5, -1.25, 0.5, 0, -1.25, -4, 0, -1.25, -3, -0.5, -1.25, 0.5, 0, -1.25, -3, 0, -1.25, 0.5, -1.5, 0.75, 0.5, -2, -1.25, 0.5, -1.5, -1.25, 0.5, -1.5, 0.75, 0.5, -2, 1.25, 0.5, -2, -1.25, 0.5, -1.5, 0.75, 0.5, 0, 1.25, 0.5, -2, 1.25, 0.5, 0, 1.25, 0.5, -1.5, 0.75, 0.5, -0.5, 0.75, 0.5, 0, 1.25, 0.5, -0.5, 0.75, 0.5, -0.5, -1.25, 0.5, 0, 1.25, 0.5, -0.5, -1.25, 0.5, 0, -1.25, 0.5, -2, -1.25, -17.5, -2, 1.25, -20.75, -2, -1.25, -20.75, -2, 0.75, -17.5, -2, 1.25, -20.75, -2, -1.25, -17.5, -2, 0.75, -16.5, -2, 1.25, -20.75, -2, 0.75, -17.5, -2, -1.25, -13, -2, 0.75, -16.5, -2, -1.25, -16.5, -2, 0.75, -13, -2, 0.75, -16.5, -2, -1.25, -13, -2, 0.75, -13, -2, 1.25, -20.75, -2, 0.75, -16.5, -2, 1.25, -20.75, -2, 0.75, -13, -2, 0.75, -12, -2, 1.25, -20.75, -2, 0.75, -12, -2, 0.75, -8.5, -2, 0.75, -8.5, -2, 0.75, -12, -2, -1.25, -12, -2, 0.75, -8.5, -2, -1.25, -12, -2, -1.25, -8.5, -2, 1.25, -20.75, -2, 0.75, -8.5, -2, 0.75, -7.5, -2, 1.25, -20.75, -2, 0.75, -7.5, -2, 0.75, -4, -2, 0.75, -4, -2, 0.75, -7.5, -2, -1.25, -7.5, -2, 0.75, -4, -2, -1.25, -7.5, -2, -1.25, -4, -2, 1.25, -20.75, -2, 0.75, -4, -2, 0.75, -3, -2, 1.25, -20.75, -2, 0.75, -3, -2, 1.25, 0.5, -2, 1.25, 0.5, -2, 0.75, -3, -2, -1.25, -3, -2, 1.25, 0.5, -2, -1.25, -3, -2, -1.25, 0.5, 0, 0.75, -12, 0, -1.25, -8.5, 0, -1.25, -12, 0, 0.75, -12, 0, 0.75, -8.5, 0, -1.25, -8.5, 0, 1.25, 0.5, 0, 0.75, -8.5, 0, 0.75, -12, 0, 0.75, -8.5, 0, 1.25, 0.5, 0, 0.75, -7.5, 0, 1.25, 0.5, 0, 0.75, -12, 0, 0.75, -13, 0, -1.25, -16.5, 0, 0.75, -13, 0, -1.25, -13, 0, 0.75, -16.5, 0, 0.75, -13, 0, -1.25, -16.5, 0, 1.25, 0.5, 0, 0.75, -13, 0, 0.75, -16.5, 0, 1.25, 0.5, 0, 0.75, -16.5, 0, 0.75, -17.5, 0, -1.25, -20.75, 0, 0.75, -17.5, 0, -1.25, -17.5, 0, 1.25, -20.75, 0, 0.75, -17.5, 0, -1.25, -20.75, 0, 1.25, 0.5, 0, 0.75, -17.5, 0, 1.25, -20.75, 0, 0.75, -7.5, 0, 1.25, 0.5, 0, 0.75, -4, 0, 0.75, -7.5, 0, 0.75, -4, 0, -1.25, -7.5, 0, -1.25, -7.5, 0, 0.75, -4, 0, -1.25, -4, 0, 0.75, -4, 0, 1.25, 0.5, 0, 0.75, -3, 0, 0.75, -3, 0, 1.25, 0.5, 0, -1.25, -3, 0, -1.25, -3, 0, 1.25, 0.5, 0, -1.25, 0.5, -2, -1.25, -20.75, 0, 1.25, -20.75, 0, -1.25, -20.75, -2, -1.25, -20.75, -2, 1.25, -20.75, 0, 1.25, -20.75, -2, 1.25, -20.75, 0, 1.25, 0.5, 0, 1.25, -20.75, -2, 1.25, -20.75, -2, 1.25, 0.5, 0, 1.25, 0.5)
 
-[node name="Door2" type="CSGBox3D" parent="." unique_id=73478021]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.125, -0.25, -3.5)
-operation = 2
-size = Vector3(0.25, 2, 1)
+[node name="Hallway2" type="StaticBody3D" unique_id=1028335007]
 
-[node name="Door3" type="CSGBox3D" parent="." unique_id=1139882842]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.125, -0.25, -8)
-operation = 2
-size = Vector3(0.25, 2, 1)
+[node name="Hallway" type="MeshInstance3D" parent="." unique_id=1197679341]
+mesh = SubResource("ArrayMesh_uut3j")
 
-[node name="Door4" type="CSGBox3D" parent="." unique_id=545585423]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.125, -0.25, -8)
-operation = 2
-size = Vector3(0.25, 2, 1)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2116742115]
+shape = SubResource("ConcavePolygonShape3D_ic660")
 
-[node name="Door5" type="CSGBox3D" parent="." unique_id=1668435825]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.125, -0.25, -12.5)
-operation = 2
-size = Vector3(0.25, 2, 1)
+[node name="Node3D" type="Node3D" parent="." unique_id=1781943799]
 
-[node name="Door6" type="CSGBox3D" parent="." unique_id=698540491]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.125, -0.25, -12.5)
-operation = 2
-size = Vector3(0.25, 2, 1)
-
-[node name="Door7" type="CSGBox3D" parent="." unique_id=1523469652]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.125, -0.25, -16.75)
-operation = 2
-size = Vector3(0.25, 2, 1)
-
-[node name="Door8" type="CSGBox3D" parent="." unique_id=855626177]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.125, -0.25, -16.75)
-operation = 2
-size = Vector3(0.25, 2, 1)
-
-[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1727711570]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -20.875)
-size = Vector3(2, 2.5, 0.25)
-
-[node name="WoodenDoor1" parent="." unique_id=1134493112 instance=ExtResource("2_6m81s")]
+[node name="WoodenDoor1" parent="Node3D" unique_id=1801826323 instance=ExtResource("2_6m81s")]
 transform = Transform3D(-4.8082526e-08, 0, -1, 0, 1.0299999, 0, 1.1, 0, -4.371139e-08, 0.11789614, -1.25, -3.9058301)
 is_door_no_open = true
 
-[node name="WoodenDoor2" parent="." unique_id=182052860 instance=ExtResource("2_6m81s")]
+[node name="WoodenDoor2" parent="Node3D" unique_id=339075465 instance=ExtResource("2_6m81s")]
 transform = Transform3D(-4.8082526e-08, 0, -1, 0, 1.0299999, 0, 1.1, 0, -4.371139e-08, 0.11789614, -1.25, -8.40583)
 is_door_no_open = true
 
-[node name="WoodenDoor3" parent="." unique_id=300016015 instance=ExtResource("2_6m81s")]
+[node name="WoodenDoor3" parent="Node3D" unique_id=591626829 instance=ExtResource("2_6m81s")]
 transform = Transform3D(-4.8082526e-08, 0, -1, 0, 1.0299999, 0, 1.1, 0, -4.371139e-08, 0.11789614, -1.25, -12.90583)
 
-[node name="WoodenDoor4" parent="." unique_id=1432431298 instance=ExtResource("2_6m81s")]
-transform = Transform3D(-4.8082526e-08, 0, -1, 0, 1.0299999, 0, 1.1, 0, -4.371139e-08, 0.11789614, -1.25, -17.15583)
+[node name="WoodenDoor4" parent="Node3D" unique_id=847020677 instance=ExtResource("2_6m81s")]
+transform = Transform3D(-4.8082526e-08, 0, -1, 0, 1.0299999, 0, 1.1, 0, -4.371139e-08, 0.11789614, -1.25, -17.40583)
 is_door_no_open = true
 
-[node name="WoodenDoor5" parent="." unique_id=2096514235 instance=ExtResource("2_6m81s")]
-transform = Transform3D(-4.8082523e-08, 0, 0.99999994, 0, 1.0299997, 0, -1.0999999, 0, -4.3711385e-08, -2.132104, -1.25, -16.349903)
+[node name="WoodenDoor5" parent="Node3D" unique_id=378655550 instance=ExtResource("2_6m81s")]
+transform = Transform3D(-4.8082523e-08, 0, 0.99999994, 0, 1.0299997, 0, -1.0999999, 0, -4.3711385e-08, -2.132104, -1.25, -16.599903)
 is_door_no_open = true
 
-[node name="WoodenDoor6" parent="." unique_id=1424717440 instance=ExtResource("2_6m81s")]
+[node name="WoodenDoor6" parent="Node3D" unique_id=1707086719 instance=ExtResource("2_6m81s")]
 transform = Transform3D(-4.8082523e-08, 0, 0.99999994, 0, 1.0299997, 0, -1.0999999, 0, -4.3711385e-08, -2.132104, -1.25, -12.099903)
 is_door_no_open = true
 
-[node name="WoodenDoor7" parent="." unique_id=1786461917 instance=ExtResource("2_6m81s")]
+[node name="WoodenDoor7" parent="Node3D" unique_id=798429557 instance=ExtResource("2_6m81s")]
 transform = Transform3D(-4.8082523e-08, 0, 0.99999994, 0, 1.0299997, 0, -1.0999999, 0, -4.3711385e-08, -2.132104, -1.25, -7.599903)
 is_door_no_open = true
 
-[node name="WoodenDoor8" parent="." unique_id=1801826323 instance=ExtResource("2_6m81s")]
+[node name="WoodenDoor8" parent="Node3D" unique_id=918316591 instance=ExtResource("2_6m81s")]
 transform = Transform3D(-4.8082523e-08, 0, 0.99999994, 0, 1.0299997, 0, -1.0999999, 0, -4.3711385e-08, -2.132104, -1.25, -3.099903)
 is_door_handle_needed = true
