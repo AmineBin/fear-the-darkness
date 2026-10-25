@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cw0pf1c2n6n7g"]
 
-[ext_resource type="Script" uid="uid://cinmq7qdq6fpo" path="res://props/collectible/item.gd" id="1_ivv6y"]
-[ext_resource type="Resource" uid="uid://d0tt6ykltt3wg" path="res://items/key/key.tres" id="2_ivv6y"]
+[ext_resource type="Script" uid="uid://cinmq7qdq6fpo" path="res://items/item.gd" id="1_ivv6y"]
+[ext_resource type="Resource" uid="uid://d0tt6ykltt3wg" path="res://items/key.tres" id="2_ivv6y"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jq8tk"]
 

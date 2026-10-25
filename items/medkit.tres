@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="MedKit" format=3 uid="uid://j8vwf02x534k"]
+
+[ext_resource type="Script" uid="uid://cc81wjbu3ourr" path="res://items/medkit.gd" id="1_7gb7o"]
+[ext_resource type="Texture2D" uid="uid://cs5k7pe36g6tx" path="res://assets/textures/items/med_kit.png" id="2_ic3hd"]
+
+[resource]
+script = ExtResource("1_7gb7o")
+name = "MedKit"
+texture = ExtResource("2_ic3hd")
+item_type = "heal"
+max_amount = 4
+can_be_used = true
+metadata/_custom_type_script = "uid://cc81wjbu3ourr"

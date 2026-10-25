@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dg6vbxu0uw324"]
 
-[ext_resource type="PackedScene" uid="uid://b003koty7p8yp" path="res://assets/models/Flashlight.glb" id="1_tl6ba"]
-[ext_resource type="Script" uid="uid://c2ppshcnj7tr4" path="res://items/flashlight/flashlight.gd" id="2_i8hij"]
+[ext_resource type="PackedScene" uid="uid://b003koty7p8yp" path="res://assets/textures/items/3D/Flashlight.glb" id="1_tl6ba"]
+[ext_resource type="Script" uid="uid://c2ppshcnj7tr4" path="res://items/flashlight.gd" id="2_i8hij"]
 
 [node name="Flashlight2" unique_id=438735374 instance=ExtResource("1_tl6ba")]
 script = ExtResource("2_i8hij")

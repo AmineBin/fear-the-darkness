@@ -25,21 +25,19 @@ func _ready() -> void:
 			door_handle.visible = true
 
 func interact(user:Node = null):
-	var target_user = user if user else get_tree().get_first_node_in_group("player")
-	
-	if key_needed and target_user and not target_user.inv.has_item(key):
-		if target_user and target_user.has_method("display_message"):
-			target_user.display_message("I need a key for this one.")
+	if key_needed and user and not user.inv.has_item(key):
+		if user and user.has_method("display_message"):
+			user.display_message("I need a key for this one.")
 		return
 	
-	if is_door_handle_needed and target_user and not target_user.inv.has_item(key):
-		if target_user and target_user.has_method("display_message"):
-			target_user.display_message("I need to find a handle for this door.")
+	if is_door_handle_needed and user and not user.inv.has_item(key):
+		if user and user.has_method("display_message"):
+			user.display_message("I need to find a handle for this door.")
 		return
 		
-	if is_door_no_open and target_user and not target_user.inv.has_item(key):
-		if target_user and target_user.has_method("display_message"):
-			target_user.display_message("There is something behind this door.")
+	if is_door_no_open and user and not user.inv.has_item(key):
+		if user and user.has_method("display_message"):
+			user.display_message("There is something behind this door.")
 		return
 	
 	if door_handle:

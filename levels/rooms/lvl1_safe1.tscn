@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://dt8ul0ikgkq7b"]
 
 [ext_resource type="PackedScene" uid="uid://byf5afsf5k1jf" path="res://props/furnitures/table_1.tscn" id="1_dv55v"]
-[ext_resource type="PackedScene" uid="uid://xhj505s5uuhc" path="res://props/collectible/medkit.tscn" id="2_kk44w"]
-[ext_resource type="PackedScene" uid="uid://cw0pf1c2n6n7g" path="res://props/collectible/key.tscn" id="3_48vpx"]
+[ext_resource type="PackedScene" uid="uid://xhj505s5uuhc" path="res://items/medkit.tscn" id="2_kk44w"]
+[ext_resource type="PackedScene" uid="uid://cw0pf1c2n6n7g" path="res://items/key.tscn" id="3_48vpx"]
 [ext_resource type="PackedScene" uid="uid://bet6rfgjanj8" path="res://props/interactable/save_computer.tscn" id="4_r4jox"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xsfx6"]

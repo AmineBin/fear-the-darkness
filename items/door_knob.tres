@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="MedKit" format=3 uid="uid://b1f2m5oed5n6a"]
+
+[ext_resource type="Script" uid="uid://cc81wjbu3ourr" path="res://items/medkit.gd" id="1_uthlr"]
+[ext_resource type="Texture2D" uid="uid://yu3r38jychb7" path="res://assets/textures/items/knob.png" id="2_uthlr"]
+
+[resource]
+script = ExtResource("1_uthlr")
+name = "Door knob"
+texture = ExtResource("2_uthlr")
+item_type = "riddle"
+max_amount = 1
+can_be_used = true
+metadata/_custom_type_script = "uid://cc81wjbu3ourr"
