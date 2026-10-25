@@ -1,0 +1,122 @@
+[gd_scene format=3 uid="uid://kj0wfprnq8g0"]
+
+[ext_resource type="Script" uid="uid://dcjb6ku4k4coq" path="res://levels/level1.gd" id="1_a1r6t"]
+[ext_resource type="PackedScene" uid="uid://yifphocygbal" path="res://entities/player/player.tscn" id="2_w28nb"]
+[ext_resource type="PackedScene" uid="uid://dwkuutr54e8u3" path="res://ui/hud/player_gui.tscn" id="3_afkyo"]
+[ext_resource type="PackedScene" uid="uid://bhl48kxd2a852" path="res://ui/inventory/player_inventory_ui.tscn" id="4_a1r6t"]
+[ext_resource type="PackedScene" uid="uid://bhb7tynm8e6f8" path="res://ui/menus/pause_menu/pause_menu.tscn" id="5_pkqcj"]
+[ext_resource type="PackedScene" uid="uid://bvjll2kscjiuy" path="res://levels/rooms/lvl1_hallway_1.tscn" id="6_n6f2s"]
+[ext_resource type="PackedScene" uid="uid://x6fhvplluu8d" path="res://levels/rooms/lvl1_appartment1.tscn" id="7_n6f2s"]
+[ext_resource type="PackedScene" uid="uid://hftf550eln31" path="res://levels/rooms/lvl1_stair_case_1.tscn" id="7_xsfx6"]
+[ext_resource type="PackedScene" uid="uid://carrmofvblnfo" path="res://props/interactable/doors/metal_door.tscn" id="8_hoo32"]
+[ext_resource type="PackedScene" uid="uid://bb7wgv67fprc0" path="res://levels/rooms/lvl1_hallway_2.tscn" id="8_qae1c"]
+[ext_resource type="PackedScene" uid="uid://dt8ul0ikgkq7b" path="res://levels/rooms/lvl1_safe1.tscn" id="8_ulkxl"]
+[ext_resource type="Script" uid="uid://m2fvd5j6jd46" path="res://addons/stairs/stairs.gd" id="10_qae1c"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_okudf"]
+albedo_color = Color(0.9739981, 0.8656828, 0.56224984, 1)
+
+[node name="Level1" type="Node3D" unique_id=800279432]
+script = ExtResource("1_a1r6t")
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=2134147659]
+
+[node name="PlayerGUI" parent="UI" unique_id=1809929944 instance=ExtResource("3_afkyo")]
+metadata/_edit_use_anchors_ = true
+
+[node name="Inv_UI" parent="UI" unique_id=1333805855 instance=ExtResource("4_a1r6t")]
+metadata/_edit_use_anchors_ = true
+
+[node name="PauseMenu" parent="UI" unique_id=873590892 node_paths=PackedStringArray("inventory_ui") instance=ExtResource("5_pkqcj")]
+inventory_ui = NodePath("../Inv_UI")
+metadata/_edit_use_anchors_ = true
+
+[node name="Player" parent="." unique_id=865410242 instance=ExtResource("2_w28nb")]
+transform = Transform3D(-8.940697e-08, 0, 1, 0, 1, 0, -1, 0, -8.940697e-08, 20.452, -0.75, 0.14299774)
+
+[node name="Rooms" type="Node3D" parent="." unique_id=1870520931]
+
+[node name="Hallway1" parent="Rooms" unique_id=1606809133 instance=ExtResource("6_n6f2s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.75, 0, -0.25)
+
+[node name="StairCase1" parent="Rooms" unique_id=1487240620 instance=ExtResource("7_xsfx6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.75, 0, -7.75)
+
+[node name="Hallway2" parent="Rooms" unique_id=509539961 instance=ExtResource("8_qae1c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -8.25, -13.25)
+
+[node name="Room2" parent="Rooms" unique_id=381013708 instance=ExtResource("7_n6f2s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.75, -3, -37.25)
+
+[node name="Room3" type="CSGCombiner3D" parent="Rooms" unique_id=1262590036]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, -10.75, -16.5)
+use_collision = true
+
+[node name="Floor5" type="CSGBox3D" parent="Rooms/Room3" unique_id=1946721617]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 0.125, -0.25)
+size = Vector3(15.5, 0.25, 2)
+
+[node name="Floor6" type="CSGBox3D" parent="Rooms/Room3" unique_id=255843458]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 3.625, -0.25)
+size = Vector3(15.5, 0.25, 2)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Rooms/Room3" unique_id=1545939754]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.375, 1.375, 0.625)
+size = Vector3(15.25, 2.25, 0.25)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Rooms/Room3" unique_id=922346976]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 1.375, -1.125)
+size = Vector3(15.5, 2.25, 0.25)
+
+[node name="Safe1" parent="Rooms" unique_id=1392035520 instance=ExtResource("8_ulkxl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.5)
+
+[node name="Puzzle" type="Node3D" parent="." unique_id=986102471]
+
+[node name="Enigme1" type="Node3D" parent="Puzzle" unique_id=564430257]
+
+[node name="Drawer1 (scissors)" type="CSGBox3D" parent="Puzzle/Enigme1" unique_id=376295599]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.75, -10, -22.25)
+
+[node name="Projector" type="CSGBox3D" parent="Puzzle/Enigme1" unique_id=1621102517]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.5, -10.25, -39)
+size = Vector3(1, 0.5, 1)
+
+[node name="Safe" type="CSGBox3D" parent="Puzzle/Enigme1" unique_id=398832246]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.5, -8.5, -25)
+
+[node name="Fuse" type="CSGBox3D" parent="Puzzle/Enigme1" unique_id=1564102800]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.75, -8.75, -29.875)
+size = Vector3(1, 1, 0.25)
+material = SubResource("StandardMaterial3D_okudf")
+
+[node name="Furniture" type="Node3D" parent="." unique_id=1079558131]
+
+[node name="Items" type="Node3D" parent="." unique_id=940124621]
+
+[node name="Environment" type="Node3D" parent="." unique_id=41424157]
+
+[node name="Stairs" type="Node3D" parent="Environment" unique_id=1512144648]
+
+[node name="Stairs" type="Node3D" parent="Environment/Stairs" unique_id=916060894]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.125427, -9.754, -27.5)
+script = ExtResource("10_qae1c")
+size = Vector3(1.2508545, 1.5, 2)
+step_count = 6
+metadata/_custom_type_script = "uid://m2fvd5j6jd46"
+
+[node name="Stairs2" type="Node3D" parent="Environment/Stairs" unique_id=1124488726]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 32.160217, -10.0043335, -29)
+script = ExtResource("10_qae1c")
+size = Vector3(1, 1.991333, 2.8204346)
+step_count = 17
+metadata/_custom_type_script = "uid://m2fvd5j6jd46"
+
+[node name="Interactable" type="Node3D" parent="." unique_id=2124057384]
+
+[node name="MetalDoor" parent="Interactable" unique_id=802934540 instance=ExtResource("8_hoo32")]
+transform = Transform3D(-1.172251e-07, 0, 1, 0, 1, 0, -1, 0, -1.172251e-07, 4.75, -0.5, -0.25)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=983709190]
+transform = Transform3D(1, 0, 0, 0, -0.50000006, 0.8660254, 0, -0.8660254, -0.50000006, 21.75, -6.25, -33)
+visible = false

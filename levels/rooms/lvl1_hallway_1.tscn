@@ -1,0 +1,152 @@
+[gd_scene format=4 uid="uid://bvjll2kscjiuy"]
+
+[ext_resource type="Texture2D" uid="uid://bjj7v6xutl678" path="res://assets/models/levels/level1/rooms/lvl1_hallway_1_Bricks097_LowRez-JPG_Color.png" id="1_ecih5"]
+[ext_resource type="Texture2D" uid="uid://dmlq7jwxafdbk" path="res://assets/models/levels/level1/rooms/lvl1_hallway_1_cave_rock_png.png" id="2_chdtn"]
+[ext_resource type="PackedScene" uid="uid://c0dnl3gt4pimd" path="res://props/environment/factory/pipes/tube_10.tscn" id="3_jivrr"]
+[ext_resource type="PackedScene" uid="uid://c6wim2hkbuigg" path="res://props/environment/factory/barrel/barrel.tscn" id="4_hid02"]
+[ext_resource type="PackedScene" uid="uid://k8g00jdy4d0o" path="res://levels/world/door_frame.tscn" id="5_chdtn"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u68gc"]
+resource_name = "Wall"
+albedo_texture = ExtResource("1_ecih5")
+metallic = 1.0
+texture_filter = 2
+metadata/_gltf_primary_texture_coord = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yetpy"]
+resource_name = "Floor"
+cull_mode = 2
+albedo_texture = ExtResource("2_chdtn")
+roughness = 0.5
+texture_filter = 2
+metadata/_gltf_primary_texture_coord = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5hfqf"]
+resource_name = "Ceiling"
+cull_mode = 2
+albedo_texture = ExtResource("2_chdtn")
+roughness = 0.5
+texture_filter = 2
+metadata/_gltf_primary_texture_coord = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_qonxw"]
+_surfaces = [{
+"aabb": AABB(-4.5, -1.5000001, -1.25, 17, 3.2500002, 2.5),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgABAAMAAgADAAQABQAEAAMABQAGAAQABwAGAAUACAAGAAcABgAIAAAAAAAJAAEAAAAIAAoAAAALAAkAAAAKAAsA"),
+"name": "Wall",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 12,
+"vertex_data": PackedByteArray("AAD/////AAD//wAA//8AAP///v///wAA//8AAAAAAAD///7/AAAAAAAAAAAAAAAAAAD+/wAAAAAAAAAAzEwAAAAAiZ3MTAAAAAAAAP//AAAAAImdMrMAAAAAAAAyswAA")
+}, {
+"aabb": AABB(-4.5, -1.5000001, -1.25, 17, 1e-05, 2.5),
+"format": 34896613377,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAwABAAAAAQADAAQAAQAEAAUA"),
+"name": "Floor",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 6,
+"vertex_data": PackedByteArray("AAANA///AAD//w0DAAAAAP//AAD//wAAAAANAzKzAAAAAA0DzEwAAAAADQMAAAAA")
+}, {
+"aabb": AABB(-4.5, 1.75, -1.25, 17, 1e-05, 2.5),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"name": "Ceiling",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAAAAAAAAAA0D//8AAP//AAD//wAAAAAAAAAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_csdcp"]
+resource_name = "lvl1_hallway_1_Hallway12"
+_surfaces = [{
+"aabb": AABB(-4.5, -1.5000001, -1.25, 17, 3.2500002, 2.5),
+"attribute_data": PackedByteArray("SEiuf//////+/65/SEj+/3Ck/v+LrK5/i6z+/3CkCLGGka5/oZkIsaGZ/v+Gkf7/hpGuf4us/v+LrK5/hpH//0hI/v/+/65//v/+/0hIrn8="),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABwAFAAQABQAHAAgACAAHAAkACAAJAAoACAAKAAsADAANAA4ADAAPAA0AEAARABIAEAATABEA"),
+"material": SubResource("StandardMaterial3D_u68gc"),
+"name": "Wall",
+"primitive": 3,
+"uv_scale": Vector4(3.6400356, 1.9926766, 0, 0),
+"vertex_count": 20,
+"vertex_data": PackedByteArray("AAD/////AAD//wAA//8AAP///v///wAAAAAAAP//AAAAAAAAzEz/vwAA/v8AAP+/AAAAAAAA/78AAImdzEz/vwAA//////+/AACJnTKz/78AAAAAMrP/vwAAAAD///+////+////AAD//wAAAAAAAP///v8AAAAA//8AAP//AAAAAAAAAAAAgP///v8AAACA//8AAAAAAIAAAP7/AAAAgP///3////9/////f////3//fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP8//3//P/9//z//f/8//3//f////3////9/////f///")
+}, {
+"aabb": AABB(-4.5, -1.5000001, -1.25, 17, 1e-05, 2.5),
+"attribute_data": PackedByteArray("CyH///7/hID/////CyHA2Qshw6YLIYSA"),
+"format": 34896613399,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAwABAAAAAQADAAQAAQAEAAUA"),
+"material": SubResource("StandardMaterial3D_yetpy"),
+"name": "Floor",
+"primitive": 3,
+"uv_scale": Vector4(7.744601, 1.99189, 0, 0),
+"vertex_count": 6,
+"vertex_data": PackedByteArray("AAANA////7///w0DAAD/v///AAD///+/AAANAzKz/78AAA0DzEz/vwAADQMAAP+/////f////3////9/////f////3////9/")
+}, {
+"aabb": AABB(-4.5, 1.75, -1.25, 17, 1e-05, 2.5),
+"attribute_data": PackedByteArray("//+EgAsh////////CyGEgA=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"material": SubResource("StandardMaterial3D_5hfqf"),
+"name": "Ceiling",
+"primitive": 3,
+"uv_scale": Vector4(7.7445974, 1.99189, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAAAA/z8AAA0D////P///AAD///8/AAAAAAAA/z8AAP9/AAD/fwAA/38AAP9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_qonxw")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_algfd"]
+data = PackedVector3Array(-4.5, 1.75, 1.25, 12.5, -1.5, 1.25, 12.5, 1.75, 1.25, -4.5, 1.75, 1.25, -4.5, -1.5, 1.25, 12.5, -1.5, 1.25, -4.5, -1.5, -0.5, -4.5, 1.75, -1.25, -4.5, -1.5, -1.25, -4.5, 0.5, -0.5, -4.5, 1.75, -1.25, -4.5, -1.5, -0.5, -4.5, 1.75, -1.25, -4.5, 0.5, -0.5, -4.5, 1.75, 1.25, -4.5, 1.75, 1.25, -4.5, 0.5, -0.5, -4.5, 0.5, 0.5, -4.5, 1.75, 1.25, -4.5, 0.5, 0.5, -4.5, -1.5, 0.5, -4.5, 1.75, 1.25, -4.5, -1.5, 0.5, -4.5, -1.5, 1.25, 12.5, 1.75, 1.25, 12.5, -1.5, -1.25, 12.5, 1.75, -1.25, 12.5, 1.75, 1.25, 12.5, -1.5, 1.25, 12.5, -1.5, -1.25, -4.5, -1.5, -1.25, 12.5, 1.75, -1.25, 12.5, -1.5, -1.25, -4.5, -1.5, -1.25, -4.5, 1.75, -1.25, 12.5, 1.75, -1.25, -4.5, -1.5, 1.25, 12.5, -1.5, -1.25, 12.5, -1.5, 1.25, -4.5, -1.5, 0.5, 12.5, -1.5, -1.25, -4.5, -1.5, 1.25, 12.5, -1.5, -1.25, -4.5, -1.5, 0.5, -4.5, -1.5, -0.5, 12.5, -1.5, -1.25, -4.5, -1.5, -0.5, -4.5, -1.5, -1.25, 12.5, 1.75, -1.25, -4.5, 1.75, 1.25, 12.5, 1.75, 1.25, 12.5, 1.75, -1.25, -4.5, 1.75, -1.25, -4.5, 1.75, 1.25)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_chdtn"]
+albedo_texture = ExtResource("1_ecih5")
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_csdcp"]
+albedo_texture = ExtResource("1_ecih5")
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_algfd"]
+albedo_texture = ExtResource("1_ecih5")
+texture_filter = 0
+
+[node name="lvl1-Hallway1" type="StaticBody3D" unique_id=1861102824]
+
+[node name="Hallway12" type="MeshInstance3D" parent="." unique_id=1480693749]
+mesh = SubResource("ArrayMesh_csdcp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1711147105]
+shape = SubResource("ConcavePolygonShape3D_algfd")
+
+[node name="Props" type="Node3D" parent="." unique_id=1607461846]
+
+[node name="Tube10" parent="Props" unique_id=1957449517 instance=ExtResource("3_jivrr")]
+transform = Transform3D(1.9470718e-07, -7.54979e-08, 1, -9.8924275e-15, 1, 7.54979e-08, -1, -2.4592412e-14, 1.9470718e-07, 5, 1.25, -0.75)
+
+[node name="Tube11" parent="Props" unique_id=1693916134 instance=ExtResource("3_jivrr")]
+transform = Transform3D(1.9470718e-07, -7.54979e-08, 1, -9.8924275e-15, 1, 7.54979e-08, -1, -2.4592412e-14, 1.9470718e-07, 15, 1.25, -0.75)
+
+[node name="Barrel" parent="Props" unique_id=1441538094 instance=ExtResource("4_hid02")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 6, -1, 0.75)
+
+[node name="World" type="Node3D" parent="." unique_id=1648521002]
+
+[node name="DoorFrame" parent="World" unique_id=573309752 instance=ExtResource("5_chdtn")]
+transform = Transform3D(2.9802322e-08, 0, 1, 0, 1, 0, -1, 0, 2.9802322e-08, -4.75, -1, 0)
+
+[node name="CSGCombiner3D2" parent="World/DoorFrame" index="0" unique_id=2103623685]
+surface_material_override/0 = SubResource("StandardMaterial3D_chdtn")
+surface_material_override/1 = SubResource("StandardMaterial3D_csdcp")
+surface_material_override/2 = SubResource("StandardMaterial3D_algfd")
+
+[editable path="World/DoorFrame"]

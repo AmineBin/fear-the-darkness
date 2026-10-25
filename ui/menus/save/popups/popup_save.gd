@@ -56,5 +56,9 @@ func update_slot():
 			slot_labels[i].text = "slot" + str(slot_nb) + " - empty"
 		else:
 			var loaded_data = ResourceLoader.load(path, "", ResourceLoader.CACHE_MODE_IGNORE)
-			var play_time = format_hour(loaded_data.play_time)
-			slot_labels[i].text = "slot" + str(slot_nb) + " - " + play_time
+			if loaded_data is SaveDataResource:
+				var play_time = format_hour(loaded_data.play_time)
+				slot_labels[i].text = "slot" + str(slot_nb) + " - " + play_time
+			else:
+				slot_labels[i].text = "slot" + str(slot_nb) + " - invalid"
+				push_warning("Unable to load save slot %d: %s" % [slot_nb, path])

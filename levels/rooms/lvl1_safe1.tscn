@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://dt8ul0ikgkq7b"]
+
+[ext_resource type="PackedScene" uid="uid://byf5afsf5k1jf" path="res://props/furnitures/table_1.tscn" id="1_dv55v"]
+[ext_resource type="PackedScene" uid="uid://xhj505s5uuhc" path="res://props/collectible/medkit.tscn" id="2_kk44w"]
+[ext_resource type="PackedScene" uid="uid://cw0pf1c2n6n7g" path="res://props/collectible/key.tscn" id="3_48vpx"]
+[ext_resource type="PackedScene" uid="uid://bet6rfgjanj8" path="res://props/interactable/save_computer.tscn" id="4_r4jox"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xsfx6"]
+
+[node name="Room1" type="CSGCombiner3D" unique_id=1392035520]
+use_collision = true
+
+[node name="Wall1" type="CSGBox3D" parent="." unique_id=1379432370]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.375, 0.125, -3.625)
+size = Vector3(3.25, 3.75, 0.25)
+
+[node name="Wall5" type="CSGBox3D" parent="." unique_id=1694826057]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.75, 0.125, -1.875)
+size = Vector3(4.5, 3.75, 0.25)
+
+[node name="Wall2" type="CSGBox3D" parent="." unique_id=735041612]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.125, 5.125)
+size = Vector3(8, 3.75, 0.25)
+
+[node name="Wall3" type="CSGBox3D" parent="." unique_id=1905945718]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.875, 0.125, 0.75)
+size = Vector3(0.25, 3.75, 8.5)
+
+[node name="Wall4" type="CSGBox3D" parent="." unique_id=1053364664]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.875, 0.125, 1.625)
+size = Vector3(0.25, 3.75, 6.75)
+
+[node name="Wall6" type="CSGBox3D" parent="." unique_id=380095154]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.375, 0.125, -2.75)
+size = Vector3(0.25, 3.75, 2)
+
+[node name="Door1" type="CSGBox3D" parent="." unique_id=593820704]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.875, -0.5, 1.25)
+operation = 2
+size = Vector3(0.25, 2, 1)
+material = SubResource("StandardMaterial3D_xsfx6")
+
+[node name="Door2" type="CSGBox3D" parent="." unique_id=1846939616]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1, -0.5, -3.625)
+operation = 2
+size = Vector3(0.25, 2, 1)
+
+[node name="Floor2" type="CSGBox3D" parent="." unique_id=600542574]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -1.625, 0.75)
+size = Vector3(8, 0.25, 9)
+
+[node name="Floor3" type="CSGBox3D" parent="." unique_id=1192106789]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1.875, 0.75)
+size = Vector3(8, 0.25, 9)
+
+[node name="ElevatorDoor1" type="CSGBox3D" parent="." unique_id=132438007]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -0.5, 5.25)
+operation = 2
+size = Vector3(2, 2, 1)
+
+[node name="Table1" parent="." unique_id=101897012 instance=ExtResource("1_dv55v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.25, -1.1498413, 1.25)
+
+[node name="Table2" parent="." unique_id=1485625665 instance=ExtResource("1_dv55v")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2.5, -1.1498413, -1.25)
+
+[node name="Lamp1" type="CSGCylinder3D" parent="." unique_id=183735396]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.25, 1.359375, 1.25)
+radius = 0.106
+height = 0.28125
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Lamp1" unique_id=418971714]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+light_color = Color(1, 0.7529412, 0.4117647, 1)
+light_energy = 2.0
+
+[node name="MedKit" parent="." unique_id=927341689 instance=ExtResource("2_kk44w")]
+transform = Transform3D(0.4829629, 0, 0.12940952, 0, 0.5, 0, -0.12940952, 0, 0.4829629, -2.25, -0.76682866, 0.75)
+
+[node name="Key" parent="." unique_id=1966935041 instance=ExtResource("3_48vpx")]
+transform = Transform3D(0.36993822, 0, -0.3363714, 0, 0.5, 0, 0.3363714, 0, 0.36993822, -2.2443223, -0.5496826, 1.8172553)
+
+[node name="ComputerSave" parent="." unique_id=729736860 instance=ExtResource("4_r4jox")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, -0.75, -1.25)

@@ -50,6 +50,7 @@ folder_colors={
 "res://data/": "orange",
 "res://entities/": "red",
 "res://items/": "red",
+"res://levels/": "red",
 "res://props/": "red",
 "res://scenes/": "blue",
 "res://scripts/": "teal",

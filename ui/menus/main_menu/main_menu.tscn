@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://uaktb6mru1ob" path="res://ui/menus/transition/fade_transition.tscn" id="2_ioe73"]
 [ext_resource type="AudioStream" uid="uid://cs5dav0lwjqd3" path="res://assets/audio/sfx/ui/menu/click.wav" id="2_j3h1s"]
 [ext_resource type="PackedScene" uid="uid://bd4j7mnm3sul5" path="res://ui/menus/settings/settings.tscn" id="3_igis3"]
-[ext_resource type="PackedScene" uid="uid://dmr1e2tkxqhy5" path="res://level/flat_forest.tscn" id="3_txwgg"]
+[ext_resource type="PackedScene" uid="uid://dmr1e2tkxqhy5" path="res://levels/flat_forest.tscn" id="3_txwgg"]
 [ext_resource type="PackedScene" uid="uid://bt1jviv51itq1" path="res://ui/menus/save/save_data/save_ui.tscn" id="5_igis3"]
 
 [node name="MainMenu" type="Control" unique_id=111744513]

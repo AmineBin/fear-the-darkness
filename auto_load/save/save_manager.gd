@@ -86,7 +86,7 @@ func save_all(save_slot):
 	save_inventories()
 	_save(save_slot)
 		
-func _load(save_slot: int):
+func _load(save_slot: int) -> bool:
 	set_save_slot(save_slot)
 	
 	var save_location = get_save_path(save_slot)
@@ -95,6 +95,10 @@ func _load(save_slot: int):
 		var loaded_data = ResourceLoader.load(save_location) as SaveDataResource
 		if loaded_data:
 			save_file_data = loaded_data
+			return true
+
+	push_warning("Unable to load save slot %d: %s" % [save_slot, save_location])
+	return false
 
 func load_player():
 	var player = get_tree().get_first_node_in_group("player")
@@ -143,7 +147,8 @@ func load_inventories():
 	chest_inv_ui.set_inventories(chest_inv_ui.chest_inv, player.inv)
 
 func load_all(save_slot):
-	_load(save_slot)
+	if not _load(save_slot):
+		return
 	await load_scene()
 	load_player()
 	load_inventories()
