@@ -12,8 +12,8 @@ const base_fov = 75.0
 const fov_change = 1.5
 
 var speed
-var walk_speed = 2.0
-var sprint_speed = 3.0
+var walk_speed = 1.7
+var sprint_speed = 2.7
 var jump_velocity = 3
 var gravity = 9.8
 

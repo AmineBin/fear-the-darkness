@@ -40,32 +40,32 @@ transform = Transform3D(-8.940697e-08, 0, 1, 0, 1, 0, -1, 0, -8.940697e-08, 20.4
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.75, 0, -0.25)
 
 [node name="StairCase1" parent="Rooms" unique_id=1487240620 instance=ExtResource("7_xsfx6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.75, 0, -7.75)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.75, -0.25, -8.5)
 
 [node name="Hallway2" parent="Rooms" unique_id=509539961 instance=ExtResource("8_qae1c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -8.25, -13.25)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -7.75, -14)
 
 [node name="Room2" parent="Rooms" unique_id=381013708 instance=ExtResource("7_n6f2s")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.75, -3, -37.25)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.75, -2.5, -38)
 
 [node name="Room3" type="CSGCombiner3D" parent="Rooms" unique_id=1262590036]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, -10.75, -16.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, -10.5, -16.5)
 use_collision = true
 
 [node name="Floor5" type="CSGBox3D" parent="Rooms/Room3" unique_id=1946721617]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 1.375, -0.25)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 1.625, -1)
 size = Vector3(15.5, 0.25, 2)
 
 [node name="Floor6" type="CSGBox3D" parent="Rooms/Room3" unique_id=255843458]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 3.625, -0.25)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 3.875, -1)
 size = Vector3(15.5, 0.25, 2)
 
 [node name="CSGBox3D" type="CSGBox3D" parent="Rooms/Room3" unique_id=1545939754]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.375, 2.625, 0.625)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.375, 2.875, -0.125)
 size = Vector3(15.25, 2.25, 0.25)
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="Rooms/Room3" unique_id=922346976]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 2.625, -1.125)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 2.875, -1.875)
 size = Vector3(15.5, 2.25, 0.25)
 
 [node name="Safe1" parent="Rooms" unique_id=1392035520 instance=ExtResource("8_ulkxl")]
@@ -76,17 +76,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.5)
 [node name="Enigme1" type="Node3D" parent="Puzzle" unique_id=564430257]
 
 [node name="Drawer1 (scissors)" type="CSGBox3D" parent="Puzzle/Enigme1" unique_id=376295599]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.75, -10, -22.25)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.75, -9.75, -22.25)
 
 [node name="Projector" type="CSGBox3D" parent="Puzzle/Enigme1" unique_id=1621102517]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.5, -10.25, -39)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.5, -10, -39)
 size = Vector3(1, 0.5, 1)
 
 [node name="Safe" type="CSGBox3D" parent="Puzzle/Enigme1" unique_id=398832246]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.5, -8.5, -25)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.5, -8.25, -25)
 
 [node name="Fuse" type="CSGBox3D" parent="Puzzle/Enigme1" unique_id=1564102800]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.75, -8.75, -29.875)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.75, -8.5, -29.875)
 size = Vector3(1, 1, 0.25)
 material = SubResource("StandardMaterial3D_okudf")
 
