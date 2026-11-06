@@ -163,7 +163,7 @@ is_door_no_open = true
 
 [node name="WoodenDoor8" parent="Doors" unique_id=918316591 instance=ExtResource("2_6m81s")]
 transform = Transform3D(-4.8082523e-08, 0, 0.99999994, 0, 1.0299997, 0, -1.0999999, 0, -4.3711385e-08, -2.132104, -1.25, -3.099903)
-is_door_handle_needed = true
+is_door_no_open = true
 
 [node name="World" type="Node3D" parent="." unique_id=2024674241]
 
