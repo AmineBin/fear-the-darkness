@@ -52,7 +52,7 @@ Le joueur ne combat pas : il fuit, se cache et gère ses ressources.
 
 Objets actuels : clé, kit de soin (+4 PV), poignée de porte, lampe torche.
 
-### Interaction — `props/interactable`
+### Interaction — `props/`
 
 Chaque prop expose `interact(user)` :
 
@@ -94,18 +94,23 @@ Chaque prop expose `interact(user)` :
 
 ```
 addons/       GUT, Proton Scatter, Stairs+, PSX Visuals, Debug Draw 3D
-assets/       Sons, modèles, textures (non versionnés)
+assets/       Sources : audio, polices, props, items, ennemis, niveaux, UI
 auto_load/    Singletons globaux
-components/   Briques réutilisables : santé, inventaire, volume
+components/   Briques réutilisables : santé, inventaire, volume, proxy
 data/         Ressource de sauvegarde
-entities/     Joueur et ennemis
-items/        Objets ramassables
+entities/     Joueur et ennemis (scènes et scripts)
+items/        Un dossier par objet : scène, ressource, script
 levels/       Niveaux et pièces
-props/        Décors et props interactifs
+props/        Un dossier par prop : scène, script
 shaders/      Overlay PS1 et CRT
 tests/        Tests unitaires GUT
 ui/           HUD, inventaires, menus
 ```
+
+Les fichiers sources vivent dans `assets/`, organisés par prop, objet, ennemi ou
+niveau. Les scènes et scripts restent dans `props/`, `items/`, `ui/`, `levels/`
+et `entities/`. `assets/props/_library/` contient les textures de props non
+rattachées à un prop précis.
 
 ### Autoloads
 
@@ -152,7 +157,9 @@ séparées dans `levels/rooms/`.
 | Signaux                | `snake_case`      | `health_changed`   |
 | Groupes                | `snake_case`      | `player_inv_ui`    |
 
-- Un dossier par fonctionnalité, scène et script portant le même nom.
+- Un dossier par prop/item dans `assets/`, `props/` et `items/`.
+- Les dossiers de `props/` et `items/` miroitent ceux de `assets/`.
+- Les scènes et scripts ne contiennent pas de binaires.
 - Commentaires en français, textes de jeu en anglais.
 - Les valeurs d'équilibrage sont en constantes ou `@export` en haut des scripts.
 
@@ -160,7 +167,7 @@ séparées dans `levels/rooms/`.
 
 - `main.tscn` pointe vers une scène supprimée : ne pas l'utiliser.
 - Taille des coffres incohérente : 21 slots dans l'UI, 24 dans la sauvegarde.
-- `door_knob.tres` utilise le script `MedKit` au lieu d'un item d'énigme.
+- `items/door_knob/door_knob.tres` utilise le script `MedKit` au lieu d'un item d'énigme.
 - Batterie de la lampe non sauvegardée et impossible à recharger.
 - Les clés ne sont pas consommées à l'ouverture d'une porte.
 - Mort du joueur : `queue_free()` sans écran de game over.

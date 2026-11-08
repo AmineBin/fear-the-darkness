@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bxfcwx76ci55k"]
 
 [ext_resource type="Script" uid="uid://cb6skp78twyon" path="res://ui/menus/save/popups/popup_button.gd" id="1_0rfp1"]
-[ext_resource type="Texture2D" uid="uid://d115oga33w1q" path="res://assets/textures/ui/save/popup/popup_btn_bg.png" id="2_0mdx8"]
+[ext_resource type="Texture2D" uid="uid://d115oga33w1q" path="res://assets/ui/save/popups/popup_btn_bg.png" id="2_0mdx8"]
 [ext_resource type="FontFile" uid="uid://c25s10h6bx4ct" path="res://assets/fonts/PixelOperator.ttf" id="2_8cu0x"]
 
 [node name="PopUpButton" type="Button" unique_id=1567148761]

@@ -52,8 +52,6 @@ folder_colors={
 "res://items/": "red",
 "res://levels/": "red",
 "res://props/": "red",
-"res://scenes/": "blue",
-"res://scripts/": "teal",
 "res://shaders/": "teal",
 "res://tests/": "pink",
 "res://ui/": "green"

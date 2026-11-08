@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dg6vbxu0uw324"]
+
+[ext_resource type="PackedScene" uid="uid://b003koty7p8yp" path="res://assets/items/flashlight/flashlight.glb" id="1_tl6ba"]
+[ext_resource type="Script" uid="uid://c2ppshcnj7tr4" path="res://items/flashlight/flashlight.gd" id="2_i8hij"]
+
+[node name="Flashlight2" unique_id=438735374 instance=ExtResource("1_tl6ba")]
+script = ExtResource("2_i8hij")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." index="1" unique_id=1545557079]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.1381342)
+light_energy = 0.5
+spot_range = 30.0
+spot_angle = 35.0
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="2" unique_id=571403772]

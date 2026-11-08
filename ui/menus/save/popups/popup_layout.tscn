@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://b0sp46550nf4p"]
 
-[ext_resource type="Texture2D" uid="uid://bay8a2vofbeqg" path="res://assets/textures/ui/save/popup/popup.png" id="1_awmxu"]
+[ext_resource type="Texture2D" uid="uid://bay8a2vofbeqg" path="res://assets/ui/save/popups/popup.png" id="1_awmxu"]
 [ext_resource type="Script" uid="uid://b747k0kujsn5d" path="res://ui/menus/save/popups/popup_layout.gd" id="2_7iyp1"]
-[ext_resource type="Texture2D" uid="uid://dsaharc8qge0e" path="res://assets/textures/ui/save/popup/popup_band.png" id="2_e14ut"]
-[ext_resource type="PackedScene" uid="uid://bf7dkgc6mg2uf" path="res://ui/menus/save/icon/reduce_pop_up_button.tscn" id="3_7iyp1"]
-[ext_resource type="PackedScene" uid="uid://ctuaqap1ku7su" path="res://ui/menus/save/icon/full_screen_pop_up_button.tscn" id="4_tjk6p"]
-[ext_resource type="PackedScene" uid="uid://bhh6rfdal27t" path="res://ui/menus/save/icon/close_pop_up_button.tscn" id="5_bmxhj"]
+[ext_resource type="Texture2D" uid="uid://dsaharc8qge0e" path="res://assets/ui/save/popups/popup_band.png" id="2_e14ut"]
+[ext_resource type="PackedScene" uid="uid://bf7dkgc6mg2uf" path="res://ui/menus/save/icons/reduce_pop_up_button.tscn" id="3_7iyp1"]
+[ext_resource type="PackedScene" uid="uid://ctuaqap1ku7su" path="res://ui/menus/save/icons/full_screen_pop_up_button.tscn" id="4_tjk6p"]
+[ext_resource type="PackedScene" uid="uid://bhh6rfdal27t" path="res://ui/menus/save/icons/close_pop_up_button.tscn" id="5_bmxhj"]
 
 [node name="PopupLayout" type="NinePatchRect" unique_id=1404222729]
 texture_filter = 1

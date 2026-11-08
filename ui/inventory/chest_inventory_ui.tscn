@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://2dh0may14cq5"]
 
 [ext_resource type="Script" uid="uid://csycjt4prp0au" path="res://ui/inventory/chest_inventory_ui.gd" id="1_t8wd2"]
-[ext_resource type="Texture2D" uid="uid://civi4yk5t3044" path="res://assets/textures/inventory/inventory_background.png" id="2_kwvyf"]
+[ext_resource type="Texture2D" uid="uid://civi4yk5t3044" path="res://assets/ui/inventory/inventory_background.png" id="2_kwvyf"]
 [ext_resource type="PackedScene" uid="uid://wc7uffhgcws" path="res://ui/inventory/inventory_ui_slot.tscn" id="3_5xown"]
 
 [node name="ChestInventoryUi" type="Control" unique_id=1815613746 groups=["chest_inv_ui"]]

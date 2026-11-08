@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://dwkuutr54e8u3"]
 
 [ext_resource type="Script" uid="uid://bp1n7pltwm27g" path="res://ui/hud/player_gui.gd" id="1_2u3rc"]
-[ext_resource type="Texture2D" uid="uid://biof71vos4bju" path="res://assets/textures/gui/crosshair001.png" id="1_s3sex"]
-[ext_resource type="AudioStream" uid="uid://cs5dav0lwjqd3" path="res://assets/audio/sfx/ui/menu/click.wav" id="2_hffkq"]
+[ext_resource type="Texture2D" uid="uid://biof71vos4bju" path="res://assets/ui/hud/crosshair001.png" id="1_s3sex"]
+[ext_resource type="AudioStream" uid="uid://cs5dav0lwjqd3" path="res://assets/audio/ui/menu/click.wav" id="2_hffkq"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_h5vwo"]
 font_size = 32

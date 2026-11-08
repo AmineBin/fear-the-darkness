@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://dadtil6r03215"]
 
 [ext_resource type="Script" uid="uid://dbegbqheurflb" path="res://entities/enemies/wrapper/wrapper.gd" id="1_cu1uc"]
-[ext_resource type="Texture2D" uid="uid://bdojv8t8wyydq" path="res://entities/enemies/wrapper/wrapper_MonsterPSX_Diffuse.png" id="1_h6mq2"]
+[ext_resource type="Texture2D" uid="uid://bdojv8t8wyydq" path="res://assets/enemies/wrapper/wrapper.png" id="1_h6mq2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_synqe"]
 resource_name = "M_MonsterPSX"

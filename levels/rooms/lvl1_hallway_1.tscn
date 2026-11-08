@@ -1,10 +1,10 @@
 [gd_scene format=4 uid="uid://bvjll2kscjiuy"]
 
-[ext_resource type="Texture2D" uid="uid://bjj7v6xutl678" path="res://assets/models/levels/level1/rooms/lvl1_hallway_1_Bricks097_LowRez-JPG_Color.png" id="1_ecih5"]
-[ext_resource type="Texture2D" uid="uid://dmlq7jwxafdbk" path="res://assets/models/levels/level1/rooms/lvl1_hallway_1_cave_rock_png.png" id="2_chdtn"]
-[ext_resource type="PackedScene" uid="uid://c0dnl3gt4pimd" path="res://props/environment/factory/pipes/tube_10.tscn" id="3_jivrr"]
-[ext_resource type="PackedScene" uid="uid://c6wim2hkbuigg" path="res://props/environment/factory/barrel/barrel.tscn" id="4_hid02"]
-[ext_resource type="PackedScene" uid="uid://k8g00jdy4d0o" path="res://levels/world/door_frame.tscn" id="5_chdtn"]
+[ext_resource type="Texture2D" uid="uid://bjj7v6xutl678" path="res://assets/levels/level1/rooms/lvl1_hallway_1_Bricks097_LowRez-JPG_Color.png" id="1_ecih5"]
+[ext_resource type="Texture2D" uid="uid://dmlq7jwxafdbk" path="res://assets/levels/level1/rooms/lvl1_hallway_1_cave_rock_png.png" id="2_chdtn"]
+[ext_resource type="PackedScene" uid="uid://c0dnl3gt4pimd" path="res://props/pipes/tube_10.tscn" id="3_jivrr"]
+[ext_resource type="PackedScene" uid="uid://c6wim2hkbuigg" path="res://props/barrel/barrel.tscn" id="4_hid02"]
+[ext_resource type="PackedScene" uid="uid://k8g00jdy4d0o" path="res://props/door_frame/door_frame.tscn" id="5_chdtn"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u68gc"]
 resource_name = "Wall"

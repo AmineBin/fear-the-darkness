@@ -1,10 +1,10 @@
 [gd_scene format=4 uid="uid://hftf550eln31"]
 
-[ext_resource type="Texture2D" uid="uid://diff6d8cnirw8" path="res://assets/models/levels/level1/rooms/stair_case_Tiles143.png" id="2_hsuac"]
-[ext_resource type="Texture2D" uid="uid://ceov1a6gdrwgc" path="res://assets/models/levels/level1/rooms/stair_case_concrete_wall_003.png" id="3_qbj45"]
-[ext_resource type="PackedScene" uid="uid://k8g00jdy4d0o" path="res://levels/world/door_frame.tscn" id="4_hsuac"]
-[ext_resource type="Texture2D" uid="uid://bxqut65ikr8pe" path="res://assets/models/levels/level1/rooms/stair_case_green_metal.png" id="4_tmb1g"]
-[ext_resource type="PackedScene" uid="uid://2g0ljm7l0oa6" path="res://props/interactable/doors/wooden_door_1.tscn" id="5_qbj45"]
+[ext_resource type="Texture2D" uid="uid://diff6d8cnirw8" path="res://assets/levels/level1/rooms/stair_case_Tiles143.png" id="2_hsuac"]
+[ext_resource type="Texture2D" uid="uid://ceov1a6gdrwgc" path="res://assets/levels/level1/rooms/stair_case_concrete_wall_003.png" id="3_qbj45"]
+[ext_resource type="PackedScene" uid="uid://k8g00jdy4d0o" path="res://props/door_frame/door_frame.tscn" id="4_hsuac"]
+[ext_resource type="Texture2D" uid="uid://bxqut65ikr8pe" path="res://assets/levels/level1/rooms/stair_case_green_metal.png" id="4_tmb1g"]
+[ext_resource type="PackedScene" uid="uid://2g0ljm7l0oa6" path="res://props/doors/wooden_door_1.tscn" id="5_qbj45"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_nqqh2"]
 load_path = "res://.godot/imported/stair_case_Tiles143.png-6de87019f8360cf8fc5e5ee557231397.s3tc.ctex"

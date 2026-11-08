@@ -1,8 +1,8 @@
 [gd_scene format=4 uid="uid://x6fhvplluu8d"]
 
-[ext_resource type="Texture2D" uid="uid://fkvail1sq1vs" path="res://assets/models/levels/level1/rooms/lvl1_appartment_styrofoam1.png" id="1_kfahp"]
-[ext_resource type="Texture2D" uid="uid://bdnttjlha10cs" path="res://assets/models/levels/level1/rooms/lvl1_appartment_wallpaper002.png" id="2_udyle"]
-[ext_resource type="Texture2D" uid="uid://e8despk04e1e" path="res://assets/models/levels/level1/rooms/lvl1_appartment_Carpet1.png" id="3_58jsq"]
+[ext_resource type="Texture2D" uid="uid://fkvail1sq1vs" path="res://assets/levels/level1/rooms/lvl1_appartment_styrofoam1.png" id="1_kfahp"]
+[ext_resource type="Texture2D" uid="uid://bdnttjlha10cs" path="res://assets/levels/level1/rooms/lvl1_appartment_wallpaper002.png" id="2_udyle"]
+[ext_resource type="Texture2D" uid="uid://e8despk04e1e" path="res://assets/levels/level1/rooms/lvl1_appartment_Carpet1.png" id="3_58jsq"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cl8ul"]
 resource_name = "wall"
