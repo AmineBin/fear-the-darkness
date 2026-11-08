@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://f5t3wx6nceyh" path="res://ui/menus/save/popups/popup_save.tscn" id="6_eej1h"]
 [ext_resource type="Shader" uid="uid://dth7y84nojqsq" path="res://shaders/save_ui.gdshader" id="8_jow33"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_053uw"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_b7gah"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_h5vwo"]
 shader = ExtResource("8_jow33")
@@ -44,7 +44,7 @@ offset_left = 64.0
 offset_top = 64.0
 offset_right = 192.0
 offset_bottom = 192.0
-button_group = SubResource("ButtonGroup_053uw")
+button_group = SubResource("ButtonGroup_b7gah")
 
 [node name="SaveIconButton2" parent="TextureRect" unique_id=1976050434 instance=ExtResource("4_v82s4")]
 layout_mode = 0

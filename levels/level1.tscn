@@ -13,6 +13,13 @@
 [ext_resource type="PackedScene" uid="uid://dt8ul0ikgkq7b" path="res://levels/rooms/lvl1_safe1.tscn" id="8_ulkxl"]
 [ext_resource type="Script" uid="uid://m2fvd5j6jd46" path="res://addons/stairs/stairs.gd" id="10_qae1c"]
 
+[sub_resource type="Environment" id="Environment_bekh1"]
+background_mode = 1
+background_color = Color(0.011702105, 0.011702111, 0.011702101, 1)
+fog_enabled = true
+fog_light_color = Color(0, 0, 0, 1)
+fog_density = 0.25
+
 [node name="Level1" type="Node3D" unique_id=800279432]
 script = ExtResource("1_a1r6t")
 
@@ -79,14 +86,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.5)
 visible = false
 
 [node name="Stairs" type="Node3D" parent="Environment/Stairs" unique_id=916060894]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.875427, -13.254, -28.547424)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.875427, -8.504, -28.547424)
 script = ExtResource("10_qae1c")
 size = Vector3(1.2508545, 1.5, 2.4051514)
 step_count = 9
 metadata/_custom_type_script = "uid://m2fvd5j6jd46"
 
 [node name="Stairs2" type="Node3D" parent="Environment/Stairs" unique_id=1124488726]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 31.910217, -13.5043335, -30.25)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 31.910217, -8.7543335, -30.25)
 script = ExtResource("10_qae1c")
 size = Vector3(1, 1.991333, 2.8204346)
 step_count = 17
@@ -103,3 +110,6 @@ visible = false
 
 [node name="Appartement" parent="." unique_id=2087882747 instance=ExtResource("7_n6f2s")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.25, -13.5, -26)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=427090023]
+environment = SubResource("Environment_bekh1")

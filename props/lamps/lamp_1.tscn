@@ -1,0 +1,115 @@
+[gd_scene format=4 uid="uid://e1d6omgiregp"]
+
+[ext_resource type="Texture2D" uid="uid://dbckwcj6nsfab" path="res://assets/props/ps1_inspired_bedroom_and_armchair_-_summer85_3.png" id="1_ec5yv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kokxu"]
+resource_name = "Lamp_Base"
+cull_mode = 2
+albedo_texture = ExtResource("1_ec5yv")
+texture_filter = 2
+metadata/_gltf_primary_texture_coord = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_aoh34"]
+_surfaces = [{
+"aabb": AABB(-0.8660254, -1, -1, 1.7320508, 4.714286, 2),
+"format": 34896613377,
+"index_count": 192,
+"index_data": PackedByteArray("AAABAAIAAAADAAEAAwAAAAQABAAAAAIAAwAFAAEABAAGAAMAAwAGAAUABAACAAcABAAIAAYACAAEAAcACAAJAAYABgAKAAUABgAJAAoACQAIAAsACAAHAAsACQALAAoAAgAMAAcABwANAAsABwAMAA0ACwAOAAoACwANAA4ACgAOAA8ACgAPAAUAAgAQAAwAAQAQAAIABQARAAEAAQARABAABQAPABEAEAASAAwAEQATABAAEAATABIADwAUABEAEQAUABMADwAVABQADgAVAA8ADAASABYADAAWAA0ADQAXAA4ADgAXABUADQAWABcAFQAYABQAFwAZABUAFQAZABgAFgAaABcAFwAaABkAFgAbABoAEgAbABYAGgAcABkAGQAcAB0AGQAdABgAGgAeABwAGwAeABoAGAAdAB8AGwAgAB4AGAAfACEAFAAYACEAIQAfACIAFAAhABMAIwAgABsAIwAiACAAIQAiACMAEwAhACMAEgAjABsAEwAjABIA"),
+"name": "Lamp_Base",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 36,
+"vertex_data": PackedByteArray("/38AAAAAAAD//zMK/z8AAP9/MwoAAAAA//8AAP8/AAAAAAAA/z8AAP//Mwr/vwAA//8AAP+/AAAAADMK/z8AAAAAAAD/vwAA/38AAP//AAD/fzMK//8AAAAAMwr/vwAAZmaLLjJzAABmZosuzIwAAP9/iy6ZmQAAmZmLLsyMAAD/f4suZmYAAJmZiy4ycwAAMEMIVZdhAAD/fwhVMEMAAM68CFWXYQAAzrwIVWeeAAAwQwhVZ54AAP9/CFXOvAAAmZn6pjJzAACZmfqmzIwAAP9/+qaZmQAAZmb6psyMAACZmf//zIwAAJmZ//8ycwAA/3///5mZAAD/f///ZmYAAGZm///MjAAA/3/6pmZmAABmZv//MnMAAGZm+qYycwAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_4v4y3"]
+resource_name = "Sketchfab_Scene_Object_3"
+_surfaces = [{
+"aabb": AABB(-0.8660254, -1, -1, 1.7320508, 4.714286, 2),
+"attribute_data": PackedByteArray("bI8ADYq46xVsj+sVirgADSmnAA2vd+sVKafrFa93AA2KuAANbI/rFYq46xVsjwANbI8ADU9m6xVsj+sVT2YADbx+NCSWk6xFfKE0JKKMrEWvdwANKafrFa936xUppwANT2YADWyP6xVPZusVbI8ADS3lrG+53PW0udysby3l9bS8fjQklpOsRXyhNCSijKxFvH40JJaTrEV8oTQkooysRbx+NCSWk6xFfKE0JKKMrEW8fjQklpOsRXyhNCSijKxFvH40JJaTrEV8oTQkooysRfPgrG9F6PW0Reisb/Pg9bRF6Kxv8+D1tPPgrG9F6PW08+Csb6HZ9bSh2axv8+D1tKHZrG/z4PW08+Csb6HZ9bS53KxvLeX1tC3lrG+53PW0udzwEf3q5S8t5fAR6NblL+jW5S8t5axv/erlL7ncrG+h2fAR8+DlL/Pg8BGPz+Uvj8/lL/PgrG/z4OUvodmsb/Pg8BGPz+UvodnwEfPg5S/z4OUvodmsb4/P5S/z4KxvRejwEfPg5S/z4PARVvLlL1by5S/z4Kxv8+DlL0XorG/z4PARVvLlL0Xo8BHz4OUv8+DlL0XorG9W8uUv8+Csby3l8BHo1uUvudzwEf3q5S/96uUvudysb+jW5S8t5axv+JG7EmaPNxTTjLsS+JHDD9OMww9mj0cO"),
+"format": 34896613399,
+"index_count": 192,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUAKAApACoAKAArACkALAAtAC4ALAAvAC0AMAAxADIAMAAzADEANAA1ADYANAA3ADUAOAA5ADoAOAA7ADkAPAA9AD4APAA/AD0AQABBAEIAQABDAEEARABFAEYARABHAEUASABJAEoASABLAEkATABNAE4ATABPAE0AUABRAFIAUABTAFEAVABVAFYAVABXAFUAWABZAFoAWABbAFkAXABdAF4AXABfAF0AYABhAGIAYABjAGEAZABlAGYAZABnAGUAaABpAGoAaABrAGkAbABtAG4AbABvAG0AcABxAHIAcABzAHEAdAB1AHYAdAB3AHUAeAB5AHoAegB7AHgAegB8AHsAfAB9AHsA"),
+"material": SubResource("StandardMaterial3D_kokxu"),
+"name": "Lamp_Base",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 126,
+"vertex_data": PackedByteArray("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")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_aoh34")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ec5yv"]
+points = PackedVector3Array(-0.00016951561, -0.81218535, 1, -0.8660254, -0.81218535, 0.49980426, -0.00016951561, -1, 1, 0.8660254, -0.81218535, 0.49980426, 0.17310339, 3.7142859, 0.09984338, -0.00016951561, 3.7142859, 0.1998825, -0.8660254, -0.81218535, -0.50019574, -0.8660254, -1, 0.49980426, -0.17327291, 3.7142859, 0.09984338, 0.8660254, -1, 0.49980426, 0.8660254, -0.81218535, -0.50019574, 0.17310339, 3.7142859, -0.100039124, -0.00016951561, -0.81218535, -1, -0.8660254, -1, -0.50019574, -0.17327291, 3.7142859, -0.100039124, -0.00016951561, 3.7142859, -0.20007831, 0.8660254, -1, -0.50019574, -0.00016951561, -1, -1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dt7mu"]
+resource_name = "Lampshade"
+cull_mode = 2
+albedo_texture = ExtResource("1_ec5yv")
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_operator = 1
+emission_texture = ExtResource("1_ec5yv")
+texture_filter = 2
+metadata/_gltf_primary_texture_coord = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_mi4an"]
+_surfaces = [{
+"aabb": AABB(-2.1428568, 2.1553373, -2.1428568, 4.2857137, 3.1428566, 4.2857137),
+"format": 34896613377,
+"index_count": 48,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAAAAIAAwAFAAEABAACAAYAAwAHAAUACAAEAAYABwAJAAUACAAGAAoABwALAAkADAAIAAoACwANAAkADAAKAA4ACwAPAA0ADwAMAA4ADwAOAA0A"),
+"name": "Lampshade",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("/38AAAAAAABArf//vlIAAP9/////PwAAgdoAAH0lAAB9JQAAfSUAAP+/////fwAAvlL//75SAAD//wAA/38AAAAAAAD/fwAAQK3//0CtAAD/P////38AAIHaAACB2gAAfSUAAIHaAAD/f////78AAL5S//9ArQAA/38AAP//AAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_aeau7"]
+resource_name = "Sketchfab_Scene_Object_4"
+_surfaces = [{
+"aabb": AABB(-2.1428568, 2.1553373, -2.1428568, 4.2857137, 3.1428566, 4.2857137),
+"attribute_data": PackedByteArray("LGBxhi01xfgsYMX4LTVxhi01cYYvCsX4LTXF+C8KcYYotnGGKovF+Ci2xfgqi3GGKotxhixgxfgqi8X4LGBxhixgcYYtNcX4LGDF+C01cYYtNXGGLwrF+C01xfgvCnGGKLZxhiqLxfgotsX4KotxhiqLcYYsYMX4KovF+CxgcYY="),
+"format": 34896613399,
+"index_count": 48,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0A"),
+"material": SubResource("StandardMaterial3D_dt7mu"),
+"name": "Lampshade",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 32,
+"vertex_data": PackedByteArray("/38AAAAAzw9Arf//vlLPD/9/////P88PgdoAAH0lzw+B2gAAfSVeL/+/////f14vQK3//75SXi///wAA/39eL///AAD/f5lOQK3//0CtmU7/v////3+ZToHaAACB2plOgdoAAIHayWv/f////7/Ja0Ct//9Arclr/38AAP//yWv/fwAA///Ja75S//9Arclr/3////+/yWt9JQAAgdrJa30lAACB2plO/z////9/mU6+Uv//QK2ZTgAAAAD/f5lOAAAAAP9/Xi++Uv//vlJeL/8/////f14vfSUAAH0lXi99JQAAfSXPD/9/////P88PvlL//75Szw//fwAAAADPD+uTTgPrk04D65NOA+uTTgMgmncKIJp3CiCadwogmncKgKNIFYCjSBWAo0gVgKNIFZC9WTOQvVkzkL1ZM5C9WTNZs27CWbNuwlmzbsJZs27CSJV93EiVfdxIlX3cSJV93HaK3uV2it7ldore5XaK3uVNgxLsTYMS7E2DEuxNgxLs")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_mi4an")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_4v4y3"]
+points = PackedVector3Array(2.1428564, 2.1553373, -0.0004196167, 1.0710087, 5.298194, -0.0004196167, 0.75721526, 5.298194, 0.7572155, 1.5148501, 2.1553373, 1.5148504, 1.5148501, 2.1553373, -1.51527, 0.75721526, 5.298194, -0.7580545, -0.0004196167, 5.298194, 1.0710089, -0.0004196167, 2.1553373, 2.1428568, -0.0004196167, 2.1553373, -2.1428568, -0.0004196167, 5.298194, -1.0718479, -0.7580546, 5.298194, 0.7572155, -1.51527, 2.1553373, 1.5148504, -1.51527, 2.1553373, -1.51527, -0.7580546, 5.298194, -0.7580545, -1.071848, 5.298194, -0.0004196167, -2.1428568, 2.1553373, -0.0004196167)
+
+[node name="Lamp1" type="StaticBody3D" unique_id=1532737073]
+collision_layer = 2
+
+[node name="Object_10" type="MeshInstance3D" parent="." unique_id=1144216294]
+transform = Transform3D(0.08, 0, 0, 0, 0.08, 0, 0, 0, 0.08, 0, 0.25, 0)
+mesh = SubResource("ArrayMesh_4v4y3")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=1024447276]
+transform = Transform3D(0.08, 0, 0, 0, 0.08, 0, 0, 0, 0.08, 0, 0.25, 0)
+shape = SubResource("ConvexPolygonShape3D_ec5yv")
+
+[node name="Object_11" type="MeshInstance3D" parent="." unique_id=1644494109]
+transform = Transform3D(0.08, 0, 0, 0, 0.08, 0, 0, 0, 0.08, 0, 0.25, 0)
+mesh = SubResource("ArrayMesh_aeau7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1760759529]
+transform = Transform3D(0.08, 0, 0, 0, 0.08, 0, 0, 0, 0.08, 0, 0.25, 0)
+shape = SubResource("ConvexPolygonShape3D_4v4y3")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1998489702]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.44893283, 0)
+light_color = Color(0.80546397, 0.57043093, 0.19794786, 1)
+light_energy = 0.5

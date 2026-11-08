@@ -3,12 +3,14 @@
 [ext_resource type="Texture2D" uid="uid://fkvail1sq1vs" path="res://assets/levels/level1/rooms/lvl1_appartment_styrofoam1.png" id="1_kfahp"]
 [ext_resource type="Texture2D" uid="uid://bdnttjlha10cs" path="res://assets/levels/level1/rooms/lvl1_appartment_wallpaper002.png" id="2_udyle"]
 [ext_resource type="Texture2D" uid="uid://e8despk04e1e" path="res://assets/levels/level1/rooms/lvl1_appartment_Carpet1.png" id="3_58jsq"]
+[ext_resource type="PackedScene" uid="uid://b8hbq5jli7frx" path="res://props/beds/bed_1.tscn" id="4_ttoqv"]
+[ext_resource type="PackedScene" uid="uid://cmo4x4ev158vm" path="res://props/tables/nightstand.tscn" id="5_f3ulw"]
+[ext_resource type="PackedScene" uid="uid://e1d6omgiregp" path="res://props/lamps/lamp_1.tscn" id="6_4yc3o"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cl8ul"]
 resource_name = "wall"
 cull_mode = 2
 albedo_texture = ExtResource("2_udyle")
-metallic = 1.0
 texture_filter = 2
 metadata/_gltf_primary_texture_coord = 0
 
@@ -16,7 +18,6 @@ metadata/_gltf_primary_texture_coord = 0
 resource_name = "Material.001"
 cull_mode = 2
 albedo_texture = ExtResource("3_58jsq")
-roughness = 0.5
 texture_filter = 2
 metadata/_gltf_primary_texture_coord = 0
 
@@ -24,7 +25,6 @@ metadata/_gltf_primary_texture_coord = 0
 resource_name = "Material.002"
 cull_mode = 2
 albedo_texture = ExtResource("1_kfahp")
-roughness = 0.5
 texture_filter = 2
 metadata/_gltf_primary_texture_coord = 0
 
@@ -257,3 +257,18 @@ mesh = SubResource("ArrayMesh_kfahp")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1082571741]
 shape = SubResource("ConcavePolygonShape3D_udyle")
+
+[node name="Bed1" parent="." unique_id=1893550999 instance=ExtResource("4_ttoqv")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -20.25, -0.5, 2.5)
+
+[node name="Nightstand" parent="." unique_id=362432720 instance=ExtResource("5_f3ulw")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -20.5, -0.2640812, 1)
+
+[node name="Lamp1" parent="." unique_id=1532737073 instance=ExtResource("6_4yc3o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.5, 0.07798681, 1)
+
+[node name="Nightstand2" parent="." unique_id=2097735386 instance=ExtResource("5_f3ulw")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -20.5, -0.2640812, 4.25)
+
+[node name="Lamp2" parent="." unique_id=1061218717 instance=ExtResource("6_4yc3o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.5, 0.07798681, 4.25)
