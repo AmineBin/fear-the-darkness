@@ -46,6 +46,7 @@ func change_room(room_path, spawn_node, animation_node):
 script = SubResource("GDScript_h2yge")
 
 [node name="FadeTransition" parent="." unique_id=1973854213 instance=ExtResource("4_jyhfs")]
+metadata/_edit_use_anchors_ = true
 
 [node name="Player" parent="." unique_id=865410242 instance=ExtResource("1_o5qli")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
