@@ -1,9 +1,10 @@
-**Utilisation de l'IA**
+**Utilisation de l'IA :**
+
 Assistance de l'IA pour l'apprentissage, la documentation et les tests. Tout le code est fait ou relu, testé et validé par moi.
 Aucun contenu artistique n'a été réalisé par un modèle IA.
 Aucune IA générative à l'execution.
 
-**Important**
+**Important :**
 
 Français:
 
