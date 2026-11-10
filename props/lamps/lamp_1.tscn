@@ -113,3 +113,4 @@ shape = SubResource("ConvexPolygonShape3D_4v4y3")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.44893283, 0)
 light_color = Color(0.80546397, 0.57043093, 0.19794786, 1)
 light_energy = 0.5
+light_size = 0.5

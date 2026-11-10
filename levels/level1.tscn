@@ -111,5 +111,5 @@ visible = false
 [node name="Appartement" parent="." unique_id=2087882747 instance=ExtResource("7_n6f2s")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.25, -13.5, -26)
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=427090023]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1391623220]
 environment = SubResource("Environment_bekh1")
