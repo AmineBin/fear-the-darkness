@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://6sr7mr1e3xyf" path="res://props/trapdoor/trapdoor.tscn" id="13_yjl7g"]
 [ext_resource type="PackedScene" uid="uid://dyuj3bmbrxb33" path="res://props/radio/radio.tscn" id="14_f7pug"]
 [ext_resource type="PackedScene" uid="uid://bet6rfgjanj8" path="res://props/save_computer/save_computer.tscn" id="14_jgc46"]
+[ext_resource type="PackedScene" uid="uid://c661drgnas856" path="res://props/closet/closet_1.tscn" id="15_jgc46"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_k63md"]
 vertices = PackedVector3Array(-34.5, 1, -5, -6.5, 1, -5, -6.5, 1, -5.75, -6, 1, -6, -6, 1, -34.5, -34.5, 1, -34.5, -2.5, 1, -6, -2.5, 1, -34.5, -2, 1, -5.75, -2, 1, -4.75, 1.25, 1, -4.75, 1.5, 1, -5.5, 3.5, 1, -5.5, 3.5, 1, -34.5, 5.25, 1, -5.5, 5.25, 1, -34.5, 7.25, 1, -5.5, 7.5, 1, -4.75, 34.5, 1, -4.75, 34.5, 1, -34.5, -6.5, 1, -4.25, -6, 1, -4, -34.5, 1, 34.5, -6, 1, 34.5, 1.5, 1, -4.25, -2.5, 1, -4, 3, 1, -4.25, -2.5, 1, 34.5, 2.75, 1, 34.5, 7, 1, -4, 7, 1, 34.5, 34.5, 1, 34.5)
@@ -166,5 +167,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.009007, 1.3444326, -4.5835
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=238073114]
 environment = SubResource("Environment_f7pug")
+
+[node name="Closet_1" parent="." unique_id=1042029617 instance=ExtResource("15_jgc46")]
+transform = Transform3D(-0.0017754267, 0, -0.99999845, 0, 1, 0, 0.99999845, 0, -0.0017754267, 9.336262, 0.50000024, 3.0566225)
 
 [connection signal="change_scene" from="StaticBody3D2" to="." method="_on_change_scene"]

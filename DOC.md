@@ -175,6 +175,7 @@ séparées dans `levels/rooms/`.
 - Bouton « Save » des options sans effet.
 - Wrapper absent des niveaux jouables.
 - Pas de musique ni d'ambiance continue.
+- Le joueur reste bloqué dans l'armoire si il la ferme en étant collé au portes en sautant
 
 ## Tests
 
