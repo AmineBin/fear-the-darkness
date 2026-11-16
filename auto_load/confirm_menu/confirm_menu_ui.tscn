@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://bejxmyojkb2gq"]
+
+[ext_resource type="Script" uid="uid://ctwnoc56ijl8x" path="res://auto_load/confirm_menu/confirm_menu_ui.gd" id="1_wt3i0"]
+[ext_resource type="AudioStream" uid="uid://cs5dav0lwjqd3" path="res://assets/audio/ui/menu/click.wav" id="2_8oxyj"]
+
+[node name="ConfirmMenuUi" type="CanvasLayer" unique_id=1774387845]
+layer = 3
+
+[node name="Control" type="Control" parent="." unique_id=1146420908]
+process_mode = 3
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+script = ExtResource("1_wt3i0")
+click_sfx = ExtResource("2_8oxyj")
+
+[node name="ColorRect" type="ColorRect" parent="Control" unique_id=1274994144]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -309.5
+offset_top = -151.0
+offset_right = 309.5
+offset_bottom = 151.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.00031778731, 0.00031778731, 0.00031778731, 1)
+
+[node name="Label" type="Label" parent="Control" unique_id=585810900]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -254.0
+offset_top = -65.0
+offset_right = 254.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control" unique_id=1258405595]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -135.0
+offset_top = 29.0
+offset_right = 136.0
+offset_bottom = 82.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Yes" type="Button" parent="Control/HBoxContainer" unique_id=536003010]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_font_sizes/font_size = 32
+text = ">> Yes"
+flat = true
+alignment = 0
+
+[node name="No" type="Button" parent="Control/HBoxContainer" unique_id=380245447]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_font_sizes/font_size = 32
+text = ">> No"
+flat = true
+alignment = 0
+
+[connection signal="pressed" from="Control/HBoxContainer/Yes" to="Control" method="_on_yes_pressed"]
+[connection signal="pressed" from="Control/HBoxContainer/No" to="Control" method="_on_no_pressed"]

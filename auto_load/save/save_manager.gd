@@ -1,0 +1,178 @@
+extends Node
+const MAX_SAVE_SLOTS: int = 4
+var save_nb = 1
+var save_file_data: SaveDataResource = SaveDataResource.new()
+var game_scene_path = "res://playground.tscn"
+
+func set_save_slot(save_slot: int) -> void:
+	if save_slot < 1 or save_slot > MAX_SAVE_SLOTS:
+		push_error("Invalid save slot: %d" % save_slot)
+		return
+	save_nb = save_slot
+
+func get_save_path(save_slot: int):
+	return "user://save/save_slot_" + str(save_slot) + ".tres"
+
+func _save(save_slot):
+	DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path("user://save"))
+	var save_location = get_save_path(save_slot)
+	var error = ResourceSaver.save(save_file_data, save_location)
+	if error != OK:
+		push_error("Unable to save game: %s" % error)
+
+func delete(save_slot:int):
+	set_save_slot(save_slot)
+	
+	var save_location = get_save_path(save_slot)
+	
+	if FileAccess.file_exists(save_location):
+		var err = DirAccess.remove_absolute(save_location)
+		if err != OK:
+			print("Erreur : ", err)
+func save_player() -> void:
+	var player = get_tree().get_first_node_in_group("player")
+	if not player:
+		return
+	var health_component = player.get_node_or_null("HealthComponent")
+	if not health_component:
+		return
+	save_file_data.health = health_component.health
+	save_file_data.position = player.global_position
+	save_file_data.play_time = PlayTimeTracker.play_time
+
+func save_scene() -> void:
+	# Récupérer la scene actuelle
+	var scene = get_tree().get_current_scene()
+	save_file_data.current_scene = load(scene.scene_file_path)
+	
+	# Save doors state
+	var doors = get_tree().get_nodes_in_group("doors")
+	for door in doors:
+		save_file_data.door_states[str(door.get_path())] = {
+			"locked": door.key_needed,
+			"open": door.is_open
+		}
+
+func save_inventories() -> void:
+	var player = get_tree().get_first_node_in_group("player")
+	var chest_ui = get_tree().get_first_node_in_group("chest_inv_ui")
+	if not player or not chest_ui or not player.inv or not chest_ui.chest_inv:
+		return
+	
+	var player_inventory = player.inv
+	var chest_inventory = chest_ui.chest_inv
+	
+	var new_player_inventory = Inv.new(0)
+	var new_chest_inventory = Inv.new(0)
+	
+	for slot in player_inventory.slots:
+		var new_slot = InvSlot.new()
+		new_slot.amount = slot.amount
+		new_slot.item = slot.item
+		new_player_inventory.slots.append(new_slot)
+	
+	for slot in chest_inventory.slots:
+		var new_slot = InvSlot.new()
+		new_slot.amount = slot.amount
+		new_slot.item = slot.item
+		new_chest_inventory.slots.append(new_slot)
+	
+	save_file_data.player_inventory = new_player_inventory
+	save_file_data.chest_inventory = new_chest_inventory
+	
+func save_all(save_slot):
+	save_player()
+	save_scene()
+	save_inventories()
+	_save(save_slot)
+		
+func _load(save_slot: int) -> bool:
+	set_save_slot(save_slot)
+	
+	var save_location = get_save_path(save_slot)
+	
+	if FileAccess.file_exists(save_location):
+		var loaded_data = ResourceLoader.load(save_location) as SaveDataResource
+		if loaded_data:
+			save_file_data = loaded_data
+			return true
+
+	push_warning("Unable to load save slot %d: %s" % [save_slot, save_location])
+	return false
+
+func load_player():
+	var player = get_tree().get_first_node_in_group("player")
+	if not player:
+		return
+	var health_component = player.get_node_or_null("HealthComponent")
+	if not health_component:
+		return
+	
+	health_component.health = save_file_data.health
+	health_component.health_changed.emit(health_component.health)
+	player.global_position = save_file_data.position
+	PlayTimeTracker.play_time = save_file_data.play_time
+	
+func load_scene() -> void:
+	var scene: PackedScene = save_file_data.current_scene
+	if scene and get_tree().current_scene.scene_file_path != scene.resource_path:
+		get_tree().change_scene_to_packed(scene)
+		await get_tree().process_frame
+		await get_tree().process_frame
+		
+	var doors = get_tree().get_nodes_in_group("doors")
+	for door in doors:
+		if save_file_data.door_states.has(str(door.get_path())): # Vérifie que la porte a un door_state
+			var door_data = save_file_data.door_states[str(door.get_path())]
+			door.key_needed = door_data["locked"]
+			door.is_open = door_data["open"]
+			door.update_visual()
+	
+	var items = get_tree().get_nodes_in_group("items")
+	for item in items:
+		if str(item.get_path()) in save_file_data.picked_up_items:
+			item.queue_free()
+			
+func load_inventories():
+	var player = get_tree().get_first_node_in_group("player")
+	var player_inv_ui = get_tree().get_first_node_in_group("player_inv_ui")
+	var chest_inv_ui = get_tree().get_first_node_in_group("chest_inv_ui")
+	if not player or not player_inv_ui or not chest_inv_ui:
+		return
+	
+	player.inv = save_file_data.player_inventory
+	chest_inv_ui.chest_inv = save_file_data.chest_inventory
+	
+	player_inv_ui.set_inventory(player.inv)
+	chest_inv_ui.set_inventories(chest_inv_ui.chest_inv, player.inv)
+
+func load_all(save_slot):
+	if not _load(save_slot):
+		return
+	await load_scene()
+	load_player()
+	load_inventories()
+
+# Vider la mémoire de tout élément sauvegardé
+func reset_save_data():
+	save_file_data = SaveDataResource.new()
+	
+func sync_inventories():
+	var player = get_tree().get_first_node_in_group("player")
+	var player_inv_ui = get_tree().get_first_node_in_group("player_inv_ui")
+	var chest_inv_ui = get_tree().get_first_node_in_group("chest_inv_ui")
+	player_inv_ui.set_inventory(player.inv)
+	chest_inv_ui.set_player_inventory(player.inv)
+	
+var session_player_inv: Resource = null
+var session_health: int = -1
+
+func save_session_data() -> void:
+	var player = get_tree().get_first_node_in_group("player")
+	if player:
+		if player.inv:
+			session_player_inv = player.inv.duplicate(true)
+		
+		var health_component = player.get_node_or_null("HealthComponent")
+		if health_component:
+			session_health = health_component.health

@@ -1,0 +1,107 @@
+extends CharacterBody3D
+
+class_name Player
+
+const sensitivity = 0.002
+
+const bob_freq = 2.0
+const bob_amp = 0.08
+var t_bob = 0.0
+
+const base_fov = 75.0
+const fov_change = 1.5
+
+var speed
+var walk_speed = 1.7
+var sprint_speed = 2.7
+var jump_velocity = 3
+var gravity = 9.8
+
+@onready var head = $Head
+@onready var camera = $Head/Camera3D
+@onready var seecast = $Head/Camera3D/SeeCast
+@onready var gui = get_tree().get_first_node_in_group("gui")
+
+var inv: Inv
+
+func _ready() -> void:
+	inv = Inv.new()
+	SaveManager.sync_inventories()
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+
+func _unhandled_input(event):
+	if event is InputEventMouseMotion:
+		head.rotate_y(-event.relative.x * sensitivity)
+		camera.rotate_x(-event.relative.y * sensitivity)
+		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-70), deg_to_rad(70))
+	
+func _physics_process(delta):
+	
+	if not is_on_floor():
+		velocity.y -= gravity * delta
+	
+	if Input.is_action_just_pressed("jump") and is_on_floor():
+		velocity.y = jump_velocity
+		
+	if Input.is_action_pressed("sprint"):
+		speed = sprint_speed
+	else:
+		speed = walk_speed
+		
+	var input_dir = Input.get_vector("move_left", "move_right", "move_forward", "move_back")
+	var direction = (head.global_transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	if is_on_floor():
+		if direction: 
+			velocity.x = direction.x * speed
+			velocity.z = direction.z * speed
+		else:
+			velocity.x = lerp(velocity.x, direction.x * speed, delta * 10.0)
+			velocity.z = lerp(velocity.z, direction.z * speed, delta * 10.0)
+	else:
+		velocity.x = lerp(velocity.x, direction.x * speed, delta * 3.0)
+		velocity.z = lerp(velocity.z, direction.z * speed, delta * 3.0)
+	
+	t_bob += delta * velocity.length() * float(is_on_floor())
+	camera.transform.origin = _headbob(t_bob)
+	
+	# FOV
+	var velocity_clamped = clamp(velocity.length(), 0.5, sprint_speed * 2)
+	var target_fov = base_fov + fov_change * velocity_clamped
+	camera.fov = lerp(camera.fov, target_fov, delta * 8.0)
+	
+	interact()
+	
+	move_and_slide()
+
+func _headbob(time) -> Vector3:
+	var pos = Vector3.ZERO
+	pos.y = sin(time * bob_freq) * bob_amp
+	pos.x = cos(time * bob_freq/2) * bob_amp
+	return pos
+	
+# Mettre un item dans l'inventaire du joueur
+func collect(item):
+	return inv.insert(item)
+	
+# Si le joueur est à porté d'un prop il peut intéragir avec
+func interact():
+	var interact_label = gui.get_node("InteractLabel")
+	if seecast.is_colliding():
+		var target = seecast.get_collider()
+		if Input.is_action_just_pressed("interact"):
+			if target.has_method("interact"):
+				target.interact(self)
+				
+		
+		interact_label.visible = true
+		gui.show_text_interact()
+	else:
+		interact_label.visible = false
+		
+				
+func display_message(text: String) -> void:
+	if gui and gui.has_method("show_text"):
+		gui.show_text(text)
+
+func _on_health_component_died() -> void:
+	self.queue_free()

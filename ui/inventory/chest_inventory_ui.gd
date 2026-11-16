@@ -1,0 +1,94 @@
+extends Control
+
+@onready var chest_slots: Array = $NinePatchRect/ChestGridContainer.get_children()
+@onready var player_slots: Array = $NinePatchRect/PlayerGridContainer.get_children()
+@onready var chest_inv = Inv.new(21)
+var player_inv: Inv
+
+var current_chest_node
+
+var is_open = false
+
+func _ready():
+	visible = false
+	is_open = false
+	var inv_action_ui_ctrl = InvActionUi.get_node_or_null("Control")
+	inv_action_ui_ctrl.discard.connect(_on_inventory_context_discard)
+	inv_action_ui_ctrl.use_item.connect(_on_inventory_context_use_item)
+	inv_action_ui_ctrl.transfer.connect(_on_inventory_context_transfer)
+
+# faudra modifier
+func update_slots(): 
+	for i in range(min(player_inv.slots.size(), player_slots.size())):
+		player_slots[i].update(player_inv.slots[i])
+	for i in range(min(chest_inv.slots.size(), chest_slots.size())):
+		chest_slots[i].update(chest_inv.slots[i])
+			
+func open(chest):
+	current_chest_node = chest
+	visible = true
+	is_open = true
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	
+func close():
+	visible = false
+	is_open = false
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)	
+
+func _unhandled_input(event: InputEvent) -> void:
+	if is_open:
+		if event.is_action_pressed("esc")  or event.is_action_pressed("toggle_inventory"):
+			close()
+			get_viewport().set_input_as_handled()
+
+# On garde
+func _on_inventory_context_discard(current_slot: InvSlot) -> void:
+	if not is_open:
+		return
+	if current_slot in player_inv.slots:
+		player_inv.discard_item_from_slot(current_slot)
+	elif current_slot in chest_inv.slots:
+		chest_inv.discard_item_from_slot(current_slot)
+
+func _on_inventory_context_use_item(current_slot: InvSlot) -> void:
+	if not is_open:
+		return
+	var player = get_tree().get_first_node_in_group("player")
+	if current_slot and not current_slot.is_empty_slot():
+		var was_used = current_slot.item.use(player)
+		
+		if was_used:
+			if current_slot in player_inv.slots:
+				player_inv.discard_item_from_slot(current_slot)
+			elif current_slot in chest_inv.slots:
+				chest_inv.discard_item_from_slot(current_slot)
+
+# Demander à l'inventaire de transférer l'item du slot
+func _on_inventory_context_transfer(current_slot: InvSlot) -> void:
+	if not is_open:
+		return
+	if current_slot in player_inv.slots:
+		player_inv.transfer_item(chest_inv, current_slot)
+	elif current_slot in chest_inv.slots:
+		chest_inv.transfer_item(player_inv, current_slot)
+		
+# Reconnecter les inventaires			
+func set_inventories(new_chest_inv:Inv, new_player_inv: Inv):
+	set_chest_inventory(new_chest_inv)
+	set_player_inventory(new_player_inv)
+
+func set_chest_inventory(new_chest_inv: Inv):
+	if chest_inv and chest_inv.update.is_connected(update_slots):
+		chest_inv.update.disconnect(update_slots)
+	chest_inv = new_chest_inv
+	if not chest_inv.update.is_connected(update_slots):
+		chest_inv.update.connect(update_slots)
+	update_slots()
+
+func set_player_inventory(new_player_inv: Inv):
+	if player_inv and player_inv.update.is_connected(update_slots):
+		player_inv.update.disconnect(update_slots)
+	player_inv = new_player_inv
+	if not player_inv.update.is_connected(update_slots):
+		player_inv.update.connect(update_slots)
+	update_slots()
