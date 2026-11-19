@@ -175,7 +175,6 @@ séparées dans `levels/rooms/`.
 - Bouton « Save » des options sans effet.
 - Pas de musique ni d'ambiance continue.
 - Le joueur reste bloqué dans l'armoire si il la ferme en étant collé au portes en sautant
-- Les animations d'un objet s'arrêtent en cours si on effectue une autre action qui active une animation sur cet objet
 
 ## Tests
 

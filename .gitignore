@@ -1,6 +1,14 @@
-# Fichiers générés par Godot
+# Godot 4+ specific ignores
 .godot/
 /android/
+
+# Exported builds
 /export.cfg
 /export_presets.cfg
 /builds/
+
+# Fichiers du projet complet conservés uniquement dans le dépôt privé.
+# Les fichiers déjà suivis par Git restent suivis malgré ces règles.
+/assets/
+*.tscn
+*.tres

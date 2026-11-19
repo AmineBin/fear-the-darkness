@@ -14,30 +14,28 @@ Une démo jouable sera disponible lorsque le jeu aura atteint un niveau de matur
 
 Certains assets (une grande partie) ont été récupéré sur internet auprès d'artistes qui autorisent la réutilisation de leurs assets, j'essaye de créditer le maximum d'artistes qui ont mis à disposition ces assets. En cas d'oublie de ma part n'hésitez pas à me contacter.
 
-## Dépôt privé du projet complet
-
-Ce dépôt public contient le code, mais pas les assets du jeu ni les scènes et
-ressources Godot privées. Ces fichiers sont sauvegardés dans un dépôt privé
-séparé, utilisé comme copie complète du projet.
-
-Pour synchroniser le dossier actuel vers un checkout local du dépôt privé :
-
-```bash
-git clone <URL_DU_DEPOT_PRIVE> ../fear-the-darkness-private
-tools/sync-private.sh ../fear-the-darkness-private
+# Workflow
+Synchroniser le dossier public avec le dossier privé.
 ```
+cd /home/amine/Dev/Perso/fear-the-darkness
+tools/sync-private.sh ../fear-the-darkness-private
+``` 
 
-Après vérification, dans le dépôt privé :
-
-```bash
+Push le dépôt publique
+```
+cd ../fear-the-darkness
 git add -A
-git commit -m "Synchronize complete Godot project"
+git commit -m "...."
 git push
 ```
 
-Les dossiers `.git`, `.godot` et `builds` ne sont pas copiés. Le script ne
-supprime pas automatiquement les fichiers absents du dépôt public afin d'éviter
-une suppression accidentelle d'assets privés.
+Push le dépôt privé
+```
+cd ../fear-the-darkness-private
+git add -A
+git commit -m "...."
+git push
+```
 
 ## Utilisation de l'IA
 

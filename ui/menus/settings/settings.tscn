@@ -4,13 +4,16 @@
 [ext_resource type="PackedScene" uid="uid://uaktb6mru1ob" path="res://ui/menus/transition/fade_transition.tscn" id="1_rqcjd"]
 [ext_resource type="PackedScene" uid="uid://quogcpd41rmv" path="res://components/volume_slider/volume_slider.tscn" id="2_37860"]
 [ext_resource type="AudioStream" uid="uid://cs5dav0lwjqd3" path="res://assets/audio/ui/menu/click.wav" id="2_kmdw2"]
+[ext_resource type="PackedScene" uid="uid://bp6q8rqs6mfsd" path="res://ui/menus/settings/input_button.tscn" id="4_4tiuo"]
 
-[node name="Settings" type="Control" unique_id=1400086558]
+[node name="Settings" type="Control" unique_id=1400086558 node_paths=PackedStringArray("action_list")]
 process_mode = 3
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_dxr1k")
 click_sfx = ExtResource("2_kmdw2")
+input_button_scene = ExtResource("4_4tiuo")
+action_list = NodePath("ButtonManager/Controls/ScrollContainer/ActionList")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=907971479]
 layout_mode = 0
@@ -45,7 +48,8 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = "Controls"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="ButtonManager" unique_id=1696316514]
+[node name="Audio" type="VBoxContainer" parent="ButtonManager" unique_id=1696316514]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -59,43 +63,80 @@ offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MainLabel" type="Label" parent="ButtonManager/VBoxContainer" unique_id=1519754272]
+[node name="MainLabel" type="Label" parent="ButtonManager/Audio" unique_id=1519754272]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
-text = "Main volume"
+text = "Master volume"
 
-[node name="MainSlider" parent="ButtonManager/VBoxContainer" unique_id=921617575 instance=ExtResource("2_37860")]
+[node name="MainSlider" parent="ButtonManager/Audio" unique_id=921617575 instance=ExtResource("2_37860")]
 layout_mode = 2
 bus_name = "Main"
 
-[node name="MusicLabel" type="Label" parent="ButtonManager/VBoxContainer" unique_id=841447106]
+[node name="MusicLabel" type="Label" parent="ButtonManager/Audio" unique_id=841447106]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = "Music volume"
 
-[node name="MusicSlider" parent="ButtonManager/VBoxContainer" unique_id=821019767 instance=ExtResource("2_37860")]
+[node name="MusicSlider" parent="ButtonManager/Audio" unique_id=821019767 instance=ExtResource("2_37860")]
 layout_mode = 2
 bus_name = "Music"
 
-[node name="SFXLabel" type="Label" parent="ButtonManager/VBoxContainer" unique_id=2032769852]
+[node name="SFXLabel" type="Label" parent="ButtonManager/Audio" unique_id=2032769852]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = "Sound volume"
 
-[node name="SFXSlider" parent="ButtonManager/VBoxContainer" unique_id=986926245 instance=ExtResource("2_37860")]
+[node name="SFXSlider" parent="ButtonManager/Audio" unique_id=986926245 instance=ExtResource("2_37860")]
 layout_mode = 2
 bus_name = "SFX"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="ButtonManager/VBoxContainer" unique_id=977377106]
+[node name="Controls" type="VBoxContainer" parent="ButtonManager" unique_id=798933264]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -173.0
+offset_right = 250.0
+offset_bottom = 227.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ButtonManager/Controls" unique_id=1957125716]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ActionList" type="VBoxContainer" parent="ButtonManager/Controls/ScrollContainer" unique_id=1664337751]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="InputButton" parent="ButtonManager/Controls/ScrollContainer/ActionList" unique_id=608080897 instance=ExtResource("4_4tiuo")]
 layout_mode = 2
 
-[node name="Save" type="Button" parent="ButtonManager/VBoxContainer/HBoxContainer" unique_id=276465161]
+[node name="ResetControls" type="Button" parent="ButtonManager/Controls" unique_id=15710051]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 32
+text = "Reset to default
+"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="ButtonManager" unique_id=404545890]
+layout_mode = 0
+offset_left = 710.0
+offset_top = 924.0
+offset_right = 1210.0
+offset_bottom = 977.0
+
+[node name="Save" type="Button" parent="ButtonManager/HBoxContainer2" unique_id=511399036]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 32
 text = "Save"
 
-[node name="Back" type="Button" parent="ButtonManager/VBoxContainer/HBoxContainer" unique_id=4124590]
+[node name="Back" type="Button" parent="ButtonManager/HBoxContainer2" unique_id=1008744891]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 32
@@ -110,5 +151,6 @@ offset_bottom = 1080.0
 
 [node name="fade_timer" type="Timer" parent="FadeTransition" unique_id=182418946]
 
-[connection signal="pressed" from="ButtonManager/VBoxContainer/HBoxContainer/Save" to="." method="_on_save_pressed"]
-[connection signal="pressed" from="ButtonManager/VBoxContainer/HBoxContainer/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="ButtonManager/Controls/ResetControls" to="." method="_on_reset_controls_pressed"]
+[connection signal="pressed" from="ButtonManager/HBoxContainer2/Save" to="." method="_on_save_pressed"]
+[connection signal="pressed" from="ButtonManager/HBoxContainer2/Back" to="." method="_on_back_pressed"]
