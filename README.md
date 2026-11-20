@@ -17,8 +17,8 @@ Certains assets (une grande partie) ont été récupéré sur internet auprès d
 # Workflow
 Synchroniser le dossier public avec le dossier privé.
 ```
-cd /home/amine/Dev/Perso/fear-the-darkness
-tools/sync-private.sh ../fear-the-darkness-private
+cd /home/amine/Dev/Perso/fear-the-darkness-private
+tools/sync-public.sh ../fear-the-darkness
 ``` 
 
 Push le dépôt publique

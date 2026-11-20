@@ -12,3 +12,4 @@
 /assets/
 *.tscn
 *.tres
+/tools/

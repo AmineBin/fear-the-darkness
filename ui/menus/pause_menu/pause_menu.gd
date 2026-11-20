@@ -25,12 +25,6 @@ func pause():
 		show()
 		$AnimationPlayer.play("blur")
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-	
-func ui_opened():
-	if inventory_ui.visible:
-		return true
-	else: 
-		return false
 		
 func _on_resume_pressed() -> void:
 	SoundPlayer.audio_play(click_sfx)
@@ -63,11 +57,10 @@ func _on_settings_pressed() -> void:
 
 # C'est très crade mais ça marche
 func _unhandled_input(event: InputEvent) -> void:
-	var player_inv_ui = get_tree().get_first_node_in_group("player_inv_ui")
-	var chest_inv_ui = get_tree().get_first_node_in_group("chest_inv_ui")
-	if event.is_action_pressed("esc") :
-		if PauseGame.is_game_paused == true:
-			resume()
-			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-		elif (not player_inv_ui or not player_inv_ui.is_open) and (not chest_inv_ui or not chest_inv_ui.is_open):
-			pause()
+	if event.is_action_pressed("esc"):
+		if not UiManager.close_top_ui():
+			if PauseGame.is_game_paused && visible:
+				resume()
+			else:
+				pause()
+			
