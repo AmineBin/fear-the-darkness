@@ -6,6 +6,10 @@ extends Control
 @export var input_button_scene: PackedScene
 @export var action_list: VBoxContainer 
 
+@onready var audio_tab = $ButtonManager/Audio
+@onready var control_tab = $ButtonManager/Controls
+@onready var graphics_tab = $ButtonManager/Graphics
+
 var is_remapping = false
 var action_to_remap = null
 var remapping_button = null
@@ -76,5 +80,40 @@ func _on_back_pressed() -> void:
 	else:
 		get_tree().change_scene_to_file(main_menu_scene_path)
 		
+func _on_controls_pressed() -> void:
+	SoundPlayer.audio_play(click_sfx)
+	audio_tab.hide()
+	graphics_tab.hide()
+	control_tab.show()
+
+func _on_audio_pressed() -> void:
+	SoundPlayer.audio_play(click_sfx)
+	audio_tab.show()
+	graphics_tab.hide()
+	control_tab.hide()
+
+func _on_graphics_pressed() -> void:
+	SoundPlayer.audio_play(click_sfx)
+	audio_tab.hide()
+	graphics_tab.show()
+	control_tab.hide()
+
 func _on_save_pressed() -> void:
 	SoundPlayer.audio_play(click_sfx)
+
+
+func _on_option_button_item_selected(index: int) -> void:
+	match index:
+		0:
+			DisplayServer.window_set_size(Vector2i(1920,1080))
+		1:
+			DisplayServer.window_set_size(Vector2i(1600,900))
+		2:
+			DisplayServer.window_set_size(Vector2i(1280,720))
+
+func _on_display_mode_item_selected(index: int) -> void:
+	match index:
+		0:
+			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+		1:
+			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
