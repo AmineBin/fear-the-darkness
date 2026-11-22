@@ -7,6 +7,7 @@
 - Ne modifie pas les fichiers `.tscn`, `.tres`, `project.godot` et `export_presets.cfg` sans mon autorisation explicite.
 - N'ajoute aucune dépendance, extension ou ressource externe sans mon autorisation.
 - En cas d'incertitude, pose une question plutôt que de prendre une décision arbitraire.
+- Réponds aux question de la manière la plus courte possible avec toutes les infos nécessaires
 
 ## Sécurité et autorisations
 - Demande une validation humaine avant toute commande destructive ou action difficilement réversible.

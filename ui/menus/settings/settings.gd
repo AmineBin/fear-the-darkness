@@ -6,14 +6,29 @@ extends Control
 @export var input_button_scene: PackedScene
 @export var action_list: VBoxContainer 
 
-@onready var audio_tab = $ButtonManager/Audio
-@onready var control_tab = $ButtonManager/Controls
-@onready var graphics_tab = $ButtonManager/Graphics
+@export var audio_tab: VBoxContainer
+@export var control_tab: VBoxContainer
+@export var graphics_tab: VBoxContainer
+
+@export var audio_button: Button
+@export var control_button: Button
+@export var graphics_button: Button
+
+@onready var resolution_button: OptionButton = $ButtonManager/Graphics/Resolution
+@onready var display_mode_button: OptionButton = $ButtonManager/Graphics/DisplayMode
 
 var is_remapping = false
 var action_to_remap = null
 var remapping_button = null
 
+# Liste des résolutions
+const DISPLAY_RESOLUTIONS: Array[Vector2i] = [
+	Vector2i(1920, 1080),
+	Vector2i(1600, 900),
+	Vector2i(1280, 720),
+]
+
+# Liste des touches du jeu
 var input_actions = {
 	"move_forward": "Move forward",
 	"move_left": "Move left",
@@ -27,6 +42,21 @@ var input_actions = {
 
 func _ready():
 	_create_action_list()
+	graphics_button.toggle_mode = true
+	_sync_display_settings()
+
+# Syncroniser le display mode et la résultion actuelle avec l'affichage des inputs
+func _sync_display_settings() -> void:
+	var is_fullscreen := DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_FULLSCREEN
+	display_mode_button.select(0 if is_fullscreen else 1)
+	resolution_button.disabled = is_fullscreen
+
+	if not is_fullscreen:
+		var current_size := DisplayServer.window_get_size()
+		for i in DISPLAY_RESOLUTIONS.size():
+			if DISPLAY_RESOLUTIONS[i] == current_size:
+				resolution_button.select(i)
+				break
 
 func _create_action_list():
 	InputMap.load_from_project_settings()
@@ -85,35 +115,43 @@ func _on_controls_pressed() -> void:
 	audio_tab.hide()
 	graphics_tab.hide()
 	control_tab.show()
+	audio_button.button_pressed = false
+	graphics_button.button_pressed = false
 
 func _on_audio_pressed() -> void:
 	SoundPlayer.audio_play(click_sfx)
 	audio_tab.show()
 	graphics_tab.hide()
 	control_tab.hide()
+	graphics_button.button_pressed = false
+	control_button.button_pressed = false
 
 func _on_graphics_pressed() -> void:
 	SoundPlayer.audio_play(click_sfx)
 	audio_tab.hide()
 	graphics_tab.show()
 	control_tab.hide()
+	audio_button.button_pressed = false
+	control_button.button_pressed = false
 
 func _on_save_pressed() -> void:
 	SoundPlayer.audio_play(click_sfx)
+	# TODO
 
-
+# Changer la résolution
 func _on_option_button_item_selected(index: int) -> void:
-	match index:
-		0:
-			DisplayServer.window_set_size(Vector2i(1920,1080))
-		1:
-			DisplayServer.window_set_size(Vector2i(1600,900))
-		2:
-			DisplayServer.window_set_size(Vector2i(1280,720))
+	if DisplayServer.window_get_mode() != DisplayServer.WINDOW_MODE_WINDOWED:
+		return
 
+	DisplayServer.window_set_size(DISPLAY_RESOLUTIONS[index])
+
+# Changer le display mode
 func _on_display_mode_item_selected(index: int) -> void:
 	match index:
 		0:
 			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+			resolution_button.disabled = true
 		1:
 			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+			resolution_button.disabled = false
+			_on_option_button_item_selected(resolution_button.selected) # Applique la résolution séléctionné
